@@ -1,0 +1,229 @@
+/* ===== Solar ROI Calculator Component — Vietnam + Lead Unlock ===== */
+.sc-root {
+  --sc-dark: #0f1a2e;
+  --sc-dark2: #162240;
+  --sc-accent: #00b4d8;
+  --sc-accent2: #00e2e0;
+  --sc-blue: #006BC0;
+  --sc-green: #22c55e;
+  --sc-orange: #f59e0b;
+  --sc-radius: 16px;
+  --sc-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sc-font);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: var(--sc-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  min-height: 560px;
+}
+
+/* ---- Sidebar ---- */
+.sc-sidebar {
+  width: 380px;
+  min-width: 340px;
+  background: var(--sc-dark);
+  color: #fff;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex-shrink: 0;
+}
+.sc-sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sc-sidebar-title svg { flex-shrink: 0; }
+.sc-sidebar-sub { font-size: 13px; color: rgba(255,255,255,.5); margin: 0 0 8px; }
+
+/* Form controls */
+.sc-field { display: flex; flex-direction: column; gap: 6px; }
+.sc-label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.7); letter-spacing: .02em; }
+.sc-select, .sc-input {
+  background: var(--sc-dark2);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color .2s;
+  font-family: var(--sc-font);
+}
+.sc-select:focus, .sc-input:focus { border-color: var(--sc-accent); }
+.sc-select option { background: var(--sc-dark); color: #fff; }
+
+/* Slider */
+.sc-slider-wrap { display: flex; align-items: center; gap: 10px; }
+.sc-slider {
+  flex: 1; -webkit-appearance: none; appearance: none;
+  height: 6px; border-radius: 3px;
+  background: rgba(255,255,255,.15); outline: none;
+}
+.sc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--sc-accent); cursor: pointer; box-shadow: 0 0 6px rgba(0,180,216,.5);
+}
+.sc-slider::-moz-range-thumb {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--sc-accent); cursor: pointer; border: none;
+}
+.sc-slider-val { min-width: 42px; text-align: right; font-size: 15px; font-weight: 600; color: var(--sc-accent2); }
+
+/* Input group */
+.sc-input-group {
+  display: flex; align-items: stretch; border-radius: 8px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1); transition: border-color .2s;
+}
+.sc-input-group:focus-within { border-color: var(--sc-accent); }
+.sc-input-group .sc-input { border: none; border-radius: 0; flex: 1; min-width: 0; }
+.sc-input-unit {
+  background: rgba(255,255,255,.06); color: rgba(255,255,255,.45);
+  padding: 0 12px; display: flex; align-items: center;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+
+/* ---- Main ---- */
+.sc-main {
+  flex: 1; background: #fff;
+  padding: 36px 36px 28px;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+}
+.sc-main-title { font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px; }
+.sc-main-sub { font-size: 13px; color: #999; margin: 0 0 24px; }
+
+/* Results wrapper (blurred when locked) */
+.sc-results-wrap {
+  flex: 1; display: flex; flex-direction: column;
+  transition: filter .6s ease, opacity .6s ease;
+}
+.sc-results-wrap.sc-locked {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+.sc-results-wrap.sc-fadein {
+  animation: scFadeIn .6s ease forwards;
+}
+@keyframes scFadeIn {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+/* ---- Lead Overlay ---- */
+.sc-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity .4s ease;
+}
+.sc-overlay.sc-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.sc-lead-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 12px 48px rgba(0,0,0,.12);
+  text-align: center;
+}
+.sc-lead-icon { margin-bottom: 12px; }
+.sc-lead-title { font-size: 20px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px; }
+.sc-lead-sub { font-size: 14px; color: #888; margin: 0 0 20px; }
+.sc-lead-form { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.sc-lead-input {
+  width: 100%; box-sizing: border-box;
+  padding: 11px 14px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: 15px; font-family: var(--sc-font); outline: none;
+  transition: border-color .2s;
+}
+.sc-lead-input:focus { border-color: var(--sc-blue); }
+
+/* Code row */
+.sc-lead-code-row { display: flex; gap: 8px; }
+.sc-lead-code-row .sc-lead-input { flex: 1; }
+.sc-lead-code-btn {
+  white-space: nowrap; padding: 0 16px;
+  background: var(--sc-dark); color: #fff; border: none; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer; font-family: var(--sc-font);
+  transition: opacity .2s;
+}
+.sc-lead-code-btn:disabled { opacity: .5; cursor: default; }
+
+.sc-lead-msg { font-size: 13px; min-height: 18px; line-height: 1.4; }
+.sc-lead-msg.error { color: #e53e3e; }
+.sc-lead-msg.info { color: var(--sc-blue); }
+
+.sc-lead-submit {
+  padding: 13px 0; border: none; border-radius: 8px;
+  background: linear-gradient(135deg, #006BC0, #00b4b4); color: #fff;
+  font-size: 16px; font-weight: 700; cursor: pointer;
+  font-family: var(--sc-font); transition: transform .2s, box-shadow .2s;
+}
+.sc-lead-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,107,192,.3); }
+
+/* ---- KPI Cards ---- */
+.sc-kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+.sc-kpi {
+  background: #f7f9fc; border-radius: 12px; padding: 20px 16px;
+  text-align: center; border: 1px solid #eef1f6;
+  transition: transform .2s, box-shadow .2s;
+}
+.sc-kpi:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+.sc-kpi-label { font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+.sc-kpi-val { font-size: 28px; font-weight: 800; color: #1a1a1a; line-height: 1.1; }
+.sc-kpi-unit { font-size: 14px; font-weight: 500; color: #999; margin-left: 2px; }
+.sc-kpi.highlight { background: linear-gradient(135deg, #006BC0, #00b4b4); border-color: transparent; }
+.sc-kpi.highlight .sc-kpi-label { color: rgba(255,255,255,.7); }
+.sc-kpi.highlight .sc-kpi-val { color: #fff; }
+.sc-kpi.highlight .sc-kpi-unit { color: rgba(255,255,255,.6); }
+
+/* ---- Bar Chart ---- */
+.sc-chart { flex: 1; display: flex; flex-direction: column; }
+.sc-chart-title { font-size: 14px; font-weight: 600; color: #555; margin-bottom: 16px; }
+.sc-chart-bars { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.sc-bar-row { display: flex; align-items: center; gap: 10px; }
+.sc-bar-label { width: 56px; font-size: 13px; color: #666; font-weight: 500; text-align: right; flex-shrink: 0; }
+.sc-bar-track { flex: 1; height: 14px; background: #eef1f6; border-radius: 7px; overflow: hidden; }
+.sc-bar-fill {
+  height: 100%; border-radius: 7px;
+  background: linear-gradient(90deg, #006BC0, #00b4d8);
+  transition: width .5s ease; min-width: 2px;
+}
+.sc-bar-fill.payback { background: linear-gradient(90deg, #e67e00, #fbbf24); }
+.sc-bar-fill.full { background: linear-gradient(90deg, #006BC0, #00e2e0); }
+.sc-bar-val { width: 120px; font-size: 13px; color: #444; font-weight: 600; flex-shrink: 0; }
+.sc-bar-val-pb { color: #e67e00; }
+
+/* Note */
+.sc-note { margin-top: 16px; font-size: 12px; color: #aaa; line-height: 1.5; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .sc-root { flex-direction: column; }
+  .sc-sidebar { width: auto; min-width: auto; }
+  .sc-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .sc-sidebar { padding: 24px 18px; }
+  .sc-main { padding: 24px 18px 20px; }
+  .sc-kpi-grid { grid-template-columns: 1fr; }
+  .sc-kpi-val { font-size: 24px; }
+  .sc-lead-card { padding: 24px 18px; }
+  .sc-bar-val { width: 80px; font-size: 12px; }
+}

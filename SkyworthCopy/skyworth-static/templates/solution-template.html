@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="[解决方案SEO描述]" />
+    <meta name="keywords" content="[关键词1], [关键词2], [关键词3]" />
+    <title>[解决方案名称] - SKYWORTH</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+    /* =========================================
+       Solution Template — Page-specific Styles
+       ========================================= */
+
+    /* Full-width Hero */
+    .tpl-hero {
+        position: relative;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: #0a1628;
+    }
+    .tpl-hero-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: .5;
+        /* 替换为真实背景图: background-image: url('[背景图片路径]'); */
+        background-image:
+            linear-gradient(135deg, #006BC0 0%, #00b4b4 50%, #003f7a 100%);
+    }
+    .tpl-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.2) 100%);
+    }
+    .tpl-hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 120px 0 100px;
+        max-width: 720px;
+    }
+    .tpl-hero-tag {
+        display: inline-block;
+        padding: 6px 18px;
+        border: 1.5px solid rgba(255,255,255,.5);
+        color: rgba(255,255,255,.9);
+        border-radius: 100px;
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    .tpl-hero-title {
+        font-size: 60px;
+        color: #fff;
+        font-family: var(--medium);
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+    .tpl-hero-title span { color: #00E2E0; }
+    .tpl-hero-sub {
+        font-size: 20px;
+        color: rgba(255,255,255,.8);
+        line-height: 1.6;
+        margin-bottom: 48px;
+    }
+    .tpl-hero-btns {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .tpl-btn-solid {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 36px;
+        background: var(--colorbj);
+        color: #fff;
+        border-radius: 100px;
+        font-size: 17px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: opacity .2s;
+    }
+    .tpl-btn-solid:hover { opacity: .85; color: #fff; }
+    .tpl-btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 36px;
+        border: 1.5px solid rgba(255,255,255,.7);
+        color: #fff;
+        border-radius: 100px;
+        font-size: 17px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: background .2s;
+    }
+    .tpl-btn-ghost:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    /* Section commons */
+    .tpl-section { padding: 80px 0; }
+    .tpl-section-hd { margin-bottom: 60px; }
+    .tpl-section-hd.center { text-align: center; }
+    .tpl-section-title {
+        font-size: 40px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+    .tpl-section-sub {
+        font-size: 18px;
+        color: var(--color8b8);
+        line-height: 1.6;
+    }
+
+    /* 3-Step Process */
+    .tpl-steps { background: var(--colorbj1); }
+    .tpl-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        position: relative;
+    }
+    .tpl-steps-grid::before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: calc(16.6% + 20px);
+        right: calc(16.6% + 20px);
+        height: 2px;
+        background: linear-gradient(90deg, var(--colorbj) 0%, #00E2E0 100%);
+        z-index: 0;
+    }
+    .tpl-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 32px 48px;
+        position: relative;
+        z-index: 1;
+    }
+    .tpl-step-num {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--colorbj2);
+        color: #fff;
+        font-size: 28px;
+        font-family: var(--bold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 28px;
+        box-shadow: 0 8px 24px rgba(0,107,192,.3);
+        flex-shrink: 0;
+    }
+    .tpl-step-icon {
+        font-size: 32px;
+    }
+    .tpl-step-title {
+        font-size: 22px;
+        color: var(--color1e1);
+        font-family: var(--semibold);
+        margin-bottom: 12px;
+    }
+    .tpl-step-desc {
+        font-size: 16px;
+        color: var(--color8b8);
+        line-height: 1.6;
+    }
+
+    /* Recommended Products — 4-card grid */
+    .tpl-products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+    .tpl-prod-card {
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius20);
+        overflow: hidden;
+        background: #fff;
+        transition: box-shadow .25s, transform .25s;
+        text-decoration: none;
+        display: block;
+    }
+    .tpl-prod-card:hover {
+        box-shadow: 0 12px 40px rgba(0,107,192,.12);
+        transform: translateY(-4px);
+    }
+    .tpl-prod-card-img {
+        background: var(--colorbj1);
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .tpl-prod-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .tpl-prod-card-img-ph {
+        font-size: 48px;
+        opacity: .3;
+    }
+    .tpl-prod-card-body {
+        padding: 24px 20px;
+    }
+    .tpl-prod-card-tag {
+        font-size: 12px;
+        color: var(--colorbj);
+        font-family: var(--semibold);
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin-bottom: 8px;
+    }
+    .tpl-prod-card-name {
+        font-size: 18px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    .tpl-prod-card-desc {
+        font-size: 14px;
+        color: var(--color8b8);
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    .tpl-prod-card-link {
+        font-size: 15px;
+        color: var(--colorbj);
+        font-family: var(--medium);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    /* Case Studies — 2 cards, image left / text right */
+    .tpl-cases { background: var(--colorbj1); }
+    .tpl-cases-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .tpl-case-card {
+        display: grid;
+        grid-template-columns: 480px 1fr;
+        border-radius: var(--radius20);
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0,0,0,.06);
+        transition: box-shadow .25s;
+    }
+    .tpl-case-card:hover {
+        box-shadow: 0 12px 40px rgba(0,107,192,.1);
+    }
+    .tpl-case-img {
+        height: 320px;
+        background: var(--colorbj1);
+        overflow: hidden;
+        position: relative;
+    }
+    .tpl-case-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .tpl-case-img-ph {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #e8f4ff 0%, #c8e6ff 100%);
+        font-size: 64px;
+        opacity: .3;
+    }
+    .tpl-case-label {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 6px 14px;
+        background: var(--colorbj);
+        color: #fff;
+        border-radius: 100px;
+        font-size: 13px;
+        font-family: var(--semibold);
+    }
+    .tpl-case-body {
+        padding: 48px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+    }
+    .tpl-case-meta {
+        font-size: 14px;
+        color: var(--color8b8);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .tpl-case-meta span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .tpl-case-title {
+        font-size: 26px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.3;
+    }
+    .tpl-case-desc {
+        font-size: 16px;
+        color: var(--color8b8);
+        line-height: 1.7;
+    }
+    .tpl-case-stats {
+        display: flex;
+        gap: 32px;
+    }
+    .tpl-case-stat-val {
+        font-size: 28px;
+        color: var(--colorbj);
+        font-family: var(--bold);
+    }
+    .tpl-case-stat-label {
+        font-size: 13px;
+        color: var(--color8b8);
+        margin-top: 2px;
+    }
+    .tpl-case-link {
+        color: var(--colorbj);
+        font-size: 15px;
+        font-family: var(--medium);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .tpl-case-link:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .tpl-products-grid { grid-template-columns: repeat(2, 1fr); }
+        .tpl-case-card { grid-template-columns: 1fr; }
+        .tpl-case-img { height: 260px; }
+    }
+    @media (max-width: 1024px) {
+        .tpl-hero-title { font-size: 44px; }
+        .tpl-steps-grid { grid-template-columns: 1fr; }
+        .tpl-steps-grid::before { display: none; }
+    }
+    @media (max-width: 640px) {
+        .tpl-products-grid { grid-template-columns: 1fr; }
+        .tpl-hero-title { font-size: 32px; }
+        .tpl-case-body { padding: 28px 24px; }
+        .tpl-case-stats { flex-wrap: wrap; gap: 16px; }
+    }
+    </style>
+</head>
+<body>
+    <div class="ys-page-wrap act">
+
+        <!-- Header / Nav -->
+        <div id="header-nav-placeholder"></div>
+
+        <main class="ys-main">
+
+            <!-- ==============================
+                 Full-width Hero Section
+                 ============================== -->
+            <section class="tpl-hero">
+                <!-- 背景图层 — 替换为真实图片时在下方 div 添加 style="background-image:url('...')" -->
+                <div class="tpl-hero-bg"></div>
+                <div class="tpl-hero-overlay"></div>
+
+                <div class="ys-cont1600">
+                    <div class="tpl-hero-content">
+                        <div class="tpl-hero-tag">[解决方案类别，如：Residential Solar Solution]</div>
+                        <h1 class="tpl-hero-title">
+                            [大标题主文案，<br>可换行，<span>关键词高亮</span>]
+                        </h1>
+                        <p class="tpl-hero-sub">
+                            [副标题，40-80字。介绍该解决方案解决什么问题，面向哪类客户，
+                            核心价值主张是什么。]
+                        </p>
+                        <div class="tpl-hero-btns">
+                            <a href="contact-us.html" class="tpl-btn-solid">Get a Free Quote →</a>
+                            <a href="#case-studies" class="tpl-btn-ghost">View Case Studies</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 3-Step Process
+                 ============================== -->
+            <section class="tpl-section tpl-steps">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd center">
+                        <h2 class="tpl-section-title">[流程标题，如：How It Works — 3 Simple Steps]</h2>
+                        <p class="tpl-section-sub">[流程副标题，20-40字，说明整个流程的价值]</p>
+                    </div>
+                    <div class="tpl-steps-grid">
+
+                        <!-- Step 1 -->
+                        <div class="tpl-step">
+                            <div class="tpl-step-num">
+                                <span class="tpl-step-icon">🔍</span>
+                            </div>
+                            <div class="tpl-step-title">[步骤1标题，如：Site Assessment]</div>
+                            <p class="tpl-step-desc">[步骤1描述，30-50字。说明该步骤做什么，持续多久，输出什么结果。]</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="tpl-step">
+                            <div class="tpl-step-num">
+                                <span class="tpl-step-icon">📐</span>
+                            </div>
+                            <div class="tpl-step-title">[步骤2标题，如：Custom Design]</div>
+                            <p class="tpl-step-desc">[步骤2描述，30-50字。]</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="tpl-step">
+                            <div class="tpl-step-num">
+                                <span class="tpl-step-icon">⚡</span>
+                            </div>
+                            <div class="tpl-step-title">[步骤3标题，如：Installation & Go-Live]</div>
+                            <p class="tpl-step-desc">[步骤3描述，30-50字。]</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Recommended Products — 4-card grid
+                 ============================== -->
+            <section class="tpl-section">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd">
+                        <h2 class="tpl-section-title">[推荐产品标题，如：Core Products in This Solution]</h2>
+                        <p class="tpl-section-sub">[推荐产品副标题，说明产品组合或选型依据]</p>
+                    </div>
+                    <div class="tpl-products-grid">
+
+                        <!-- Product Card 1 -->
+                        <a href="product/pv-inverter.html" class="tpl-prod-card">
+                            <div class="tpl-prod-card-img">
+                                <!-- <img src="[产品图片1]" alt="[产品名1]" /> -->
+                                <div class="tpl-prod-card-img-ph">⚡</div>
+                            </div>
+                            <div class="tpl-prod-card-body">
+                                <div class="tpl-prod-card-tag">[产品类别1，如：Inverter]</div>
+                                <div class="tpl-prod-card-name">[产品名1，如：SkyInverter X3 Pro]</div>
+                                <p class="tpl-prod-card-desc">[产品卡片描述，20-30字]</p>
+                                <span class="tpl-prod-card-link">Learn More →</span>
+                            </div>
+                        </a>
+
+                        <!-- Product Card 2 -->
+                        <a href="product/battery-storage-system.html" class="tpl-prod-card">
+                            <div class="tpl-prod-card-img">
+                                <div class="tpl-prod-card-img-ph">🔋</div>
+                            </div>
+                            <div class="tpl-prod-card-body">
+                                <div class="tpl-prod-card-tag">[产品类别2，如：Battery]</div>
+                                <div class="tpl-prod-card-name">[产品名2，如：SkyBattery E5]</div>
+                                <p class="tpl-prod-card-desc">[产品卡片描述，20-30字]</p>
+                                <span class="tpl-prod-card-link">Learn More →</span>
+                            </div>
+                        </a>
+
+                        <!-- Product Card 3 -->
+                        <a href="product/pv-module.html" class="tpl-prod-card">
+                            <div class="tpl-prod-card-img">
+                                <div class="tpl-prod-card-img-ph">☀️</div>
+                            </div>
+                            <div class="tpl-prod-card-body">
+                                <div class="tpl-prod-card-tag">[产品类别3，如：PV Module]</div>
+                                <div class="tpl-prod-card-name">[产品名3，如：SkyModule 440W]</div>
+                                <p class="tpl-prod-card-desc">[产品卡片描述，20-30字]</p>
+                                <span class="tpl-prod-card-link">Learn More →</span>
+                            </div>
+                        </a>
+
+                        <!-- Product Card 4 -->
+                        <a href="product/mounting-system.html" class="tpl-prod-card">
+                            <div class="tpl-prod-card-img">
+                                <div class="tpl-prod-card-img-ph">🔩</div>
+                            </div>
+                            <div class="tpl-prod-card-body">
+                                <div class="tpl-prod-card-tag">[产品类别4，如：Mounting]</div>
+                                <div class="tpl-prod-card-name">[产品名4，如：SkyMount Flex Pro]</div>
+                                <p class="tpl-prod-card-desc">[产品卡片描述，20-30字]</p>
+                                <span class="tpl-prod-card-link">Learn More →</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Case Studies — 2 cards (image left, text right)
+                 ============================== -->
+            <section class="tpl-section tpl-cases" id="case-studies">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd">
+                        <h2 class="tpl-section-title">[成功案例标题，如：Real Projects. Real Results.]</h2>
+                        <p class="tpl-section-sub">[案例副标题，说明案例的地区或行业覆盖]</p>
+                    </div>
+                    <div class="tpl-cases-list">
+
+                        <!-- Case Card 1 -->
+                        <div class="tpl-case-card">
+                            <div class="tpl-case-img">
+                                <!-- <img src="[案例图片1]" alt="[案例标题1]" /> -->
+                                <div class="tpl-case-img-ph">🏠</div>
+                                <span class="tpl-case-label">[案例标签1，如：Residential]</span>
+                            </div>
+                            <div class="tpl-case-body">
+                                <div class="tpl-case-meta">
+                                    <span>📍 [项目地点1，如：Frankfurt, Germany]</span>
+                                    <span>📅 [项目时间1，如：Sep 2024]</span>
+                                </div>
+                                <h3 class="tpl-case-title">[案例标题1，如：Empowering Frankfurt Homes with Reliable Energy Storage]</h3>
+                                <p class="tpl-case-desc">
+                                    [案例简介1，60-100字。描述客户背景、面临的挑战、Skyworth提供的解决方案，
+                                    以及最终实现的效果。]
+                                </p>
+                                <div class="tpl-case-stats">
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据1，如：12 kW]</div>
+                                        <div class="tpl-case-stat-label">[指标1，如：System Capacity]</div>
+                                    </div>
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据2，如：85%]</div>
+                                        <div class="tpl-case-stat-label">[指标2，如：Self-sufficiency Rate]</div>
+                                    </div>
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据3，如：€1,200/yr]</div>
+                                        <div class="tpl-case-stat-label">[指标3，如：Annual Savings]</div>
+                                    </div>
+                                </div>
+                                <a href="cases/residentials.html" class="tpl-case-link">Read Full Case Study →</a>
+                            </div>
+                        </div>
+
+                        <!-- Case Card 2 -->
+                        <div class="tpl-case-card">
+                            <div class="tpl-case-img">
+                                <div class="tpl-case-img-ph">🏭</div>
+                                <span class="tpl-case-label">[案例标签2，如：Commercial]</span>
+                            </div>
+                            <div class="tpl-case-body">
+                                <div class="tpl-case-meta">
+                                    <span>📍 [项目地点2，如：Shenzhen, China]</span>
+                                    <span>📅 [项目时间2，如：Jan 2025]</span>
+                                </div>
+                                <h3 class="tpl-case-title">[案例标题2，如：High-Efficiency Rooftop PV for Industrial Use]</h3>
+                                <p class="tpl-case-desc">
+                                    [案例简介2，60-100字。]
+                                </p>
+                                <div class="tpl-case-stats">
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据1，如：500 kW]</div>
+                                        <div class="tpl-case-stat-label">[指标1]</div>
+                                    </div>
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据2，如：72%]</div>
+                                        <div class="tpl-case-stat-label">[指标2]</div>
+                                    </div>
+                                    <div>
+                                        <div class="tpl-case-stat-val">[数据3，如：¥380K/yr]</div>
+                                        <div class="tpl-case-stat-label">[指标3]</div>
+                                    </div>
+                                </div>
+                                <a href="cases/businesses.html" class="tpl-case-link">Read Full Case Study →</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+    </div><!-- /.ys-page-wrap -->
+
+    <script src="assets/js/components.js"></script>
+    <script src="Public/En/js/public.js"></script>
+    <script src="Public/En/js/base-v4.0.min.js"></script>
+    <script src="Public/En/js/common.js"></script>
+    <script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
+
+</body>
+</html>

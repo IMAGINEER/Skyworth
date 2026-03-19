@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.skyworth-pv.com	TRUE	/	FALSE	1999999999	ys_lang	en
+www.skyworth-pv.com	TRUE	/	FALSE	1999999999	PHPSESSID	prtrko5jhk1fisrer7p95o6uqg
+www.skyworth-pv.com	TRUE	/	FALSE	1999999999	SITE_TOTAL_ID	af5ec7bc78512ce86db5d9ddc43b2db6
+

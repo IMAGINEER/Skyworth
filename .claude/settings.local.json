@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node build-components-vn.mjs)",
+      "Bash(node find-duplicates.js)",
+      "Bash(node generate-unique.js)",
+      "Bash(node fix-footer.js)",
+      "Bash(node fix-footer4.js)",
+      "Bash(node fix-help.js)",
+      "Bash(node fix-help2.js)",
+      "Bash(node fix-help3.js)",
+      "Bash(node fix-help4.js)",
+      "Bash(npx localtunnel:*)"
+    ]
+  }
+}

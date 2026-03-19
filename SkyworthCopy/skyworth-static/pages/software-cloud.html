@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="上海雍熙提供技术支持,https://www.yongsy.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="Software Cloud" />
+    <meta name="keywords" content="Software Cloud" />
+    <title>Software Cloud-SKYWORTH</title>
+    <!-- public start -->
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" type="text/css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" type="text/css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" type="text/css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" type="text/css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <!-- public end -->
+</head>
+<!-- 以下代码下code为新增code，请不要删除，保留在当前文件内,！！！请不要放在最头部，放在head标签的下面！！！ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TMBW1Y91V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4TMBW1Y91V');
+</script><meta property="og:title" content="Software Cloud-SKYWORTH" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.skyworth-pv.com/software-cloud" />
+<meta property="og:image" content="https://www.skyworth-pv.com" />
+<meta property="og:image:secure_url" content="https://www.skyworth-pv.com" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="280" />
+<meta property="og:description" content="Software Cloud" />
+<meta property="twitter:image" content="https://www.skyworth-pv.com" />
+<!-- 新增结束 --><!-- body加sticky-body代表，body超出显示 -->
+<body>
+    <!-- ys-page-wrap加act代表导航永远反白 -->
+    <div class="ys-page-wrap userware-page">
+        <!-- 顶部导航 -->
+        <link href="Public/En/cookie/css/privacy.css" type="text/css" rel="stylesheet"/>
+<div class="privacy_modal" id="privacy_modal">
+    <div class="privacy_modal_container">
+            <p>Your privacy is very important to us.When you visit our website,please agree to the use of all cookies.For more information about personal data processing,please go to&nbsp;<a href="privacy.html" target="_blank">Privacy&nbsp;Policy</a></p>        <button onclick="setCook('/En')">Accept</button>
+    </div>
+</div>
+<script>
+    function setCook(lang){
+        setcookies('is_lang',1,30);
+        document.getElementById('privacy_modal').style.display="none";
+    }
+    is_ck();
+    function is_ck(){
+        var ck = getCookies('is_lang');
+        if(ck){
+            document.getElementById('privacy_modal').style.display="none";
+        }
+    }
+    function setcookies(key,value,day){
+        var cookie=key+'='+encodeURIComponent(value);
+        if(day>0){
+             var date=new Date();
+             date.setDate(date.getDate()+day);
+             cookie+=';path=/;expires='+date;
+        }
+        document.cookie=cookie;
+    }
+    //读取cookies 
+    function getCookies(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+</script><div id="header-nav-placeholder"></div>
+<!-- 微信分享，默认关闭后续需要此功能可自行打开 -->
+        <!-- 主体内容 -->
+        <main class="ys-main">
+            <!-- Simulation 模拟组件 - 固定定位覆盖整个视口 -->
+            <section class="pv-simulation" id="pv-simulation-section" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; background: rgba(5, 7, 10, 0.92); z-index: 9999; display: none; opacity: 0; transition: opacity 0.4s ease;">
+                <style>
+                    .pv-simulation { --accent: #00d4ff; --bg: #05070a; --glass: rgba(15, 20, 30, 0.9); }
+                    .pv-simulation .video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+                    .pv-simulation #main-video { width: 100%; height: 100%; object-fit: cover; opacity: 1; }
+                    .pv-simulation .ui-layer { position: absolute; inset: 0; pointer-events: none; padding: 40px; display: grid; grid-template-columns: 280px 1fr 280px; grid-template-rows: 1fr 120px; gap: 20px; z-index: 1; align-items: center; }
+                    .pv-simulation .pointer { pointer-events: auto; }
+                    .pv-simulation .glass-card { background:rgba(10, 15, 25, 0.9); backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 255, 0.25); border-radius: 20px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+                    .pv-simulation .sidebar-left { display: flex; flex-direction: column; gap: 12px; }
+                    .pv-simulation .monitor-item { margin-bottom: 12px; }
+                    .pv-simulation .monitor-label { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 1px; margin-bottom: 6px; text-transform: uppercase; font-weight: 600; }
+                    .pv-simulation .monitor-val { font-size: 24px; font-weight: 800; color: #fff; }
+                    .pv-simulation .device-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+                    .pv-simulation .device-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 10px 6px; border-radius: 10px; cursor: pointer; transition: 0.2s; text-align: center; color: rgba(255,255,255,0.7); font-size: 11px; font-weight: 500; }
+                    .pv-simulation .device-item.active { background: rgba(0, 212, 255, 0.2); border-color: var(--accent); color: #fff; }
+                    .pv-simulation .gauge-val { font-size: 36px; font-weight: 800; color: var(--accent); margin: 6px 0; }
+                    .pv-simulation .chart-box { display: flex; align-items: flex-end; gap: 4px; height: 50px; margin-top: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; }
+                    .pv-simulation .bar { flex: 1; background: rgba(255,255,255,0.1); border-radius: 2px; transition: height 0.6s; }
+                    .pv-simulation .bar.today { background: var(--accent); }
+                    .pv-simulation .timeline-area { grid-column: 1 / span 3; display: flex; justify-content: center; align-items: center; }
+                    .pv-simulation .timeline-box { width: 70%; display: flex; align-items: center; gap: 20px; padding: 15px 30px; border-radius: 80px; background: rgba(10, 15, 25, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(0, 212, 255, 0.2); }
+                    .pv-simulation input[type=range] { flex: 1; accent-color: var(--accent); cursor: pointer; height: 6px; }
+                    .pv-simulation .top-params { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 2; }
+                    .pv-simulation .pill { background: rgba(0,0,0,0.7); padding: 12px 20px; border-radius: 14px; border: 1px solid rgba(0, 212, 255, 0.3); min-width: 140px; text-align: center; backdrop-filter: blur(10px); }
+                    .pv-simulation .pill span { display: block; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+                    .pv-simulation .pill b { font-size: 20px; color: #fff; font-weight: 700; }
+                    .pv-simulation .pill b i { font-style: normal; color: var(--accent); font-size: 12px; margin-left: 4px; }
+                    .pv-simulation .icon-label { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; color: rgba(255,255,255,0.6); font-weight: 500; }
+                    .pv-simulation .icon-label span { font-size: 18px; }
+                    .pv-simulation .sys-status { color: rgba(255,255,255,0.8) !important; font-weight: 600; }
+                    .pv-simulation .close-sim-btn { position: absolute; top: 20px; right: 20px; z-index: 10; width: 44px; height: 44px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+                    .pv-simulation .close-sim-btn:hover { background: rgba(255,255,255,0.1); }
+                    .pv-simulation .close-sim-btn svg { width: 20px; height: 20px; stroke: #fff; }
+                    /* 移动端 - 图标优先 */
+                    @media (max-width: 768px) {
+                        .pv-simulation .ui-layer { grid-template-columns: 1fr; grid-template-rows: auto auto 80px; padding: 15px; gap: 10px; }
+                        .pv-simulation .glass-card { padding: 12px; border-radius: 16px; }
+                        .pv-simulation .monitor-label { font-size: 9px; }
+                        .pv-simulation .monitor-val { font-size: 16px; }
+                        .pv-simulation .gauge-val { font-size: 22px; }
+                        .pv-simulation .device-grid { grid-template-columns: repeat(4, 1fr); }
+                        .pv-simulation .device-item { padding: 8px 4px; font-size: 9px; }
+                        .pv-simulation .device-item span { display: none; }
+                        .pv-simulation .device-item::before { font-size: 16px; display: block; margin-bottom: 2px; }
+                        .pv-simulation .device-item:nth-child(1)::before { content: '❄️'; }
+                        .pv-simulation .device-item:nth-child(2)::before { content: '🚗'; }
+                        .pv-simulation .device-item:nth-child(3)::before { content: '🏊'; }
+                        .pv-simulation .device-item:nth-child(4)::before { content: '🍳'; }
+                        .pv-simulation .timeline-box { width: 90%; padding: 10px 15px; gap: 10px; }
+                        .pv-simulation .timeline-box .icon-label { display: none; }
+                        .pv-simulation .top-params { flex-direction: row; gap: 8px; top: 15px; }
+                        .pv-simulation .pill { min-width: 90px; padding: 8px 12px; }
+                        .pv-simulation .pill span { font-size: 8px; }
+                        .pv-simulation .pill b { font-size: 14px; }
+                        .pv-simulation .pill b i { font-size: 10px; }
+                        .pv-simulation .close-sim-btn { top: 10px; right: 10px; width: 36px; height: 36px; }
+                        .pv-simulation .timeline-area { grid-column: 1; }
+                        .pv-simulation #time-display { font-size: 24px !important; width: 80px !important; }
+                    }
+                </style>
+                <div class="video-container">
+                    <video id="main-video" muted playsinline autoplay>
+                        <source src="Public/Uploads/uploadfile/files/20250815/simulation-video-back.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <button class="close-sim-btn" id="close-simulation" title="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                <div class="top-params">
+                    <div class="pill"><span>PV SYSTEM</span><b>5.67 <small>kWp</small> <i id="pv-eff">0%</i></b></div>
+                    <div class="pill"><span>ENERGY</span><b>10.0 <small>kWh</small> <i id="ess-soc">20%</i></b></div>
+                </div>
+                <div class="ui-layer">
+                    <div class="glass-card pointer sidebar-left">
+                        <div class="monitor-item">
+                            <div class="monitor-label">Grid</div>
+                            <div class="monitor-val" id="val-grid" style="color:#ff4d4d">0.00 kW</div>
+                            <div style="font-size:10px;color:#aaa;margin-top:2px">2,103 VND/kWh</div>
+                        </div>
+                        <div class="monitor-item" style="border-top:1px solid #222;padding-top:12px">
+                            <div class="monitor-label">Load</div>
+                            <div class="monitor-val" id="val-load">0.50 kW</div>
+                            <div class="device-grid">
+                                <div class="device-item" onclick="toggleDev(this,1.5)"><span>❄️ AC</span></div>
+                                <div class="device-item" onclick="toggleDev(this,3.0)"><span>🚗 EV</span></div>
+                                <div class="device-item" onclick="toggleDev(this,0.8)"><span>🏊 Pool</span></div>
+                                <div class="device-item" onclick="toggleDev(this,0.5)"><span>🍳 Kit</span></div>
+                            </div>
+                        </div>
+                        <div class="monitor-item" style="margin-top:auto"><span style="color:#aaa;font-size:10px">Status: </span><span id="sys-status" style="color:var(--accent)">Normal</span></div>
+                    </div>
+                    <div></div>
+                    <div class="glass-card pointer">
+                        <div><div class="monitor-label">Profit</div><div class="gauge-val" id="val-profit">0 VND</div><div class="chart-box" id="chart"></div></div>
+                        <div style="margin-top:25px"><div class="monitor-label">Self-Sufficiency</div><div class="gauge-val" id="val-self" style="color:#4caf50">100%</div><div style="height:4px;background:#111;border-radius:2px;overflow:hidden;margin-top:8px"><div id="self-bar" style="width:100%;height:100%;background:#4caf50"></div></div></div>
+                    </div>
+                    <div class="timeline-area">
+                        <div class="timeline-box glass-card pointer">
+                            <div class="icon-label"><span>🌅</span>6AM</div>
+                            <input type="range" id="time-scrubber" min="360" max="1080" value="360">
+                            <div class="icon-label"><span>🌇</span>6PM</div>
+                            <div style="font-size:28px;font-weight:800;width:90px;text-align:right;color:var(--accent)" id="time-display">06:00</div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                (function(){
+                    const video=document.getElementById('main-video'),scrubber=document.getElementById('time-scrubber'),timeDisplay=document.getElementById('time-display'),chartBox=document.getElementById('chart');
+                    const PV_MAX=5.67,TARIFF=2103;let activeLoad=0.5;
+                    video.playbackRate=0.25;video.currentTime=0;
+                    for(let i=0;i<7;i++){const b=document.createElement('div');b.className='bar'+(i===6?' today':'');b.style.height=(20+Math.random()*50)+'%';chartBox.appendChild(b);}
+                    video.addEventListener('timeupdate',()=>{if(!isUserDragging){const p=video.currentTime/video.duration,m=360+p*720;scrubber.value=m;updateLogic(p,m)}});
+                    let isUserDragging=false;scrubber.addEventListener('mousedown',()=>isUserDragging=true);scrubber.addEventListener('mouseup',()=>isUserDragging=false);
+                    scrubber.addEventListener('input',()=>{const p=(scrubber.value-360)/720;video.currentTime=p*video.duration;updateLogic(p,parseInt(scrubber.value))});
+                    window.toggleDev=function(el,p){el.classList.toggle('active');activeLoad+=el.classList.contains('active')?p:-p;document.getElementById('val-load').innerText=activeLoad.toFixed(2)+" kW";updateLogic()};
+                    function updateLogic(progress,mins){
+                        if(progress===undefined)progress=(scrubber.value-360)/720;if(mins===undefined)mins=parseInt(scrubber.value);
+                        const h=Math.floor(mins/60),m=Math.floor(mins%60);timeDisplay.innerText=h.toString().padStart(2,'0')+':'+m.toString().padStart(2,'0');
+                        const currentPv=Math.max(0,PV_MAX*Math.sin(progress*Math.PI));document.getElementById('pv-eff').innerText=Math.round(currentPv/PV_MAX*100)+"%";
+                        const energyNet=(currentPv/2-activeLoad)*(progress*12),currentSoc=Math.max(5,Math.min(100,20+energyNet/10*100));document.getElementById('ess-soc').innerText=Math.round(currentSoc)+"%";
+                        let gridPower=0,loadGap=activeLoad-currentPv;
+                        if(loadGap>0){if(currentSoc>10){gridPower=Math.min(loadGap,3.0);loadGap-=gridPower;}gridPower+=loadGap;}
+                        const selfSufficiency=(activeLoad>0)?((activeLoad-gridPower)/activeLoad*100):100,cumulativeGen=(PV_MAX*12/Math.PI)*(1-Math.cos(Math.PI*progress)),profit=cumulativeGen*TARIFF;
+                        document.getElementById('val-grid').innerText=gridPower.toFixed(2)+" kW";document.getElementById('val-grid').style.color=gridPower>0?"#ff4d4d":"#4caf50";
+                        document.getElementById('val-profit').innerText=Math.round(profit).toLocaleString()+" VND";document.getElementById('val-self').innerText=Math.round(selfSufficiency)+"%";
+                        document.getElementById('self-bar').style.width=selfSufficiency+"%";document.querySelector('.bar.today').style.height=Math.min(100,(profit/30000)*100)+"%";
+                        document.getElementById('sys-status').innerText=gridPower>0?"Grid Importing":(currentPv>activeLoad?"ESS Charging":"Self-Sustaining");
+                    }
+                })();
+                </script>
+            </section>
+            <!-- page start -->
+            <!-- 内页banner区 -->
+            <!-- 此页面banner有视频结构，与其他页面结构不一致 -->
+            <section class="ys-nybanner ys-nybanner1 userware-ban">
+                <div class="ys-nyban-img">
+                    <img class="ys-nyban-pc yx-case8-fadeInUpimg" src="Public/Uploads/uploadfile/images/20250813/banner-854.png" alt="banner.png">
+                    <!-- 判断不传视频不显示此video标签 -->
+                        <video src="Public/Uploads/uploadfile/files/20250815/wangyeshipin22.mp4" loop muted poster="Public/Uploads/uploadfile/images/20250813/banner-854.png" class="ys-ban-video"></video>
+                    <img class="ys-nyban-ph yx-case8-fadeInUpimg" src="Public/Uploads/uploadfile/images/20250813/250813411411100031-973.jpg" alt="2508134114111000_3(1).jpg">
+                </div>
+                <div class="ys-cont1600 ys-pos-center">
+                    <div class="ys-nyban-title">
+                        <h1 class="ys-fadeup1"><span>SKYWORH CLOUD</span><br>USER SOFTWARE</h1>
+                        <p class="ys-fadeup2"></p>
+                    </div>
+                    <div class="pclb-btn ys-fadeup3">
+                        <div class="pclb-btn-list">
+                            <a href="https://apps.apple.com/cn/app/solavita-cloud/id6499499800?l=en-GB" target="_blank" rel="nofollow" >
+                                <img src="Public/Uploads/uploadfile/images/20250424/AppStoreyingwenheise-987.svg" alt="Download on the App Store button for iOS mobile applications">
+                            </a>
+                        </div><div class="pclb-btn-list">
+                            <a href="https://play.google.com/store/apps/details?id=com.solavita.cloud&amp;pcampaignid=web_share" target="_blank" rel="nofollow" >
+                                <img src="Public/Uploads/uploadfile/images/20250730/b1icon061-526.svg" alt="b1icon061.svg">
+                            </a>
+                        </div><div class="pclb-btn-list">
+                            <a href="https://solavita.solavita-ess.com/login" target="_blank" rel="nofollow" >
+                                <img src="Public/Uploads/uploadfile/images/20250424/Microsoftyingwenheise-400.svg" alt="Microsoft Store download badge with colorful Windows logo and text &quot;Get it from Microsoft&quot;">
+                            </a>
+                        </div>                    </div>
+                    <!-- Solar System Simulation CTA 按钮 -->
+                    <div class="simulation-cta ys-fadeup4" style="margin-top: 30px;">
+                        <a href="javascript:;" class="sim-btn std-btn1" id="open-simulation" style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px 16px 28px; background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); color: #fff; border-radius: 50px; font-size: 18px; font-weight: 600; text-decoration: none; animation: ctaGlow 2s infinite; transition: all 0.3s ease;">
+                            <style>
+                                @keyframes ctaGlow {
+                                    0%, 100% { box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4); }
+                                    50% { box-shadow: 0 4px 40px rgba(0, 212, 255, 0.7), 0 0 60px rgba(0, 212, 255, 0.3); }
+                                }
+                            </style>
+    
+                            Solar System Simulation
+                            <span>👆</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 内容区 -->
+            <section class="userware-real std-padd120-top">
+                <div class="ys-cont1600">
+                    <div class="userware-real-le">
+                        <h2 class="wow ys-fadeup1 std-h3">Real-time Control at <span>Your Fingertips</span>—Your Personal Smart Energy Manager</h2>
+                        <div class="userware-real-text std-h5 wow ys-fadeup1">Comprehensive Data Monitoring</div>
+                        <div class="userware-word std-text1 wow ys-fadeup1">
+                            <p>Stay on top with 24/7 real-time monitoring and instant feedback, keep your devicesand power stations running at peak performance, reducing downtime and boostingefficiency.</p>                        </div>
+                        <div class="std-btn1 wow ys-fadeup1">
+                            <a href="https://solavita.solavita-ess.com/login" target="_blank" title="" class="std-btn1-box">
+                                <p>Try Now</p>
+                                <div class="std-btn1-icon">
+                                    <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                </div>
+                            </a>
+                        </div>                    </div>
+                </div>
+                <div class="userware-real-pic">
+                    <img src="Public/Uploads/uploadfile/images/20250422/baibeijing1.jpg" alt="Hand holding a smartphone displaying real-time solar energy monitoring app with consumption, grid, PV, and battery power charts." class="wow">
+                </div>
+            </section>
+            <section class="userware-multi">
+                <div class="ys-cont1600 userware-multi-top">
+                    <h2 class="wow ys-fadeup1 std-h3">Multi-platform Compatibility</h2>
+                    <div class="wow ys-fadeup1 userware-word">
+                        <p>Experience seamless energy management with Skyworth Cloud. Monitor and optimizeevery aspect of your system with detailed views and settings. Conduct selfchecks toensure peak performance, Download now and take control of your energy!</p>                    </div>
+                </div>
+                <!--<div class="ys-cont1600 userware-multi-bot">-->
+                <!--    <div class="pclb-btn">-->
+                <!--        -->
+                <!--        <div class="pclb-btn-list">-->
+                <!--            <a href="https://apps.apple.com/cn/app/solavita-cloud/id6499499800?l=en-GB" target="_blank" rel="nofollow" >-->
+                <!--                <img src="/Public/Uploads/uploadfile/images/20250424/AppStoreyingwenheise-987.svg" alt="Download on the App Store button for iOS mobile applications">-->
+                <!--            </a>-->
+                <!--        </div>-->
+                <!---->
+                <!--        <div class="pclb-btn-list">-->
+                <!--            <a href="https://play.google.com/store/apps/details?id=com.solavita.cloud&amp;pcampaignid=web_share" target="_blank" rel="nofollow" >-->
+                <!--                <img src="/Public/Uploads/uploadfile/images/20250730/b1icon061-526.svg" alt="b1icon061.svg">-->
+                <!--            </a>-->
+                <!--        </div>-->
+                <!---->
+                <!--        <div class="pclb-btn-list">-->
+                <!--            <a href="https://solavita.solavita-ess.com/login" target="_blank" rel="nofollow" >-->
+                <!--                <img src="/Public/Uploads/uploadfile/images/20250424/Microsoftyingwenheise-400.svg" alt="Microsoft Store download badge with colorful Windows logo and text &quot;Get it from Microsoft&quot;">-->
+                <!--            </a>-->
+                <!--        </div>-->
+                <!---->
+                <!--    </div>-->
+                <!--</div>-->
+                <div class="userware-multi-min">
+                    <div class="userware-multi-img">
+                        <span class="userware-multi-img1">
+                            <img src="Public/Uploads/uploadfile/images/20250418/gb01.svg" alt="gb_01.svg" class="userware-multi-img-bj1">
+                        </span>
+                        <span class="userware-multi-img2">
+                            <img src="Public/Uploads/uploadfile/images/20250418/gb02.svg" alt="gb_02.svg" class="userware-multi-img-bj2">
+                        </span>
+                        <span class="userware-multi-img3">
+                            <img src="Public/Uploads/uploadfile/images/20250418/gb03.svg" alt="gb_03.svg" class="userware-multi-img-bj3">
+                        </span>
+                    </div>
+                    <div class="userware-multi-pic">
+                        <img src="Public/Uploads/uploadfile/images/20250422/f1img03.png" alt="Solavita Cloud app displaying energy history graph on smartphone, showing real-time data for consumption, grid, PV, and battery power." class="userware-multi-pic-img1">
+                        <img src="Public/Uploads/uploadfile/images/20250418/f1img02.png" alt="Solavita Cloud interface on tablet showing smart home energy data including revenue, battery status, and energy balance statistics." class="userware-multi-pic-img2">
+                    </div>
+                </div>
+            </section>
+            <section class="product-cust std-padd120-top">
+                <div class="product-cust-cont">
+                    <div class="product-cloud-le">
+                        <div class="product-cloud-le-box">
+                            <img src="Public/Uploads/uploadfile/images/20250424/f1img041.jpg" alt="Solavita Cloud web and mobile dashboard for real-time solar energy system monitoring, featuring plant data and power flow diagrams">
+                            <!-- 弹窗视频按钮 -->
+                                <img class="ys-video-btn" src="Public/En/images/mod_icon_video.svg" data-src="/Public/Uploads/uploadfile/files/20250424/shipin2.mp4" data-type="video">                        </div>
+                    </div>
+                    <div class="product-cloud-ri wow ys-fadeup1">
+                        <div class="product-cloud-ri-cont">
+                            <div class="pcrc-tp">
+                                <h2 class="std-h3">Proactive Maintenance Fault Prevention</h2>
+                                <div class="pcrc-tab std-text1">
+                                    <p>Product Features</p>
+                                </div>
+                                <div class="pcrc-word std-text1">
+                                    <p>Receive early warnings and perform preventive maintenance to avoid unexpected issues. Skyworth Cloud helps you stay ahead of potential problems, ensuring reliability and safety.</p>
+                                </div>
+                            </div>
+                            <div class="std-btn2">
+                                <a href="https://solavita.solavita-ess.com/login" target="_blank" title="" class="std-btn2-box">
+                                    <p>Try Now</p>
+                                    <div class="std-btn2-icon">
+                                        <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                        <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="userware-prod std-padd120-top">
+                <div class="ys-cont1600">
+                    <h2 class="wow ys-fadeup1 std-h3 std-mar40">Realted Products</h2>
+                    <ul class="userware-prod-ul wow ys-fadeup1">
+                        <li class="userware-prod-ul-li ys-slick-item">
+                                <a href="product/mounting-system.html" target="_self" class="upul-cont">
+                                    <div class="upul-cont-top">
+                                        <div class="ys-imgbox-cover">
+                                            <img src="Public/En/images/f1.png" alt="">
+                                            <img src="Public/Uploads/uploadfile/images/20250425/zujiantu.png" alt="Close-up of a black-frame solavita solar panel mounted on an aluminum rail using a metal clamp bracket">
+                                        </div>
+                                        <!-- <div class="upul-cont-top-icon"></div> -->
+                                        <!-- <div class="upul-cont-top-btn">
+                                            <ul class="upul-cont-top-ul">
+                                                <li class="uctu-li">
+                                                    <div class="std-btn3 white">
+                                                        <a href="" title="" class="std-btn3-box">
+                                                            <p>Learn More</p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="uctu-li">
+                                                    <div class="std-btn1">
+                                                        <a href="" title="" class="std-btn1-box">
+                                                            <p>Add to Wishlist</p>
+                                                            <div class="std-btn1-icon">
+                                                                <img src="/Public/En/images/b1_icon_02.svg" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="upul-cont-top-text std-h5">Mounting System</div>
+                                </a>
+                            </li><li class="userware-prod-ul-li ys-slick-item">
+                                <a href="product/pv-module.html" target="_self" class="upul-cont">
+                                    <div class="upul-cont-top">
+                                        <div class="ys-imgbox-cover">
+                                            <img src="Public/En/images/f1.png" alt="">
+                                            <img src="Public/Uploads/uploadfile/images/20250425/fangansangechanpin02-859.jpg" alt="Solavita silver-frame solar panel showing front cell layout and rear backsheet design">
+                                        </div>
+                                        <!-- <div class="upul-cont-top-icon"></div> -->
+                                        <!-- <div class="upul-cont-top-btn">
+                                            <ul class="upul-cont-top-ul">
+                                                <li class="uctu-li">
+                                                    <div class="std-btn3 white">
+                                                        <a href="" title="" class="std-btn3-box">
+                                                            <p>Learn More</p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="uctu-li">
+                                                    <div class="std-btn1">
+                                                        <a href="" title="" class="std-btn1-box">
+                                                            <p>Add to Wishlist</p>
+                                                            <div class="std-btn1-icon">
+                                                                <img src="/Public/En/images/b1_icon_02.svg" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="upul-cont-top-text std-h5">PV Module</div>
+                                </a>
+                            </li><li class="userware-prod-ul-li ys-slick-item">
+                                <a href="product/pv-inverter.html" target="_self" class="upul-cont">
+                                    <div class="upul-cont-top">
+                                        <div class="ys-imgbox-cover">
+                                            <img src="Public/En/images/f1.png" alt="">
+                                            <img src="Public/Uploads/uploadfile/images/20250902/PVInverter.jpg" alt="PV Inverter.jpg">
+                                        </div>
+                                        <!-- <div class="upul-cont-top-icon"></div> -->
+                                        <!-- <div class="upul-cont-top-btn">
+                                            <ul class="upul-cont-top-ul">
+                                                <li class="uctu-li">
+                                                    <div class="std-btn3 white">
+                                                        <a href="" title="" class="std-btn3-box">
+                                                            <p>Learn More</p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="uctu-li">
+                                                    <div class="std-btn1">
+                                                        <a href="" title="" class="std-btn1-box">
+                                                            <p>Add to Wishlist</p>
+                                                            <div class="std-btn1-icon">
+                                                                <img src="/Public/En/images/b1_icon_02.svg" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="upul-cont-top-text std-h5">PV Inverter</div>
+                                </a>
+                            </li>                    </ul>
+                </div>
+            </section>
+            <!-- 此页面联系板块结构与其他页面按钮结构不一致 -->
+            <section class="mod-nyctact">
+                <div class="mod-nyctact-pic">
+                    <img src="Public/Uploads/uploadfile/images/20250424/f1img0501.jpg" alt="Hand holding smartphone showing Solavita Cloud app with solar plant status and energy statistics in a cozy indoor environment">
+                    <img src="Public/Uploads/uploadfile/images/20250424/f1img05-877.png" alt="Hand holding smartphone displaying Solavita Cloud app on blue background, showcasing solar plant statistics and monitoring interface">
+                </div>
+                <div class="mod-nyctact-tit">Quickly Experience <br><span>Skyworth Cloud</span></div>
+                <div class="mod-nyctact-bot">
+                    <div class="mod-nyctact-bot-btn">
+                        <div class="pclb-btn">
+                            <div class="pclb-btn-list">
+                                <a href="https://apps.apple.com/cn/app/solavita-cloud/id6499499800?l=en-GB" target="_blank" rel="nofollow" >
+                                    <img src="Public/Uploads/uploadfile/images/20250422/AppStoreyingwenheise.svg" alt="Download on the App Store button for iOS mobile applications">
+                                </a>
+                            </div><div class="pclb-btn-list">
+                                <a href="https://play.google.com/store/apps/details?id=com.solavita.cloud&amp;pcampaignid=web_share" target="_blank" rel="nofollow" >
+                                    <img src="Public/Uploads/uploadfile/images/20250422/b1icon061-72.svg" alt="Get it on Google Play button for Android app downloads.">
+                                </a>
+                            </div><div class="pclb-btn-list">
+                                <a href="https://solavita.solavita-ess.com/login" target="_blank" rel="nofollow" >
+                                    <img src="Public/Uploads/uploadfile/images/20250422/Microsoftyingwenheise.svg" alt="Microsoft Store download badge with colorful Windows logo and text &quot;Get it from Microsoft&quot;">
+                                </a>
+                            </div>                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- 页脚 -->
+        <div id="footer-placeholder"></div>
+<script>
+    $('.footsbumitform').click(function(){
+        let email1 = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        if (!email1.test($('#form2 #form2_email').val())) {   
+            ysalert('The email format is incorrect');
+            return false;         
+        }
+        emaildy('form2');
+    })
+</script>    </div>
+    <!-- 右下角help -->
+    <div class="mod-help help-close">
+    <div class="help-btn">
+        <div class="help-btn-img ys-imgbox-cover">
+            <img src="Public/En/images/0square.png" alt="">
+            <img src="Public/En/images/a1_icon_08.svg" alt="">
+        </div>
+        <div class="help-btn-kuo"></div>
+    </div>
+    <div class="help-pop">
+        <div class="help-pop-close">
+            <img src="Public/En/images/close.svg" alt="">
+        </div>
+        <div class="help-pop-text">
+            <p><a href="contact-us.html" target="">How can we help you today?</a></p>
+        </div>
+    </div>
+</div>    <!-- public start -->
+    <script>
+               window.onload = function() {
+                    dataStatistics("/En/Index/dataStatistics?&catid=13");
+                }
+            </script><!--
+实现静态化关闭站点，以及判断ip的js文件
+使用时，打开即可
+-->
+<script type="text/javascript" src="Public/En/Yongsy/Yongsy.js"></script>
+<script type="text/javascript" src="Public/jqueryui/layer/layer.js"></script>
+<script src="Public/En/js/public.js"></script>
+<script src="Public/En/js/base-v4.0.min.js"></script>
+<script src="Public/En/js/common.js"></script>
+<script>
+    function on_search() {
+        var wd = $("#keywords").val();
+        if (wd.length == 0) {
+            alert("Please enter the key words!");
+        } else {
+            var url= "/En/Index/search";
+            queryData.query(url,wd);
+        }
+    }
+    function phsearch() {
+        var wd = $("#phkeywords").val();
+        if (wd.length == 0) {
+            alert("Please enter the key words!");
+        } else {
+            var url= "/En/Index/search";
+            queryData.query(url,wd);
+        }
+    }
+    $("#keywords").keyup(function (event) {
+        if (event.keyCode == 13) {
+            var wd = $("#keywords").val();
+            if (wd.length == 0) {
+                alert("Please enter the key words!");
+            } else {
+                var url= "/En/Index/search";
+                queryData.query(url,wd);
+            }
+        }
+    });
+  </script>
+<script>
+function ysalert(msg){
+    layerHandel=layer.alert(
+            msg,
+            {
+                'title':"information",
+                'btn':["OK"]
+            },function(){
+                layer.close(layerHandel);
+            }
+    );
+}
+function emaildy(formId){
+    var loading = false;
+    if (!loading) {
+        loading = true;
+        loadModal = layer.open({
+            type: 3,
+        });
+        $.ajax({
+            url: "/En/Index/newformView",
+            data: $("#" + formId).serialize(),
+            dataType: "json",
+            type: "POST",
+            success: function(data) {
+                setTimeout(function() {
+                    layer.close(loadModal);
+                }, 100);
+                loading = false;
+                layer.alert(
+                    data.info, {
+                        'title': "information",
+                        'btn': ["OK"]
+                    }
+                );
+                if (data.status == "success") {
+                    setTimeout('location.reload()', 1500);
+                }
+            },
+            error: function(data) {
+                setTimeout(function() {
+                    layer.close(loadModal);
+                }, 100);
+                loading = false;
+
+                layer.open({
+                    title: "调试模式",
+                    content: data.responseText
+                })
+            }
+        });
+    }
+}
+</script>    <!-- public end -->
+    <script>
+        $(function(){
+
+
+            // banner
+            banInit()
+            function banInit(){
+                $('.userware-ban').appear(function(){
+                    if($(window).width() > 1199){
+                        var video  = $('.userware-ban').find("video").get(0);
+                        if(video){
+                            $(video).get(0).play();
+                        }
+                    }
+                })
+            }
+
+            // Real-time Control at Your Fingertips 
+            topInit()
+            function topInit(){
+                $(window).on('scroll', function () {
+                    getParas()
+                })
+                var topArr1 = [];
+                var $container = $(".userware-real");
+                var beforeIndex = 0;
+                var nowIndex = 0;
+                function getParas() {
+                    $(".userware-real").each(function (index, item) {
+                        var top = $(this).offset().top;
+                        topArr1[index] = top;
+                        for (var i = 0; i < topArr1.length; i++) {
+                            if ($(window).scrollTop() > topArr1[i] - $(window).height() / 2) {
+                                nowIndex = i;
+                                $(".userware-real").eq(i).addClass("acts");
+                            }
+                        }
+                    });
+                }
+            }
+            
+            // Multi-platform Compatibility
+            showInit()
+            function showInit(){
+                $(window).on('scroll', function () {
+                    getParas()
+                })
+                var topArr1 = [];
+                var $container = $(".userware-multi");
+                var beforeIndex = 0;
+                var nowIndex = 0;
+                function getParas() {
+                    $(".userware-multi").each(function (index, item) {
+                        var top = $(this).offset().top;
+                        topArr1[index] = top;
+                        for (var i = 0; i < topArr1.length; i++) {
+                            if ($(window).scrollTop() > topArr1[i] - $(window).height() / 2) {
+                                nowIndex = i;
+                                $(".userware-multi").eq(i).addClass("acts");
+                            }
+                        }
+                    });
+                }
+
+                if($('.userware-multi-pic-img1').length > 0){
+                    var tween = gsap.to('.userware-multi-pic-img1', {
+                    scrollTrigger: {
+                        trigger: '.userware-multi-pic-img1', // 指定触发动画的元素
+                        start: 'top center', // 指定动画开始的滚动位置
+                        end: 'bottom 10%', // 指定动画结束的滚动位置，'+=200' 表示从 '.box' 元素底部开始 200px 处结束
+                        scrub: 1, // 触发器1秒后跟上滚动条
+                    },
+                    y: -100, 
+                    scrub: 2,
+                    duration: 3, 
+                    ease: 'power1.inOut', // 缓动函数
+                    });
+                }
+                if($('.userware-multi-pic-img2').length > 0){
+                    var tween = gsap.to('.userware-multi-pic-img2', {
+                    scrollTrigger: {
+                        trigger: '.userware-multi-pic-img2', // 指定触发动画的元素
+                        start: 'top center', // 指定动画开始的滚动位置
+                        end: 'bottom 10%', // 指定动画结束的滚动位置，'+=200' 表示从 '.box' 元素底部开始 200px 处结束
+                        scrub: 1, // 触发器1秒后跟上滚动条
+                    },
+                    y:  100, 
+                    scrub: 2,
+                    duration: 3, 
+                    ease: 'power1.inOut', // 缓动函数
+                    });
+                } 
+            }
+            
+
+
+            // 弹窗视频
+            ys.videomodal(".ys-video-btn",true);
+
+            // Realted Products
+            prodInit()
+            function prodInit(){
+                $('.userware-prod-ul').slick({
+                    dots: true,
+                    infinite: false,
+                    speed: 800,
+                    slidesToShow: 3,
+                    responsive: [
+                        {
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                        },
+                        {
+                        breakpoint: 481,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                        }
+                    ]
+                });
+            }
+            // Quickly Experience Solavita Cloud
+            ctactInit()
+            function ctactInit(){
+                if($('.mod-nyctact').length > 0){
+                    var tween = gsap.to('.mod-nyctact-tit', {
+                    scrollTrigger: {
+                        trigger: '.mod-nyctact-tit', // 指定触发动画的元素
+                        start: 'top center', // 指定动画开始的滚动位置
+                        end: 'bottom 10%', // 指定动画结束的滚动位置，'+=200' 表示从 '.box' 元素底部开始 200px 处结束
+                        scrub: 1, // 触发器1秒后跟上滚动条
+                    },
+                    y: 100, 
+                    scrub: 2,
+                    duration: 3, 
+                    ease: 'power1.inOut', // 缓动函数
+                    });
+                }
+            }
+        })
+    </script>
+    <script>
+        $('.userware-prod-ul').on('click','.likepro1',function(){
+            $(this).parents('.like-status').toggleClass('act')
+            if($(this).parents('.like-status').hasClass('act')){
+                var type=1;
+            }else{
+                var type=2;
+            }
+            var id=$(this).data('id');
+            $.ajax({
+                url: "/En/Index/likepro1",
+                data: {id:id,type:type},
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                },
+                error: function (data) {
+                }
+            });
+        })
+        $('.userware-prod-ul').on('click','.likepro2',function(){
+            $(this).parents('.like-status').toggleClass('act')
+            if($(this).parents('.like-status').hasClass('act')){
+                var type=1;
+            }else{
+                var type=2;
+            }
+            var id=$(this).data('id');
+            $.ajax({
+                url: "/En/Index/likepro2",
+                data: {id:id,type:type},
+                dataType: "json",
+                type: "POST",
+                success: function (data) {
+                },
+                error: function (data) {
+                }
+            });
+        })
+    </script>
+<script src="assets/js/components-vn.js"></script>
+<script src="Public/En/js/public.js"></script>
+<script src="Public/En/js/base-v4.0.min.js"></script>
+<script src="Public/En/js/common.js"></script>
+<script>$(function(){$(".ys-hd-pc").addClass("ishover").off("mouseenter mouseleave mousemove");});</script>
+
+<!-- Solar System Simulation 交互逻辑 -->
+<script>
+// 弹窗 HTML 模板 - 带报告预览
+function createPopupModal() {
+    const selfSufficiency = document.getElementById('val-self') ? document.getElementById('val-self').innerText : '85%';
+    const dailyProfit = document.getElementById('val-profit') ? document.getElementById('val-profit').innerText : '45,000 VND';
+    const yearlyProfit = Math.round(parseFloat(dailyProfit.replace(/[^0-9.]/g, '')) * 365).toLocaleString();
+
+    const needsBattery = parseInt(selfSufficiency.replace('%', '')) < 80;
+    const treesPlanted = Math.round(parseFloat(dailyProfit.replace(/[^0-9.]/g, '')) / 1000 * 12);
+
+    return `
+    <div id="simulation-popup" style="position: fixed; inset: 0; z-index: 99999; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.85); backdrop-filter: blur(15px);">
+        <div style="background: linear-gradient(160deg, #0f1419 0%, #1a2332 50%, #0d1117 100%); border-radius: 28px; padding: 45px; max-width: 680px; width: 95%; box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.15); position: relative; animation: popupFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);">
+            <style>
+                @keyframes popupFadeIn {
+                    from { opacity: 0; transform: scale(0.92) translateY(25px); }
+                    to { opacity: 1; transform: scale(1) translateY(0); }
+                }
+                @keyframes pulse {
+                    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+                    50% { box-shadow: 0 0 0 12px rgba(0, 212, 255, 0); }
+                }
+                @keyframes shimmer {
+                    0% { background-position: -200% 0; }
+                    100% { background-position: 200% 0; }
+                }
+                .report-header { text-align: center; margin-bottom: 30px; }
+                .report-badge { display: inline-block; background: linear-gradient(90deg, rgba(0,212,255,0.15), rgba(0,180,220,0.15)); border: 1px solid rgba(0,212,255,0.3); padding: 8px 20px; border-radius: 50px; font-size: 11px; color: #00d4ff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+                .report-title { font-size: 26px; color: #fff; font-weight: 700; line-height: 1.3; margin-bottom: 8px; }
+                .report-sub { color: rgba(255,255,255,0.5); font-size: 14px; }
+                .report-preview { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 25px; margin-bottom: 30px; }
+                .report-section { display: flex; gap: 15px; margin-bottom: 18px; align-items: flex-start; }
+                .report-section:last-child { margin-bottom: 0; }
+                .report-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+                .report-icon svg { width: 22px; height: 22px; }
+                .report-content { flex: 1; }
+                .report-label { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+                .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+                .report-cta-area { display: flex; flex-direction: column; gap: 12px; }
+                .btn-primary { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 32px; background: linear-gradient(135deg, #00d4ff 0%, #0088cc 100%); color: #fff; border-radius: 14px; font-size: 16px; font-weight: 600; text-decoration: none; animation: pulse 2s infinite; border: none; cursor: pointer; width: 100%; }
+                .btn-secondary { padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; font-size: 14px; text-decoration: none; transition: all 0.3s; cursor: pointer; width: 100%; text-align: center; }
+                .btn-secondary:hover { background: rgba(255,255,255,0.05); color: #fff; }
+            </style>
+            <div class="report-header">
+                <div class="report-badge">电子快报</div>
+                <h3 class="report-title">想要获取为您定制的<br><span style="color:#00d4ff;">24 小时完整能源建议书</span>吗？</h3>
+                <p class="report-sub">我们的专家团队将根据您的模拟结果，提供个性化方案</p>
+            </div>
+
+            <div class="report-preview">
+                <div class="report-grid">
+                    <div class="report-section">
+                        <div class="report-icon" style="background: linear-gradient(135deg, #00d4ff20, #00d4ff10); border:1px solid #00d4ff30;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-label">场景摘要 (Scenario Summary)</div>
+                    
+                        </div>
+                    </div>
+
+                    <div class="report-section">
+                        <div class="report-icon" style="background: linear-gradient(135deg, #4caf5020, #4caf5010); border:1px solid #4caf5030;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-label">能源战报 (Energy Battle Report)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="report-grid">
+                    <div class="report-section" style="margin-bottom:0;">
+                        <div class="report-icon" style="background: linear-gradient(135deg, #ff980020, #ff980010); border:1px solid #ff980030;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9800" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-label">经济预测 (Financial Forecast)</div>
+                        </div>
+                    </div>
+                    <div class="report-section" style="margin-bottom:0;">
+                        <div class="report-icon" style="background: linear-gradient(135deg, #e91e6320, #e91e6310); border:1px solid #e91e6330;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#e91e63" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-label">专业建议 (Expert Advice)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-cta-area">
+                <a href="https://wa.me/84868686868" target="_blank" rel="nofollow" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    免费定制 (WhatsApp)
+                </a>
+                <a href="javascript:;" id="close-popup" class="btn-secondary">再次体验</a>
+            </div>
+            <button id="popup-close-x" style="position: absolute; top: 18px; right: 18px; background: rgba(255,255,255,0.05); border: none; color: rgba(255,255,255,0.4); font-size: 22px; cursor: pointer; padding: 8px; border-radius: 50%; transition: all 0.3s;">&times;</button>
+        </div>
+    </div>
+    `;
+}
+
+$(function() {
+    // 点击打开 Simulation
+    $('#open-simulation').on('click', function() {
+        var $simSection = $('#pv-simulation-section');
+        var $banner = $('.userware-ban');
+
+        // 显示 simulation 区域（使用 opacity 动画）
+        $simSection.css('display', 'block');
+        setTimeout(function() {
+            $simSection.css('opacity', '1');
+        }, 10);
+
+        // 播放背景视频
+        var bgVideo = $banner.find('video').get(0);
+        if(bgVideo) {
+            bgVideo.pause();
+            bgVideo.currentTime = 0;
+        }
+
+        // 播放 simulation 视频
+        var simVideo = document.getElementById('main-video');
+        if(simVideo) {
+            simVideo.currentTime = 0;
+            simVideo.play();
+        }
+
+        // 滚动到顶部
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
+
+    // 关闭 Simulation
+    $('#close-simulation').on('click', function() {
+        var $simSection = $('#pv-simulation-section');
+        var $banner = $('.userware-ban');
+
+        // 隐藏 simulation 区域
+        $simSection.css('opacity', '0');
+        setTimeout(function() {
+            $simSection.css('display', 'none');
+        }, 400);
+
+        // 暂停 simulation 视频
+        var simVideo = document.getElementById('main-video');
+        if(simVideo) {
+            simVideo.pause();
+        }
+
+        // 恢复背景视频播放
+        var bgVideo = $banner.find('video').get(0);
+        if(bgVideo) {
+            bgVideo.play();
+        }
+    });
+
+    // 视频结束事件监听（使用 MutationObserver 监听 DOM）
+    var popupShown = false;
+    var observer = new MutationObserver(function(mutations) {
+        var video = document.getElementById('main-video');
+        if (!video) return;
+
+        video.addEventListener('ended', function() {
+            if (popupShown) return;
+            popupShown = true;
+
+            // 添加弹窗到页面
+            $('body').append(createPopupModal());
+            $('#simulation-popup').css('display', 'flex');
+
+            // 关闭弹窗
+            $('#popup-close-x, #close-popup').on('click', function() {
+                $('#simulation-popup').fadeOut(300, function() {
+                    $(this).remove();
+                });
+                popupShown = false;
+
+                // 关闭 Simulation 区域
+                var $simSection = $('#pv-simulation-section');
+                var $banner = $('.userware-ban');
+                $simSection.css('opacity', '0');
+                setTimeout(function() {
+                    $simSection.css('display', 'none');
+                }, 400);
+                var simVideo = document.getElementById('main-video');
+                if(simVideo) { simVideo.pause(); }
+                var bgVideo = $banner.find('video').get(0);
+                if(bgVideo) { bgVideo.play(); }
+            });
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+</body>
+
+
+
+</html><script>console.log('%c文件路径：./En/View/Page/solavita_cloud','color:green')</script>

@@ -1,0 +1,104 @@
+=== PDF: 海外产品培训.pdf ===
+总页数: 34
+
+--- 第 1 页 ---
+
+
+--- 第 2 页 ---
+1   2  SUN Mate Introduction SUN Ward Introduction
+
+--- 第 3 页 ---
+SUN Mate Introduction  Adjustable | Aesthetic | Versatile | Cost-effective
+
+--- 第 4 页 ---
+Quick to install, Hassle-Free Choice  Power Range: 900W/1800W  Build your power station as easily as assembling building blocks. A small-scale residential PV solution, perfectly tailored for balcony installations with system capacity under 2kW.  All-in-one Quick-install Solution  Product Overview
+
+--- 第 5 页 ---
+Product Four Features  Adjustable   Aesthetic   Flexible   Cost-effective  The optimal installation angle can be easily adjusted to suit a variety of installation environments. The power generation efficiency of solar panels can be maximized based on sunlight availability. Bauhaus-inspired minimalist design for a sleek, elegant look that seamlessly complements modern home styles. Generate electricity from sunlight anytime and connect to household appliances instantly. Suitable for a wide range of scenarios, the system is compact and easy to store when not in use, with no bulky footprint. The standard version is ready to use immediately upon generation and enables free electricity usage during the midday peak period. The energy storage version enables peak-load shifting, perfectly alleviating electricity anxiety during the evening peak period.
+
+--- 第 6 页 ---
+Bauhaus-inspired Minimalist Design  Meticulously crafted by our Skyworth design team – a Red Dot Design Award winner – to seamlessly integrate with a wide range of modern home styles.  Modules:  Feature: Aesthetic
+
+--- 第 7 页 ---
+All-black design (without grid lines) High-power & anti-microcrack High resistance to wind and snow Plug-and-play  Sunshade Mounting
+
+--- 第 8 页 ---
+Scenes Design   (Suitable for shop fronts, windowsill exterior facades, and self-built house entrances)  Store fronts   Windowsill exterior facades Self-built house entrances Modules and support  All-steel support Stable structure with enhanced wind and snow resistance All-black minimalist design (without grid lines) High-power anti-microcrack modules  Sunshade Mounting
+
+--- 第 9 页 ---
+String-style frame Rounded corners for collision prevention Foldable high-strength support High resistance to wind and snow Plug-and-play  Railing Mounting
+
+--- 第 10 页 ---
+Scenes Design   (Suitable for villas, apartments, and other residences with open balconies)  Villa balcony   Apartment balcony   Utility balcony Support: Bauhaus design and foldable support facilitates installation and storage.  Serrated pattern   Rounded hook Texture splicing Hinge connecting module and support  The smooth contours of the J-shaped hook minimize visual intrusion while preventing user injury from accidental impacts. The modules are attached to the support with hinges so that the support becomes more streamlined, giving the product a cleaner and smoother visual appearance. The foldable design and ex-work pre-installation simplify the user assembly, making packaging and transportation more convenient.  Railing Mounting
+
+--- 第 11 页 ---
+Minimalist design Foldable and easy to store Tool-free three-step installation Multi-angle adjustable Plug-and-play  Ground Mounting
+
+--- 第 12 页 ---
+The product offers four adjustable angles at 25°, 30°, 35°, and 40° to suit the optimal sunlight angles in different regions and seasons, maximizing solar energy utilization and improving power generation efficiency. It is adapted to different scenarios, orientations, and structures, enabling users to make corresponding adjustments according to the space and balancing practicality and flexibility.  · ·  Four-position pin adjustment Support slotted slideway adjustment  · ·  Adjustable: 25°, 30°, 35°, 40° Four-angle Adjustment Adapted to optimal sunlight angle in various conditions Ground Mounting
+
+--- 第 13 页 ---
+Villa courtyard   Self-built house courtyard camping scene  Scenes Floor mounting design  PV & Mounting  Minimalist design Foldable for easy storage Tool-free, three-step installation with adjustable angles of 25°, 30°, 35°, and 40°  · · · ·   The four holes should be finely adjusted  Ground Mounting
+
+--- 第 14 页 ---
+Skyworth Cloud   App monitoring Public power grid Zero export limitation Household socket Household socket AC output AC output  225V power supply  By following the principle of proximity while providing a higher voltage, the supply current, preceding over the utility power, is consumed by the residential loads in the circuit. Residential loads (using smart home devices as an example)  Integrated energy storage and inverter system Microinverter 225V power supply  Feature: Flexible
+
+--- 第 15 页 ---
+Feature: Flexible  Exclusive supplier providing a zero export device Adaptive adjustment for stable returns Fully eliminate the risk of reverse power flow Integrated AI-powered monitoring technology  PV module PV module Inverter Inverter Household load Household load Grid Grid Zero export device  Reverse current  Forward current circuit  Zero-export Management Principle   Zero-export Management Solution  Precise zero-export management  Second-level rapid current response Completely eliminate power grid fluctuations caused by export  Adaptive adjustment  Built-in dynamic power regulation module Adjust the zero-export management threshold according to actual electricity usage  Integrated monitoring  Integrated local network/Wi-Fi communication module  Forward current circuit  Reverse current  PV green power PV green power  Why Is a Zero Export Limitation Necessary?  Ensure grid safety   Ensure compliant electricity billing  The zero export limiter continuously monitors whether current is being exported and dynamically adjusts the inverter’s output power to match real-time load consumption
+
+--- 第 16 页 ---
+Control at your fingertips, anytime, anywhere  •   Full visibility into your rooftop PV station status  •   One-tap check of daily/monthly/annual generation and revenue  •   Dual-view upgrade: mobile & desktop full access  •   AI O&M for worry-free management  Feature: Flexible  Smart Operation
+
+--- 第 17 页 ---
+A self-installation kit Three major components  •   Modules  •   Microinverter  •   zero export device.  Type   Series   Series Model   System Capacity(Wp)   Microinverter(W)   Export Limitation Device  RAILING MOUNTING 1-to-2   SWM800-R   900   800   Standard 1-to-4   SWM1600-R   1800   2000   Standard SUNSHADE MOUNTING 1-to-2   SWM800-S   900   800   Standard 1-to-4   SWM1600-S   1800   2000   Standard GROUND MOUNTING 1-to-2   SWM800-G   900   800   Standard 1-to-4   SWM1600-G   1800   2000   Standard  Modular Design  1-to-2   1-to-4  Notes: Installation in Thailand requires hardwired connection to the AC distribution box—no plug-and-play allowed
+
+--- 第 18 页 ---
+TV   *2  Refrigerator   *1   20H  Light Bulbs   *6  1-to-2 (900W)  Daily Power Generation  3.0kWh  Light Bulbs   *6  AC   *1  Refrigerator   *2  1-to-4 (1800W)  Daily Power Generation  6.0kWh  8H 15H 7H 20H 16H  1P AC 600-800W  Feature:Cost-effective
+
+--- 第 19 页 ---
+Electricity cost as low as  0.45   THB/unit  Total 30-year return  331,128   THB One-time investment  35,999   THB  9.2x  Return on Investment  Feature: Cost-effective  4.2 0.45 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 Original Price   Current Price  Electricity Price Contrast （THB）
+
+--- 第 20 页 ---
+55118 110376 165564 220752 275940 331128  0 50000 100000 150000 200000 250000 300000 350000  5   10   15   20   25   30  THB  Monthly savings  459 THB on electricity  1-to-2 900W  Monthly savings  919 THB on electricity  1-to-4 1800W  Feature Four: Cost-effective  ROI Calculation
+
+--- 第 21 页 ---
+SUN Ward Introduction
+
+--- 第 22 页 ---
+Unique & Tailor-Made  Power Range   2kW-30kW  SUN WARD  Tailored for medium to large residential PV scenarios Integrated design, construction, and O&M Compatible with both flat and pitched roof configurations  Customized Photovoltaic Solution  SUN Ward Overview
+
+--- 第 23 页 ---
+SUN Ward Scenario  Scenario 1: On-Grid PV System  This is the most basic application scenario of PV power generation systems.  Grid-tied PV systems without energy storage are the global mainstream for residential installations. They feature an asset-light model with high adaptability, making them ideal for areas with a stable, mature grid and no requirement for backup power.  PV   Grid connected inverter  State Grid  Scenario 2: PV&ESS PV System  This is a power station solution scenario that coexists with mains power.  On-grid PV plants with added energy storage form composite power facilities, featuring grid connection plus energy storage regulation. The PV-storage synergy retains photovoltaic’s clean energy attributes and offsets its unstable output, serving as a key development model for high penetration of new energy into grids.  PV   Hybrid inverter  Grid Load ESS
+
+--- 第 24 页 ---
+Scenario 3: Off-grid PV system  Independent power supply scenarios that are disconnected from the power grid  PV   Hybrid  Load ESS  SUN Ward Scenario  1. Direct PV Power Supply Mode Sufficient daylight: PV power directly powers the load, surplus charges the energy storage battery. 2. Battery Power Mode Night/insufficient PV power (cloudy/rainy): battery alone or with PV system jointly powers the load. 3. Hybrid Power Supply Mode System paired with grid/diesel generator: when battery is low, grid/diesel generator powers the load.
+
+--- 第 25 页 ---
+a  SUN ROOF  SUN LOFT  Your Private Sky Garden Power your roof, make it pay  SUN Ward Roof Style: Flat and Sloped Roof Scenarios
+
+--- 第 26 页 ---
+SUN Loft Core Advantages Multiple Functions  Rainproof, moisture-proof, cooling, and heat-insulating.  Flexible Space  2.7m high support creates ample leisure space for a sky garden or recreational area.  Reliable & Durable  TÜV Rheinland certified: corrosion-resistant, moisture- proof, and typhoon-resistant (Grade 12).  Maximized Revenue  5° gable design ensures year-round sunlight, boosting power generation and revenue.  SUN Loft
+
+--- 第 27 页 ---
+Solavita Cloud APP PV&Mounting   Battery Inverter  High Energy Yield  •   High Efficency N-type PV Panel  •   Stable Output at High Temperatures  High Efficiency  •   Max. Efficiency 98.6%  •   1.5X DC Overmatching  •   Dual MPPT Design,  •   Fault Redundancy  •   Stability Enhancement  Reliable Battery  •   Premium Cells, LiFePO ₄  batteries with multi-layer safety protection  •   10-Year Warranty  One-stop Solution  Smart Operation  •   One-Stop Control: Manage PV, storage, heat pumps & EV chargers in one.  •   Smart Savings: Optimize tariffs & lower electricity costs.
+
+--- 第 28 页 ---
+High-Quality  Exceeding Industry Standards for a 30-Year Lifespan  Energy Bright Technology builds PV plants to above-industry standards. Rigorous internal control and professional external supervision ensure standardized engineering services. This dual guarantee extends the station’s lifespan, enabling stable, efficient power generation for up to 30 years.  •   O w n e r a c c e p t a n c e  •   G r i d a c c e p t a n c e  •   O & M a c c e p t a n c e Station Acceptance  •   V i s u a l i z e d c o n s t r u c t i o n  •   S t a n d a r d i z e d p r o c e s s e s  •   S m a r t O & M  •   7 × 2 4 a l l - w e a t h e r s e r v i c e O&M Services Material Selection  •   3 1 8 a b o v e - i n d u s t r y s t a n d a r d s  •   T Ü V R h e i n l a n d s u p e r v i s i o n Survey & Design  •   U A V 3 D m o d e l i n g  •   R o o f l o a d a s s e s s m e n t Project Management  High- Standard Quality Manage ment Selected Premium Products  Modules 30-year power output warranty  Inverter 25-year design life  Mounting 30-year anti-corrosion warranty  Product Warranty：15 years   Product Warranty：10 years
+
+--- 第 29 页 ---
+Energy Bright Technology operates an all-weather smart O&M platform, delivering 2-hour rapid response and 24/7 monitoring to provide users with end-to-end O&M management services.  Smart O&M: Securing 30 Years of Steady Revenue  Plant Monitoring  Equipment Maintenance  Inspection Management  Fault Resolution  Cleaning Services  Insurance Services  *This service is optional for full-payment customers.  Value-Added Revenue
+
+--- 第 30 页 ---
+Item   Value  System Solution   8,278 kWh Annual Generation Self-Consumption Ratio   80% 30-Year Power (kWh)   230961 Initial Investment (THB)   114999 Payback Period (Years)   4.4 LCOE (THB/kWh)   0.62 30-Year Profit (THB)   776031  Item   Value  System Solution   8,200 kWh Annual Generation+5kWh ESS Self-Consumption Ratio   100% 30-Year Power (kWh)   230961 Initial Investment （THB）   135000 Payback Period (Years)   4.1 LCOE (THB/kWh)   0.58 30-Year Profit (THB)   970039  8,278 kWh Annual PV Generation/Year +5kWh Energy Storage 8,278 kWh PV power generation/Year  Option 1   Option 2  SUN Ward Return Calculation  ROI Calculation
+
+--- 第 31 页 ---
+Unique & Tailor-Made  Power Range   30kW+  SUN WARD PRO  Tailored for medium to large residential PV scenarios Integrated design, construction, and O&M Compatible with both flat and pitched roof configurations  Customized Photovoltaic Solution  SUN Ward Overview
+
+--- 第 32 页 ---
+Solar PV Charging Carports Industrial Parks Digital Infrastructure Commercial Buildings Medical Buildings  SUN Ward Pro Overview  Power range covering 30 kW and above, up to megawatt scale Suitable for manufacturing, warehousing & logistics, and commercial buildings Predictable power generation, more controllable returns Prioritize self-consumption to reduce reliance on high-cost grid electricity
+
+--- 第 33 页 ---
+Taking a 150kW project in Bangkok, funded entirely by the property owner, as an example, it uses an original system with SKYWORTH 630W modules.  Installed capacity  150kW  Annual effective sunshine  1460小时  Self-consumption ratio  80%  Average electricity tariff  4.2THB *The actual returns of a project are related to multiple factors such as local climate, sunlight conditions, roof conditions, enterprise electricity consumption curves, and electricity prices. The above returns calculations are for reference only.  4,073,400   kWh 25-year power generation income   0.62  THB  684,000  THB  Annual power generation income  3,037,500   THB 20.25   THB/W  175,200   kWh   25 years of power generation  Cost of electricity  Average annual power generation  System unit price   initial investment  SUN Ward Pro Return Calculation  Pay Back  Project investment Return calculation ROI Power generation calculation  17,110,000  THB 4.4 years
+
+--- 第 34 页 ---
+

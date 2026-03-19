@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="[案例SEO描述]" />
+    <meta name="keywords" content="[关键词1], [关键词2], [项目地点]" />
+    <title>[项目名称] Case Study - SKYWORTH</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+    /* ======================================
+       Case Template — Page-specific Styles
+       ====================================== */
+
+    /* Project Header */
+    .tpl-proj-header {
+        padding: 60px 0 0;
+        background: #fff;
+    }
+    .tpl-proj-header-inner {
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--colord8d);
+    }
+    .tpl-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+    .tpl-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 16px;
+        border-radius: 100px;
+        font-size: 13px;
+        font-family: var(--semibold);
+    }
+    .tpl-tag-blue { background: var(--colorbj1); color: var(--colorbj); }
+    .tpl-tag-green { background: #dcfce7; color: #16a34a; }
+    .tpl-tag-gray { background: #f3f4f6; color: var(--color8b8); }
+    .tpl-proj-title {
+        font-size: 52px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    .tpl-proj-meta {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+    .tpl-proj-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        color: var(--color8b8);
+    }
+    .tpl-proj-meta-icon {
+        font-size: 18px;
+    }
+
+    /* Stats Cards — 3 columns */
+    .tpl-stats { padding: 60px 0; }
+    .tpl-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .tpl-stat-card {
+        border-radius: var(--radius20);
+        padding: 40px 36px;
+        background: var(--colorbj2);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+    .tpl-stat-card::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.08);
+    }
+    .tpl-stat-card:nth-child(2) {
+        background: linear-gradient(135deg, #0a1628 0%, #1a3a6b 100%);
+    }
+    .tpl-stat-card:nth-child(3) {
+        background: linear-gradient(135deg, #006BC0 0%, #0099cc 100%);
+    }
+    .tpl-stat-label {
+        font-size: 14px;
+        color: rgba(255,255,255,.7);
+        font-family: var(--semibold);
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin-bottom: 16px;
+    }
+    .tpl-stat-value {
+        font-size: 56px;
+        color: #fff;
+        font-family: var(--bold);
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    .tpl-stat-unit {
+        font-size: 24px;
+    }
+    .tpl-stat-desc {
+        font-size: 15px;
+        color: rgba(255,255,255,.75);
+        line-height: 1.5;
+    }
+
+    /* Project Detail — text left / image right */
+    .tpl-detail { padding: 80px 0; }
+    .tpl-detail-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+    .tpl-detail-content h2 {
+        font-size: 36px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.3;
+        margin-bottom: 24px;
+    }
+    .tpl-detail-content p {
+        font-size: 17px;
+        color: var(--color8b8);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+    .tpl-detail-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0;
+    }
+    .tpl-detail-bullets li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--colord8d);
+        font-size: 16px;
+        color: var(--color1e1);
+        line-height: 1.5;
+    }
+    .tpl-detail-bullets li:last-child { border-bottom: none; }
+    .tpl-detail-bullet-icon {
+        color: var(--colorbj);
+        font-size: 16px;
+        flex-shrink: 0;
+        margin-top: 3px;
+    }
+    .tpl-detail-img-wrap {
+        border-radius: var(--radius20);
+        overflow: hidden;
+        position: sticky;
+        top: 100px;
+    }
+    .tpl-detail-img-wrap img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+    .tpl-img-placeholder {
+        background: linear-gradient(135deg, #e8f4ff 0%, #c8e6ff 100%);
+        aspect-ratio: 4/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius20);
+        border: 2px dashed var(--colord8d);
+        color: var(--color8b8);
+    }
+    .tpl-img-placeholder span { font-size: 64px; margin-bottom: 12px; opacity: .35; }
+    .tpl-img-placeholder p { font-size: 14px; }
+
+    /* CSS Circular Progress */
+    .tpl-progress { padding: 80px 0; background: var(--colorbj1); }
+    .tpl-progress-title {
+        font-size: 40px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        margin-bottom: 12px;
+    }
+    .tpl-progress-sub {
+        font-size: 18px;
+        color: var(--color8b8);
+        margin-bottom: 60px;
+    }
+    .tpl-progress-grid {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
+    .tpl-circle-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    /* Pure-CSS conic-gradient progress ring */
+    .tpl-ring {
+        --pct: 0;        /* 0-100, override inline per circle */
+        --size: 160px;
+        --thickness: 14px;
+        --color: var(--colorbj);
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background:
+            conic-gradient(
+                var(--color) 0deg,
+                var(--color) calc(var(--pct) * 3.6deg),
+                #dde8f5 calc(var(--pct) * 3.6deg),
+                #dde8f5 360deg
+            );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    /* Inner white circle (donut effect) */
+    .tpl-ring::before {
+        content: '';
+        position: absolute;
+        width: calc(var(--size) - var(--thickness) * 2);
+        height: calc(var(--size) - var(--thickness) * 2);
+        border-radius: 50%;
+        background: var(--colorbj1);
+    }
+    .tpl-ring-label {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+    .tpl-ring-pct {
+        font-size: 28px;
+        color: var(--colorbj);
+        font-family: var(--bold);
+        line-height: 1;
+    }
+    .tpl-ring-unit {
+        font-size: 14px;
+        color: var(--color8b8);
+    }
+    .tpl-circle-name {
+        font-size: 17px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        text-align: center;
+    }
+    .tpl-circle-note {
+        font-size: 14px;
+        color: var(--color8b8);
+        text-align: center;
+    }
+
+    /* Related Products */
+    .tpl-related { padding: 80px 0; }
+    .tpl-related-title {
+        font-size: 40px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        margin-bottom: 12px;
+    }
+    .tpl-related-sub {
+        font-size: 18px;
+        color: var(--color8b8);
+        margin-bottom: 48px;
+    }
+    .tpl-related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .tpl-rel-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px;
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius15);
+        text-decoration: none;
+        background: #fff;
+        transition: border-color .2s, box-shadow .2s;
+    }
+    .tpl-rel-card:hover {
+        border-color: var(--colorbj);
+        box-shadow: 0 4px 20px rgba(0,107,192,.1);
+    }
+    .tpl-rel-card-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius10);
+        background: var(--colorbj1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+    .tpl-rel-card-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 8px;
+    }
+    .tpl-rel-card-info {
+        flex: 1;
+    }
+    .tpl-rel-card-cat {
+        font-size: 12px;
+        color: var(--colorbj);
+        font-family: var(--semibold);
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .tpl-rel-card-name {
+        font-size: 17px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+    .tpl-rel-card-link {
+        font-size: 13px;
+        color: var(--colorbj);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .tpl-detail-inner { grid-template-columns: 1fr; gap: 40px; }
+        .tpl-stats-grid { grid-template-columns: 1fr; }
+        .tpl-proj-title { font-size: 36px; }
+    }
+    @media (max-width: 768px) {
+        .tpl-related-grid { grid-template-columns: 1fr; }
+        .tpl-progress-grid { gap: 40px; }
+        .tpl-proj-meta { gap: 16px; }
+    }
+    @media (max-width: 640px) {
+        .tpl-progress-grid { flex-direction: column; align-items: center; }
+    }
+    </style>
+</head>
+<body>
+    <div class="ys-page-wrap act">
+
+        <!-- Header / Nav -->
+        <div id="header-nav-placeholder"></div>
+
+        <main class="ys-main">
+
+            <!-- ==============================
+                 Project Header — Title + Tags + Meta
+                 ============================== -->
+            <section class="tpl-proj-header">
+                <div class="ys-cont1600 tpl-proj-header-inner">
+
+                    <!-- Tags -->
+                    <div class="tpl-tags">
+                        <span class="tpl-tag tpl-tag-blue">[行业标签，如：Residential]</span>
+                        <span class="tpl-tag tpl-tag-green">[技术标签，如：Solar + Storage]</span>
+                        <span class="tpl-tag tpl-tag-gray">[地区标签，如：Europe]</span>
+                    </div>
+
+                    <!-- Project Title -->
+                    <h1 class="tpl-proj-title">
+                        [项目完整名称，<br>可换行，50字以内]
+                    </h1>
+
+                    <!-- Meta Info -->
+                    <div class="tpl-proj-meta">
+                        <div class="tpl-proj-meta-item">
+                            <span class="tpl-proj-meta-icon">📍</span>
+                            <span>[项目地点，如：Frankfurt, Germany]</span>
+                        </div>
+                        <div class="tpl-proj-meta-item">
+                            <span class="tpl-proj-meta-icon">🏗️</span>
+                            <span>[系统规模，如：12 kW PV + 10 kWh Storage]</span>
+                        </div>
+                        <div class="tpl-proj-meta-item">
+                            <span class="tpl-proj-meta-icon">📅</span>
+                            <span>[竣工时间，如：Completed September 2024]</span>
+                        </div>
+                        <div class="tpl-proj-meta-item">
+                            <span class="tpl-proj-meta-icon">🏢</span>
+                            <span>[客户类型，如：Homeowner / Commercial Building]</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ==============================
+                 3 Key Data Cards
+                 ============================== -->
+            <section class="tpl-stats">
+                <div class="ys-cont1600">
+                    <div class="tpl-stats-grid">
+
+                        <!-- Card 1: Installed Capacity -->
+                        <div class="tpl-stat-card">
+                            <div class="tpl-stat-label">Installed Capacity</div>
+                            <div class="tpl-stat-value">
+                                [数值1，如：12]<span class="tpl-stat-unit">[单位1，如：kW]</span>
+                            </div>
+                            <p class="tpl-stat-desc">[数据卡片说明1，15-25字，解释该数据的意义]</p>
+                        </div>
+
+                        <!-- Card 2: Annual Savings -->
+                        <div class="tpl-stat-card">
+                            <div class="tpl-stat-label">Annual Cost Savings</div>
+                            <div class="tpl-stat-value">
+                                [数值2，如：€1,200]<span class="tpl-stat-unit">[单位2，如：/yr]</span>
+                            </div>
+                            <p class="tpl-stat-desc">[数据卡片说明2，15-25字]</p>
+                        </div>
+
+                        <!-- Card 3: Energy Independence -->
+                        <div class="tpl-stat-card">
+                            <div class="tpl-stat-label">Energy Independence</div>
+                            <div class="tpl-stat-value">
+                                [数值3，如：85]<span class="tpl-stat-unit">[单位3，如：%]</span>
+                            </div>
+                            <p class="tpl-stat-desc">[数据卡片说明3，15-25字]</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Project Detail — Text Left / Image Right
+                 ============================== -->
+            <section class="tpl-detail">
+                <div class="ys-cont1600">
+                    <div class="tpl-detail-inner">
+
+                        <!-- Left: Text Content -->
+                        <div class="tpl-detail-content">
+                            <h2>[项目详情标题，如：Project Overview & Challenge]</h2>
+                            <p>
+                                [背景段落，60-100字。描述客户背景、使用场景、安装前面临的主要问题，
+                                如高电费、电网不稳定、碳排放压力等。]
+                            </p>
+                            <p>
+                                [解决方案段落，60-100字。描述Skyworth为该项目设计的具体解决方案，
+                                包括产品选型、系统配置、安装方式等关键决策点。]
+                            </p>
+                            <h2 style="font-size:28px; margin-top:40px;">[成果标题，如：Outcomes & Benefits]</h2>
+                            <ul class="tpl-detail-bullets">
+                                <li>
+                                    <span class="tpl-detail-bullet-icon">✓</span>
+                                    <span>[成果要点1，如：Reduced electricity bill by 72% in the first year of operation]</span>
+                                </li>
+                                <li>
+                                    <span class="tpl-detail-bullet-icon">✓</span>
+                                    <span>[成果要点2，如：System achieved full payback in estimated 6.5 years]</span>
+                                </li>
+                                <li>
+                                    <span class="tpl-detail-bullet-icon">✓</span>
+                                    <span>[成果要点3，如：CO₂ emissions reduced by approximately 4.2 tonnes annually]</span>
+                                </li>
+                                <li>
+                                    <span class="tpl-detail-bullet-icon">✓</span>
+                                    <span>[成果要点4，如：Solavita Cloud app enables real-time monitoring and smart scheduling]</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right: Project Photo -->
+                        <div class="tpl-detail-img-wrap">
+                            <!-- 替换为真实项目照片 -->
+                            <div class="tpl-img-placeholder">
+                                <span>🏠</span>
+                                <p>[项目现场照片 — 建议尺寸 800×600px]</p>
+                            </div>
+                            <!-- <img src="[项目照片路径]" alt="[项目名称] — site photo" /> -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Circular Progress — CSS Only
+                 ============================== -->
+            <section class="tpl-progress">
+                <div class="ys-cont1600">
+                    <h2 class="tpl-progress-title">[进度展示标题，如：Performance at a Glance]</h2>
+                    <p class="tpl-progress-sub">[副标题，说明数据来源，如：Based on 12-month operational data]</p>
+
+                    <div class="tpl-progress-grid">
+
+                        <!-- Ring 1: Energy Saving Rate -->
+                        <!-- style="--pct: [0-100]" 控制进度百分比 -->
+                        <div class="tpl-circle-item">
+                            <div class="tpl-ring" style="--pct: 85; --color: #006BC0;">
+                                <div class="tpl-ring-label">
+                                    <div class="tpl-ring-pct">[85]<span style="font-size:16px">%</span></div>
+                                    <div class="tpl-ring-unit">of target</div>
+                                </div>
+                            </div>
+                            <div class="tpl-circle-name">[指标1，如：Energy Saving Rate]</div>
+                            <div class="tpl-circle-note">[指标说明1，如：vs. pre-installation baseline]</div>
+                        </div>
+
+                        <!-- Ring 2: Self-Sufficiency -->
+                        <div class="tpl-circle-item">
+                            <div class="tpl-ring" style="--pct: 72; --color: #00b4b4;">
+                                <div class="tpl-ring-label">
+                                    <div class="tpl-ring-pct" style="color:#00b4b4;">[72]<span style="font-size:16px">%</span></div>
+                                    <div class="tpl-ring-unit">self-powered</div>
+                                </div>
+                            </div>
+                            <div class="tpl-circle-name">[指标2，如：Solar Self-Sufficiency]</div>
+                            <div class="tpl-circle-note">[指标说明2，如：Annual average across all seasons]</div>
+                        </div>
+
+                        <!-- Ring 3: Customer Satisfaction -->
+                        <div class="tpl-circle-item">
+                            <div class="tpl-ring" style="--pct: 96; --color: #16a34a;">
+                                <div class="tpl-ring-label">
+                                    <div class="tpl-ring-pct" style="color:#16a34a;">[96]<span style="font-size:16px">%</span></div>
+                                    <div class="tpl-ring-unit">satisfied</div>
+                                </div>
+                            </div>
+                            <div class="tpl-circle-name">[指标3，如：Customer Satisfaction]</div>
+                            <div class="tpl-circle-note">[指标说明3，如：Based on post-installation survey]</div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Related Products
+                 ============================== -->
+            <section class="tpl-related">
+                <div class="ys-cont1600">
+                    <h2 class="tpl-related-title">[相关产品标题，如：Products Used in This Project]</h2>
+                    <p class="tpl-related-sub">[相关产品副标题，说明产品组合价值]</p>
+
+                    <div class="tpl-related-grid">
+
+                        <!-- Related Product 1 -->
+                        <a href="product/pv-inverter.html" class="tpl-rel-card">
+                            <div class="tpl-rel-card-icon">
+                                <!-- <img src="[产品缩略图1]" alt="[产品名1]" /> -->
+                                <span>⚡</span>
+                            </div>
+                            <div class="tpl-rel-card-info">
+                                <div class="tpl-rel-card-cat">[产品类别1，如：PV Inverter]</div>
+                                <div class="tpl-rel-card-name">[产品型号1，如：SkyInverter X3-Pro 6K]</div>
+                                <span class="tpl-rel-card-link">View Product →</span>
+                            </div>
+                        </a>
+
+                        <!-- Related Product 2 -->
+                        <a href="product/battery-storage-system.html" class="tpl-rel-card">
+                            <div class="tpl-rel-card-icon">
+                                <span>🔋</span>
+                            </div>
+                            <div class="tpl-rel-card-info">
+                                <div class="tpl-rel-card-cat">[产品类别2，如：Battery Storage]</div>
+                                <div class="tpl-rel-card-name">[产品型号2，如：SkyBattery E10 Pro]</div>
+                                <span class="tpl-rel-card-link">View Product →</span>
+                            </div>
+                        </a>
+
+                        <!-- Related Product 3 -->
+                        <a href="product/pv-module.html" class="tpl-rel-card">
+                            <div class="tpl-rel-card-icon">
+                                <span>☀️</span>
+                            </div>
+                            <div class="tpl-rel-card-info">
+                                <div class="tpl-rel-card-cat">[产品类别3，如：PV Module]</div>
+                                <div class="tpl-rel-card-name">[产品型号3，如：SkyModule 420N TopCon]</div>
+                                <span class="tpl-rel-card-link">View Product →</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+    </div><!-- /.ys-page-wrap -->
+
+    <script src="assets/js/components.js"></script>
+    <script src="Public/En/js/public.js"></script>
+    <script src="Public/En/js/base-v4.0.min.js"></script>
+    <script src="Public/En/js/common.js"></script>
+    <script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
+
+</body>
+</html>

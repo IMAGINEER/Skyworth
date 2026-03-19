@@ -1,0 +1,94 @@
+﻿@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 提示框 */
+.privacy_modal {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 110;
+    width: 100%;
+    padding: 20px 0;
+    background: #474747;
+}
+
+.privacy_modal_container {
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    perspective: 500px;
+}
+
+.privacy_modal_container p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+    padding-right: 2em;
+}
+
+.privacy_modal_container p a {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+}
+
+.privacy_modal_container button {
+    flex: none;
+    font-size: 16px;
+    width: 12em;
+    height: 3.5em;
+    background: #fff;
+    color: #474747;
+    border-radius: 2em;
+    transition: all 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    outline: 0 !important;
+    border: 0;
+}
+
+@media screen and (max-width:1200px) {
+    .privacy_modal_container{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .privacy_modal_container p,
+    .privacy_modal_container button {
+        font-size: 14px;
+    }
+
+   
+}
+
+@media screen and (max-width:991px) {
+    
+
+    .privacy_modal_container button {
+        width: 10em;
+        height: 3em;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .privacy_modal_container{
+        display: block;
+        text-align: center;
+    }
+    .privacy_modal_container p {
+        padding-right: 0;
+    }
+    .privacy_modal_container button {
+        width: 8em;
+        height: 2.8em;
+        margin-top: 15px;
+    }
+}

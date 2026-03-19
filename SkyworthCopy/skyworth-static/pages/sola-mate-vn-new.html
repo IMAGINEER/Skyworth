@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolaMate - Giải pháp điện mặt trời ban công | Skyworth Solar Vietnam</title>
+    <meta name="description" content="SolaMate - Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một. Đầu tư 35.999 THB, tiết kiệm 9.2 lần trong 30 năm.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --colorbj: #006BC0;
+            --colorbj1: #F0F7FF;
+            --colorbj2: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
+            --color1e1: #1E293B;
+            --color8b8: #64748B;
+            --colord8d: #E2E8F0;
+            --color33: #334155;
+            --colorSuccess: #16A34A;
+            --colorWarning: #F59E0B;
+            --radius10: 10px;
+            --radius15: 15px;
+            --radius20: 20px;
+            --medium: 'Be Vietnam Pro', -apple-system, sans-serif;
+            --semibold: 600;
+            --bold: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--medium);
+            color: var(--color1e1);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .ys-cont1600 {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== 0. Breadcrumb ========== */
+        .sm-breadcrumb {
+            background: var(--colorbj1);
+            padding: 12px 0;
+            font-size: 14px;
+        }
+        .sm-breadcrumb-inner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sm-breadcrumb a { color: var(--color8b8); transition: color .2s; }
+        .sm-breadcrumb a:hover { color: var(--colorbj); }
+        .sm-breadcrumb-sep { color: var(--colord8d); }
+        .sm-breadcrumb-cur { color: var(--color1e1); font-weight: var(--semibold); }
+
+        /* ========== Section Commons ========== */
+        .sm-section { padding: 80px 0; }
+        .sm-section-dark { background: var(--color1e1); color: #fff; }
+        .sm-section-gray { background: var(--colorbj1); }
+        .sm-section-hd { margin-bottom: 48px; }
+        .sm-section-hd.center { text-align: center; }
+        .sm-section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color1e1);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .sm-section-dark .sm-section-title { color: #fff; }
+        .sm-section-sub {
+            font-size: 18px;
+            color: var(--color8b8);
+            line-height: 1.6;
+        }
+        .sm-section-dark .sm-section-sub { color: rgba(255,255,255,.7); }
+
+        /* ========== 1. Hero Section ========== */
+        .sm-hero {
+            background: linear-gradient(180deg, #fff 0%, var(--colorbj1) 100%);
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .sm-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(0,107,192,.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .sm-hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .sm-product-line {
+            display: inline-block;
+            background: var(--colorbj);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            margin-bottom: 20px;
+        }
+        .sm-hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--color1e1);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .sm-hero-sub-title {
+            font-size: 22px;
+            color: var(--color8b8);
+            margin-bottom: 24px;
+        }
+        .sm-hero-desc {
+            font-size: 16px;
+            color: var(--color33);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .sm-hero-btns {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .sm-btn-solid {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: var(--colorbj);
+            color: #fff;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all .2s;
+        }
+        .sm-btn-solid:hover {
+            background: #005399;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,107,192,.3);
+        }
+        .sm-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: transparent;
+            color: var(--colorbj);
+            border: 2px solid var(--colorbj);
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all .2s;
+        }
+        .sm-btn-outline:hover {
+            background: var(--colorbj);
+            color: #fff;
+        }
+        .sm-hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .sm-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: rgba(255,255,255,.8);
+            border: 1px solid var(--colord8d);
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--color33);
+        }
+        .sm-hero-visual {
+            position: relative;
+        }
+        .sm-hero-visual img {
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,107,192,.15);
+        }
+        .sm-hero-specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--colord8d);
+        }
+        .sm-spec-item {
+            text-align: center;
+        }
+        .sm-spec-val {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--colorbj);
+            line-height: 1;
+        }
+        .sm-spec-unit { font-size: 18px; }
+        .sm-spec-label {
+            font-size: 14px;
+            color: var(--color8b8);
+            margin-top: 4px;
+        }
+
+        /* ========== 2. Problem Statement ========== */
+        .sm-problem {
+            background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+            color: #fff;
+            padding: 80px 0;
+        }
+        .sm-problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        /* PC端：图在左，文字在右 */
+        .sm-problem-grid.swap-desktop .sm-problem-text {
+            order: 2;
+        }
+        .sm-problem-grid.swap-desktop .sm-problem-img {
+            order: 1;
+        }
+        @media (max-width: 768px) {
+            .sm-problem-grid {
+                grid-template-columns: 1fr;
+            }
+            .sm-problem-grid.swap-desktop .sm-problem-text,
+            .sm-problem-grid.swap-desktop .sm-problem-img {
+                order: unset;
+            }
+        }
+        .sm-problem-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        .sm-problem-highlight {
+            color: #00E2E0;
+        }
+        .sm-problem-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        .sm-problem-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            font-size: 16px;
+        }
+        .sm-problem-list li::before {
+            content: '❌';
+            flex-shrink: 0;
+        }
+        .sm-problem-solution {
+            background: rgba(255,255,255,.1);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,.2);
+        }
+        .sm-problem-solution-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #00E2E0;
+        }
+        .sm-problem-img {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: rgba(255,255,255,.05);
+        }
+
+        /* ========== 3. What is SolaMate ========== */
+        .sm-what {
+            background: #fff;
+        }
+        .sm-what-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .sm-what-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color8b8);
+        }
+        .sm-what-content p { margin-bottom: 20px; }
+        .sm-what-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .sm-what-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--colorbj1);
+            border-radius: 12px;
+        }
+        .sm-what-feature-icon {
+            font-size: 24px;
+        }
+        .sm-what-feature-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color1e1);
+        }
+        .sm-what-cards {
+            display: none;
+        }
+        .sm-what-image {
+            margin-top: 32px;
+        }
+        .sm-what-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: var(--colorbj1);
+            border-radius: 16px;
+            transition: all .2s;
+        }
+        .sm-what-card:hover {
+            background: #e0f0ff;
+            transform: translateX(4px);
+        }
+        .sm-what-card-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--colorbj);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .sm-what-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color1e1);
+        }
+
+        /* ========== 4. Key Benefits ========== */
+        .sm-benefits {
+            background: var(--colorbj1);
+        }
+        .sm-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .sm-benefit-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all .3s;
+        }
+        .sm-benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,107,192,.12);
+        }
+        .sm-benefit-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--colorbj1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+        }
+        .sm-benefit-num {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--colorbj);
+            letter-spacing: .1em;
+            margin-bottom: 8px;
+        }
+        .sm-benefit-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color1e1);
+            margin-bottom: 12px;
+        }
+        .sm-benefit-desc {
+            font-size: 14px;
+            color: var(--color8b8);
+            line-height: 1.6;
+        }
+
+        /* ========== 5. Installation Types ========== */
+        .sm-install {
+            background: #fff;
+        }
+        .sm-install-tabs {
+            display: flex;
+            gap: 0;
+            background: var(--colorbj1);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 48px;
+            border: 1px solid var(--colord8d);
+        }
+        .sm-install-tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            border-right: 1px solid var(--colord8d);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color8b8);
+            transition: all .2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .sm-install-tab:last-child { border-right: none; }
+        .sm-install-tab.active { background: var(--colorbj); color: #fff; }
+        .sm-install-tab:hover:not(.active) { background: #e0f0ff; color: var(--colorbj); }
+
+        .sm-install-panel { display: none; }
+        .sm-install-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+
+        .sm-install-gallery {
+            display: grid;
+            gap: 12px;
+        }
+        .sm-install-main-img {
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--colorbj1);
+        }
+        .sm-install-sub-imgs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .sm-install-sub-img {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--colorbj1);
+        }
+
+        .sm-install-info {
+            padding: 20px 0;
+        }
+        .sm-install-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--colorbj1);
+            color: var(--colorbj);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .sm-install-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color1e1);
+            margin-bottom: 16px;
+        }
+        .sm-install-desc {
+            font-size: 16px;
+            color: var(--color8b8);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .sm-install-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .sm-install-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--colorbj1);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: var(--color1e1);
+        }
+        .sm-install-features li::before {
+            content: '✓';
+            color: var(--colorbj);
+            font-weight: 700;
+        }
+        .sm-install-scenarios {
+            font-size: 14px;
+            color: var(--color8b8);
+        }
+        .sm-install-scenarios strong { color: var(--color1e1); }
+
+        /* ========== 6. Models & Specs ========== */
+        .sm-models {
+            background: var(--colorbj1);
+        }
+        .sm-models-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--colord8d);
+            background: #fff;
+        }
+        .sm-models-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+        .sm-models-table thead th {
+            background: var(--colorbj);
+            color: #fff;
+            padding: 18px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .sm-models-table tbody tr:nth-child(odd) td { background: #fff; }
+        .sm-models-table tbody tr:nth-child(even) td { background: var(--colorbj1); }
+        .sm-models-table tbody tr:hover td { background: #e8f4ff; }
+        .sm-models-table td {
+            padding: 16px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--colord8d);
+        }
+        .sm-models-table td:first-child {
+            font-weight: 600;
+            color: var(--color1e1);
+        }
+        .sm-model-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .sm-model-tag-blue { background: #DBEAFE; color: #2563EB; }
+        .sm-model-tag-green { background: #DCFCE7; color: #16A34A; }
+        .sm-model-tag-orange { background: #FEF9C3; color: #CA8A04; }
+        .sm-models-note {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--color8b8);
+            font-style: italic;
+        }
+
+        /* ========== 7. Power Generation ========== */
+        .sm-power {
+            background: #fff;
+        }
+        .sm-power-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .sm-power-card {
+            border-radius: 20px;
+            padding: 40px 32px;
+            border: 1px solid var(--colord8d);
+        }
+        .sm-power-card-std {
+            background: var(--colorbj1);
+        }
+        .sm-power-card-pro {
+            background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
+            color: #fff;
+            border: none;
+        }
+        .sm-power-model {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .sm-power-card-std .sm-power-model { color: var(--colorbj); }
+        .sm-power-card-pro .sm-power-model { color: rgba(255,255,255,.7); }
+        .sm-power-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .sm-power-yield {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .sm-power-card-std .sm-power-yield { color: var(--colorbj); }
+        .sm-power-card-pro .sm-power-yield { color: #00E2E0; }
+        .sm-power-yield-unit {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .sm-power-card-pro .sm-power-yield-unit { color: rgba(255,255,255,.6); }
+        .sm-power-devices {
+            list-style: none;
+        }
+        .sm-power-devices li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            font-size: 15px;
+        }
+        .sm-power-card-pro .sm-power-devices li {
+            border-color: rgba(255,255,255,.2);
+            color: #fff;
+        }
+        .sm-power-devices li:last-child { border-bottom: none; }
+        .sm-power-device-icon { font-size: 22px; }
+        .sm-power-device-time {
+            margin-left: auto;
+            font-size: 13px;
+            opacity: .7;
+        }
+        .sm-power-savings {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+        .sm-power-card-pro .sm-power-savings {
+            border-color: rgba(255,255,255,.2);
+        }
+        .sm-power-savings-label {
+            font-size: 14px;
+            opacity: .7;
+            margin-bottom: 4px;
+        }
+        .sm-power-savings-value {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .sm-power-card-std .sm-power-savings-value { color: var(--colorbj); }
+        .sm-power-card-pro .sm-power-savings-value { color: #fff; }
+
+        /* ========== 8. ROI Analysis ========== */
+        .sm-roi {
+            background: var(--colorbj1);
+        }
+        .sm-roi-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .sm-roi-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .sm-roi-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 2px solid var(--colord8d);
+        }
+        .sm-roi-card.highlight {
+            border-color: var(--colorbj);
+            background: linear-gradient(135deg, rgba(0,107,192,.1) 0%, rgba(0,180,180,.1) 100%);
+        }
+        .sm-roi-card-label {
+            font-size: 13px;
+            color: var(--color8b8);
+            margin-bottom: 8px;
+        }
+        .sm-roi-card-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--colorbj);
+            line-height: 1.1;
+        }
+        .sm-roi-card-highlight .sm-roi-card-value { color: var(--colorSuccess); }
+        .sm-roi-card-unit {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .sm-roi-card-desc {
+            font-size: 12px;
+            color: var(--color8b8);
+            margin-top: 8px;
+        }
+        .sm-roi-highlights {
+            list-style: none;
+        }
+        .sm-roi-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--colord8d);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .sm-roi-highlights li:last-child { border-bottom: none; }
+        .sm-roi-highlights li::before {
+            content: '→';
+            color: var(--colorbj);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .sm-roi-chart {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px;
+        }
+        .sm-roi-chart-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--color1e1);
+        }
+        .sm-roi-chart-bar {
+            margin-bottom: 20px;
+        }
+        .sm-roi-chart-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .sm-roi-chart-label span:last-child {
+            font-weight: 700;
+            color: var(--colorbj);
+        }
+        .sm-roi-chart-bg {
+            background: var(--colorbj1);
+            border-radius: 100px;
+            height: 12px;
+            overflow: hidden;
+        }
+        .sm-roi-chart-fill {
+            height: 100%;
+            border-radius: 100px;
+            background: linear-gradient(90deg, var(--colorbj), #00b4b4);
+        }
+
+        /* ========== 9. Certifications ========== */
+        .sm-certs {
+            background: #fff;
+        }
+        .sm-certs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .sm-cert-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: var(--colorbj1);
+            border-radius: 16px;
+            transition: all .2s;
+        }
+        .sm-cert-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,107,192,.1);
+        }
+        .sm-cert-icon {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            background: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        .sm-cert-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .sm-cert-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color1e1);
+            margin-bottom: 4px;
+        }
+        .sm-cert-desc {
+            font-size: 13px;
+            color: var(--color8b8);
+            margin-bottom: 12px;
+        }
+        .sm-cert-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+            color: var(--color8b8);
+        }
+        .sm-cert-placeholder span {
+            margin-right: 8px;
+        }
+
+        /* ========== 10. Installation Process ========== */
+        .sm-process {
+            background: var(--colorbj1);
+        }
+        .sm-process-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+        .sm-process-step {
+            text-align: center;
+        }
+        .sm-process-num {
+            width: 40px;
+            height: 40px;
+            background: var(--colorbj);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+        .sm-process-img {
+            aspect-ratio: 1;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .sm-process-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color1e1);
+            margin-bottom: 4px;
+        }
+        .sm-process-desc {
+            font-size: 12px;
+            color: var(--color8b8);
+        }
+
+        /* ========== 11. Use Cases ========== */
+        .sm-cases {
+            background: #fff;
+        }
+        .sm-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .sm-case-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--colorbj1);
+            transition: all .3s;
+        }
+        .sm-case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,107,192,.15);
+        }
+        .sm-case-img {
+            aspect-ratio: 16/10;
+            background: #ccc;
+        }
+        .sm-case-info {
+            padding: 20px;
+        }
+        .sm-case-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: var(--colorbj);
+            color: #fff;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .sm-case-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color1e1);
+            margin-bottom: 8px;
+        }
+        .sm-case-desc {
+            font-size: 14px;
+            color: var(--color8b8);
+        }
+
+        /* ========== 12. FAQ ========== */
+        .sm-faq {
+            background: var(--colorbj1);
+        }
+        .sm-faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .sm-faq-item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--colord8d);
+        }
+        .sm-faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color1e1);
+            margin-bottom: 12px;
+        }
+        .sm-faq-answer {
+            font-size: 14px;
+            color: var(--color8b8);
+            line-height: 1.6;
+        }
+
+        /* ========== 13. CTA ========== */
+        .sm-cta {
+            background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .sm-cta-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .sm-cta-sub {
+            font-size: 18px;
+            opacity: .9;
+            margin-bottom: 40px;
+        }
+        .sm-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 48px;
+            background: #fff;
+            color: var(--colorbj);
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all .2s;
+        }
+        .sm-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,.2);
+        }
+
+        /* ========== Footer ========== */
+        .sm-footer {
+            background: var(--color1e1);
+            color: rgba(255,255,255,.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* ========== Placeholder Image ========== */
+        .sm-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            color: #888;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+        .sm-placeholder-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        .sm-placeholder-title {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        .sm-placeholder-size {
+            font-size: 12px;
+            color: #999;
+        }
+        .sm-placeholder-priority {
+            margin-top: 8px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .sm-placeholder-priority.high { background: #fee2e2; color: #dc2626; }
+        .sm-placeholder-priority.medium { background: #fef3c7; color: #d97706; }
+        .sm-placeholder-priority.low { background: #dcfce7; color: #16a34a; }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1200px) {
+            .sm-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .sm-hero-visual { order: -1; }
+            .sm-hero-title { font-size: 48px; }
+            .sm-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .sm-certs-grid { grid-template-columns: 1fr; }
+            .sm-process-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .sm-hero-title { font-size: 36px; }
+            .sm-section-title { font-size: 28px; }
+            .sm-hero-specs { grid-template-columns: repeat(2, 1fr); }
+            .sm-what-grid { grid-template-columns: 1fr; }
+            .sm-what-features { grid-template-columns: 1fr; }
+            .sm-benefits-grid { grid-template-columns: 1fr; }
+            .sm-install-panel.active { grid-template-columns: 1fr; }
+            .sm-install-tabs { flex-direction: column; }
+            .sm-install-tab { border-right: none; border-bottom: 1px solid var(--colord8d); }
+            .sm-power-grid { grid-template-columns: 1fr; }
+            .sm-roi-inner { grid-template-columns: 1fr; }
+            .sm-roi-compare { grid-template-columns: 1fr; }
+            .sm-certs-grid { grid-template-columns: 1fr; }
+            .sm-process-grid { grid-template-columns: repeat(2, 1fr); }
+            .sm-cases-grid { grid-template-columns: 1fr; }
+            .sm-faq-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== 0. Breadcrumb ========== -->
+    <div class="sm-breadcrumb">
+        <div class="ys-cont1600 sm-breadcrumb-inner">
+            <a href="index.html">Trang chủ</a>
+            <span class="sm-breadcrumb-sep">/</span>
+            <a href="residential/residential-pv.html">Hộ gia đình</a>
+            <span class="sm-breadcrumb-sep">/</span>
+            <span class="sm-breadcrumb-cur">SolaMate</span>
+        </div>
+    </div>
+
+    <!-- ========== 1. Hero Section ========== -->
+    <section class="sm-hero">
+        <div class="ys-cont1600">
+            <div class="sm-hero-inner">
+                <div>
+                    <div class="sm-product-line">Giải pháp điện mặt trời ban công</div>
+                    <h1 class="sm-hero-title">SolaMate</h1>
+                    <p class="sm-hero-sub-title">Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một</p>
+                    <p class="sm-hero-desc">
+                        Xây dựng trạm phát điện cá nhân của bạn dễ dàng như lắp ráp các khối đồ chơi.
+                        Một giải pháp quang điện dân dụng nhỏ gọn được thiết kế hoàn hảo cho việc lắp đặt ở ban công —
+                        cắm điện, tạo ra điện năng và bắt đầu tiết kiệm ngay từ ngày đầu tiên.
+                    </p>
+                    <div class="sm-hero-btns">
+                        <a href="contact-us.html" class="sm-btn-solid">Nhận báo giá →</a>
+                        <a href="#specs" class="sm-btn-outline">Xem chi tiết</a>
+                    </div>
+                    <div class="sm-hero-badges">
+                        <span class="sm-badge">🏆 Red Dot Design Award</span>
+                        <span class="sm-badge">⚡ Plug & Play</span>
+                        <span class="sm-badge">☁️ Solavita Cloud</span>
+                        <span class="sm-badge">🔒 Zero-Export</span>
+                    </div>
+                </div>
+                <div class="sm-hero-visual">
+                    <div class="sm-placeholder" style="aspect-ratio:4/3;border-radius:24px;">
+                        <div class="sm-placeholder-icon">☀️</div>
+                        <div class="sm-placeholder-title">SolaMate 产品主图</div>
+                        <div class="sm-placeholder-size">1920×1080px · PNG/JPG</div>
+                        <div class="sm-placeholder-priority high">优先级：高</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sm-hero-specs">
+                <div class="sm-spec-item">
+                    <div class="sm-spec-val">900<span class="sm-spec-unit">W</span></div>
+                    <div class="sm-spec-label">Công suất cơ bản</div>
+                </div>
+                <div class="sm-spec-item">
+                    <div class="sm-spec-val">1800<span class="sm-spec-unit">W</span></div>
+                    <div class="sm-spec-label">Công suất tối đa</div>
+                </div>
+                <div class="sm-spec-item">
+                    <div class="sm-spec-val">6</div>
+                    <div class="sm-spec-label">Tùy chọn model</div>
+                </div>
+                <div class="sm-spec-item">
+                    <div class="sm-spec-val">9.2<span class="sm-spec-unit">x</span></div>
+                    <div class="sm-spec-label">ROI 30 năm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 2. Problem Statement ========== -->
+    <section class="sm-problem">
+        <div class="ys-cont1600">
+            <div class="sm-problem-grid swap-desktop">
+                <div class="sm-problem-text">
+                    <h2 class="sm-problem-title">
+                        Bạn đang trả<br>
+                        <span class="sm-problem-highlight">quá nhiều tiền điện?</span>
+                    </h2>
+                    <ul class="sm-problem-list">
+                        <li>Hóa đơn điện hàng tháng tăng liên tục</li>
+                        <li>Tiêu thụ điện cho: điều hòa, tủ lạnh, thiết bị điện tử</li>
+                        <li>Không gian mái nhà hạn chế hoặc không có</li>
+                        <li>Thủ tục xin phép lắp đặt điện mặt trời phức tạp</li>
+                        <li>Chi phí lắp đặt ban đầu quá cao</li>
+                    </ul>
+                    <div class="sm-problem-solution">
+                        <div class="sm-problem-solution-title">→ Giải pháp: SolaMate</div>
+                        <p>Giải pháp hoàn hảo cho không gian nhỏ — không cần xin phép, lắp đặt trong 15 phút.</p>
+                    </div>
+                </div>
+                <div class="sm-problem-img">
+                    <div class="sm-placeholder" style="aspect-ratio:4/3;border-radius:16px;">
+                        <div class="sm-placeholder-icon">💰</div>
+                        <div class="sm-placeholder-title">高电费账单困扰</div>
+                        <div class="sm-placeholder-size">800×600px · PNG/JPG</div>
+                        <div class="sm-placeholder-priority medium">优先级：中</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 3. What is SolaMate ========== -->
+    <section class="sm-section sm-what">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">SolaMate là gì?</h2>
+                <p class="sm-section-sub">Bộ điện mặt trời "tất cả trong một" — thiết kế cho không gian sống đô thị hiện đại</p>
+            </div>
+            <div class="sm-what-grid">
+                <div class="sm-what-content">
+                    <p>
+                        <strong>SolaMate</strong> là giải pháp điện mặt trời ban công hoàn chỉnh từ Skyworth —
+                        được thiết kế đặc biệt cho những người sống trong căn hộ, biệt thự hoặc không gian có hạn.
+                    </p>
+                    <p>
+                        Khác với hệ thống điện mặt trời truyền thống cần lắp trên mái và xin phép phức tạp,
+                        SolaMate có thể được lắp đặt trên <strong>ban công, mái che, hoặc sân vườn</strong>
+                        — không cần thợ điện, không cần xin phép (hệ thống &lt;2kW).
+                    </p>
+                    <p>
+                        Chỉ cần mở hộp, lắp ráp theo hướng dẫn, cắm vào ổ điện —
+                        và bạn đã có trạm phát điện cá nhân của mình!
+                    </p>
+                    <div class="sm-what-features">
+                        <div class="sm-what-feature">
+                            <span class="sm-what-feature-icon">📦</span>
+                            <span class="sm-what-feature-text">Đầy đủ trong 1 hộp</span>
+                        </div>
+                        <div class="sm-what-feature">
+                            <span class="sm-what-feature-icon">🔌</span>
+                            <span class="sm-what-feature-text">Cắm là chạy</span>
+                        </div>
+                        <div class="sm-what-feature">
+                            <span class="sm-what-feature-icon">📱</span>
+                            <span class="sm-what-feature-text">Giám sát qua App</span>
+                        </div>
+                        <div class="sm-what-feature">
+                            <span class="sm-what-feature-icon">💰</span>
+                            <span class="sm-what-feature-text">Tiết kiệm 30 năm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-what-image">
+                    <div class="sm-placeholder" style="aspect-ratio:16/9;border-radius:20px;">
+                        <div class="sm-placeholder-icon">🏠☂️🌿</div>
+                        <div class="sm-placeholder-title">三种使用场景展示图</div>
+                        <div class="sm-placeholder-size">1920×1080px · PNG/JPG</div>
+                        <div class="sm-placeholder-priority high">优先级：高</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. Key Benefits ========== -->
+    <section class="sm-section sm-benefits">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Tại sao chọn SolaMate?</h2>
+                <p class="sm-section-sub">Bốn ưu điểm cốt lõi làm nên sự khác biệt</p>
+            </div>
+            <div class="sm-benefits-grid">
+                <div class="sm-benefit-card">
+                    <div class="sm-benefit-icon">🔧</div>
+                    <div class="sm-benefit-num">01</div>
+                    <h3 class="sm-benefit-title">Có thể điều chỉnh</h3>
+                    <p class="sm-benefit-desc">
+                        Bốn góc điều chỉnh (25°, 30°, 35°, 40°) phù hợp mọi hướng và mùa.
+                        Tối đa hóa sản lượng điện quanh năm.
+                    </p>
+                    <!-- IMAGE: Adjustable Angle
+                         Description: 角度调节示意图
+                         Size: 400x400px
+                         Priority: 🔴 HIGH -->
+                </div>
+                <div class="sm-benefit-card">
+                    <div class="sm-benefit-icon">🎨</div>
+                    <div class="sm-benefit-num">02</div>
+                    <h3 class="sm-benefit-title">Thiết kế Bauhaus</h3>
+                    <p class="sm-benefit-desc">
+                        Giải thưởng <strong>Red Dot Design Award</strong>. Thiết kế tối giản,
+                        màu đen hoàn toàn — tích hợp hoàn hảo với ngôi nhà hiện đại.
+                    </p>
+                    <!-- IMAGE: Red Dot Award
+                         Description: 红点设计奖证书/奖杯
+                         Size: 200x200px
+                         Priority: 🔴 HIGH -->
+                </div>
+                <div class="sm-benefit-card">
+                    <div class="sm-benefit-icon">🤖</div>
+                    <div class="sm-benefit-num">03</div>
+                    <h3 class="sm-benefit-title">Quản lý thông minh</h3>
+                    <p class="sm-benefit-desc">
+                        <strong>Zero-export</strong> tự động — chống phát ngược lưới điện.
+                        Giám sát AI qua <strong>App Solavita Cloud</strong>.
+                    </p>
+                    <!-- IMAGE: App Interface
+                         Description: APP界面截图
+                         Size: 400x800px
+                         Priority: 🔴 HIGH -->
+                </div>
+                <div class="sm-benefit-card">
+                    <div class="sm-benefit-icon">💰</div>
+                    <div class="sm-benefit-num">04</div>
+                    <h3 class="sm-benefit-title">Hiệu quả chi phí</h3>
+                    <p class="sm-benefit-desc">
+                        Đầu tư một lần. Chi phí điện chỉ <strong>0.45 THB/số</strong> —
+                        rẻ hơn 89% so với điện lưới. ROI 9.2 lần trong 30 năm.
+                    </p>
+                    <!-- IMAGE: ROI Chart
+                         Description: 投资回报图表
+                         Size: 600x400px
+                         Priority: 🔴 HIGH -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. Installation Types ========== -->
+    <section class="sm-section sm-install" id="install">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Ba giải pháp lắp đặt</h2>
+                <p class="sm-section-sub">Chọn phong cách phù hợp với không gian của bạn</p>
+            </div>
+
+            <div class="sm-install-tabs">
+                <div class="sm-install-tab active" onclick="switchInstall('railing', this)">
+                    🏠 Lắp đặt trên lan can
+                </div>
+                <div class="sm-install-tab" onclick="switchInstall('sunshade', this)">
+                    ☂️ Lắp đặt mái che nắng
+                </div>
+                <div class="sm-install-tab" onclick="switchInstall('ground', this)">
+                    🌿 Lắp đặt trên mặt đất
+                </div>
+            </div>
+
+            <!-- Railing -->
+            <div class="sm-install-panel active" id="install-railing">
+                <div class="sm-install-gallery">
+                    <div class="sm-install-main-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🏠</div>
+                            <div class="sm-placeholder-title">阳台安装主图</div>
+                            <div class="sm-placeholder-size">1920×1080px · PNG/JPG</div>
+                            <div class="sm-placeholder-priority high">优先级：高</div>
+                        </div>
+                    </div>
+                    <div class="sm-install-sub-imgs">
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔍</div>
+                                <div class="sm-placeholder-title">安装特写</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">📐</div>
+                                <div class="sm-placeholder-title">角度调节</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔧</div>
+                                <div class="sm-placeholder-title">配件展示</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-install-info">
+                    <span class="sm-install-tag">SWM800-R · SWM1600-R</span>
+                    <h3 class="sm-install-title">Lắp đặt trên lan can</h3>
+                    <p class="sm-install-desc">
+                        Thiết kế cho các ban công mở trong biệt thự và căn hộ. Móc hình chữ J gắn gọn gàng
+                        vào lan can mà không cần khoan. Giá đỡ có thể gập lại — toàn bộ hệ thống đóng gói phẳng.
+                    </p>
+                    <ul class="sm-install-features">
+                        <li>Khung kiểu dây có góc bo tròn (chống va chạm)</li>
+                        <li>Giá đỡ độ bền cao có thể gập lại — không cần dụng cụ</li>
+                        <li>Khả năng chống gió và tuyết cao</li>
+                        <li>Kết nối AC cắm và chạy</li>
+                    </ul>
+                    <p class="sm-install-scenarios">
+                        <strong>Tốt nhất cho:</strong> Ban công biệt thự · Ban công căn hộ · Ban công đa năng
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sunshade -->
+            <div class="sm-install-panel" id="install-sunshade">
+                <div class="sm-install-gallery">
+                    <div class="sm-install-main-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">☂️</div>
+                            <div class="sm-placeholder-title">遮阳棚安装主图</div>
+                            <div class="sm-placeholder-size">1920×1080px · PNG/JPG</div>
+                            <div class="sm-placeholder-priority high">优先级：高</div>
+                        </div>
+                    </div>
+                    <div class="sm-install-sub-imgs">
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔍</div>
+                                <div class="sm-placeholder-title">安装特写</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🏗️</div>
+                                <div class="sm-placeholder-title">结构展示</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔧</div>
+                                <div class="sm-placeholder-title">配件展示</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-install-info">
+                    <span class="sm-install-tag">SWM800-S · SWM1600-S</span>
+                    <h3 class="sm-install-title">Lắp đặt mái che nắng</h3>
+                    <p class="sm-install-desc">
+                        Chức năng kép: vừa là máy phát điện năng lượng mặt trời vừa là mái che nắng.
+                        Giá đỡ hoàn toàn bằng thép cung cấp cấu trúc ổn định với khả năng chống gió và tuyết tuyệt vời.
+                    </p>
+                    <ul class="sm-install-features">
+                        <li>Giá đỡ hoàn toàn bằng thép với khả năng chống gió và tuyết nâng cao</li>
+                        <li>Thiết kế tối giản màu đen hoàn toàn</li>
+                        <li>Mô-đun chống nứt vi mô công suất cao</li>
+                        <li>Chức năng kép: phát điện + chống nắng</li>
+                    </ul>
+                    <p class="sm-install-scenarios">
+                        <strong>Tốt nhất cho:</strong> Mặt tiền cửa hàng · Mặt tiền bệ cửa sổ · Lối vào nhà
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ground -->
+            <div class="sm-install-panel" id="install-ground">
+                <div class="sm-install-gallery">
+                    <div class="sm-install-main-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🌿</div>
+                            <div class="sm-placeholder-title">地面/庭院安装主图</div>
+                            <div class="sm-placeholder-size">1920×1080px · PNG/JPG</div>
+                            <div class="sm-placeholder-priority high">优先级：高</div>
+                        </div>
+                    </div>
+                    <div class="sm-install-sub-imgs">
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔍</div>
+                                <div class="sm-placeholder-title">安装特写</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">📐</div>
+                                <div class="sm-placeholder-title">角度展示</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                        <div class="sm-install-sub-img">
+                            <div class="sm-placeholder">
+                                <div class="sm-placeholder-icon">🔧</div>
+                                <div class="sm-placeholder-title">配件展示</div>
+                                <div class="sm-placeholder-size">400×400px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-install-info">
+                    <span class="sm-install-tag">SWM800-G · SWM1600-G</span>
+                    <h3 class="sm-install-title">Lắp đặt trên mặt đất</h3>
+                    <p class="sm-install-desc">
+                        Tùy chọn linh hoạt nhất — gập phẳng để dễ cất giữ và triển khai trong ba bước không cần dụng cụ.
+                        Bốn vị trí góc điều chỉnh cho phép đón ánh sáng tối đa.
+                    </p>
+                    <ul class="sm-install-features">
+                        <li>Thiết kế tối giản — gập phẳng để dễ cất giữ</li>
+                        <li>Cài đặt ba bước không cần dụng cụ</li>
+                        <li>Bốn góc điều chỉnh: 25° / 30° / 35° / 40°</li>
+                        <li>Kết nối AC cắm và chạy</li>
+                    </ul>
+                    <p class="sm-install-scenarios">
+                        <strong>Tốt nhất cho:</strong> Sân biệt thự · Sân nhà · Cắm trại
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 6. Models & Specs ========== -->
+    <section class="sm-section sm-models" id="specs">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Model & Thông số kỹ thuật</h2>
+                <p class="sm-section-sub">Sáu cấu hình trên ba kiểu lắp đặt — tất cả đều bao gồm thiết bị zero-export làm tiêu chuẩn</p>
+            </div>
+            <div class="sm-models-table-wrap">
+                <table class="sm-models-table">
+                    <thead>
+                        <tr>
+                            <th>Loại lắp đặt</th>
+                            <th>Cấu hình</th>
+                            <th>Model</th>
+                            <th>Công suất hệ thống</th>
+                            <th>Microinverter</th>
+                            <th>Zero-export</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-blue">Lan can</span></td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-R</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-blue">Lan can</span></td>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-R</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-green">Mái che</span></td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-S</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-green">Mái che</span></td>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-S</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-orange">Mặt đất</span></td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-G</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sm-model-tag sm-model-tag-orange">Mặt đất</span></td>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-G</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>✓ Tiêu chuẩn</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="sm-models-note">
+                * Lắp đặt tại Việt Nam yêu cầu kết nối có dây cứng với hộp phân phối điện AC theo quy định địa phương.
+            </p>
+            <div class="sm-placeholder" style="margin-top:40px;border-radius:16px;aspect-ratio:2/1;">
+                <div class="sm-placeholder-icon">📋</div>
+                <div class="sm-placeholder-title">技术规格表 / 接线图 / 尺寸图</div>
+                <div class="sm-placeholder-size">800×400px · PNG/JPG</div>
+                <div class="sm-placeholder-priority medium">优先级：中</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 7. Power Generation ========== -->
+    <section class="sm-section sm-power">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Sản lượng điện & Khả năng cấp điện</h2>
+                <p class="sm-section-sub">Dựa trên điều kiện ánh sáng mặt trời điển hình ở Đông Nam Á</p>
+            </div>
+            <div class="sm-power-grid">
+                <div class="sm-power-card sm-power-card-std">
+                    <div class="sm-power-model">SWM800-R/S/G · 900W</div>
+                    <div class="sm-power-title">1-to-2 · 900 W</div>
+                    <div class="sm-power-yield">~3.0 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
+                    <ul class="sm-power-devices">
+                        <li>
+                            <span class="sm-power-device-icon">💡</span>
+                            Bóng đèn × 6
+                            <span class="sm-power-device-time">20 giờ</span>
+                        </li>
+                        <li>
+                            <span class="sm-power-device-icon">📺</span>
+                            TV × 2
+                            <span class="sm-power-device-time">cả ngày</span>
+                        </li>
+                        <li>
+                            <span class="sm-power-device-icon">🧊</span>
+                            Tủ lạnh × 1
+                            <span class="sm-power-device-time">20 giờ</span>
+                        </li>
+                    </ul>
+                    <div class="sm-power-savings">
+                        <div class="sm-power-savings-label">Tiết kiệm điện hàng tháng</div>
+                        <div class="sm-power-savings-value">459 THB</div>
+                    </div>
+                </div>
+                <div class="sm-power-card sm-power-card-pro">
+                    <div class="sm-power-model">SWM1600-R/S/G · 1800W</div>
+                    <div class="sm-power-title">1-to-4 · 1800 W</div>
+                    <div class="sm-power-yield">~6.0 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
+                    <ul class="sm-power-devices">
+                        <li>
+                            <span class="sm-power-device-icon">❄️</span>
+                            Điều hòa × 1
+                            <span class="sm-power-device-time">8 giờ</span>
+                        </li>
+                        <li>
+                            <span class="sm-power-device-icon">🧊</span>
+                            Tủ lạnh × 2
+                            <span class="sm-power-device-time">16 giờ</span>
+                        </li>
+                        <li>
+                            <span class="sm-power-device-icon">💡</span>
+                            Bóng đèn × 6
+                            <span class="sm-power-device-time">15 giờ</span>
+                        </li>
+                    </ul>
+                    <div class="sm-power-savings">
+                        <div class="sm-power-savings-label">Tiết kiệm điện hàng tháng</div>
+                        <div class="sm-power-savings-value">919 THB</div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:40px;">
+                <div class="sm-placeholder" style="border-radius:16px;aspect-ratio:2/1;">
+                    <div class="sm-placeholder-icon">📈</div>
+                    <div class="sm-placeholder-title">日发电量曲线图</div>
+                    <div class="sm-placeholder-size">800×400px · PNG/JPG</div>
+                    <div class="sm-placeholder-priority high">优先级：高</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 8. ROI Analysis ========== -->
+    <section class="sm-section sm-roi" id="roi">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Phân tích lợi tức đầu tư</h2>
+                <p class="sm-section-sub">Dựa trên hệ thống 1-to-4 (1800W), điều kiện thị trường điện Việt Nam</p>
+            </div>
+            <div class="sm-roi-inner">
+                <div>
+                    <div class="sm-roi-compare">
+                        <div class="sm-roi-card">
+                            <div class="sm-roi-card-label">Giá điện lưới</div>
+                            <div class="sm-roi-card-value">3.500<span class="sm-roi-card-unit"> VND/kWh</span></div>
+                            <div class="sm-roi-card-desc">Giá điện sinh hoạt bậc 3</div>
+                        </div>
+                        <div class="sm-roi-card highlight">
+                            <div class="sm-roi-card-label">Chi phí phát điện SolaMate</div>
+                            <div class="sm-roi-card-value">450<span class="sm-roi-card-unit"> VND/kWh</span></div>
+                            <div class="sm-roi-card-desc">Rẻ hơn 87% so với lưới</div>
+                        </div>
+                        <div class="sm-roi-card">
+                            <div class="sm-roi-card-label">Đầu tư một lần</div>
+                            <div class="sm-roi-card-value">15.000.000<span class="sm-roi-card-unit"> VND</span></div>
+                            <div class="sm-roi-card-desc">Giá bộ thiết bị đầy đủ</div>
+                        </div>
+                        <div class="sm-roi-card highlight sm-roi-card-highlight">
+                            <div class="sm-roi-card-label">Tổng lợi nhuận 25 năm</div>
+                            <div class="sm-roi-card-value">138.000.000<span class="sm-roi-card-unit"> VND</span></div>
+                            <div class="sm-roi-card-desc">ROI 9.2 lần</div>
+                        </div>
+                    </div>
+                    <ul class="sm-roi-highlights">
+                        <li>Công suất hệ thống &lt;2kW — không cần xin phép lắp đặt</li>
+                        <li>Sử dụng ngay trong ngày — tiết kiệm giờ cao điểm</li>
+                        <li>App Solavita Cloud theo dõi sản lượng và doanh thu</li>
+                        <li>Bảo hành 10 năm — yên tâm sử dụng</li>
+                    </ul>
+                </div>
+                <div class="sm-roi-chart">
+                    <div class="sm-roi-chart-title">Lợi nhuận tích lũy theo thời gian (VND)</div>
+                    <div class="sm-placeholder" style="border-radius:12px;aspect-ratio:2/1;">
+                        <div class="sm-placeholder-icon">💹</div>
+                        <div class="sm-placeholder-title">30年收益累积增长曲线</div>
+                        <div class="sm-placeholder-size">800×400px · PNG/JPG</div>
+                        <div class="sm-placeholder-priority high">优先级：高</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 9. Certifications ========== -->
+    <section class="sm-section sm-certs">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Chứng nhận & Bảo hành</h2>
+                <p class="sm-section-sub">Đạt tiêu chuẩn quốc tế — yên tâm sử dụng dài hạn</p>
+            </div>
+            <div class="sm-certs-grid">
+                <div class="sm-cert-card">
+                    <div class="sm-cert-icon">🏆</div>
+                    <div class="sm-cert-content">
+                        <div class="sm-cert-name">Red Dot Design Award</div>
+                        <div class="sm-cert-desc">Giải thưởng thiết kế quốc tế</div>
+                        <div class="sm-cert-placeholder">
+                            <span>📷 红点设计奖证书</span>
+                            <span style="color:#999">300×200px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-cert-card">
+                    <div class="sm-cert-icon">✓</div>
+                    <div class="sm-cert-content">
+                        <div class="sm-cert-name">CE Certification</div>
+                        <div class="sm-cert-desc">Tiêu chuẩn Châu Âu</div>
+                        <div class="sm-cert-placeholder">
+                            <span>📷 CE认证证书</span>
+                            <span style="color:#999">300×200px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-cert-card">
+                    <div class="sm-cert-icon">🔬</div>
+                    <div class="sm-cert-content">
+                        <div class="sm-cert-name">TÜV Certification</div>
+                        <div class="sm-cert-desc">Tiêu chuẩn kiểm tra Đức</div>
+                        <div class="sm-cert-placeholder">
+                            <span>📷 TUV认证证书</span>
+                            <span style="color:#999">300×200px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-cert-card">
+                    <div class="sm-cert-icon">🛡️</div>
+                    <div class="sm-cert-content">
+                        <div class="sm-cert-name">Bảo hành 10 năm</div>
+                        <div class="sm-cert-desc">Bảo hành toàn diện từ Skyworth</div>
+                        <div class="sm-cert-placeholder">
+                            <span>📷 质保卡/质保政策</span>
+                            <span style="color:#999">300×200px</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 10. Installation Process ========== -->
+    <section class="sm-section sm-process">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Quy trình lắp đặt</h2>
+                <p class="sm-section-sub">Chỉ 6 bước đơn giản — có thể tự lắp đặt trong 15 phút</p>
+            </div>
+            <div class="sm-process-grid">
+                <div class="sm-process-step">
+                    <div class="sm-process-num">1</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">📦</div>
+                            <div class="sm-placeholder-title">开箱/配件展示</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Mở hộp</div>
+                    <div class="sm-process-desc">Kiểm tra đầy đủ配件</div>
+                </div>
+                <div class="sm-process-step">
+                    <div class="sm-process-num">2</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🔩</div>
+                            <div class="sm-placeholder-title">支架组装</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Lắp ráp khung</div>
+                    <div class="sm-process-desc">Gắn giá đỡ</div>
+                </div>
+                <div class="sm-process-step">
+                    <div class="sm-process-num">3</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">☀️</div>
+                            <div class="sm-placeholder-title">面板安装</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Lắp tấm pin</div>
+                    <div class="sm-process-desc">Gắn module</div>
+                </div>
+                <div class="sm-process-step">
+                    <div class="sm-process-num">4</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🔌</div>
+                            <div class="sm-placeholder-title">连接微逆变器</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Kết nối inverter</div>
+                    <div class="sm-process-desc">Nối dây AC</div>
+                </div>
+                <div class="sm-process-step">
+                    <div class="sm-process-num">5</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">⚡</div>
+                            <div class="sm-placeholder-title">通电测试</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Cấp điện</div>
+                    <div class="sm-process-desc">Bật nguồn kiểm tra</div>
+                </div>
+                <div class="sm-process-step">
+                    <div class="sm-process-num">6</div>
+                    <div class="sm-process-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">📱</div>
+                            <div class="sm-placeholder-title">APP绑定</div>
+                            <div class="sm-placeholder-size">400×400px</div>
+                        </div>
+                    </div>
+                    <div class="sm-process-title">Cài đặt app</div>
+                    <div class="sm-process-desc">Kết nối Solavita Cloud</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 11. Use Cases ========== -->
+    <section class="sm-section sm-cases">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Ứng dụng thực tế</h2>
+                <p class="sm-section-sub">Khách hàng đã sử dụng SolaMate như thế nào?</p>
+            </div>
+            <div class="sm-cases-grid">
+                <div class="sm-case-card">
+                    <div class="sm-case-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🏢</div>
+                            <div class="sm-placeholder-title">公寓阳台场景</div>
+                            <div class="sm-placeholder-size">600×375px</div>
+                            <div class="sm-placeholder-priority medium">中</div>
+                        </div>
+                    </div>
+                    <div class="sm-case-info">
+                        <span class="sm-case-tag">Căn hộ</span>
+                        <h3 class="sm-case-title">Căn hộ Sun Avenue</h3>
+                        <p class="sm-case-desc">Lắp đặt 2 tấm pin trên ban công 9m², tiết kiệm 400k/tháng</p>
+                    </div>
+                </div>
+                <div class="sm-case-card">
+                    <div class="sm-case-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🏪</div>
+                            <div class="sm-placeholder-title">商铺门面场景</div>
+                            <div class="sm-placeholder-size">600×375px</div>
+                            <div class="sm-placeholder-priority medium">中</div>
+                        </div>
+                    </div>
+                    <div class="sm-case-info">
+                        <span class="sm-case-tag">Cửa hàng</span>
+                        <h3 class="sm-case-title">Cửa hàng tiện lợi</h3>
+                        <p class="sm-case-desc">Lắp mái che trước cửa, cấp điện cho tủ lạnh và điều hòa</p>
+                    </div>
+                </div>
+                <div class="sm-case-card">
+                    <div class="sm-case-img">
+                        <div class="sm-placeholder">
+                            <div class="sm-placeholder-icon">🏡</div>
+                            <div class="sm-placeholder-title">别墅庭院场景</div>
+                            <div class="sm-placeholder-size">600×375px</div>
+                            <div class="sm-placeholder-priority medium">中</div>
+                        </div>
+                    </div>
+                    <div class="sm-case-info">
+                        <span class="sm-case-tag">Biệt thự</span>
+                        <div class="sm-case-title">Biệt thự Garden Hill</div>
+                        <p class="sm-case-desc">Lắp đặt 4 tấm trong sân vườn 20m², tiết kiệm 900k/tháng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 12. FAQ ========== -->
+    <section class="sm-section sm-faq">
+        <div class="ys-cont1600">
+            <div class="sm-section-hd center">
+                <h2 class="sm-section-title">Câu hỏi thường gặp</h2>
+                <p class="sm-section-sub">Giải đáp những thắc mắc phổ biến về SolaMate</p>
+            </div>
+            <div class="sm-faq-grid">
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">SolaMate có cần xin phép lắp đặt không?</div>
+                    <div class="sm-faq-answer">
+                        Không. Với hệ thống công suất &lt;2kW, bạn không cần xin phép hoặc đăng ký với cơ quan điện lực.
+                        Chỉ cần đảm bảo kết nối an toàn với hệ thống điện trong nhà.
+                    </div>
+                </div>
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">Lắp đặt SolaMate có khó không?</div>
+                    <div class="sm-faq-answer">
+                        Rất đơn giản! Toàn bộ hệ thống được thiết kế "Plug & Play" —
+                        chỉ cần lắp ráp theo hướng dẫn bằng hình ảnh và cắm vào ổ điện.
+                        Thời gian lắp đặt: 15-30 phút.
+                    </div>
+                </div>
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">SolaMate có phát điện khi trời mây không?</div>
+                    <div class="sm-faq-answer">
+                        Có, nhưng công suất sẽ giảm. Hiệu suất panel pin mặt trời giảm khoảng 20-50%
+                        trong ngày mây. Tuy nhiên, hệ thống vẫn phát điện và bạn vẫn tiết kiệm được.
+                    </div>
+                </div>
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">Điện phát ra có bị hòa vào lưới không?</div>
+                    <div class="sm-faq-answer">
+                        Không! SolaMate được trang bị thiết bị <strong>Zero-Export</strong> —
+                        tự động ngăn chặn dòng điện chảy ngược vào lưới.
+                        Tất cả điện phát ra chỉ sử dụng trong nhà.
+                    </div>
+                </div>
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">Bảo hành SolaMate như thế nào?</div>
+                    <div class="sm-faq-answer">
+                        Bảo hành toàn diện <strong>10 năm</strong> cho:
+                        - Panel pin mặt trời
+                        - Microinverter
+                        - Giá đỡ và phụ kiện
+                    </div>
+                </div>
+                <div class="sm-faq-item">
+                    <div class="sm-faq-question">Có thể mở rộng công suất sau này không?</div>
+                    <div class="sm-faq-answer">
+                        Có! Bạn có thể mua thêm tấm pin và microinverter để mở rộng hệ thống
+                        từ 900W lên 1800W (1-to-2 lên 1-to-4).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 13. CTA ========== -->
+    <section class="sm-cta">
+        <div class="ys-cont1600">
+            <h2 class="sm-cta-title">Sẵn sàng bắt đầu tiết kiệm?</h2>
+            <p class="sm-cta-sub">Liên hệ với chúng tôi để nhận tư vấn miễn phí và báo giá chi tiết</p>
+            <a href="contact-us.html" class="sm-cta-btn">
+                Liên hệ tư vấn →
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="sm-footer">
+        <div class="ys-cont1600">
+            <p>© 2025 Skyworth Solar Vietnam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Installation tabs switch
+        function switchInstall(type, tab) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.sm-install-tab').forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            // Hide all panels
+            document.querySelectorAll('.sm-install-panel').forEach(p => p.classList.remove('active'));
+            // Show selected panel
+            document.getElementById('install-' + type).classList.add('active');
+        }
+    </script>
+</body>
+</html>

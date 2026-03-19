@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "Bash(start:*)",
+      "Bash(cd \"D:\\\\SkyworthCopy\\\\SkyworthCopy\\\\skyworth-static\\\\pages\" && mv sun-mate.html sola-mate.html && mv sun-mate-vn.html sola-mate-vn.html && mv sun-ward.html sola-ward.html && echo \"Done\")",
+      "Bash(cd \"D:\\\\SkyworthCopy\\\\SkyworthCopy\\\\skyworth-static\" && sed -i 's/SUN Mate/SolaMate/g; s/SUN Ward/SolaWard/g; s/sun-mate/sola-mate/g; s/sun-ward/sola-ward/g' pages/sola-mate.html pages/sola-ward.html README.txt && echo \"Done\")"
+    ]
+  }
+}

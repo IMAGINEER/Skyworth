@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="[产品SEO描述]" />
+    <meta name="keywords" content="[关键词1], [关键词2], [关键词3]" />
+    <title>[产品名称] - SKYWORTH</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+    /* ========================================
+       Product Template — Page-specific Styles
+       ======================================== */
+
+    /* Breadcrumb */
+    .tpl-breadcrumb {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--colord8d);
+    }
+    .tpl-breadcrumb-inner {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .tpl-breadcrumb a {
+        font-size: 14px;
+        color: var(--color8b8);
+        text-decoration: none;
+        transition: color .2s;
+    }
+    .tpl-breadcrumb a:hover { color: var(--colorbj); }
+    .tpl-breadcrumb-sep {
+        font-size: 14px;
+        color: var(--colord8d);
+    }
+    .tpl-breadcrumb-cur {
+        font-size: 14px;
+        color: var(--color1e1);
+    }
+
+    /* Product Hero */
+    .tpl-prod-hero {
+        padding: 80px 0 100px;
+    }
+    .tpl-prod-hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+    }
+    .tpl-prod-img-wrap {
+        background: var(--colorbj1);
+        border-radius: var(--radius20);
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .tpl-prod-img-wrap img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+    /* Placeholder box when no real image */
+    .tpl-img-placeholder {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--color8b8);
+        background: var(--colorbj1);
+        border-radius: var(--radius20);
+        border: 2px dashed var(--colord8d);
+    }
+    .tpl-img-placeholder span {
+        font-size: 48px;
+        margin-bottom: 12px;
+        opacity: .4;
+    }
+    .tpl-img-placeholder p {
+        font-size: 14px;
+        color: var(--color8b8);
+    }
+    .tpl-prod-tag {
+        display: inline-block;
+        padding: 6px 16px;
+        background: var(--colorbj1);
+        color: var(--colorbj);
+        border-radius: 100px;
+        font-size: 14px;
+        font-family: var(--semibold);
+        margin-bottom: 20px;
+    }
+    .tpl-prod-name {
+        font-size: 48px;
+        color: var(--color1e1);
+        line-height: 1.2;
+        font-family: var(--medium);
+        margin-bottom: 20px;
+    }
+    .tpl-prod-desc {
+        font-size: 18px;
+        color: var(--color8b8);
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+    .tpl-key-specs {
+        display: flex;
+        gap: 0;
+        margin-bottom: 48px;
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius15);
+        overflow: hidden;
+    }
+    .tpl-key-specs li {
+        flex: 1;
+        list-style: none;
+        padding: 24px 20px;
+        text-align: center;
+        border-right: 1px solid var(--colord8d);
+        background: #fff;
+    }
+    .tpl-key-specs li:last-child { border-right: none; }
+    .tpl-spec-val {
+        font-size: 32px;
+        color: var(--colorbj);
+        font-family: var(--bold);
+        line-height: 1.2;
+    }
+    .tpl-spec-unit {
+        font-size: 16px;
+        color: var(--colorbj);
+        font-family: var(--medium);
+    }
+    .tpl-spec-label {
+        font-size: 14px;
+        color: var(--color8b8);
+        margin-top: 6px;
+        line-height: 1.4;
+    }
+    .tpl-btn-group {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .tpl-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 32px;
+        background: var(--colorbj);
+        color: #fff;
+        border-radius: 100px;
+        font-size: 16px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: opacity .2s;
+    }
+    .tpl-btn-primary:hover { opacity: .85; color: #fff; }
+    .tpl-btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border: 1.5px solid var(--colorbj);
+        color: var(--colorbj);
+        border-radius: 100px;
+        font-size: 16px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: all .2s;
+    }
+    .tpl-btn-outline:hover { background: var(--colorbj); color: #fff; }
+
+    /* Section title */
+    .tpl-section { padding: 80px 0; }
+    .tpl-section-title {
+        font-size: 40px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+    .tpl-section-sub {
+        font-size: 18px;
+        color: var(--color8b8);
+        line-height: 1.6;
+        margin-bottom: 56px;
+    }
+    .tpl-section-hd {
+        margin-bottom: 56px;
+    }
+
+    /* Features Grid — 2 rows × 3 cols */
+    .tpl-features { background: var(--colorbj1); }
+    .tpl-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .tpl-feature-card {
+        background: #fff;
+        border-radius: var(--radius20);
+        padding: 40px 32px;
+        transition: box-shadow .25s, transform .25s;
+    }
+    .tpl-feature-card:hover {
+        box-shadow: 0 12px 40px rgba(0,107,192,.1);
+        transform: translateY(-4px);
+    }
+    .tpl-feature-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--colorbj1);
+        border-radius: var(--radius10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--colorbj);
+    }
+    .tpl-feature-name {
+        font-size: 20px;
+        color: var(--color1e1);
+        font-family: var(--semibold);
+        margin-bottom: 10px;
+    }
+    .tpl-feature-desc {
+        font-size: 16px;
+        color: var(--color8b8);
+        line-height: 1.6;
+    }
+
+    /* Specs Table */
+    .tpl-specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: var(--radius15);
+        overflow: hidden;
+        border: 1px solid var(--colord8d);
+    }
+    .tpl-specs-table thead th {
+        background: var(--colorbj);
+        color: #fff;
+        padding: 18px 24px;
+        font-size: 16px;
+        font-family: var(--semibold);
+        text-align: left;
+    }
+    .tpl-specs-table tbody tr:nth-child(odd) td {
+        background: #fff;
+    }
+    .tpl-specs-table tbody tr:nth-child(even) td {
+        background: var(--colorbj1);
+    }
+    .tpl-specs-table td {
+        padding: 16px 24px;
+        font-size: 16px;
+        border-bottom: 1px solid var(--colord8d);
+    }
+    .tpl-specs-table td:first-child {
+        color: var(--color1e1);
+        font-family: var(--medium);
+        width: 40%;
+    }
+    .tpl-specs-table td:last-child {
+        color: var(--color8b8);
+    }
+    .tpl-specs-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+    .tpl-specs-table tbody tr:hover td {
+        background: #e8f4ff;
+    }
+
+    /* Downloads */
+    .tpl-dl-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .tpl-dl-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 28px;
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius15);
+        background: #fff;
+        transition: border-color .2s, box-shadow .2s;
+    }
+    .tpl-dl-item:hover {
+        border-color: var(--colorbj);
+        box-shadow: 0 4px 20px rgba(0,107,192,.08);
+    }
+    .tpl-dl-icon {
+        width: 48px;
+        height: 48px;
+        background: #fee2e2;
+        border-radius: var(--radius10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+    .tpl-dl-info {
+        flex: 1;
+    }
+    .tpl-dl-name {
+        font-size: 17px;
+        color: var(--color1e1);
+        font-family: var(--medium);
+        margin-bottom: 4px;
+    }
+    .tpl-dl-meta {
+        font-size: 14px;
+        color: var(--color8b8);
+    }
+    .tpl-dl-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 24px;
+        background: var(--colorbj1);
+        color: var(--colorbj);
+        border-radius: 100px;
+        font-size: 14px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: background .2s;
+        flex-shrink: 0;
+    }
+    .tpl-dl-btn:hover { background: var(--colorbj); color: #fff; }
+
+    /* CTA Banner */
+    .tpl-cta {
+        background: var(--colorbj2);
+        padding: 80px 0;
+        text-align: center;
+    }
+    .tpl-cta-title {
+        font-size: 48px;
+        color: #fff;
+        font-family: var(--medium);
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+    .tpl-cta-sub {
+        font-size: 18px;
+        color: rgba(255,255,255,.8);
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+    .tpl-btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 40px;
+        background: #fff;
+        color: var(--colorbj);
+        border-radius: 100px;
+        font-size: 18px;
+        font-family: var(--medium);
+        text-decoration: none;
+        transition: transform .2s, box-shadow .2s;
+    }
+    .tpl-btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,.15);
+        color: var(--colorbj);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .tpl-prod-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+        .tpl-features-grid { grid-template-columns: repeat(2, 1fr); }
+        .tpl-prod-name { font-size: 36px; }
+        .tpl-cta-title { font-size: 36px; }
+    }
+    @media (max-width: 640px) {
+        .tpl-features-grid { grid-template-columns: 1fr; }
+        .tpl-key-specs { flex-direction: column; }
+        .tpl-key-specs li { border-right: none; border-bottom: 1px solid var(--colord8d); }
+        .tpl-key-specs li:last-child { border-bottom: none; }
+    }
+    </style>
+</head>
+<body>
+    <!-- ys-page-wrap加act代表导航永远反白 -->
+    <div class="ys-page-wrap act product-page">
+
+        <!-- Header / Nav (injected by components.js) -->
+        <div id="header-nav-placeholder"></div>
+
+        <main class="ys-main">
+
+            <!-- ==============================
+                 Breadcrumb
+                 ============================== -->
+            <div class="tpl-breadcrumb">
+                <div class="ys-cont1600 tpl-breadcrumb-inner">
+                    <a href="index.html">Home</a>
+                    <span class="tpl-breadcrumb-sep">/</span>
+                    <a href="product/pv-inverter.html">Product</a>
+                    <span class="tpl-breadcrumb-sep">/</span>
+                    <span class="tpl-breadcrumb-cur">[产品名称]</span>
+                </div>
+            </div>
+
+            <!-- ==============================
+                 Product Hero
+                 ============================== -->
+            <section class="tpl-prod-hero">
+                <div class="ys-cont1600">
+                    <div class="tpl-prod-hero-inner">
+
+                        <!-- Left: Product Image -->
+                        <div class="tpl-prod-img-wrap">
+                            <!-- 替换为真实产品图片时，移除下方占位 div，改用 <img> -->
+                            <div class="tpl-img-placeholder">
+                                <span>📷</span>
+                                <p>[产品图片 — 建议尺寸 600×600px]</p>
+                            </div>
+                            <!-- <img src="[产品图片路径]" alt="[产品名称]" /> -->
+                        </div>
+
+                        <!-- Right: Product Info -->
+                        <div class="tpl-prod-info">
+                            <div class="tpl-prod-tag">[产品类别，如：PV Inverter]</div>
+                            <h1 class="tpl-prod-name">[产品名称，如：SolarEdge X3-Pro]</h1>
+                            <p class="tpl-prod-desc">
+                                [产品一句话卖点，20字以内] <br>
+                                [产品详细简介，2-3句话，80-120字。描述核心技术优势、适用场景、认证情况等。]
+                            </p>
+
+                            <!-- 3 Key Specs -->
+                            <ul class="tpl-key-specs">
+                                <li>
+                                    <div class="tpl-spec-val">[参数值1]<span class="tpl-spec-unit">[单位1]</span></div>
+                                    <div class="tpl-spec-label">[参数名称1，如：Max. Power]</div>
+                                </li>
+                                <li>
+                                    <div class="tpl-spec-val">[参数值2]<span class="tpl-spec-unit">[单位2]</span></div>
+                                    <div class="tpl-spec-label">[参数名称2，如：Efficiency]</div>
+                                </li>
+                                <li>
+                                    <div class="tpl-spec-val">[参数值3]<span class="tpl-spec-unit">[单位3]</span></div>
+                                    <div class="tpl-spec-label">[参数名称3，如：Warranty]</div>
+                                </li>
+                            </ul>
+
+                            <div class="tpl-btn-group">
+                                <a href="contact-us.html" class="tpl-btn-primary">Get a Quote →</a>
+                                <a href="#downloads" class="tpl-btn-outline">Download Datasheet</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Product Features — 6 Cards (2×3)
+                 ============================== -->
+            <section class="tpl-section tpl-features">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd">
+                        <h2 class="tpl-section-title">[产品特性标题，如：Why Choose This Product]</h2>
+                        <p class="tpl-section-sub">[副标题，20-40字，说明产品优势方向]</p>
+                    </div>
+                    <div class="tpl-features-grid">
+
+                        <!-- Feature Card 1 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">⚡</div>
+                            <div class="tpl-feature-name">[特性名称1，如：High Efficiency]</div>
+                            <p class="tpl-feature-desc">[特性描述1，30-50字，说明该特性的具体表现和用户价值]</p>
+                        </div>
+
+                        <!-- Feature Card 2 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">🛡️</div>
+                            <div class="tpl-feature-name">[特性名称2，如：IP65 Protection]</div>
+                            <p class="tpl-feature-desc">[特性描述2，30-50字]</p>
+                        </div>
+
+                        <!-- Feature Card 3 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">📱</div>
+                            <div class="tpl-feature-name">[特性名称3，如：Smart Monitoring]</div>
+                            <p class="tpl-feature-desc">[特性描述3，30-50字]</p>
+                        </div>
+
+                        <!-- Feature Card 4 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">🔧</div>
+                            <div class="tpl-feature-name">[特性名称4，如：Easy Installation]</div>
+                            <p class="tpl-feature-desc">[特性描述4，30-50字]</p>
+                        </div>
+
+                        <!-- Feature Card 5 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">🌡️</div>
+                            <div class="tpl-feature-name">[特性名称5，如：Wide Temp. Range]</div>
+                            <p class="tpl-feature-desc">[特性描述5，30-50字]</p>
+                        </div>
+
+                        <!-- Feature Card 6 -->
+                        <div class="tpl-feature-card">
+                            <div class="tpl-feature-icon">🌍</div>
+                            <div class="tpl-feature-name">[特性名称6，如：Global Certification]</div>
+                            <p class="tpl-feature-desc">[特性描述6，30-50字]</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Technical Specifications Table
+                 ============================== -->
+            <section class="tpl-section">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd">
+                        <h2 class="tpl-section-title">Technical Specifications</h2>
+                        <p class="tpl-section-sub">[规格说明，如：All data measured under standard test conditions (STC)]</p>
+                    </div>
+                    <table class="tpl-specs-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>[参数名1，如：Rated Power]</td>
+                                <td>[参数值1，如：5 kW]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名2，如：Max. Input Voltage]</td>
+                                <td>[参数值2，如：1000 V DC]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名3，如：Max. Efficiency]</td>
+                                <td>[参数值3，如：98.4%]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名4，如：MPPT Voltage Range]</td>
+                                <td>[参数值4，如：100V ~ 800V]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名5，如：Output Voltage]</td>
+                                <td>[参数值5，如：230V / 400V AC]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名6，如：Communication]</td>
+                                <td>[参数值6，如：RS485 / Wi-Fi]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名7，如：Protection Degree]</td>
+                                <td>[参数值7，如：IP65]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名8，如：Operating Temperature]</td>
+                                <td>[参数值8，如：-25°C ~ +60°C]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名9，如：Dimensions (W×H×D)]</td>
+                                <td>[参数值9，如：364×695×183 mm]</td>
+                            </tr>
+                            <tr>
+                                <td>[参数名10，如：Weight]</td>
+                                <td>[参数值10，如：18.5 kg]</td>
+                            </tr>
+                            <!-- 继续添加更多参数行 -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 Downloads — Datasheets / Manuals
+                 ============================== -->
+            <section class="tpl-section" id="downloads" style="background:var(--colorbj1);">
+                <div class="ys-cont1600">
+                    <div class="tpl-section-hd">
+                        <h2 class="tpl-section-title">Resources & Downloads</h2>
+                        <p class="tpl-section-sub">[下载区说明，如：Download product documentation for installation and configuration]</p>
+                    </div>
+                    <div class="tpl-dl-list">
+
+                        <!-- Download Item 1 — Datasheet -->
+                        <div class="tpl-dl-item">
+                            <div class="tpl-dl-icon" style="background:#fee2e2; color:#dc2626;">📄</div>
+                            <div class="tpl-dl-info">
+                                <div class="tpl-dl-name">[文件名1，如：Product Datasheet — Model XYZ]</div>
+                                <div class="tpl-dl-meta">PDF · [文件大小，如：2.4 MB] · [更新日期，如：Updated Mar 2025]</div>
+                            </div>
+                            <a href="[文件下载链接1]" class="tpl-dl-btn" download>↓ Download</a>
+                        </div>
+
+                        <!-- Download Item 2 — Installation Manual -->
+                        <div class="tpl-dl-item">
+                            <div class="tpl-dl-icon" style="background:#dbeafe; color:#2563eb;">📋</div>
+                            <div class="tpl-dl-info">
+                                <div class="tpl-dl-name">[文件名2，如：Installation Manual]</div>
+                                <div class="tpl-dl-meta">PDF · [文件大小] · [更新日期]</div>
+                            </div>
+                            <a href="[文件下载链接2]" class="tpl-dl-btn" download>↓ Download</a>
+                        </div>
+
+                        <!-- Download Item 3 — Certification -->
+                        <div class="tpl-dl-item">
+                            <div class="tpl-dl-icon" style="background:#dcfce7; color:#16a34a;">🏅</div>
+                            <div class="tpl-dl-info">
+                                <div class="tpl-dl-name">[文件名3，如：CE / IEC Certification]</div>
+                                <div class="tpl-dl-meta">PDF · [文件大小] · [更新日期]</div>
+                            </div>
+                            <a href="[文件下载链接3]" class="tpl-dl-btn" download>↓ Download</a>
+                        </div>
+
+                        <!-- 继续添加更多下载项 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================
+                 CTA Banner
+                 ============================== -->
+            <section class="tpl-cta">
+                <div class="ys-cont1600">
+                    <h2 class="tpl-cta-title">[CTA标题，如：Ready to Power Your Future?]</h2>
+                    <p class="tpl-cta-sub">
+                        [CTA副标题，如：Talk to our energy experts and get a customized solar solution for your project.]
+                    </p>
+                    <a href="contact-us.html" class="tpl-btn-white">Contact Us Now →</a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer (injected by components.js) -->
+        <div id="footer-placeholder"></div>
+
+    </div><!-- /.ys-page-wrap -->
+
+    <!-- Core Scripts -->
+    <script src="assets/js/components.js"></script>
+    <script src="Public/En/js/public.js"></script>
+    <script src="Public/En/js/base-v4.0.min.js"></script>
+    <script src="Public/En/js/common.js"></script>
+    <script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
+
+</body>
+</html>

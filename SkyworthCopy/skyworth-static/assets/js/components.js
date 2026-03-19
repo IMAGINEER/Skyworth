@@ -1,0 +1,1651 @@
+// Auto-generated component loader - do not edit manually
+const headerNavHTML = `<header class="ys-header">
+    <!-- pc顶部导航 -->
+    <div class="ys-hd-pc">
+        <div class="mod-head1">
+            <div class="mod-head1-wrap">
+                <div class="head-logo ys-imgbox-contain">
+                    <a href="index.html">
+                        <img src="Public/Uploads/uploadfile/images/20250830/LOGOfanbai.svg" alt="LOGO反白.svg">
+                        <img src="Public/Uploads/uploadfile/images/20250830/LOGOlan.svg" alt="LOGO蓝.svg">
+                    </a>
+                </div>
+                <div class="head1-fr">
+                    <ul class="head1-inof">
+                        <!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="about-us.html" target="_self" class="head1-inof-nub-link">About Us</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="news-media/news-center/news.html" target="_self" class="head1-inof-nub-link">News & Media</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="news-media/blogs.html" target="_self" class="head1-inof-nub-link">Blog</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="news-media/events.html" target="_self" class="head1-inof-nub-link">Event</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="cases/residentials.html" target="_self" class="head1-inof-nub-link">Case</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="careers.html" target="_self" class="head1-inof-nub-link">Career</a>
+                        </li><!-- 选中添加类名active-->
+                        <li class="head1-inof-nub ">
+                            <a href="wish-list.html" target="_self" class="head1-inof-nub-link">Wish List</a>
+                        </li>                    </ul>
+                    <div class="head1-search">
+                        <div class="head1-search-icon yx-search3-btn">
+                            <div class="ys-imgbox-cover yx-search3img1">
+                                <img src="Public/En/images/a1_icon_05.svg" alt="">
+                                <img src="Public/En/images/a1_icon_05_1.svg" alt="">
+                            </div>
+                            <div class="ys-imgbox-cover yx-search3img2">
+                                <img src="Public/En/images/close1.svg" alt="">
+                                <img src="Public/En/images/closeh1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="yx-search3xlbox">
+                            <div class="yx-search3-tbox clearfix">
+                                <div class="yx-search3-xls fl">
+                                    <input type="text" placeholder="Please enter..." id="keywords">
+                                </div>
+                                <div class="yx-search3-xlicon fr">
+                                    <button class="yx-search3xlbtn" onclick="on_search()">
+                                        <img src="Public/En/images/0com3.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 语言 -->
+                    <div class="head1-language">
+                        <div class="head1-language-top">
+                            <div class="ys-imgbox-cover head1-language-top-icon">
+                                <img src="Public/En/images/a1_icon_06.svg" alt="">
+                                <img src="Public/En/images/a1_icon_06_1.svg" alt="">
+                            </div>
+                            <div class="ys-imgbox-cover head1-language-top-jian">
+                                <img src="Public/En/images/0com2.html" alt="">
+                                <img src="Public/En/images/0com2h.html" alt="">
+                            </div>
+                        </div>
+                        <div class="head1-language-bot-list head1-language-bot">
+                            <div class="hlbl-item">
+                                    <div class="hlbl-item-text std-text1">Skyworth</div>
+                                    <ul class="hlbl-item-ul">
+                                        <li class="hlbl-item-ul-li">
+                                                <a href="index.html" target="_self" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/sken.svg" alt="sk_en.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">EN</div>
+                                                </a>
+                                            </li><li class="hlbl-item-ul-li">
+                                                <a href="https://my.skyworth-pv.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/my.svg" alt="my.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">MY</div>
+                                                </a>
+                                            </li><li class="hlbl-item-ul-li">
+                                                <a href="https://th.skyworth-pv.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/th.svg" alt="th.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">TH</div>
+                                                </a>
+                                            </li><li class="hlbl-item-ul-li">
+                                                <a href="https://br.skyworth-pv.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20251016/de11.svg" alt="de-1 1.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">BR</div>
+                                                </a>
+                                            </li>                                     
+                                    </ul>
+                                </div><div class="hlbl-item">
+                                    <div class="hlbl-item-text std-text1">Solavita</div>
+                                    <ul class="hlbl-item-ul">
+                                        <li class="hlbl-item-ul-li">
+                                                <a href="https://www.solavita.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/slen.svg" alt="sl_en.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">EN</div>
+                                                </a>
+                                            </li><li class="hlbl-item-ul-li">
+                                                <a href="https://it.solavita.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/it.svg" alt="it.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">IT</div>
+                                                </a>
+                                            </li><li class="hlbl-item-ul-li">
+                                                <a href="https://de.solavita.com/" target="_blank" title="" class="hiul-links">
+                                                    <div class="hiul-links-icon">
+                                                        <img src="Public/Uploads/uploadfile/images/20250903/de.svg" alt="de.svg">
+                                                    </div>
+                                                    <div class="hiul-links-text">DE</div>
+                                                </a>
+                                            </li>                                     
+                                    </ul>
+                                </div>                           
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-head2">
+            <div class="mod-head2-wrap">
+                <ul class="head-nav">
+                    <!-- 一级，选中添加类名yxnav-active1 act -->
+                    <li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="residential/residential-pv.html"  class="head-nav-item-title">Residential</a>
+                                <!-- 下拉类型一 -->
+                                <div class="head-nav-item-down head-pull-first">
+                                    <div class="head-pull-first-cont ys-cont1600">
+                                        <div class="head-pull-first-le">
+                                            <div class="hpfl-tit">Residential Solution</div>
+                                            <div class="hpfl-word std-text2">
+                                                <p>Sun-Powered Living, Designed for Life</p>
+                                            </div>
+                                            <ul class="head-pull-third-ul">
+                                                <!-- 二级选中添加类名yxnav-active2 act,有三级结构添加类名haspull控制显示 -->
+                                                 <li class="hptu-li  ">
+                                                    <a href="residential/residential-pv.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon24.svg" alt="a1icon24.svg">
+                                                            </div>
+                                                            <p>Residential PV</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                                                                    </li><li class="hptu-li  ">
+                                                    <a href="residential/residential-ess.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon25.svg" alt="a1icon25.svg">
+                                                            </div>
+                                                            <p>Residential ESS</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                                                                    </li><li class="hptu-li  haspull">
+                                                    <a href="#"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon26.svg" alt="a1icon26.svg">
+                                                            </div>
+                                                            <p>Explore Skyworth</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                    <!--三级选中添加类名yxnav-active3 act-->
+                                                    <ul class="head-pull-first-list">
+                                                        <li class="hpfl-item">
+                                                            <a href="about-us.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Why choose us?</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpfl-item">
+                                                            <a href="product/epc-service.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>EPC Service</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                    </ul>                                                </li><li class="hptu-li  haspull">
+                                                    <a href="#"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon27.svg" alt="a1icon27.svg">
+                                                            </div>
+                                                            <p>Get Professional Support</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                    <!--三级选中添加类名yxnav-active3 act-->
+                                                    <ul class="head-pull-first-list">
+                                                        <li class="hpfl-item">
+                                                            <a href="contact-us.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Online consultation</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpfl-item">
+                                                            <a href="wish-list.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Wish list</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                    </ul>                                                </li>                                            </ul>
+                                        </div>
+                                        <div class="head-pull-first-ri">
+                                            <div class="hpfr-link">
+                                                <a href="cases/residentials.html" target="_self" title="" class="hpft-link-box">
+                                                    <p>Solution Cases</p>
+                                                    <div class="hpft-link-icons">
+                                                        <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                    </div> 
+                                                </a>
+                                            </div> 
+                                            <ul class="hpfr-ul">
+                                                <li class="hpfr-ul-li">
+                                                    <a href="cases/residentials/frankfurt-homes.html" target="_self" title="" class="hpfr-ul-li-link">
+                                                        <div class="ys-imgbox-cover">
+                                                            <img src="Public/En/images/d_pics01.png" alt="">
+                                                            <img src="Public/Uploads/uploadfile/images/20250421/a1img21.jpg" alt="Residential rooftop solar panel installation under clear blue sky, powered by Solavita">
+                                                        </div>
+                                                        <div class="hull-pic">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                        <div class="hull-text std-text1">Empowering Frankfurt Homes with Solavita Reliable Energy Storage</div>
+                                                    </a>
+                                                </li><li class="hpfr-ul-li">
+                                                    <a href="cases/residentials/wesel-residences.html" target="_self" title="" class="hpfr-ul-li-link">
+                                                        <div class="ys-imgbox-cover">
+                                                            <img src="Public/En/images/d_pics01.png" alt="">
+                                                            <img src="Public/Uploads/uploadfile/images/20250421/a1img22.jpg" alt="Solavita balcony solar panel system mounted on residential railing, urban energy-saving solution">
+                                                        </div>
+                                                        <div class="hull-pic">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                        <div class="hull-text std-text1">Enhancing Wesel Residences with Sustainable Energy Solutions</div>
+                                                    </a>
+                                                </li>                                            </ul>
+                                        </div>                                    </div>
+                                </div>                                                                                            </div>
+                        </li><li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="business/business-pv.html"  class="head-nav-item-title">Business</a>
+                                <!-- 下拉类型一 -->
+                                <div class="head-nav-item-down head-pull-first">
+                                    <div class="head-pull-first-cont ys-cont1600">
+                                        <div class="head-pull-first-le">
+                                            <div class="hpfl-tit">Business Solution</div>
+                                            <div class="hpfl-word std-text2">
+                                                <p>Sun-Powered Living, Designed for Life</p>
+                                            </div>
+                                            <ul class="head-pull-third-ul">
+                                                <!-- 二级选中添加类名yxnav-active2 act,有三级结构添加类名haspull控制显示 -->
+                                                 <li class="hptu-li  ">
+                                                    <a href="business/business-pv.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon28.svg" alt="a1icon28.svg">
+                                                            </div>
+                                                            <p>Business PV</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                                                                    </li><li class="hptu-li  ">
+                                                    <a href="business/business-ess.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon29.svg" alt="a1icon29.svg">
+                                                            </div>
+                                                            <p>Business ESS</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                                                                    </li><li class="hptu-li  haspull">
+                                                    <a href="#"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon26-641.svg" alt="a1icon26.svg">
+                                                            </div>
+                                                            <p>Explore Skyworth</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                    <!--三级选中添加类名yxnav-active3 act-->
+                                                    <ul class="head-pull-first-list">
+                                                        <li class="hpfl-item">
+                                                            <a href="about-us.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Why choose us?</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpfl-item">
+                                                            <a href="product/epc-service.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>EPC Service</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                    </ul>                                                </li><li class="hptu-li  haspull">
+                                                    <a href="#"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon27-721.svg" alt="a1icon27.svg">
+                                                            </div>
+                                                            <p>Get Professional Support</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                    <!--三级选中添加类名yxnav-active3 act-->
+                                                    <ul class="head-pull-first-list">
+                                                        <li class="hpfl-item">
+                                                            <a href="contact-us.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Online consultation</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpfl-item">
+                                                            <a href="wish-list.html" target="_self" title="" class="hpfl-item-link">
+                                                                <p>Wish list</p>
+                                                                <div class="hptu-li-ri-icon">
+                                                                    <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                    </ul>                                                </li>                                            </ul>
+                                        </div>
+                                        <div class="head-pull-first-ri">
+                                            <div class="hpfr-link">
+                                                <a href="cases/businesses.html" target="_self" title="" class="hpft-link-box">
+                                                    <p>Solution Cases</p>
+                                                    <div class="hpft-link-icons">
+                                                        <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                    </div> 
+                                                </a>
+                                            </div> 
+                                            <ul class="hpfr-ul">
+                                                <li class="hpfr-ul-li">
+                                                    <a href="cases/businesses/commercial-rooftop.html" target="_self" title="" class="hpfr-ul-li-link">
+                                                        <div class="ys-imgbox-cover">
+                                                            <img src="Public/En/images/d_pics01.png" alt="">
+                                                            <img src="Public/Uploads/uploadfile/images/20250422/a1img23.jpg" alt="Commercial rooftop solar panel array under blue sky, flat roof PV installation by Solavita">
+                                                        </div>
+                                                        <div class="hull-pic">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                        <div class="hull-text std-text1">Commercial Rooftop PV System Enhances Energy Independence in Shaoxing</div>
+                                                    </a>
+                                                </li><li class="hpfr-ul-li">
+                                                    <a href="cases/businesses/high-efficiency-rooftop.html" target="_self" title="" class="hpfr-ul-li-link">
+                                                        <div class="ys-imgbox-cover">
+                                                            <img src="Public/En/images/d_pics01.png" alt="">
+                                                            <img src="Public/Uploads/uploadfile/images/20250422/a1img24.jpg" alt="Aerial view of large-scale utility solar farm with neatly arranged PV modules, Solavita renewable project">
+                                                        </div>
+                                                        <div class="hull-pic">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                        <div class="hull-text std-text1">High-Efficiency Rooftop PV Solution for Industrial Use in Shenzhen</div>
+                                                    </a>
+                                                </li>                                            </ul>
+                                        </div>                                    </div>
+                                </div>                                                                                            </div>
+                        </li><li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="product/pv-inverter.html"  class="head-nav-item-title">Product</a>
+                                                                <div class="head-nav-item-down head-pull-second">
+                                        <div class="ys-cont1600">
+                                            <div class="head-pull-second-cont">
+                                                <div class="head-pull-second-le">
+                                                    <ul class="hpsl-list">
+                                                        <!-- 二级选中添加类名yxnav-active2 act -->
+                                                         <li class="hpsl-list-item ">
+                                                            <a href="product/pv-inverter.html"  title="" class="hpsl-list-item-link">
+                                                                <div class="hlil-pic">
+                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon19.svg" alt="a1icon19.svg">
+                                                                </div>
+                                                                <p>PV Inverter</p>
+                                                                <!-- 背景装饰图 -->
+                                                                <div class="hlil-bgs">
+                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpsl-list-item ">
+                                                            <a href="product/battery-storage-system.html"  title="" class="hpsl-list-item-link">
+                                                                <div class="hlil-pic">
+                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
+                                                                </div>
+                                                                <p>Battery Storage System</p>
+                                                                <!-- 背景装饰图 -->
+                                                                <div class="hlil-bgs">
+                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpsl-list-item ">
+                                                            <a href="product/balcony-solar.html"  title="" class="hpsl-list-item-link">
+                                                                <div class="hlil-pic">
+                                                                    <img src="Public/Uploads/uploadfile/images/20260113/iconblue.svg" alt="icon-blue.svg">
+                                                                </div>
+                                                                <p>Residential Solar</p>
+                                                                <!-- 背景装饰图 -->
+                                                                <div class="hlil-bgs">
+                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpsl-list-item ">
+                                                            <a href="product/pv-module.html"  title="" class="hpsl-list-item-link">
+                                                                <div class="hlil-pic">
+                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon21.svg" alt="a1icon21.svg">
+                                                                </div>
+                                                                <p>PV Module</p>
+                                                                <!-- 背景装饰图 -->
+                                                                <div class="hlil-bgs">
+                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li><li class="hpsl-list-item ">
+                                                            <a href="product/mounting-system.html"  title="" class="hpsl-list-item-link">
+                                                                <div class="hlil-pic">
+                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon22.svg" alt="a1icon22.svg">
+                                                                </div>
+                                                                <p>Mounting System</p>
+                                                                <!-- 背景装饰图 -->
+                                                                <div class="hlil-bgs">
+                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                    </ul>
+                                                    <div class="hpsl-btn hpsl-btn1">
+                                                        <div class="std-btn1">
+                                                            <a href="product/pv-inverter.html"  title="" class="std-btn1-box">
+                                                                <p>All Products</p>
+                                                                <div class="std-btn1-icon">
+                                                                    <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="hpsl-btn hpsl-btn2">
+                                                        <div class="std-btn1">
+                                                            <a href="product/epc-service.html" title="" class="std-btn1-box">
+                                                                <p>EPC Service</p>
+                                                                <div class="std-btn1-icon">
+                                                                    <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="head-pull-second-ri">
+                                                    <ul class="hpsr-list">
+                                                        <li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/pv-inverter7fe4.html?tp=45"  title="" class="hpft-link-box">
+                                                                        <p>Residential PV Inverter</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-1-3ktl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="1-3.3.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 1-3.3KTL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-4-6ktl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/46.png" alt="4-6.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 4-6KTL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-7-10ktl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/710.png" alt="7-10.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 7-10KTL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-10-25ktl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/1025.png" alt="10-25.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 10-25KTL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div><div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/pv-inverter4593.html?tp=46"  title="" class="hpft-link-box">
+                                                                        <p>Business PV Inverter</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/business/sw-30-33ktl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/3033.png" alt="30-33.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 30-33KTL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-inverter/business/sw40-60ktl-t1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250830/4060.png" alt="40-60.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SW 40-60KTL-T1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/battery-storage-systemc89e.html?tp=66"  title="" class="hpft-link-box">
+                                                                        <p>Residential ESS</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/residential-ess/svh-3-6kh-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/36kh.png" alt="3-6kh.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWH 3-6KH-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/residential-ess/svh-3-6kl-s1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/36KL.png" alt="3-6KL.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWH 3-6KL-S1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/residential-ess/svh-5-15kh-t1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/515.png" alt="5-15.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWH 5-15KH-T1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/residential-ess/svr-5-20k-h1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/5.1220.png" alt="5.12-20.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWR5.12--20.48-H1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div><div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/battery-storage-systemcf48.html?tp=67"  title="" class="hpft-link-box">
+                                                                        <p>C&amp;I ESS</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/c-i-ess/swh-29-50kh-t1.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/2950.png" alt="29-50.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SVH 29-50KH-T1</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/c-i-ess/sws-p50e100-hc.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/50100.png" alt="50-100.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWS-P50E100-HC</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/battery-storage-system/c-i-ess/sws-p100e215-hc.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250901/100215.png" alt="100-215.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>SWS-P100E215-HC</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/balcony-solar2005.html?tp=77"  title="" class="hpft-link-box">
+                                                                        <p>Balcony Solar</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/railing-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/RailingMountingsmall-942.png" alt="Railing Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Railing Mounting</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/sunshade-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/SunshadeMountingsmall.png" alt="Sunshade Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Sunshade Mounting</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/ground-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/GroundMountingsmall.png" alt="Ground  Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Ground  Mounting</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/wall-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/WallMountingsmall.png" alt="Wall Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Wall Mounting</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/pv-module3a87.html?tp=38"  title="" class="hpft-link-box">
+                                                                        <p>PV Module</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/m10-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/M10SERIES-893.png" alt="Solavita Black all-glass solar panel with monocrystalline cells arranged in a full-black module design, viewed from the front">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>M10 SERIES</p>
+                                                                                <p><span>420-645W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/g12-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/G12SERIES.png" alt="210 Monocrystalline half-cell solar panel with silver aluminum frame, ideal for high-efficiency residential or commercial PV installations.">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>G12 SERIES </p>
+                                                                                <p><span>630-720W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/g12r-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/G12RSERIES.png" alt="High-efficiency monocrystalline half-cell solar panel with white backsheet and silver frame, designed for large-scale commercial and utility solar installations">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>G12R SERIES </p>
+                                                                                <p><span>440-630W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/mounting-systemcf33.html?tp=68"  title="" class="hpft-link-box">
+                                                                        <p>Mounting System</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <!-- 选中添加类名yxnav-active3 act -->
+                                                                     <li class="hlil-thrul-li ">
+                                                                        <a href="product/mounting-system/mounting/for-tile-roof.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250428/1.png" alt="Stainless steel solar roof hook for tile mounting systems, featuring adjustable base plate with multiple holes for flexible installation">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>For Tile  Roof</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/mounting-system/mounting/for-slate-roof.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250428/2.png" alt="Waterproof solar roof mounting bracket with base plate and adjustable L-foot, designed for metal roof photovoltaic installations">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>For Slate Roof</p>
+                                                                                                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li>                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                            </div>
+                        </li><li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="resources-support/download/product-related.html"  class="head-nav-item-title">Resources &amp; Support</a>
+                                                                                                <!-- 下拉类型三 -->
+                                    <div class="head-nav-item-down head-pull-third">
+                                        <div class="head-pull-third-cont ys-cont1600">
+                                            <ul class="head-pull-third-ul">
+                                                <!-- 二级选中添加类名yxnav-active2 act -->
+                                                 <li class="hptu-li ">
+                                                    <a href="resources-support/download/product-related.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala01.svg" alt="xiala_01.svg">
+                                                            </div>
+                                                            <p>Download</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                </li><li class="hptu-li ">
+                                                    <a href="resources-support/warranty.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala02.svg" alt="xiala_02.svg">
+                                                            </div>
+                                                            <p>Warranty</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                </li><li class="hptu-li ">
+                                                    <a href="resources-support/faq/question-list.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala03.svg" alt="xiala_03.svg">
+                                                            </div>
+                                                            <p>FAQS</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                </li><li class="hptu-li ">
+                                                    <a href="resources-support/community.html"  title="" class="hptu-li-link">
+                                                        <div class="hptu-li-le">
+                                                            <div class="hptu-li-le-icon">
+                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala04.svg" alt="xiala_04.svg">
+                                                            </div>
+                                                            <p>Community</p>
+                                                        </div>
+                                                        <div class="hptu-li-ri-icon">
+                                                            <img src="Public/En/images/a1_icon_07_1.svg" alt="">
+                                                        </div>
+                                                    </a>
+                                                </li>                                            </ul>
+                                        </div>
+                                    </div>                            </div>
+                        </li><li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="partner.html"  class="head-nav-item-title">Partner</a>
+                                                                                                                            </div>
+                        </li><li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="contact-us.html"  class="head-nav-item-title">Contact Us</a>
+                                                                                                                            </div>
+                        </li>
+                </ul>
+                <div class="head-other">
+                    <div class="std-btn3">
+                        <a href="software-cloud.html" target="_self" title="Skyworth Cloud" class="std-btn3-box">
+                            <p data-text="Skyworth Cloud">Skyworth Cloud</p>
+                            <div class="std-btn3-bg">
+                                <div class="std-btn3-bg-side"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="std-btn3 nomre">
+                        <a href="contact-us.html" target="_self" title="Contact Us" class="std-btn3-box">
+                            <p data-text="Contact Us">Contact Us</p>
+                            <div class="std-btn3-bg">
+                                <div class="std-btn3-bg-side"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ph顶部导航 -->
+    <div class="ys-hd-ph">
+        <nav class="ys-ph-navbar ys-ph-navbar4">
+            <!-- 导航条 -->
+            <div class="ys-phnav-header">
+                <!-- 菜单按钮 -->
+                <div class="ys-phnav-menubox">
+                    <div class="ys-phnav-menubtn">
+                        <span></span>
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="ys-phnav-logo">
+                    <a href="index.html">
+                        <img src="Public/Uploads/uploadfile/images/20250830/LOGOfanbai.svg" alt="LOGO反白.svg">
+                        <img src="Public/Uploads/uploadfile/images/20250830/LOGOlan.svg" alt="LOGO蓝.svg">
+                    </a>
+                </div>
+                <!-- 搜索 -->
+                <div class="ys-phnav-search">
+                    <!-- 搜索按钮 -->
+                    <i class="iconfont icon-search ys-phnavss-btn"></i>
+                    <!-- 搜索弹窗 -->
+                    <div class="ys-modal ys-phnavss-modal">
+                        <div class="ys-modal-wrap">
+                            <div class="ys-modal-close">
+                                <i class="iconfont icon-close"></i>
+                            </div>
+                            <div class="ys-modal-container">
+                                <div class="ys-modal-content">
+                                    <div class="ys-phnavss-form">
+                                        <input type="text" placeholder="Please enter keyword" id="phkeywords">
+                                        <button type="button" onclick="phsearch()">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 下拉菜单 -->
+            <div class="ys-phnav-menu">
+                <!-- 导航 -->
+                <div class="ys-phmenu-scroll">
+                    <ul class="ys-ph-nav">
+                        <!-- 有下级时加类名ys-phnav-haschild 不需要判断加减号有无 -->
+                        <li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="residential/residential-pv.html" >
+                                    <div class="ys-phnav-header-font">Residential</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="residential/residential-pv.html" >
+                                            <div class="ys-phnav-header-font">Residential PV</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="residential/residential-ess.html" >
+                                            <div class="ys-phnav-header-font">Residential ESS</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="business/business-pv.html" >
+                                    <div class="ys-phnav-header-font">Business</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="business/business-pv.html" >
+                                            <div class="ys-phnav-header-font">Business PV</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="business/business-ess.html" >
+                                            <div class="ys-phnav-header-font">Business ESS</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="product/pv-inverter.html" >
+                                    <div class="ys-phnav-header-font">Product</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/pv-inverter.html" >
+                                            <div class="ys-phnav-header-font">PV Inverter</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/pv-inverter/residential-pv-inverter/sw-1-3ktl-s1.html" >
+                                                    <div class="ys-phnav-header-font">Residential PV Inverter</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-1-3ktl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SW 1-3.3KTL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-4-6ktl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SW 4-6KTL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-7-10ktl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SW 7-10KTL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-10-25ktl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SW 10-25KTL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li><li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/pv-inverter/business/sw-30-33ktl-s1.html" >
+                                                    <div class="ys-phnav-header-font">Business PV Inverter</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/business/sw-30-33ktl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SW 30-33KTL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-inverter/business/sw40-60ktl-t1.html" >
+                                                            <div class="ys-phnav-header-font">SW 40-60KTL-T1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li>                                    </ul>                                </li><li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/battery-storage-system.html" >
+                                            <div class="ys-phnav-header-font">Battery Storage System</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/battery-storage-system/residential-ess/svh-3-6kh-s1.html" >
+                                                    <div class="ys-phnav-header-font">Residential ESS</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/residential-ess/svh-3-6kh-s1.html" >
+                                                            <div class="ys-phnav-header-font">SWH 3-6KH-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/residential-ess/svh-3-6kl-s1.html" >
+                                                            <div class="ys-phnav-header-font">SWH 3-6KL-S1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/residential-ess/svh-5-15kh-t1.html" >
+                                                            <div class="ys-phnav-header-font">SWH 5-15KH-T1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/residential-ess/svr-5-20k-h1.html" >
+                                                            <div class="ys-phnav-header-font">SWR5.12--20.48-H1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li><li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/battery-storage-system/c-i-ess/swh-29-50kh-t1.html" >
+                                                    <div class="ys-phnav-header-font">C&amp;I ESS</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/c-i-ess/swh-29-50kh-t1.html" >
+                                                            <div class="ys-phnav-header-font">SVH 29-50KH-T1</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/c-i-ess/sws-p50e100-hc.html" >
+                                                            <div class="ys-phnav-header-font">SWS-P50E100-HC</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/battery-storage-system/c-i-ess/sws-p100e215-hc.html" >
+                                                            <div class="ys-phnav-header-font">SWS-P100E215-HC</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li>                                    </ul>                                </li><li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/balcony-solar.html" >
+                                            <div class="ys-phnav-header-font">Residential Solar</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/balcony-solar/balcony-solar/railing-mounting.html" >
+                                                    <div class="ys-phnav-header-font">Balcony Solar</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/balcony-solar/balcony-solar/railing-mounting.html" >
+                                                            <div class="ys-phnav-header-font">Railing Mounting</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/balcony-solar/balcony-solar/sunshade-mounting.html" >
+                                                            <div class="ys-phnav-header-font">Sunshade Mounting</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/balcony-solar/balcony-solar/ground-mounting.html" >
+                                                            <div class="ys-phnav-header-font">Ground  Mounting</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/balcony-solar/balcony-solar/wall-mounting.html" >
+                                                            <div class="ys-phnav-header-font">Wall Mounting</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li>                                    </ul>                                </li><li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/pv-module.html" >
+                                            <div class="ys-phnav-header-font">PV Module</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/pv-module/modules/m10-series.html" >
+                                                    <div class="ys-phnav-header-font">PV Module</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-module/modules/m10-series.html" >
+                                                            <div class="ys-phnav-header-font">M10 SERIES</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-module/modules/g12-series.html" >
+                                                            <div class="ys-phnav-header-font">G12 SERIES </div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/pv-module/modules/g12r-series.html" >
+                                                            <div class="ys-phnav-header-font">G12R SERIES </div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li>                                    </ul>                                </li><li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/mounting-system.html" >
+                                            <div class="ys-phnav-header-font">Mounting System</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class="ys-phnav-haschild ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="product/mounting-system/mounting/for-tile-roof.html" >
+                                                    <div class="ys-phnav-header-font">Mounting System</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                             <ul>
+                                                <li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/mounting-system/mounting/for-tile-roof.html" >
+                                                            <div class="ys-phnav-header-font">For Tile  Roof</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li><li class="">
+                                                    <div class="ys-phnav-lisbox">
+                                                        <a href="product/mounting-system/mounting/for-slate-roof.html" >
+                                                            <div class="ys-phnav-header-font">For Slate Roof</div>
+                                                        </a>
+                                                        <div class="ys-phnav-icon"></div>
+                                                    </div>
+                                                </li>                                            </ul>                                        </li>                                    </ul>                                </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="resources-support/download/product-related.html" >
+                                    <div class="ys-phnav-header-font">Resources &amp; Support</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="resources-support/download/product-related.html" >
+                                            <div class="ys-phnav-header-font">Download</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class=" ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="resources-support/download/product-related.html" >
+                                                    <div class="ys-phnav-header-font">Product Related</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                                                                     </li><li class=" ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="resources-support/download/brand-promotion.html" >
+                                                    <div class="ys-phnav-header-font">Brand Promotion</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                                                                     </li>                                    </ul>                                </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="resources-support/warranty.html" >
+                                            <div class="ys-phnav-header-font">Warranty</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class="ys-phnav-haschild ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="resources-support/faq/question-list.html" >
+                                            <div class="ys-phnav-header-font">FAQS</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                    <!-- 三级 -->
+                                    <ul>
+                                        <li class=" ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="resources-support/faq/question-list.html" >
+                                                    <div class="ys-phnav-header-font">Question List</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                                                                     </li><li class=" ">
+                                            <div class="ys-phnav-lisbox">
+                                                <a href="contact-us.html" >
+                                                    <div class="ys-phnav-header-font">Online Support</div>
+                                                </a>
+                                                <div class="ys-phnav-icon"></div>
+                                            </div>
+                                            <!-- 四级 -->
+                                                                                     </li>                                    </ul>                                </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="resources-support/community.html" >
+                                            <div class="ys-phnav-header-font">Community</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="partner.html" >
+                                    <div class="ys-phnav-header-font">Partner</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="partner/hzformab9c.html?fid=48" >
+                                            <div class="ys-phnav-header-font">Distributor</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="partner/hzforme12f.html?fid=49" >
+                                            <div class="ys-phnav-header-font">Installer</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="partner/hzformc6d7.html?fid=50" >
+                                            <div class="ys-phnav-header-font">OEM Partner</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li><li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="partner/hzforma5cd.html?fid=51" >
+                                            <div class="ys-phnav-header-font">Strategic Partner</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                                                    </li>                            </ul>                        </li><li class=" ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="contact-us.html" >
+                                    <div class="ys-phnav-header-font">Contact Us</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                                                    </li>                        <!-- 以下li标签结构为pc端副导航以及pc端导航上按钮的跳转，不放入整理循环中 -->
+                         <li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="about-us.html" target="_self">
+                                    <div class="ys-phnav-header-font">About Us</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="news-media/news-center/news.html" target="_self">
+                                    <div class="ys-phnav-header-font">News & Media</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="news-media/blogs.html" target="_self">
+                                    <div class="ys-phnav-header-font">Blog</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="news-media/events.html" target="_self">
+                                    <div class="ys-phnav-header-font">Event</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="cases/residentials.html" target="_self">
+                                    <div class="ys-phnav-header-font">Case</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="careers.html" target="_self">
+                                    <div class="ys-phnav-header-font">Career</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li><li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="wish-list.html" target="_self">
+                                    <div class="ys-phnav-header-font">Wish List</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li>                        <!--新增移动端导航---20250814-->
+                        <!--选中需要添加类名yxnav-active1-->
+                        <li class="">
+                            <div class="ys-phnav-lisbox">
+                                <a href="software-cloud.html" target="_self">
+                                    <div class="ys-phnav-header-font">Solavita Cloud</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 语言 -->
+                    <div class="ys-phnav3-language">
+                        <div class="ys-phnav3-lang-hd ys-phnav-lisbox">
+                            <a href="javascript:;"><div class="ys-phnav-header-font">Language</div></a>
+                            <div class="ys-phnav-icon"></div>
+                        </div>
+                        <div class="ys-phnav3-lang-bd">
+                            <ul>
+                                <li>
+                                            <a href="index.html" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">EN</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://my.skyworth-pv.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">MY</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://th.skyworth-pv.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">TH</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://br.skyworth-pv.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">BR</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://www.solavita.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">EN</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://it.solavita.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">IT</div>
+                                            </a>
+                                        </li><li>
+                                            <a href="https://de.solavita.com/" rel="noopenner noreferrer">
+                                                <div class="ys-phnav-header-font">DE</div>
+                                            </a>
+                                        </li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>`;
+
+const footerHTML = `		<footer class="ys-footer">
+    <div class="mod-foot">
+        <div class="ys-cont1600">
+            <div class="mod-foot-top">
+                <div class="mod-foot-top-le">
+                    <div class="mod-foot-top-logo">
+                        <a href="index.html" title="">
+                            <img src="Public/Uploads/uploadfile/images/20250830/LOGOlan-430.svg" alt="LOGO蓝.svg">
+                        </a>
+                    </div>
+                    <ul class="mod-foot-bot-leul">
+                        <li class="mfbl-lis">
+                            <a href="https://www.linkedin.com/company/solavita-ess/" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon13.svg" alt="a1_icon_13.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.youtube.com/@Solavita_ESS/featured" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon14.svg" alt="a1_icon_14.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.facebook.com/profile.php?id=61557740968408" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon15.svg" alt="a1_icon_15.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.instagram.com/solavitaess/" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon16.svg" alt="a1_icon_16.svg">
+                            </a>
+                        </li>                    </ul>
+                </div>
+                <div class="mod-foot-top-ri">
+                    <ul class="mftr-ul"><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="residential/residential-pv.html" title="" class="std-text2">Residential</a></div><ul><li><p><a href="residential/residential-pv.html">Residential PV</a></p></li><li><p><a href="residential/residential-ess.html">Residential ESS</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="business/business-pv.html" title="" class="std-text2">Business</a></div><ul><li><p><a href="business/business-pv.html">Business PV</a></p></li><li><p><a href="business/business-ess.html">Business ESS</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href title="" class="std-text2">Product</a></div><ul><li><p><a href="product/pv-inverter.html" title="">PV Inverter</a></p></li><li><p><a href="product/battery-storage-system.html" title="">Battery Storage System</a></p></li><li><p><a href="product/pv-module.html" title="">PV Module</a></p></li><li><p><a href="product/mounting-system.html" title="">Mounting System</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="resources-support/download/product-related.html" title="" class="std-text2">Resources &amp; Support</a></div><ul><li><p><a href="resources-support/download/product-related.html" title="">Download</a></p></li><li><p><a href="resources-support/warranty.html" title="">Warranty</a></p></li><li><p><a href="resources-support/faq/question-list.html" title="">FAQS</a></p></li><li><p><a href="resources-support/community.html" title="">Community</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="news-media/news-center/news.html" title="" class="std-text2">News &amp; Media</a></div><ul><li><p><a href="news-media/news-center/media.html" title="">Media Coverage</a></p></li><li><p><a href="news-media/blogs.html" title="">Blog</a></p></li><li><p><a href="news-media/events.html" title="">Event</a></p></li><li><p><a href="news-media/news-center/news.html" title="">News</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="about-us.html" title="" class="std-text2">About Us</a></div><ul><li><p><a href="partner.html" title="">Partner</a></p></li><li><p><a href="cases/residentials.html" title="">Case</a></p></li><li><p><a href="careers.html" title="">Career</a></p></li></ul></li></ul>                </div>
+            </div>
+            <div class="mod-foot-min">
+                <div class="footer-other-link">
+                    <div class="std-text1 footer-other-link-name">Links</div>
+                    <ul class="footer-other-link-inof">
+                        <li class="foli-nub">
+                            <a href="https://global.skyworth.com/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTH</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li><li class="foli-nub">
+                            <a href="https://www.skyworthpv.com/en/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTHPV</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li><li class="foli-nub">
+                            <a href="https://www.skyworthdigital.com/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTHDIGITAL</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li>       
+                    </ul>
+                </div>                <div class="mod-foot-bot-ri">
+                    <form id="form2" class="mod-foot-bot-ri" onsubmit="return false">
+                    <input type="hidden" name="catid" value="1">
+                    <input type="hidden" name="modelid" value="66">
+                    <div class="mfbr-input">
+                        <input type="text" id="form2_email" name="form2_email" placeholder="Enter your email address to subscribe to our latest news">
+                    </div>
+                    <div class="std-btn1 footsbumitform">
+                        <div class="std-btn1-box">
+                            <p>Subscribe</p>
+                            <div class="std-btn1-icon">
+                                <img src="Public/En/images/a1_icon_18.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mod-foot-bot">
+                <div class="mod-foot-bot-le">
+                    <!-- 版权信息 -->
+                    <p><span>Copyright © 2025 Shenzhen Skyworth Photovoltaic Technology Co., Ltd.</span>  <a rel="nofollow" target="_blank" href="https://www.yongsy.com/">Powered by Yongsy</a> </p>
+                </div>
+                <ul class="mod-foot-bot-riul">
+                    <li class="mfbr-li">
+                        <a href="privacy.html" target="_self" title="Privacy Policy">Privacy Policy</a>
+                    </li><li class="mfbr-li">
+                        <a href="legal.html" target="_self" title="Legal Notices">Legal Notices</a>
+                    </li><li class="mfbr-li">
+                        <a href="sitemap.html" target="_self" title="Sitemap">Sitemap</a>
+                    </li>                </ul>
+            </div>
+        </div>
+    </div>
+</footer>`;
+
+// Inject immediately (script runs at end of body, DOM is ready)
+(function () {
+  var h = document.getElementById('header-nav-placeholder');
+  if (h) h.innerHTML = headerNavHTML;
+  var f = document.getElementById('footer-placeholder');
+  if (f) f.innerHTML = footerHTML;
+})();

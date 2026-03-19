@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="SolaMate — Skyworth's all-in-one balcony solar kit. 900W/1800W, plug-and-play, Bauhaus design. Railing, Sunshade and Ground mounting options." />
+    <meta name="keywords" content="SolaMate, balcony solar, microinverter, SWM800, SWM1600, plug and play solar" />
+    <title>SolaMate — Balcony Solar Kit | SKYWORTH</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+    /* ===== SolaMate Page Styles ===== */
+    .sm-breadcrumb {
+        padding: 18px 0;
+        border-bottom: 1px solid var(--colord8d);
+        background: #fff;
+    }
+    .sm-breadcrumb-inner { display: flex; align-items: center; gap: 8px; }
+    .sm-breadcrumb a { font-size: 14px; color: var(--color8b8); text-decoration: none; }
+    .sm-breadcrumb a:hover { color: var(--colorbj); }
+    .sm-breadcrumb-sep { font-size: 14px; color: var(--colord8d); }
+    .sm-breadcrumb-cur { font-size: 14px; color: var(--color1e1); }
+
+    /* Hero */
+    .sm-hero {
+        background: linear-gradient(135deg, #0a1628 0%, #003f7a 60%, #006BC0 100%);
+        padding: 80px 0 90px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+    }
+    .sm-hero::after {
+        content: '';
+        position: absolute;
+        right: -100px;
+        top: -100px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0,226,224,.12) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .sm-hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 80px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    .sm-product-line {
+        font-size: 13px;
+        color: #00E2E0;
+        font-family: var(--semibold);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .sm-hero-title {
+        font-size: 72px;
+        color: #fff;
+        font-family: var(--bold);
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    .sm-hero-sub-title {
+        font-size: 22px;
+        color: rgba(255,255,255,.6);
+        font-family: var(--regular2);
+        margin-bottom: 20px;
+    }
+    .sm-hero-tagline {
+        font-size: 18px;
+        color: rgba(255,255,255,.85);
+        line-height: 1.65;
+        margin-bottom: 44px;
+        max-width: 520px;
+    }
+    .sm-key-specs {
+        display: flex;
+        gap: 0;
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: var(--radius15);
+        overflow: hidden;
+        margin-bottom: 44px;
+        backdrop-filter: blur(8px);
+    }
+    .sm-key-specs li {
+        flex: 1;
+        list-style: none;
+        padding: 20px 16px;
+        text-align: center;
+        border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .sm-key-specs li:last-child { border-right: none; }
+    .sm-spec-val {
+        font-size: 28px;
+        color: #00E2E0;
+        font-family: var(--bold);
+        line-height: 1.1;
+    }
+    .sm-spec-unit { font-size: 14px; color: #00E2E0; }
+    .sm-spec-label { font-size: 13px; color: rgba(255,255,255,.55); margin-top: 6px; }
+    .sm-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .sm-btn-solid {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 14px 32px; background: #00E2E0; color: #0a1628;
+        border-radius: 100px; font-size: 16px; font-family: var(--semibold);
+        text-decoration: none; transition: opacity .2s;
+    }
+    .sm-btn-solid:hover { opacity: .85; color: #0a1628; }
+    .sm-btn-outline {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 14px 32px; border: 1.5px solid rgba(255,255,255,.5);
+        color: #fff; border-radius: 100px; font-size: 16px;
+        font-family: var(--semibold); text-decoration: none; transition: background .2s;
+    }
+    .sm-btn-outline:hover { background: rgba(255,255,255,.12); color: #fff; }
+    /* Hero right: product visual */
+    .sm-hero-visual {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: var(--radius20);
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        backdrop-filter: blur(4px);
+    }
+    .sm-hero-visual-icon { font-size: 80px; opacity: .6; }
+    .sm-hero-visual-label { font-size: 15px; color: rgba(255,255,255,.4); }
+    .sm-hero-badges {
+        display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .sm-badge {
+        padding: 5px 12px;
+        background: rgba(255,255,255,.1);
+        border-radius: 100px;
+        font-size: 12px;
+        color: rgba(255,255,255,.75);
+        border: 1px solid rgba(255,255,255,.15);
+    }
+
+    /* Section commons */
+    .sm-section { padding: 80px 0; }
+    .sm-section-hd { margin-bottom: 56px; }
+    .sm-section-hd.center { text-align: center; }
+    .sm-section-title { font-size: 40px; color: var(--color1e1); font-family: var(--medium); line-height: 1.2; margin-bottom: 12px; }
+    .sm-section-sub { font-size: 18px; color: var(--color8b8); line-height: 1.6; }
+
+    /* 4 Features */
+    .sm-features { background: var(--colorbj1); }
+    .sm-features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+    .sm-feature-card {
+        background: #fff;
+        border-radius: var(--radius20);
+        padding: 36px 28px;
+        transition: box-shadow .25s, transform .25s;
+        cursor: default;
+    }
+    .sm-feature-card:hover { box-shadow: 0 12px 40px rgba(0,107,192,.1); transform: translateY(-4px); }
+    .sm-feature-num {
+        font-size: 13px; color: var(--colorbj); font-family: var(--bold);
+        letter-spacing: .08em; margin-bottom: 16px;
+    }
+    .sm-feature-icon { font-size: 36px; margin-bottom: 16px; }
+    .sm-feature-name { font-size: 22px; color: var(--color1e1); font-family: var(--semibold); margin-bottom: 12px; }
+    .sm-feature-desc { font-size: 15px; color: var(--color8b8); line-height: 1.65; }
+
+    /* Mounting Types */
+    .sm-mounting-tabs {
+        display: flex;
+        gap: 0;
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius15);
+        overflow: hidden;
+        margin-bottom: 48px;
+    }
+    .sm-mount-tab {
+        flex: 1;
+        padding: 18px 20px;
+        text-align: center;
+        cursor: pointer;
+        background: #fff;
+        border-right: 1px solid var(--colord8d);
+        transition: background .2s, color .2s;
+        font-size: 17px;
+        font-family: var(--medium);
+        color: var(--color8b8);
+        user-select: none;
+    }
+    .sm-mount-tab:last-child { border-right: none; }
+    .sm-mount-tab.active { background: var(--colorbj); color: #fff; }
+    .sm-mount-tab:hover:not(.active) { background: var(--colorbj1); color: var(--colorbj); }
+    .sm-mount-panel { display: none; }
+    .sm-mount-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .sm-mount-panel-img {
+        border-radius: var(--radius20);
+        overflow: hidden;
+        background: var(--colorbj1);
+        aspect-ratio: 4/3;
+    }
+    .sm-mount-panel-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sm-mount-panel-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .sm-mount-panel-imgs .sm-mount-panel-img { aspect-ratio: 1; }
+    .sm-mount-title { font-size: 28px; color: var(--color1e1); font-family: var(--medium); margin-bottom: 16px; }
+    .sm-mount-tag {
+        display: inline-block; padding: 5px 14px;
+        background: var(--colorbj1); color: var(--colorbj);
+        border-radius: 100px; font-size: 13px; font-family: var(--semibold);
+        margin-bottom: 20px;
+    }
+    .sm-mount-desc { font-size: 16px; color: var(--color8b8); line-height: 1.7; margin-bottom: 24px; }
+    .sm-mount-features { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .sm-mount-features li {
+        display: flex; align-items: center; gap: 12px;
+        font-size: 15px; color: var(--color1e1); padding: 10px 14px;
+        background: var(--colorbj1); border-radius: var(--radius10);
+    }
+    .sm-mount-features li::before { content: '✓'; color: var(--colorbj); font-family: var(--bold); flex-shrink: 0; }
+    .sm-mount-scenes { font-size: 14px; color: var(--color8b8); }
+    .sm-mount-scenes strong { color: var(--color1e1); }
+
+    /* Models Table */
+    .sm-models { background: var(--colorbj1); }
+    .sm-models-table {
+        width: 100%; border-collapse: collapse;
+        border-radius: var(--radius15); overflow: hidden;
+        border: 1px solid var(--colord8d); background: #fff;
+    }
+    .sm-models-table thead th {
+        background: var(--colorbj); color: #fff;
+        padding: 16px 20px; font-size: 15px; font-family: var(--semibold); text-align: left;
+    }
+    .sm-models-table thead th:first-child { border-radius: 0; }
+    .sm-models-table tbody tr:nth-child(odd) td { background: #fff; }
+    .sm-models-table tbody tr:nth-child(even) td { background: var(--colorbj1); }
+    .sm-models-table td { padding: 14px 20px; font-size: 15px; border-bottom: 1px solid var(--colord8d); }
+    .sm-models-table tbody tr:last-child td { border-bottom: none; }
+    .sm-models-table td:first-child { color: var(--color1e1); font-family: var(--medium); }
+    .sm-models-table td:not(:first-child) { color: var(--color8b8); }
+    .sm-models-table tbody tr:hover td { background: #e8f4ff; }
+    .sm-model-tag {
+        display: inline-block; padding: 3px 10px;
+        border-radius: 100px; font-size: 12px; font-family: var(--semibold);
+    }
+    .sm-model-tag-blue { background: #dbeafe; color: #2563eb; }
+    .sm-model-tag-green { background: #dcfce7; color: #16a34a; }
+    .sm-model-tag-orange { background: #fef9c3; color: #ca8a04; }
+
+    /* ROI Section */
+    .sm-roi { overflow: hidden; }
+    .sm-roi-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .sm-roi-title { font-size: 40px; color: var(--color1e1); font-family: var(--medium); margin-bottom: 12px; }
+    .sm-roi-sub { font-size: 18px; color: var(--color8b8); line-height: 1.6; margin-bottom: 40px; }
+    .sm-roi-compare {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px;
+    }
+    .sm-roi-card {
+        border-radius: var(--radius20); padding: 28px 24px;
+        border: 2px solid var(--colord8d); background: #fff;
+        text-align: center; transition: border-color .2s;
+    }
+    .sm-roi-card.highlight { border-color: var(--colorbj); background: var(--colorbj1); }
+    .sm-roi-card-label { font-size: 14px; color: var(--color8b8); margin-bottom: 8px; }
+    .sm-roi-card-val { font-size: 36px; color: var(--colorbj); font-family: var(--bold); line-height: 1.1; }
+    .sm-roi-card-unit { font-size: 16px; }
+    .sm-roi-card-desc { font-size: 13px; color: var(--color8b8); margin-top: 8px; }
+    .sm-roi-highlights { list-style: none; padding: 0; }
+    .sm-roi-highlights li {
+        display: flex; align-items: flex-start; gap: 12px;
+        padding: 14px 0; border-bottom: 1px solid var(--colord8d);
+        font-size: 16px; line-height: 1.5;
+    }
+    .sm-roi-highlights li:last-child { border-bottom: none; }
+    .sm-roi-highlights li::before { content: '→'; color: var(--colorbj); flex-shrink: 0; font-family: var(--bold); }
+    /* Savings comparison bars */
+    .sm-savings-grid {
+        background: var(--colorbj1); border-radius: var(--radius20);
+        padding: 32px; display: flex; flex-direction: column; gap: 24px;
+    }
+    .sm-savings-title { font-size: 18px; color: var(--color1e1); font-family: var(--semibold); margin-bottom: 4px; }
+    .sm-savings-item { }
+    .sm-savings-label { font-size: 15px; color: var(--color1e1); margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .sm-savings-label span { color: var(--colorbj); font-family: var(--bold); }
+    .sm-savings-bar-bg { background: #dde8f5; border-radius: 100px; height: 10px; overflow: hidden; }
+    .sm-savings-bar { height: 10px; border-radius: 100px; background: var(--colorbj2); }
+
+    /* CTA */
+    .sm-cta { background: var(--colorbj2); padding: 80px 0; text-align: center; }
+    .sm-cta-title { font-size: 48px; color: #fff; font-family: var(--medium); line-height: 1.2; margin-bottom: 16px; }
+    .sm-cta-sub { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 40px; }
+    .sm-btn-white {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 16px 40px; background: #fff; color: var(--colorbj);
+        border-radius: 100px; font-size: 18px; font-family: var(--medium);
+        text-decoration: none; transition: transform .2s, box-shadow .2s;
+    }
+    .sm-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); color: var(--colorbj); }
+
+    @media (max-width: 1200px) {
+        .sm-features-grid { grid-template-columns: repeat(2, 1fr); }
+        .sm-roi-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 1024px) {
+        .sm-hero-inner { grid-template-columns: 1fr; }
+        .sm-hero-visual { display: none; }
+        .sm-hero-title { font-size: 52px; }
+        .sm-mount-panel.active { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+        .sm-features-grid { grid-template-columns: 1fr; }
+        .sm-key-specs { flex-wrap: wrap; }
+        .sm-key-specs li { flex: 1 1 33%; border-bottom: 1px solid rgba(255,255,255,.12); }
+        .sm-roi-compare { grid-template-columns: 1fr; }
+        .sm-mounting-tabs { flex-direction: column; border-radius: var(--radius15); }
+        .sm-mount-tab { border-right: none; border-bottom: 1px solid var(--colord8d); }
+        .sm-mount-tab:last-child { border-bottom: none; }
+    }
+    </style>
+</head>
+<body>
+<div class="ys-page-wrap act product-page">
+    <div id="header-nav-placeholder"></div>
+    <main class="ys-main">
+
+        <!-- Breadcrumb -->
+        <div class="sm-breadcrumb">
+            <div class="ys-cont1600 sm-breadcrumb-inner">
+                <a href="index.html">Home</a>
+                <span class="sm-breadcrumb-sep">/</span>
+                <a href="residential/residential-pv.html">Residential</a>
+                <span class="sm-breadcrumb-sep">/</span>
+                <span class="sm-breadcrumb-cur">SolaMate</span>
+            </div>
+        </div>
+
+        <!-- ===== Hero ===== -->
+        <section class="sm-hero">
+            <div class="ys-cont1600">
+                <div class="sm-hero-inner">
+                    <div>
+                        <div class="sm-product-line">Balcony Solar Solution</div>
+                        <h1 class="sm-hero-title">SolaMate</h1>
+                        <p class="sm-hero-sub-title">All-in-One Quick-Install Balcony Solar Kit</p>
+                        <p class="sm-hero-tagline">
+                            Build your personal power station as easily as assembling building blocks.
+                            A compact residential PV solution perfectly tailored for balcony installations —
+                            plug in, generate, and start saving from day one.
+                        </p>
+                        <ul class="sm-key-specs">
+                            <li>
+                                <div class="sm-spec-val">900<span class="sm-spec-unit">W</span></div>
+                                <div class="sm-spec-label">Entry System</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">1800<span class="sm-spec-unit">W</span></div>
+                                <div class="sm-spec-label">Max System</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">6</div>
+                                <div class="sm-spec-label">Model Options</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">9.2<span class="sm-spec-unit">x</span></div>
+                                <div class="sm-spec-label">30-Year ROI</div>
+                            </li>
+                        </ul>
+                        <div class="sm-hero-btns">
+                            <a href="contact-us.html" class="sm-btn-solid">Get a Quote →</a>
+                            <a href="#models" class="sm-btn-outline">View All Models</a>
+                        </div>
+                        <div class="sm-hero-badges">
+                            <span class="sm-badge">🏆 Red Dot Design Award</span>
+                            <span class="sm-badge">⚡ Plug &amp; Play</span>
+                            <span class="sm-badge">☁️ Solavita Cloud Monitor</span>
+                            <span class="sm-badge">🔒 Zero Export Device</span>
+                        </div>
+                    </div>
+                    <div class="sm-hero-visual">
+                        <img src="assets/images/products/page_03_img_01.jpeg" alt="SolaMate Balcony Solar Kit" style="width:100%;height:100%;object-fit:contain;display:block;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 4 Features ===== -->
+        <section class="sm-section sm-features">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd center">
+                    <h2 class="sm-section-title">Four Core Advantages</h2>
+                    <p class="sm-section-sub">Adjustable · Aesthetic · Flexible · Cost-effective</p>
+                </div>
+                <div class="sm-features-grid">
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">01 / ADJUSTABLE</div>
+                        <img src="assets/images/products/page_12_img_01.jpeg" alt="Four-angle adjustment 25 30 35 40 degrees" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:contain;background:#f5f5f5;">
+                        <div class="sm-feature-name">Optimized for Every Angle</div>
+                        <p class="sm-feature-desc">
+                            Four-position pin adjustment at <strong>25°, 30°, 35° and 40°</strong> lets you match the
+                            optimal sunlight angle for your location and season. Support slotted slideway adjustment
+                            adapts to different orientations, structures, and spaces — maximizing power generation
+                            efficiency year-round without any guesswork.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">02 / AESTHETIC</div>
+                        <img src="assets/images/products/page_06_img_02.jpeg" alt="SolaMate product back view with railing mount" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover;aspect-ratio:16/9;background:#111;">
+                        <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;">
+                            <img src="assets/images/products/page_06_img_03.jpeg" alt="Red Dot Award" style="height:36px;object-fit:contain;">
+                            <img src="assets/images/products/page_06_img_04.jpeg" alt="Red Dot" style="height:24px;object-fit:contain;">
+                        </div>
+                        <div class="sm-feature-name">Bauhaus-Inspired Design</div>
+                        <p class="sm-feature-desc">
+                            Meticulously crafted by Skyworth's award-winning design team — a <strong>Red Dot Design Award</strong>
+                            winner — to seamlessly integrate with modern home styles. All-black minimalist modules
+                            (no grid lines), smooth J-shaped hooks that minimize visual intrusion, and foldable
+                            supports that keep everything clean and streamlined.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">03 / FLEXIBLE</div>
+                        <img src="assets/images/products/page_16_img_01.jpeg" alt="Solavita Cloud App monitoring dashboard" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover;aspect-ratio:16/9;">
+                        <div class="sm-feature-name">Smart Zero-Export Control</div>
+                        <p class="sm-feature-desc">
+                            Built-in <strong>zero-export management</strong> with second-level rapid current response
+                            completely eliminates reverse power flow into the grid. Integrated AI-powered monitoring
+                            via the <strong>Solavita Cloud App</strong> gives you full visibility into generation,
+                            revenue, and system status — from any device, anywhere.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">04 / COST-EFFECTIVE</div>
+                        <div class="sm-feature-icon">💰</div>
+                        <div class="sm-feature-name">9.2× Return on Investment</div>
+                        <p class="sm-feature-desc">
+                            One-time investment of just <strong>35,999 THB</strong> generates electricity at only
+                            <strong>0.45 THB/unit</strong> — vs. 4.2 THB grid price. The standard version uses
+                            power immediately at generation (midday peak savings); the energy storage version adds
+                            evening peak-shift capability for even greater monthly savings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Mounting Types ===== -->
+        <section class="sm-section">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd">
+                    <h2 class="sm-section-title">Three Mounting Solutions</h2>
+                    <p class="sm-section-sub">Choose the mounting style that fits your space — all models ship plug-and-play ready.</p>
+                </div>
+                <!-- Tabs -->
+                <div class="sm-mounting-tabs">
+                    <div class="sm-mount-tab active" onclick="switchMount('railing', this)">🏠 Railing Mounting</div>
+                    <div class="sm-mount-tab" onclick="switchMount('sunshade', this)">☂️ Sunshade Mounting</div>
+                    <div class="sm-mount-tab" onclick="switchMount('ground', this)">🌿 Ground Mounting</div>
+                </div>
+
+                <!-- Railing -->
+                <div class="sm-mount-panel active" id="mount-railing">
+                    <div class="sm-mount-panel-imgs">
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_03_img_01.jpeg" alt="SolaMate railing mounting on balcony">
+                        </div>
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_10_img_01.jpg" alt="SolaMate railing mounting apartment balcony scene">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-R · SWM1600-R</div>
+                        <h3 class="sm-mount-title">Railing Mounting</h3>
+                        <p class="sm-mount-desc">
+                            Designed for open balconies in villas and apartments. The J-shaped hook attaches cleanly
+                            to balcony railings without drilling. Bauhaus foldable support simplifies installation
+                            and storage — the entire system packs flat for easy transportation.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>String-style frame with rounded corners (collision prevention)</li>
+                            <li>Foldable high-strength support — no tools required</li>
+                            <li>High resistance to wind and snow</li>
+                            <li>Plug-and-play AC connection</li>
+                            <li>Hinge-connected module and support for cleaner profile</li>
+                            <li>Serrated pattern · Rounded hook · Texture splicing design</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Best for:</strong> Villa balconies · Apartment balconies · Utility balconies
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sunshade -->
+                <div class="sm-mount-panel" id="mount-sunshade">
+                    <div class="sm-mount-panel-img">
+                        <img src="assets/images/products/page_07_img_01.jpg" alt="SolaMate sunshade mounting on building exterior">
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-S · SWM1600-S</div>
+                        <h3 class="sm-mount-title">Sunshade Mounting</h3>
+                        <p class="sm-mount-desc">
+                            Functions as both a solar generator and a sunshade canopy. The all-steel support
+                            provides a stable structure with excellent wind and snow resistance. All-black minimalist
+                            design (without grid lines) blends naturally with shop fronts, windowsill facades,
+                            and residential entrances.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>All-steel support with enhanced wind and snow resistance</li>
+                            <li>All-black minimalist design (no grid lines)</li>
+                            <li>High-power anti-microcrack modules</li>
+                            <li>Plug-and-play installation</li>
+                            <li>Dual function: power generation + sun protection</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Best for:</strong> Shop fronts · Windowsill exterior facades · Self-built house entrances
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ground -->
+                <div class="sm-mount-panel" id="mount-ground">
+                    <div class="sm-mount-panel-imgs">
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_11_img_01.jpg" alt="SolaMate ground mounting on deck">
+                        </div>
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_12_img_01.jpeg" alt="SolaMate four-angle adjustment 25 30 35 40 degrees">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-G · SWM1600-G</div>
+                        <h3 class="sm-mount-title">Ground Mounting</h3>
+                        <p class="sm-mount-desc">
+                            The most versatile option — folds flat for easy storage and deploys in three tool-free
+                            steps. Four adjustable angle positions (25°, 30°, 35°, 40°) let you capture maximum
+                            sunlight in any season or location. Compact enough for courtyards, gardens, or even
+                            camping sites.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>Minimalist design — folds flat for easy storage</li>
+                            <li>Tool-free three-step installation</li>
+                            <li>Four adjustable angles: 25° / 30° / 35° / 40°</li>
+                            <li>Support slotted slideway for fine-tuning</li>
+                            <li>Plug-and-play AC connection</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Best for:</strong> Villa courtyard · Self-built house courtyard · Camping
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Models & Specifications ===== -->
+        <section class="sm-section sm-models" id="models">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd">
+                    <h2 class="sm-section-title">Models &amp; Specifications</h2>
+                    <p class="sm-section-sub">Six configurations across three mounting styles — all include a zero-export device as standard.</p>
+                </div>
+                <table class="sm-models-table">
+                    <thead>
+                        <tr>
+                            <th>Mounting Type</th>
+                            <th>Configuration</th>
+                            <th>Model</th>
+                            <th>System Capacity</th>
+                            <th>Microinverter</th>
+                            <th>Zero Export Device</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-blue">Railing</span>
+                            </td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-R</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-R</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-green">Sunshade</span>
+                            </td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-S</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-S</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-orange">Ground</span>
+                            </td>
+                            <td>1-to-2</td>
+                            <td><strong>SWM800-G</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-to-4</td>
+                            <td><strong>SWM1600-G</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Standard ✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top:16px; font-size:14px; color:var(--color8b8);">
+                    * Installation in Thailand requires hardwired connection to the AC distribution box — plug-and-play is not permitted per local regulations.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Daily Power Generation ===== -->
+        <section class="sm-section">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd center">
+                    <h2 class="sm-section-title">What Can It Power?</h2>
+                    <p class="sm-section-sub">Daily generation based on typical sunlight conditions in Southeast Asia</p>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+                    <!-- 900W Card -->
+                    <div style="background:var(--colorbj1); border-radius:var(--radius20); padding:40px 36px; border:1px solid var(--colord8d);">
+                        <div style="font-size:14px; color:var(--colorbj); font-family:var(--semibold); margin-bottom:8px;">SWM800-R/S/G</div>
+                        <div style="font-size:32px; color:var(--color1e1); font-family:var(--bold); margin-bottom:4px;">1-to-2 · 900 W</div>
+                        <div style="font-size:40px; color:var(--colorbj); font-family:var(--bold); margin-bottom:24px;">~3.0 kWh<span style="font-size:18px; color:var(--color8b8);"> / day</span></div>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">💡</span> Light Bulbs × 6 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— 20 hours</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">📺</span> TV × 2 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— full day</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">🧊</span> Refrigerator × 1 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— 20 hours</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--colord8d);">
+                            <div style="font-size:15px; color:var(--color8b8);">Monthly electricity savings</div>
+                            <div style="font-size:36px; color:var(--colorbj); font-family:var(--bold);">459 THB</div>
+                        </div>
+                    </div>
+                    <!-- 1800W Card -->
+                    <div style="background:linear-gradient(135deg,#006BC0 0%,#00b4b4 100%); border-radius:var(--radius20); padding:40px 36px;">
+                        <div style="font-size:14px; color:rgba(255,255,255,.7); font-family:var(--semibold); margin-bottom:8px;">SWM1600-R/S/G</div>
+                        <div style="font-size:32px; color:#fff; font-family:var(--bold); margin-bottom:4px;">1-to-4 · 1800 W</div>
+                        <div style="font-size:40px; color:#00E2E0; font-family:var(--bold); margin-bottom:24px;">~6.0 kWh<span style="font-size:18px; color:rgba(255,255,255,.6);"> / day</span></div>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">❄️</span> Air Conditioner × 1 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 8 hours (1P, 600~800W)</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">🧊</span> Refrigerator × 2 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 16 hours</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">💡</span> Light Bulbs × 6 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 15 hours</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top:28px; padding-top:20px; border-top:1px solid rgba(255,255,255,.2);">
+                            <div style="font-size:15px; color:rgba(255,255,255,.6);">Monthly electricity savings</div>
+                            <div style="font-size:36px; color:#fff; font-family:var(--bold);">919 THB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ROI Section ===== -->
+        <section class="sm-section sm-roi" style="background:var(--colorbj1);">
+            <div class="ys-cont1600">
+                <div class="sm-roi-inner">
+                    <div>
+                        <h2 class="sm-roi-title">Investment Returns</h2>
+                        <p class="sm-roi-sub">Based on 1-to-4 (1800W) system, Thailand electricity market conditions.</p>
+                        <div class="sm-roi-compare">
+                            <div class="sm-roi-card">
+                                <div class="sm-roi-card-label">Grid electricity price</div>
+                                <div class="sm-roi-card-val">4.2 <span class="sm-roi-card-unit">THB/unit</span></div>
+                                <div class="sm-roi-card-desc">Current market rate</div>
+                            </div>
+                            <div class="sm-roi-card highlight">
+                                <div class="sm-roi-card-label">SolaMate generation cost</div>
+                                <div class="sm-roi-card-val">0.45 <span class="sm-roi-card-unit">THB/unit</span></div>
+                                <div class="sm-roi-card-desc">89% cheaper than grid</div>
+                            </div>
+                            <div class="sm-roi-card">
+                                <div class="sm-roi-card-label">One-time investment</div>
+                                <div class="sm-roi-card-val">35,999 <span class="sm-roi-card-unit">THB</span></div>
+                                <div class="sm-roi-card-desc">Complete kit price</div>
+                            </div>
+                            <div class="sm-roi-card highlight">
+                                <div class="sm-roi-card-label">30-year total return</div>
+                                <div class="sm-roi-card-val">331,128 <span class="sm-roi-card-unit">THB</span></div>
+                                <div class="sm-roi-card-desc">9.2× return on investment</div>
+                            </div>
+                        </div>
+                        <ul class="sm-roi-highlights">
+                            <li>System capacity &lt;2kW — no grid connection permit required in most regions</li>
+                            <li>Standard version: instant use during midday peak generation hours</li>
+                            <li>Energy storage version: evening peak-shift for maximum daily savings</li>
+                            <li>Solavita Cloud App tracks daily/monthly/annual generation and revenue</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="sm-savings-grid">
+                            <div class="sm-savings-title">Cumulative Return vs. Time (THB)</div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 5 <span>55,188 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:16%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 10 <span>110,376 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:33%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 15 <span>165,564 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:50%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 20 <span>220,752 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:67%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 25 <span>275,940 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:83%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Year 30 <span style="color:#16a34a;">331,128 THB ✓</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:100%; background:linear-gradient(90deg,#006BC0,#00E2E0)"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="sm-cta">
+            <div class="ys-cont1600">
+                <h2 class="sm-cta-title">Ready to Start Generating?</h2>
+                <p class="sm-cta-sub">Talk to our team and get a personalized SolaMate recommendation for your home.</p>
+                <a href="contact-us.html" class="sm-btn-white">Contact Us Now →</a>
+            </div>
+        </section>
+
+    </main>
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="assets/js/components.js"></script>
+<script src="Public/En/js/public.js"></script>
+<script src="Public/En/js/base-v4.0.min.js"></script>
+<script src="Public/En/js/common.js"></script>
+<script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
+<script>
+function switchMount(type, tab) {
+    document.querySelectorAll('.sm-mount-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.sm-mount-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('mount-' + type).classList.add('active');
+}
+</script>
+</body>
+</html>

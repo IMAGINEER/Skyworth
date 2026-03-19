@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+    <meta charset="UTF-8">
+    <base href="../">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="SolaMate — Bộ điện mặt trời ban công tất cả trong một của Skyworth. 900W/1800W, cắm và chạy, thiết kế Bauhaus. Tùy chọn lắp ráp trên Lan can, Mái che nắng và Mặt đất." />
+    <meta name="keywords" content="SolaMate, điện mặt trời ban công, microinverter, SWM800, SWM1600, cắm và chạy năng lượng mặt trời" />
+    <title>SolaMate — Bộ Điện Mặt Trời Ban Công | SKYWORTH</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+    /* ===== SolaMate Page Styles ===== */
+    .sm-breadcrumb {
+        padding: 18px 0;
+        border-bottom: 1px solid var(--colord8d);
+        background: #fff;
+    }
+    .sm-breadcrumb-inner { display: flex; align-items: center; gap: 8px; }
+    .sm-breadcrumb a { font-size: 14px; color: var(--color8b8); text-decoration: none; }
+    .sm-breadcrumb a:hover { color: var(--colorbj); }
+    .sm-breadcrumb-sep { font-size: 14px; color: var(--colord8d); }
+    .sm-breadcrumb-cur { font-size: 14px; color: var(--color1e1); }
+
+    /* Hero */
+    .sm-hero {
+        background: linear-gradient(135deg, #0a1628 0%, #003f7a 60%, #006BC0 100%);
+        padding: 80px 0 90px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+    }
+    .sm-hero::after {
+        content: '';
+        position: absolute;
+        right: -100px;
+        top: -100px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0,226,224,.12) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .sm-hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 80px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    .sm-product-line {
+        font-size: 13px;
+        color: #00E2E0;
+        font-family: var(--semibold);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .sm-hero-title {
+        font-size: 72px;
+        color: #fff;
+        font-family: var(--bold);
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    .sm-hero-sub-title {
+        font-size: 22px;
+        color: rgba(255,255,255,.6);
+        font-family: var(--regular2);
+        margin-bottom: 20px;
+    }
+    .sm-hero-tagline {
+        font-size: 18px;
+        color: rgba(255,255,255,.85);
+        line-height: 1.65;
+        margin-bottom: 44px;
+        max-width: 520px;
+    }
+    .sm-key-specs {
+        display: flex;
+        gap: 0;
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: var(--radius15);
+        overflow: hidden;
+        margin-bottom: 44px;
+        backdrop-filter: blur(8px);
+    }
+    .sm-key-specs li {
+        flex: 1;
+        list-style: none;
+        padding: 20px 16px;
+        text-align: center;
+        border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .sm-key-specs li:last-child { border-right: none; }
+    .sm-spec-val {
+        font-size: 28px;
+        color: #00E2E0;
+        font-family: var(--bold);
+        line-height: 1.1;
+    }
+    .sm-spec-unit { font-size: 14px; color: #00E2E0; }
+    .sm-spec-label { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 6px; }
+    .sm-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .sm-btn-solid {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 14px 32px; background: #00E2E0; color: #0a1628;
+        border-radius: 100px; font-size: 16px; font-family: var(--semibold);
+        text-decoration: none; transition: opacity .2s;
+    }
+    .sm-btn-solid:hover { opacity: .85; color: #0a1628; }
+    .sm-btn-outline {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 14px 32px; border: 1.5px solid rgba(255,255,255,.5);
+        color: #fff; border-radius: 100px; font-size: 16px;
+        font-family: var(--semibold); text-decoration: none; transition: background .2s;
+    }
+    .sm-btn-outline:hover { background: rgba(255,255,255,.12); color: #fff; }
+    /* Hero right: product visual */
+    .sm-hero-visual {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: var(--radius20);
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        backdrop-filter: blur(4px);
+    }
+    .sm-hero-visual-icon { font-size: 80px; opacity: .6; }
+    .sm-hero-visual-label { font-size: 15px; color: rgba(255,255,255,.4); }
+    .sm-hero-badges {
+        display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .sm-badge {
+        padding: 5px 12px;
+        background: rgba(255,255,255,.1);
+        border-radius: 100px;
+        font-size: 12px;
+        color: rgba(255,255,255,.75);
+        border: 1px solid rgba(255,255,255,.15);
+    }
+
+    /* Section commons */
+    .sm-section { padding: 80px 0; }
+    .sm-section-hd { margin-bottom: 56px; }
+    .sm-section-hd.center { text-align: center; }
+    .sm-section-title { font-size: 40px; color: var(--color1e1); font-family: var(--medium); line-height: 1.2; margin-bottom: 12px; }
+    .sm-section-sub { font-size: 18px; color: var(--color8b8); line-height: 1.6; }
+
+    /* 4 Features */
+    .sm-features { background: var(--colorbj1); }
+    .sm-features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+    .sm-feature-card {
+        background: #fff;
+        border-radius: var(--radius20);
+        padding: 36px 28px;
+        transition: box-shadow .25s, transform .25s;
+        cursor: default;
+    }
+    .sm-feature-card:hover { box-shadow: 0 12px 40px rgba(0,107,192,.1); transform: translateY(-4px); }
+    .sm-feature-num {
+        font-size: 13px; color: var(--colorbj); font-family: var(--bold);
+        letter-spacing: .08em; margin-bottom: 16px;
+    }
+    .sm-feature-icon { font-size: 36px; margin-bottom: 16px; }
+    .sm-feature-name { font-size: 22px; color: var(--color1e1); font-family: var(--semibold); margin-bottom: 12px; }
+    .sm-feature-desc { font-size: 15px; color: var(--color8b8); line-height: 1.65; }
+
+    /* Mounting Types */
+    .sm-mounting-tabs {
+        display: flex;
+        gap: 0;
+        border: 1px solid var(--colord8d);
+        border-radius: var(--radius15);
+        overflow: hidden;
+        margin-bottom: 48px;
+    }
+    .sm-mount-tab {
+        flex: 1;
+        padding: 18px 20px;
+        text-align: center;
+        cursor: pointer;
+        background: #fff;
+        border-right: 1px solid var(--colord8d);
+        transition: background .2s, color .2s;
+        font-size: 17px;
+        font-family: var(--medium);
+        color: var(--color8b8);
+        user-select: none;
+    }
+    .sm-mount-tab:last-child { border-right: none; }
+    .sm-mount-tab.active { background: var(--colorbj); color: #fff; }
+    .sm-mount-tab:hover:not(.active) { background: var(--colorbj1); color: var(--colorbj); }
+    .sm-mount-panel { display: none; }
+    .sm-mount-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .sm-mount-panel-img {
+        border-radius: var(--radius20);
+        overflow: hidden;
+        background: var(--colorbj1);
+        aspect-ratio: 4/3;
+    }
+    .sm-mount-panel-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sm-mount-panel-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .sm-mount-panel-imgs .sm-mount-panel-img { aspect-ratio: 1; }
+    .sm-mount-title { font-size: 28px; color: var(--color1e1); font-family: var(--medium); margin-bottom: 16px; }
+    .sm-mount-tag {
+        display: inline-block; padding: 5px 14px;
+        background: var(--colorbj1); color: var(--colorbj);
+        border-radius: 100px; font-size: 13px; font-family: var(--semibold);
+        margin-bottom: 20px;
+    }
+    .sm-mount-desc { font-size: 16px; color: var(--color8b8); line-height: 1.7; margin-bottom: 24px; }
+    .sm-mount-features { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .sm-mount-features li {
+        display: flex; align-items: center; gap: 12px;
+        font-size: 15px; color: var(--color1e1); padding: 10px 14px;
+        background: var(--colorbj1); border-radius: var(--radius10);
+    }
+    .sm-mount-features li::before { content: '✓'; color: var(--colorbj); font-family: var(--bold); flex-shrink: 0; }
+    .sm-mount-scenes { font-size: 14px; color: var(--color8b8); }
+    .sm-mount-scenes strong { color: var(--color1e1); }
+
+    /* Models Table */
+    .sm-models { background: var(--colorbj1); }
+    .sm-models-table {
+        width: 100%; border-collapse: collapse;
+        border-radius: var(--radius15); overflow: hidden;
+        border: 1px solid var(--colord8d); background: #fff;
+    }
+    .sm-models-table thead th {
+        background: var(--colorbj); color: #fff;
+        padding: 16px 20px; font-size: 15px; font-family: var(--semibold); text-align: left;
+    }
+    .sm-models-table thead th:first-child { border-radius: 0; }
+    .sm-models-table tbody tr:nth-child(odd) td { background: #fff; }
+    .sm-models-table tbody tr:nth-child(even) td { background: var(--colorbj1); }
+    .sm-models-table td { padding: 14px 20px; font-size: 15px; border-bottom: 1px solid var(--colord8d); }
+    .sm-models-table tbody tr:last-child td { border-bottom: none; }
+    .sm-models-table td:first-child { color: var(--color1e1); font-family: var(--medium); }
+    .sm-models-table td:not(:first-child) { color: var(--color8b8); }
+    .sm-models-table tbody tr:hover td { background: #e8f4ff; }
+    .sm-model-tag {
+        display: inline-block; padding: 3px 10px;
+        border-radius: 100px; font-size: 12px; font-family: var(--semibold);
+    }
+    .sm-model-tag-blue { background: #dbeafe; color: #2563eb; }
+    .sm-model-tag-green { background: #dcfce7; color: #16a34a; }
+    .sm-model-tag-orange { background: #fef9c3; color: #ca8a04; }
+
+    /* ROI Section */
+    .sm-roi { overflow: hidden; }
+    .sm-roi-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .sm-roi-title { font-size: 40px; color: var(--color1e1); font-family: var(--medium); margin-bottom: 12px; }
+    .sm-roi-sub { font-size: 18px; color: var(--color8b8); line-height: 1.6; margin-bottom: 40px; }
+    .sm-roi-compare {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px;
+    }
+    .sm-roi-card {
+        border-radius: var(--radius20); padding: 28px 24px;
+        border: 2px solid var(--colord8d); background: #fff;
+        text-align: center; transition: border-color .2s;
+    }
+    .sm-roi-card.highlight { border-color: var(--colorbj); background: var(--colorbj1); }
+    .sm-roi-card-label { font-size: 14px; color: var(--color8b8); margin-bottom: 8px; }
+    .sm-roi-card-val { font-size: 36px; color: var(--colorbj); font-family: var(--bold); line-height: 1.1; }
+    .sm-roi-card-unit { font-size: 16px; }
+    .sm-roi-card-desc { font-size: 13px; color: var(--color8b8); margin-top: 8px; }
+    .sm-roi-highlights { list-style: none; padding: 0; }
+    .sm-roi-highlights li {
+        display: flex; align-items: flex-start; gap: 12px;
+        padding: 14px 0; border-bottom: 1px solid var(--colord8d);
+        font-size: 16px; line-height: 1.5;
+    }
+    .sm-roi-highlights li:last-child { border-bottom: none; }
+    .sm-roi-highlights li::before { content: '→'; color: var(--colorbj); flex-shrink: 0; font-family: var(--bold); }
+    /* Savings comparison bars */
+    .sm-savings-grid {
+        background: var(--colorbj1); border-radius: var(--radius20);
+        padding: 32px; display: flex; flex-direction: column; gap: 24px;
+    }
+    .sm-savings-title { font-size: 18px; color: var(--color1e1); font-family: var(--semibold); margin-bottom: 4px; }
+    .sm-savings-item { }
+    .sm-savings-label { font-size: 15px; color: var(--color1e1); margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .sm-savings-label span { color: var(--colorbj); font-family: var(--bold); }
+    .sm-savings-bar-bg { background: #dde8f5; border-radius: 100px; height: 10px; overflow: hidden; }
+    .sm-savings-bar { height: 10px; border-radius: 100px; background: var(--colorbj2); }
+
+    /* CTA */
+    .sm-cta { background: var(--colorbj2); padding: 80px 0; text-align: center; }
+    .sm-cta-title { font-size: 48px; color: #fff; font-family: var(--medium); line-height: 1.2; margin-bottom: 16px; }
+    .sm-cta-sub { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 40px; }
+    .sm-btn-white {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 16px 40px; background: #fff; color: var(--colorbj);
+        border-radius: 100px; font-size: 18px; font-family: var(--medium);
+        text-decoration: none; transition: transform .2s, box-shadow .2s;
+    }
+    .sm-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); color: var(--colorbj); }
+
+    @media (max-width: 1200px) {
+        .sm-features-grid { grid-template-columns: repeat(2, 1fr); }
+        .sm-roi-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 1024px) {
+        .sm-hero-inner { grid-template-columns: 1fr; }
+        .sm-hero-visual { display: none; }
+        .sm-hero-title { font-size: 52px; }
+        .sm-mount-panel.active { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+        .sm-features-grid { grid-template-columns: 1fr; }
+        .sm-key-specs { flex-wrap: wrap; }
+        .sm-key-specs li { flex: 1 1 33%; border-bottom: 1px solid rgba(255,255,255,.12); }
+        .sm-roi-compare { grid-template-columns: 1fr; }
+        .sm-mounting-tabs { flex-direction: column; border-radius: var(--radius15); }
+        .sm-mount-tab { border-right: none; border-bottom: 1px solid var(--colord8d); }
+        .sm-mount-tab:last-child { border-bottom: none; }
+    }
+    </style>
+</head>
+<body>
+<div class="ys-page-wrap act product-page">
+    <div id="header-nav-placeholder"></div>
+    <main class="ys-main">
+
+        <div class="sm-breadcrumb">
+            <div class="ys-cont1600 sm-breadcrumb-inner">
+                <a href="index.html">Trang chủ</a>
+                <span class="sm-breadcrumb-sep">/</span>
+                <a href="residential/residential-pv.html">Hộ gia đình</a>
+                <span class="sm-breadcrumb-sep">/</span>
+                <span class="sm-breadcrumb-cur">SolaMate</span>
+            </div>
+        </div>
+
+        <section class="sm-hero">
+            <div class="ys-cont1600">
+                <div class="sm-hero-inner">
+                    <div>
+                        <div class="sm-product-line">Giải pháp điện mặt trời ban công</div>
+                        <h1 class="sm-hero-title">SolaMate</h1>
+                        <p class="sm-hero-sub-title">Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một</p>
+                        <p class="sm-hero-tagline">
+                            Xây dựng trạm phát điện cá nhân của bạn dễ dàng như lắp ráp các khối đồ chơi.
+                            Một giải pháp quang điện dân dụng nhỏ gọn được thiết kế hoàn hảo cho việc lắp đặt ở ban công —
+                            cắm điện, tạo ra điện năng và bắt đầu tiết kiệm ngay từ ngày đầu tiên.
+                        </p>
+                        <ul class="sm-key-specs">
+                            <li>
+                                <div class="sm-spec-val">900<span class="sm-spec-unit">W</span></div>
+                                <div class="sm-spec-label">Hệ thống cơ bản</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">1800<span class="sm-spec-unit">W</span></div>
+                                <div class="sm-spec-label">Hệ thống tối đa</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">6</div>
+                                <div class="sm-spec-label">Tùy chọn mô hình</div>
+                            </li>
+                            <li>
+                                <div class="sm-spec-val">9.2<span class="sm-spec-unit">x</span></div>
+                                <div class="sm-spec-label">ROI 30 năm</div>
+                            </li>
+                        </ul>
+                        <div class="sm-hero-btns">
+                            <a href="contact-us.html" class="sm-btn-solid">Nhận báo giá →</a>
+                            <a href="#models" class="sm-btn-outline">Xem tất cả mô hình</a>
+                        </div>
+                        <div class="sm-hero-badges">
+                            <span class="sm-badge">🏆 Giải thưởng thiết kế Red Dot</span>
+                            <span class="sm-badge">⚡ Cắm và Chạy (Plug &amp; Play)</span>
+                            <span class="sm-badge">☁️ Giám sát đám mây Solavita</span>
+                            <span class="sm-badge">🔒 Thiết bị chống phát ngược</span>
+                        </div>
+                    </div>
+                    <div class="sm-hero-visual">
+                        <img src="assets/images/products/page_03_img_01.jpeg" alt="Bộ Điện Mặt Trời Ban Công SolaMate" style="width:100%;height:100%;object-fit:contain;display:block;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-section sm-features">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd center">
+                    <h2 class="sm-section-title">Bốn Ưu Điểm Cốt Lõi</h2>
+                    <p class="sm-section-sub">Có thể điều chỉnh · Tính thẩm mỹ cao · Linh hoạt · Hiệu quả chi phí</p>
+                </div>
+                <div class="sm-features-grid">
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">01 / CÓ THỂ ĐIỀU CHỈNH</div>
+                        <img src="assets/images/products/page_12_img_01.jpeg" alt="Bốn góc điều chỉnh 25 30 35 40 độ" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:contain;background:#f5f5f5;">
+                        <div class="sm-feature-name">Tối ưu hóa cho mọi góc độ</div>
+                        <p class="sm-feature-desc">
+                            Điều chỉnh chốt bốn vị trí ở <strong>25°, 30°, 35° và 40°</strong> cho phép bạn điều chỉnh
+                            góc ánh sáng mặt trời tối ưu cho vị trí và mùa của bạn. Hỗ trợ điều chỉnh đường trượt có rãnh
+                            thích ứng với các hướng, cấu trúc và không gian khác nhau — tối đa hóa hiệu quả phát điện
+                            quanh năm mà không cần phải phỏng đoán.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">02 / TÍNH THẨM MỸ CAO</div>
+                        <img src="assets/images/products/page_06_img_02.jpeg" alt="Góc nhìn mặt sau của sản phẩm SolaMate với giá đỡ lan can" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover;aspect-ratio:16/9;background:#111;">
+                        <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;">
+                            <img src="assets/images/products/page_06_img_03.jpeg" alt="Giải thưởng Red Dot" style="height:36px;object-fit:contain;">
+                            <img src="assets/images/products/page_06_img_04.jpeg" alt="Red Dot" style="height:24px;object-fit:contain;">
+                        </div>
+                        <div class="sm-feature-name">Thiết kế lấy cảm hứng từ Bauhaus</div>
+                        <p class="sm-feature-desc">
+                            Được chế tác tỉ mỉ bởi đội ngũ thiết kế từng đoạt giải thưởng của Skyworth — giải thưởng <strong>Thiết kế Red Dot</strong>
+                            — để tích hợp hoàn hảo với phong cách ngôi nhà hiện đại. Các mô-đun thiết kế tối giản hoàn toàn màu đen 
+                            (không có đường lưới điện), các móc hình chữ J mượt mà giúp giảm thiểu sự cản trở tầm nhìn và các giá đỡ 
+                            có thể gập lại giúp giữ mọi thứ gọn gàng và hợp lý.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">03 / LINH HOẠT</div>
+                        <img src="assets/images/products/page_16_img_01.jpeg" alt="Bảng điều khiển giám sát ứng dụng đám mây Solavita" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover;aspect-ratio:16/9;">
+                        <div class="sm-feature-name">Kiểm soát chống phát ngược thông minh</div>
+                        <p class="sm-feature-desc">
+                            Được tích hợp <strong>quản lý chống phát ngược (zero-export)</strong> với phản ứng dòng điện nhanh chóng tính bằng giây
+                            giúp loại bỏ hoàn toàn dòng điện ngược vào lưới điện. Giám sát bằng AI được tích hợp 
+                            thông qua <strong>Ứng dụng Solavita Cloud</strong> cung cấp cho bạn khả năng hiển thị đầy đủ về sản lượng, 
+                            doanh thu và trạng thái hệ thống — từ mọi thiết bị, ở bất kỳ đâu.
+                        </p>
+                    </div>
+                    <div class="sm-feature-card">
+                        <div class="sm-feature-num">04 / HIỆU QUẢ CHI PHÍ</div>
+                        <div class="sm-feature-icon">💰</div>
+                        <div class="sm-feature-name">Lợi tức đầu tư gấp 9.2 lần</div>
+                        <p class="sm-feature-desc">
+                            Đầu tư một lần chỉ <strong>35.999 THB</strong> tạo ra điện năng chỉ với
+                            <strong>0,45 THB/số</strong> — so với giá lưới điện 4,2 THB. Phiên bản tiêu chuẩn sử dụng
+                            điện ngay khi phát (tiết kiệm vào giờ cao điểm buổi trưa); phiên bản lưu trữ năng lượng bổ sung
+                            khả năng dịch chuyển giờ cao điểm buổi tối để tiết kiệm hàng tháng nhiều hơn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-section">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd">
+                    <h2 class="sm-section-title">Ba Giải Pháp Lắp Đặt</h2>
+                    <p class="sm-section-sub">Chọn phong cách lắp đặt phù hợp với không gian của bạn — tất cả các mô hình đều được vận chuyển sẵn sàng để cắm và chạy.</p>
+                </div>
+                <div class="sm-mounting-tabs">
+                    <div class="sm-mount-tab active" onclick="switchMount('railing', this)">🏠 Lắp đặt trên lan can</div>
+                    <div class="sm-mount-tab" onclick="switchMount('sunshade', this)">☂️ Lắp đặt mái che nắng</div>
+                    <div class="sm-mount-tab" onclick="switchMount('ground', this)">🌿 Lắp đặt trên mặt đất</div>
+                </div>
+
+                <div class="sm-mount-panel active" id="mount-railing">
+                    <div class="sm-mount-panel-imgs">
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_03_img_01.jpeg" alt="SolaMate lắp đặt lan can trên ban công">
+                        </div>
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_10_img_01.jpg" alt="SolaMate lắp đặt lan can cảnh ban công căn hộ">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-R · SWM1600-R</div>
+                        <h3 class="sm-mount-title">Lắp đặt trên lan can</h3>
+                        <p class="sm-mount-desc">
+                            Được thiết kế cho các ban công mở trong biệt thự và căn hộ. Móc hình chữ J gắn gọn gàng 
+                            vào lan can ban công mà không cần khoan. Giá đỡ có thể gập lại Bauhaus đơn giản hóa việc 
+                            lắp đặt và cất giữ — toàn bộ hệ thống đóng gói phẳng để vận chuyển dễ dàng.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>Khung kiểu dây có góc bo tròn (chống va chạm)</li>
+                            <li>Giá đỡ độ bền cao có thể gập lại — không cần dụng cụ</li>
+                            <li>Khả năng chống gió và tuyết cao</li>
+                            <li>Kết nối AC cắm và chạy</li>
+                            <li>Mô-đun kết nối bản lề và giá đỡ để có cấu hình gọn gàng hơn</li>
+                            <li>Hoa văn răng cưa · Móc bo tròn · Thiết kế ghép kết cấu</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Tốt nhất cho:</strong> Ban công biệt thự · Ban công căn hộ · Ban công đa năng
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sm-mount-panel" id="mount-sunshade">
+                    <div class="sm-mount-panel-img">
+                        <img src="assets/images/products/page_07_img_01.jpg" alt="SolaMate lắp đặt mái che trên mặt ngoài tòa nhà">
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-S · SWM1600-S</div>
+                        <h3 class="sm-mount-title">Lắp đặt mái che nắng</h3>
+                        <p class="sm-mount-desc">
+                            Chức năng vừa là máy phát điện năng lượng mặt trời vừa là mái che nắng. Giá đỡ hoàn toàn 
+                            bằng thép cung cấp cấu trúc ổn định với khả năng chống gió và tuyết tuyệt vời. Thiết kế tối 
+                            giản hoàn toàn màu đen (không có đường lưới điện) kết hợp tự nhiên với mặt tiền cửa hàng, 
+                            mặt tiền bệ cửa sổ và lối vào nhà tự xây.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>Giá đỡ hoàn toàn bằng thép với khả năng chống gió và tuyết nâng cao</li>
+                            <li>Thiết kế tối giản hoàn toàn màu đen (không có đường lưới điện)</li>
+                            <li>Mô-đun chống nứt vi mô công suất cao</li>
+                            <li>Cài đặt cắm và chạy</li>
+                            <li>Chức năng kép: phát điện + chống nắng</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Tốt nhất cho:</strong> Mặt tiền cửa hàng · Mặt tiền bên ngoài bệ cửa sổ · Lối vào nhà tự xây
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sm-mount-panel" id="mount-ground">
+                    <div class="sm-mount-panel-imgs">
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_11_img_01.jpg" alt="SolaMate lắp đặt trên mặt đất ở boong">
+                        </div>
+                        <div class="sm-mount-panel-img">
+                            <img src="assets/images/products/page_12_img_01.jpeg" alt="Bốn góc điều chỉnh SolaMate 25 30 35 40 độ">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sm-mount-tag">SWM800-G · SWM1600-G</div>
+                        <h3 class="sm-mount-title">Lắp đặt trên mặt đất</h3>
+                        <p class="sm-mount-desc">
+                            Tùy chọn linh hoạt nhất — gập phẳng để dễ cất giữ và triển khai trong ba bước không cần dụng cụ. 
+                            Bốn vị trí góc điều chỉnh (25°, 30°, 35°, 40°) cho phép bạn đón được lượng ánh sáng mặt trời 
+                            tối đa vào bất kỳ mùa hay vị trí nào. Đủ nhỏ gọn cho sân trong, khu vườn, hay thậm chí là các địa điểm cắm trại.
+                        </p>
+                        <ul class="sm-mount-features">
+                            <li>Thiết kế tối giản — gập phẳng để dễ cất giữ</li>
+                            <li>Cài đặt ba bước không cần dụng cụ</li>
+                            <li>Bốn góc điều chỉnh: 25° / 30° / 35° / 40°</li>
+                            <li>Hỗ trợ đường trượt có rãnh để tinh chỉnh</li>
+                            <li>Kết nối AC cắm và chạy</li>
+                        </ul>
+                        <p class="sm-mount-scenes">
+                            <strong>Tốt nhất cho:</strong> Sân biệt thự · Sân nhà tự xây · Cắm trại
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-section sm-models" id="models">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd">
+                    <h2 class="sm-section-title">Mô hình &amp; Thông số kỹ thuật</h2>
+                    <p class="sm-section-sub">Sáu cấu hình trên ba kiểu lắp đặt — tất cả đều bao gồm thiết bị chống phát ngược làm tiêu chuẩn.</p>
+                </div>
+                <table class="sm-models-table">
+                    <thead>
+                        <tr>
+                            <th>Loại lắp đặt</th>
+                            <th>Cấu hình</th>
+                            <th>Mô hình</th>
+                            <th>Công suất hệ thống</th>
+                            <th>Biến tần vi mô (Microinverter)</th>
+                            <th>Thiết bị chống phát ngược</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-blue">Lan can</span>
+                            </td>
+                            <td>1-đến-2</td>
+                            <td><strong>SWM800-R</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-đến-4</td>
+                            <td><strong>SWM1600-R</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-green">Mái che nắng</span>
+                            </td>
+                            <td>1-đến-2</td>
+                            <td><strong>SWM800-S</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-đến-4</td>
+                            <td><strong>SWM1600-S</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="font-family:var(--semibold)">
+                                <span class="sm-model-tag sm-model-tag-orange">Mặt đất</span>
+                            </td>
+                            <td>1-đến-2</td>
+                            <td><strong>SWM800-G</strong></td>
+                            <td>900 Wp</td>
+                            <td>800 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                        <tr>
+                            <td>1-đến-4</td>
+                            <td><strong>SWM1600-G</strong></td>
+                            <td>1800 Wp</td>
+                            <td>2000 W</td>
+                            <td>Tiêu chuẩn ✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top:16px; font-size:14px; color:var(--color8b8);">
+                    * Việc lắp đặt tại Thái Lan yêu cầu kết nối có dây cứng với hộp phân phối điện xoay chiều AC — cắm và chạy không được phép theo quy định của địa phương.
+                </p>
+            </div>
+        </section>
+
+        <section class="sm-section">
+            <div class="ys-cont1600">
+                <div class="sm-section-hd center">
+                    <h2 class="sm-section-title">Nó có thể cấp điện cho những thiết bị nào?</h2>
+                    <p class="sm-section-sub">Sản lượng điện hàng ngày dựa trên điều kiện ánh sáng mặt trời điển hình ở Đông Nam Á</p>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+                    <div style="background:var(--colorbj1); border-radius:var(--radius20); padding:40px 36px; border:1px solid var(--colord8d);">
+                        <div style="font-size:14px; color:var(--colorbj); font-family:var(--semibold); margin-bottom:8px;">SWM800-R/S/G</div>
+                        <div style="font-size:32px; color:var(--color1e1); font-family:var(--bold); margin-bottom:4px;">1-đến-2 · 900 W</div>
+                        <div style="font-size:40px; color:var(--colorbj); font-family:var(--bold); margin-bottom:24px;">~3.0 kWh<span style="font-size:18px; color:var(--color8b8);"> / ngày</span></div>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">💡</span> Bóng đèn × 6 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— 20 giờ</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">📺</span> TV × 2 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— cả ngày</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:var(--color1e1);">
+                                <span style="font-size:24px;">🧊</span> Tủ lạnh × 1 &nbsp;<span style="color:var(--color8b8); font-size:14px;">— 20 giờ</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--colord8d);">
+                            <div style="font-size:15px; color:var(--color8b8);">Tiết kiệm điện hàng tháng</div>
+                            <div style="font-size:36px; color:var(--colorbj); font-family:var(--bold);">459 THB</div>
+                        </div>
+                    </div>
+                    <div style="background:linear-gradient(135deg,#006BC0 0%,#00b4b4 100%); border-radius:var(--radius20); padding:40px 36px;">
+                        <div style="font-size:14px; color:rgba(255,255,255,.7); font-family:var(--semibold); margin-bottom:8px;">SWM1600-R/S/G</div>
+                        <div style="font-size:32px; color:#fff; font-family:var(--bold); margin-bottom:4px;">1-đến-4 · 1800 W</div>
+                        <div style="font-size:40px; color:#00E2E0; font-family:var(--bold); margin-bottom:24px;">~6.0 kWh<span style="font-size:18px; color:rgba(255,255,255,.6);"> / ngày</span></div>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">❄️</span> Điều hòa không khí × 1 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 8 giờ (1P, 600~800W)</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">🧊</span> Tủ lạnh × 2 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 16 giờ</span>
+                            </li>
+                            <li style="display:flex; align-items:center; gap:12px; font-size:16px; color:#fff;">
+                                <span style="font-size:24px;">💡</span> Bóng đèn × 6 &nbsp;<span style="color:rgba(255,255,255,.55); font-size:14px;">— 15 giờ</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top:28px; padding-top:20px; border-top:1px solid rgba(255,255,255,.2);">
+                            <div style="font-size:15px; color:rgba(255,255,255,.6);">Tiết kiệm điện hàng tháng</div>
+                            <div style="font-size:36px; color:#fff; font-family:var(--bold);">919 THB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-section sm-roi" style="background:var(--colorbj1);">
+            <div class="ys-cont1600">
+                <div class="sm-roi-inner">
+                    <div>
+                        <h2 class="sm-roi-title">Lợi tức đầu tư</h2>
+                        <p class="sm-roi-sub">Dựa trên hệ thống 1-đến-4 (1800W), điều kiện thị trường điện Thái Lan.</p>
+                        <div class="sm-roi-compare">
+                            <div class="sm-roi-card">
+                                <div class="sm-roi-card-label">Giá điện lưới</div>
+                                <div class="sm-roi-card-val">4.2 <span class="sm-roi-card-unit">THB/số</span></div>
+                                <div class="sm-roi-card-desc">Tỷ giá thị trường hiện tại</div>
+                            </div>
+                            <div class="sm-roi-card highlight">
+                                <div class="sm-roi-card-label">Chi phí phát điện SolaMate</div>
+                                <div class="sm-roi-card-val">0.45 <span class="sm-roi-card-unit">THB/số</span></div>
+                                <div class="sm-roi-card-desc">Rẻ hơn 89% so với lưới điện</div>
+                            </div>
+                            <div class="sm-roi-card">
+                                <div class="sm-roi-card-label">Đầu tư một lần</div>
+                                <div class="sm-roi-card-val">35,999 <span class="sm-roi-card-unit">THB</span></div>
+                                <div class="sm-roi-card-desc">Giá bộ thiết bị đầy đủ</div>
+                            </div>
+                            <div class="sm-roi-card highlight">
+                                <div class="sm-roi-card-label">Tổng lợi nhuận 30 năm</div>
+                                <div class="sm-roi-card-val">331,128 <span class="sm-roi-card-unit">THB</span></div>
+                                <div class="sm-roi-card-desc">Lợi tức đầu tư gấp 9.2 lần</div>
+                            </div>
+                        </div>
+                        <ul class="sm-roi-highlights">
+                            <li>Công suất hệ thống &lt;2kW — không cần giấy phép hòa lưới điện ở hầu hết các khu vực</li>
+                            <li>Phiên bản tiêu chuẩn: sử dụng ngay trong giờ phát điện cao điểm buổi trưa</li>
+                            <li>Phiên bản lưu trữ năng lượng: chuyển đổi sang sử dụng giờ cao điểm buổi tối để tiết kiệm tối đa hàng ngày</li>
+                            <li>Ứng dụng Solavita Cloud theo dõi sản lượng và doanh thu hàng ngày / hàng tháng / hàng năm</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="sm-savings-grid">
+                            <div class="sm-savings-title">Lợi nhuận Tích lũy theo Thời gian (THB)</div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 5 <span>55,188 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:16%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 10 <span>110,376 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:33%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 15 <span>165,564 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:50%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 20 <span>220,752 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:67%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 25 <span>275,940 THB</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:83%"></div></div>
+                            </div>
+                            <div class="sm-savings-item">
+                                <div class="sm-savings-label">Năm 30 <span style="color:#16a34a;">331,128 THB ✓</span></div>
+                                <div class="sm-savings-bar-bg"><div class="sm-savings-bar" style="width:100%; background:linear-gradient(90deg,#006BC0,#00E2E0)"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sm-cta">
+            <div class="ys-cont1600">
+                <h2 class="sm-cta-title">Sẵn sàng bắt đầu tạo ra điện năng?</h2>
+                <p class="sm-cta-sub">Hãy trò chuyện với đội ngũ của chúng tôi và nhận đề xuất SolaMate được cá nhân hóa cho ngôi nhà của bạn.</p>
+                <a href="contact-us.html" class="sm-btn-white">Liên hệ với chúng tôi ngay →</a>
+            </div>
+        </section>
+
+    </main>
+		<footer class="ys-footer">
+    <div class="mod-foot">
+        <div class="ys-cont1600">
+            <div class="mod-foot-top">
+                <div class="mod-foot-top-le">
+                    <div class="mod-foot-top-logo">
+                        <a href="index.html" title="">
+                            <img src="Public/Uploads/uploadfile/images/20250830/LOGOlan-430.svg" alt="LOGO蓝.svg">
+                        </a>
+                    </div>
+                    <ul class="mod-foot-bot-leul">
+                        <li class="mfbl-lis">
+                            <a href="https://www.linkedin.com/company/solavita-ess/" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon13.svg" alt="a1_icon_13.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.youtube.com/@Solavita_ESS/featured" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon14.svg" alt="a1_icon_14.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.facebook.com/profile.php?id=61557740968408" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon15.svg" alt="a1_icon_15.svg">
+                            </a>
+                        </li><li class="mfbl-lis">
+                            <a href="https://www.instagram.com/solavitaess/" target="_blank" rel="nofollow">
+                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon16.svg" alt="a1_icon_16.svg">
+                            </a>
+                        </li>                    </ul>
+                </div>
+                <div class="mod-foot-top-ri">
+                    <ul class="mftr-ul"><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="residential/residential-pv.html" title="" class="std-text2">Dân Dụng</a></div><ul><li><p><a href="residential/residential-pv.html">Điện Mặt Trời Dân Dụng</a></p></li><li><p><a href="residential/residential-ess.html">Lưu Trữ Năng Lượng Dân Dụng</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="business/business-pv.html" title="" class="std-text2">Doanh Nghiệp</a></div><ul><li><p><a href="business/business-pv.html">Điện Mặt Trời Doanh Nghiệp</a></p></li><li><p><a href="business/business-ess.html">Lưu Trữ Năng Lượng Doanh Nghiệp</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href title="" class="std-text2">Sản Phẩm</a></div><ul><li><p><a href="product/pv-inverter.html" title="">Biến Tần</a></p></li><li><p><a href="product/battery-storage-system.html" title="">Hệ Thống Lưu Trữ Pin</a></p></li><li><p><a href="product/pv-module.html" title="">Tấm Pin Mặt Trời</a></p></li><li><p><a href="product/mounting-system.html" title="">Hệ Thống Lắp Đặt</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="resources-support/download/product-related.html" title="" class="std-text2">Tài Nguyên &amp; Hỗ Trợ</a></div><ul><li><p><a href="resources-support/download/product-related.html" title="">Tải Xuống</a></p></li><li><p><a href="resources-support/warranty.html" title="">Bảo Hành</a></p></li><li><p><a href="resources-support/faq/question-list.html" title="">Câu Hỏi Thường Gặp</a></p></li><li><p><a href="resources-support/community.html" title="">Cộng Đồng</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="news-media/news-center/news.html" title="" class="std-text2">Tin Tức &amp; Truyền Thông</a></div><ul><li><p><a href="news-media/news-center/media.html" title="">Đưa Tin Truyền Thông</a></p></li><li><p><a href="news-media/blogs.html" title="">Blog</a></p></li><li><p><a href="news-media/events.html" title="">Sự Kiện</a></p></li><li><p><a href="news-media/news-center/news.html" title="">Tin Tức</a></p></li></ul></li><li class="mftr-ul-li"><div class="mftr-ul-li-link"><a href="about-us.html" title="" class="std-text2">Về Chúng Tôi</a></div><ul><li><p><a href="partner.html" title="">Đối Tác</a></p></li><li><p><a href="cases/residentials.html" title="">Dự Án</a></p></li><li><p><a href="careers.html" title="">Tuyển Dụng</a></p></li></ul></li></ul>                </div>
+            </div>
+            <div class="mod-foot-min">
+                <div class="footer-other-link">
+                    <div class="std-text1 footer-other-link-name">Liên Kết</div>
+                    <ul class="footer-other-link-inof">
+                        <li class="foli-nub">
+                            <a href="https://global.skyworth.com/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTH</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li><li class="foli-nub">
+                            <a href="https://www.skyworthpv.com/en/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTHPV</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li><li class="foli-nub">
+                            <a href="https://www.skyworthdigital.com/" target="_blank" class="foli-nub-link">
+                                <div class="std-text1">SKYWORTHDIGITAL</div>
+                                <div class="ys-imgbox-cover foli-nub-link-icon">
+                                    <img src="Public/En/images/com_icon_01.svg" alt="">
+                                    <img src="Public/En/images/com_icon_01h.svg" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                <div class="mod-foot-bot-ri">
+                    <form id="form2" class="mod-foot-bot-ri" onsubmit="return false">
+                    <input type="hidden" name="catid" value="1">
+                    <input type="hidden" name="modelid" value="66">
+                    <div class="mfbr-input">
+                        <input type="text" id="form2_email" name="form2_email" placeholder="Nhập email để đăng ký nhận tin mới nhất">
+                    </div>
+                    <div class="std-btn1 footsbumitform">
+                        <div class="std-btn1-box">
+                            <p>Đăng Ký</p>
+                            <div class="std-btn1-icon">
+                                <img src="Public/En/images/a1_icon_18.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mod-foot-bot">
+                <div class="mod-foot-bot-le">
+                    <p><span>Bản quyền © 2025 Công ty TNHH Công nghệ Quang điện Skyworth Thâm Quyến.</span>  <a rel="nofollow" target="_blank" href="https://www.yongsy.com/">Powered by Yongsy</a> </p>
+                </div>
+                <ul class="mod-foot-bot-riul">
+                    <li class="mfbr-li">
+                        <a href="privacy.html" target="_self" title="Chính Sách Bảo Mật">Chính Sách Bảo Mật</a>
+                    </li><li class="mfbr-li">
+                        <a href="legal.html" target="_self" title="Thông Báo Pháp Lý">Thông Báo Pháp Lý</a>
+                    </li><li class="mfbr-li">
+                        <a href="sitemap.html" target="_self" title="Sơ Đồ Trang Web">Sơ Đồ Trang Web</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- respond.io WebChat -->
+<script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=3674460090ed13238562f32c5af0bc0"></script>
+</div>
+
+<script src="assets/js/components-vn.js"></script>
+<script src="Public/En/js/public.js"></script>
+<script src="Public/En/js/base-v4.0.min.js"></script>
+<script src="Public/En/js/common.js"></script>
+<script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
+<script>
+function switchMount(type, tab) {
+    document.querySelectorAll('.sm-mount-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.sm-mount-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('mount-' + type).classList.add('active');
+}
+</script>
+</body>
+</html>

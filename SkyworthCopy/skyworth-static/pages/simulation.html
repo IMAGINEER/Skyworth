@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Skyworth PV - Simulation V1.2</title>
+    <style>
+        :root { --accent: #00d4ff; --bg: #05070a; --glass: rgba(15, 20, 30, 0.9); }
+        body { margin: 0; background: var(--bg); color: white; font-family: 'Inter', sans-serif; overflow: hidden; }
+        
+        .video-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: #000; }
+        #main-video { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+
+        .ui-layer { position: absolute; inset: 0; pointer-events: none; padding: 40px; display: grid; grid-template-columns: 300px 1fr 300px; grid-template-rows: 1fr 140px; gap: 20px; }
+        .pointer { pointer-events: auto; }
+        .glass-card { background:rgb(15 20 30 / 6%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
+
+        /* 左侧：EMS 监控面板 */
+        .sidebar-left { display: flex; flex-direction: column; gap: 15px; }
+        .monitor-item { margin-bottom: 15px; }
+        .monitor-label { font-size: 10px; color: #666; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
+        .monitor-val { font-size: 24px; font-weight: 800; }
+
+        .device-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+        .device-item { 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px; border-radius: 12px; cursor: pointer; transition: 0.2s; font-size: 11px; text-align: center;
+        }
+        .device-item.active { background: rgba(0, 212, 255, 0.15); border-color: var(--accent); color: var(--accent); }
+
+        /* 右侧：收益与指数 */
+        .gauge-val { font-size: 38px; font-weight: 800; color: var(--accent); margin: 5px 0; }
+        .chart-box { display: flex; align-items: flex-end; gap: 6px; height: 60px; margin-top: 15px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .bar { flex: 1; background: rgba(255,255,255,0.1); border-radius: 2px; transition: height 0.6s; }
+        .bar.today { background: var(--accent); }
+
+        /* 底部时间轴 */
+        .timeline-area { grid-column: 1 / span 3; display: flex; justify-content: center; align-items: center; }
+        .timeline-box { width: 85%; display: flex; align-items: center; gap: 25px; padding: 20px 40px; border-radius: 100px; }
+        input[type=range] { flex: 1; accent-color: var(--accent); cursor: pointer; }
+
+        /* 顶部动态参数 */
+        .top-params { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 20px; }
+        .pill { background: rgba(0,0,0,0.7); padding: 10px 20px; border-radius: 16px; border: 1px solid #333; min-width: 140px; text-align: center; }
+        .pill span { display: block; font-size: 10px; color: #666; margin-bottom: 4px; }
+        .pill b { font-size: 18px; color: #fff; }
+        .pill b i { font-style: normal; color: var(--accent); font-size: 12px; margin-left: 5px; }
+
+        .icon-label { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 10px; color: #888; }
+        .icon-label span { font-size: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <video id="main-video" muted playsinline autoplay>
+        <source src="simulation-video-back.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="top-params">
+    <div class="pill">
+        <span>PV SYSTEM</span>
+        <b>5.67 <small>kWp</small> <i id="pv-eff">0%</i></b>
+    </div>
+    <div class="pill">
+        <span>ENERGY STORAGE</span>
+        <b>10.0 <small>kWh</small> <i id="ess-soc">20%</i></b>
+    </div>
+</div>
+
+<div class="ui-layer">
+    <div class="glass-card pointer sidebar-left">
+        <div class="monitor-item">
+            <div class="monitor-label">Grid Power (Hòa lưới)</div>
+            <div class="monitor-val" id="val-grid" style="color: #ff4d4d;">0.00 kW</div>
+            <div style="font-size: 11px; color: #444; margin-top: 4px;">Cost: 2,103 VND/kWh</div>
+        </div>
+        
+        <div class="monitor-item" style="border-top: 1px solid #222; padding-top: 15px;">
+            <div class="monitor-label">Total Load (Tổng tải)</div>
+            <div class="monitor-val" id="val-load">0.50 kW</div>
+            <div class="device-grid">
+                <div class="device-item" onclick="toggleDev(this, 1.5)">❄️ AC</div>
+                <div class="device-item" onclick="toggleDev(this, 3.0)">🚗 EV</div>
+                <div class="device-item" onclick="toggleDev(this, 0.8)">🏊 Pool</div>
+                <div class="device-item" onclick="toggleDev(this, 0.5)">🍳 Kitchen</div>
+            </div>
+        </div>
+
+        <div class="monitor-item" style="margin-top: auto;">
+            <div style="font-size: 9px; color: #444;">Status: <span id="sys-status" style="color:var(--accent)">System Normal</span></div>
+        </div>
+    </div>
+
+    <div></div>
+
+    <div class="glass-card pointer">
+        <div>
+            <div class="monitor-label">Daily Profit (Lợi nhuận)</div>
+            <div class="gauge-val" id="val-profit">0 VND</div>
+            <div class="chart-box" id="chart"></div>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <div class="monitor-label">Self-Sufficiency (Tự chủ)</div>
+            <div class="gauge-val" id="val-self" style="color: #4caf50;">100%</div>
+            <div style="height: 6px; background: #111; border-radius: 3px; overflow: hidden; margin-top: 10px;">
+                <div id="self-bar" style="width: 100%; height: 100%; background: #4caf50; transition: 0.5s;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-area">
+        <div class="timeline-box glass-card pointer">
+            <div class="icon-label"><span>🌅</span>6:00</div>
+            <input type="range" id="time-scrubber" min="360" max="1080" value="360">
+            <div class="icon-label"><span>🌇</span>18:00</div>
+            <div style="font-size: 32px; font-weight: 800; width: 120px; text-align: right; color: var(--accent); font-variant-numeric: tabular-nums;" id="time-display">06:00</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const video = document.getElementById('main-video');
+    const scrubber = document.getElementById('time-scrubber');
+    const timeDisplay = document.getElementById('time-display');
+    const chartBox = document.getElementById('chart');
+    
+    // 物理参数
+    const PV_MAX = 5.67;
+    const ESS_MAX = 10000; // Wh
+    const TARIFF = 2103;
+    let activeLoad = 0.5; // kW
+    let batterySOC = 20; // 初始电量 20%
+
+    video.playbackRate = 0.5;
+    video.currentTime = 0;
+
+    // 绘制模拟背景图表
+    for(let i=0; i<7; i++) {
+        const b = document.createElement('div');
+        b.className = 'bar' + (i===6 ? ' today' : '');
+        b.style.height = (20 + Math.random() * 50) + '%';
+        chartBox.appendChild(b);
+    }
+
+    video.addEventListener('timeupdate', () => {
+        if (!isUserDragging) {
+            const progress = video.currentTime / video.duration;
+            const minutes = 360 + (progress * 720);
+            scrubber.value = minutes;
+            updateLogic(progress, minutes);
+        }
+    });
+
+    let isUserDragging = false;
+    scrubber.addEventListener('mousedown', () => isUserDragging = true);
+    scrubber.addEventListener('mouseup', () => isUserDragging = false);
+    scrubber.addEventListener('input', () => {
+        const progress = (scrubber.value - 360) / 720;
+        video.currentTime = progress * video.duration;
+        updateLogic(progress, parseInt(scrubber.value));
+    });
+
+    function toggleDev(el, p) {
+        el.classList.toggle('active');
+        activeLoad += el.classList.contains('active') ? p : -p;
+        document.getElementById('val-load').innerText = activeLoad.toFixed(2) + " kW";
+        updateLogic();
+    }
+
+    function updateLogic(progress, mins) {
+        if (progress === undefined) progress = (scrubber.value - 360) / 720;
+        if (mins === undefined) mins = parseInt(scrubber.value);
+
+        // 1. 时间更新
+        const h = Math.floor(mins / 60);
+        const m = Math.floor(mins % 60);
+        timeDisplay.innerText = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}`;
+
+        // 2. 光伏功率与效率
+        const currentPv = Math.max(0, PV_MAX * Math.sin(progress * Math.PI));
+        const pvEff = Math.round((currentPv / PV_MAX) * 100);
+        document.getElementById('pv-eff').innerText = pvEff + "%";
+
+        // 3. 动态 SOC 计算 (基于积分的简化模拟)
+        // 假设从 6:00 到当前时间的净能量流入
+        // 这是一个演示性质的积分：(总光伏 - 总负载)
+        const avgPv = (currentPv / 2); // 简化平均值
+        const energyNet = (avgPv - activeLoad) * (progress * 12); // kWh
+        let currentSoc = 20 + (energyNet / 10 * 100); 
+        currentSoc = Math.max(5, Math.min(100, currentSoc)); // 限制在 5%-100%
+        document.getElementById('ess-soc').innerText = Math.round(currentSoc) + "%";
+
+        // 4. EMS 调度逻辑 (关键)
+        let gridPower = 0;
+        let batterySupport = 0;
+        let loadGap = activeLoad - currentPv;
+
+        if (loadGap > 0) {
+            // 需要补电
+            if (currentSoc > 10) {
+                // 电池优先供电 (假设最大放电功率 3kW)
+                batterySupport = Math.min(loadGap, 3.0);
+                loadGap -= batterySupport;
+            }
+            gridPower = loadGap; // 剩下的找电网
+        }
+        
+        // 5. 自给率计算
+        const selfSufficiency = (activeLoad > 0) ? ((activeLoad - gridPower) / activeLoad * 100) : 100;
+
+        // 6. 累计收益
+        const cumulativeGen = (PV_MAX * 12 / Math.PI) * (1 - Math.cos(Math.PI * progress));
+        const profit = cumulativeGen * TARIFF;
+
+        // 7. UI 更新
+        document.getElementById('val-grid').innerText = gridPower.toFixed(2) + " kW";
+        document.getElementById('val-grid').style.color = gridPower > 0 ? "#ff4d4d" : "#4caf50";
+        document.getElementById('val-profit').innerText = Math.round(profit).toLocaleString() + " VND";
+        document.getElementById('val-self').innerText = Math.round(selfSufficiency) + "%";
+        document.getElementById('self-bar').style.width = selfSufficiency + "%";
+        document.querySelector('.bar.today').style.height = Math.min(100, (profit/30000)*100) + "%";
+        
+        document.getElementById('sys-status').innerText = gridPower > 0 ? "Grid Importing" : (currentPv > activeLoad ? "ESS Charging" : "Self-Sustaining");
+    }
+</script>
+
+</body>
+</html>
