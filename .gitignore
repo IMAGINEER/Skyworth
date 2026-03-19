@@ -1,14 +1,1 @@
-# 忽略所有隐藏的工具文件夹
 .*
-!.gitignore
-
-# 忽略视频和大型动图素材（如果你的 index.html 不需要它们）
-*.mp4
-*.mov
-*.gif
-
-# 忽略日志文件
-*.log
-
-# 排除 node_modules（如果你以后用 npm 的话）
-node_modules/
