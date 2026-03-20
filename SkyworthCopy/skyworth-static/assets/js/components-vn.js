@@ -1526,15 +1526,23 @@ const footerHTML = `		<footer class="ys-footer">
         });
       }
     });
+    // 点击关闭按钮关闭弹窗
     if (overlay && closeBtn) {
       closeBtn.addEventListener('click', function () {
         overlay.style.display = 'none';
       });
     }
+    // form 提交成功后关闭弹窗 (通过监听 sc-hidden 类变化)
     if (overlay) {
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) overlay.style.display = 'none';
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.attributeName === 'class' && overlay.classList.contains('sc-hidden')) {
+            overlay.style.display = 'none';
+            overlay.classList.remove('sc-hidden'); // 重置状态
+          }
+        });
       });
+      observer.observe(overlay, { attributes: true });
     }
   };
   document.body.appendChild(script);

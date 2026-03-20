@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="lenis lenis-smooth">
 <head>
     <meta charset="UTF-8">
+    <base href="../">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolaWard Pro - Giải pháp năng lượng mặt trời C&I | Skyworth Solar Vietnam</title>
     <meta name="description" content="SolaWard Pro - Giải pháp năng lượng mặt trời từ 30kW đến MW. Hệ thống hoàn chỉnh từ sản phẩm đến thiết kế, thi công và bảo hành.">
@@ -9,32 +10,23 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+VVietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
 
     <style>
-        :root {
-            --colorbj: #006BC0;
-            --colorbj1: #F0F7FF;
-            --colorbj2: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
-            --color1e1: #1E293B;
-            --color8b8: #64748B;
-            --colord8d: #E2E8F0;
-            --color33: #334155;
-            --colorSuccess: #16A34A;
-            --colorWarning: #F59E0B;
-            --radius10: 10px;
-            --radius15: 15px;
-            --radius20: 20px;
-            --medium: 'Be Vietnam Pro', -apple-system, sans-serif;
-            --semibold: 600;
-            --bold: 700;
-        }
-
+        /* Removed :root variables to avoid header style conflicts */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: var(--medium);
-            color: var(--color1e1);
+            font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+            color: #1E293B;
             line-height: 1.6;
             background: #fff;
         }
@@ -50,7 +42,7 @@
 
         /* ========== 0. Breadcrumb ========== */
         .sw-breadcrumb {
-            background: var(--colorbj1);
+            background: #F0F7FF;
             padding: 12px 0;
             font-size: 14px;
         }
@@ -59,35 +51,35 @@
             align-items: center;
             gap: 8px;
         }
-        .sw-breadcrumb a { color: var(--color8b8); transition: color .2s; }
-        .sw-breadcrumb a:hover { color: var(--colorbj); }
-        .sw-breadcrumb-sep { color: var(--colord8d); }
-        .sw-breadcrumb-cur { color: var(--color1e1); font-weight: var(--semibold); }
+        .sw-breadcrumb a { color: #64748B; transition: color .2s; }
+        .sw-breadcrumb a:hover { color: #006BC0; }
+        .sw-breadcrumb-sep { color: #E2E8F0; }
+        .sw-breadcrumb-cur { color: #1E293B; font-weight: 600; }
 
         /* ========== Section Commons ========== */
         .sw-section { padding: 80px 0; }
-        .sw-section-dark { background: var(--color1e1); color: #fff; }
-        .sw-section-gray { background: var(--colorbj1); }
+        .sw-section-dark { background: #1E293B; color: #fff; }
+        .sw-section-gray { background: #F0F7FF; }
         .sw-section-hd { margin-bottom: 48px; }
         .sw-section-hd.center { text-align: center; }
         .sw-section-title {
             font-size: 42px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             line-height: 1.2;
             margin-bottom: 12px;
         }
         .sw-section-dark .sw-section-title { color: #fff; }
         .sw-section-sub {
             font-size: 18px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.6;
         }
         .sw-section-dark .sw-section-sub { color: rgba(255,255,255,.7); }
 
         /* ========== 1. Hero Section ========== */
         .sw-hero {
-            background: linear-gradient(180deg, #fff 0%, var(--colorbj1) 100%);
+            background: linear-gradient(180deg, #fff 0%, #F0F7FF 100%);
             padding: 60px 0 80px;
             position: relative;
             overflow: hidden;
@@ -110,30 +102,30 @@
         }
         .sw-hero-badge {
             display: inline-block;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             padding: 6px 16px;
             border-radius: 100px;
             font-size: 13px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 20px;
         }
         .sw-hero-title {
             font-size: 56px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             line-height: 1.1;
             margin-bottom: 20px;
         }
         .sw-hero-title span {
-            background: var(--colorbj2);
+            background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         .sw-hero-desc {
             font-size: 20px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.7;
             margin-bottom: 36px;
         }
@@ -147,11 +139,11 @@
             align-items: center;
             gap: 8px;
             padding: 16px 32px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border-radius: 100px;
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             transition: all .2s;
         }
         .sw-btn-solid:hover {
@@ -166,16 +158,16 @@
             gap: 8px;
             padding: 16px 32px;
             background: #fff;
-            color: var(--colorbj);
-            border: 2px solid var(--colorbj);
+            color: #006BC0;
+            border: 2px solid #006BC0;
             border-radius: 100px;
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             transition: all .2s;
         }
         .sw-btn-outline:hover {
-            background: var(--colorbj1);
-            color: var(--colorbj);
+            background: #F0F7FF;
+            color: #006BC0;
         }
         .sw-hero-features {
             display: flex;
@@ -186,13 +178,13 @@
             align-items: center;
             gap: 10px;
             font-size: 15px;
-            color: var(--color1e1);
-            font-weight: var(--semibold);
+            color: #1E293B;
+            font-weight: 600;
         }
         .sw-hero-feature-icon {
             width: 36px;
             height: 36px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -201,7 +193,7 @@
         }
         .sw-hero-visual {
             position: relative;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 4/3;
             background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
@@ -228,7 +220,7 @@
         }
         .sw-hero-visual-placeholder-title {
             font-size: 18px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 8px;
             color: #fff;
         }
@@ -244,7 +236,7 @@
             gap: 24px;
             margin-top: 40px;
             padding-top: 40px;
-            border-top: 1px solid var(--colord8d);
+            border-top: 1px solid #E2E8F0;
         }
         .sw-spec-item {
             text-align: center;
@@ -252,13 +244,13 @@
         .sw-spec-val {
             font-size: 36px;
             font-weight: 700;
-            color: var(--colorbj);
+            color: #006BC0;
             line-height: 1;
         }
         .sw-spec-unit { font-size: 18px; }
         .sw-spec-label {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-top: 4px;
         }
 
@@ -287,42 +279,42 @@
             display: flex;
             gap: 16px;
             padding: 24px;
-            background: var(--colorbj1);
-            border-radius: var(--radius15);
-            border-left: 4px solid var(--colorbj);
+            background: #F0F7FF;
+            border-radius: 15px;
+            border-left: 4px solid #006BC0;
         }
         .sw-pain-item-num {
             width: 32px;
             height: 32px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            font-weight: var(--bold);
+            font-weight: 700;
             flex-shrink: 0;
         }
         .sw-pain-item-content h4 {
             font-size: 17px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 6px;
         }
         .sw-pain-item-content p {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.5;
         }
         .sw-compare-table {
-            background: var(--color1e1);
-            border-radius: var(--radius20);
+            background: #1E293B;
+            border-radius: 20px;
             padding: 32px;
             color: #fff;
         }
         .sw-compare-table h3 {
             font-size: 22px;
-            font-weight: var(--bold);
+            font-weight: 700;
             margin-bottom: 24px;
             text-align: center;
         }
@@ -339,7 +331,7 @@
         }
         .sw-compare-table th:last-child {
             text-align: center;
-            color: var(--colorbj);
+            color: #006BC0;
         }
         .sw-compare-table td {
             padding: 14px 16px;
@@ -353,17 +345,17 @@
             border-bottom: none;
         }
         .sw-compare-plus {
-            color: var(--colorSuccess);
-            font-weight: var(--bold);
+            color: #16A34A;
+            font-weight: 700;
         }
         .sw-compare-minus {
             color: #ef4444;
-            font-weight: var(--bold);
+            font-weight: 700;
         }
 
         /* ========== 3. 4 Pillars ========== */
         .sw-pillars {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sw-pillars-grid {
             display: grid;
@@ -372,7 +364,7 @@
         }
         .sw-pillar-card {
             background: #fff;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             padding: 32px 24px;
             text-align: center;
             transition: all .3s;
@@ -384,7 +376,7 @@
         .sw-pillar-icon {
             width: 72px;
             height: 72px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -394,20 +386,20 @@
         }
         .sw-pillar-num {
             font-size: 12px;
-            color: var(--colorbj);
-            font-weight: var(--bold);
+            color: #006BC0;
+            font-weight: 700;
             letter-spacing: .1em;
             margin-bottom: 12px;
         }
         .sw-pillar-title {
             font-size: 20px;
-            font-weight: var(--bold);
+            font-weight: 700;
             margin-bottom: 12px;
-            color: var(--color1e1);
+            color: #1E293B;
         }
         .sw-pillar-desc {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.6;
         }
 
@@ -419,7 +411,7 @@
         }
         .sw-app-card {
             position: relative;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 3/4;
             background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
@@ -449,7 +441,7 @@
         }
         .sw-app-card-title {
             font-size: 18px;
-            font-weight: var(--bold);
+            font-weight: 700;
             color: #fff;
             margin-bottom: 4px;
         }
@@ -471,7 +463,7 @@
 
         /* ========== 5. System Ecosystem ========== */
         .sw-ecosystem {
-            background: var(--color1e1);
+            background: #1E293B;
             color: #fff;
         }
         .sw-ecosystem-flow {
@@ -483,7 +475,7 @@
         }
         .sw-eco-node {
             background: rgba(255,255,255,.1);
-            border-radius: var(--radius20);
+            border-radius: 20px;
             padding: 32px;
             text-align: center;
             min-width: 160px;
@@ -495,11 +487,11 @@
         }
         .sw-eco-node-title {
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
         }
         .sw-eco-arrow {
             font-size: 32px;
-            color: var(--colorbj);
+            color: #006BC0;
         }
         .sw-ecosystem-note {
             text-align: center;
@@ -516,9 +508,9 @@
         }
         .sw-case-card {
             background: #fff;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             overflow: hidden;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
             transition: all .3s;
         }
         .sw-case-card:hover {
@@ -547,25 +539,25 @@
             position: absolute;
             top: 16px;
             left: 16px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             padding: 6px 12px;
             border-radius: 100px;
             font-size: 12px;
-            font-weight: var(--semibold);
+            font-weight: 600;
         }
         .sw-case-body {
             padding: 24px;
         }
         .sw-case-loc {
             font-size: 13px;
-            color: var(--colorbj);
-            font-weight: var(--semibold);
+            color: #006BC0;
+            font-weight: 600;
             margin-bottom: 8px;
         }
         .sw-case-title {
             font-size: 20px;
-            font-weight: var(--bold);
+            font-weight: 700;
             margin-bottom: 16px;
         }
         .sw-case-metrics {
@@ -574,25 +566,25 @@
             gap: 12px;
         }
         .sw-case-metric {
-            background: var(--colorbj1);
+            background: #F0F7FF;
             padding: 12px;
-            border-radius: var(--radius10);
+            border-radius: 10px;
             text-align: center;
         }
         .sw-case-metric-val {
             font-size: 18px;
-            font-weight: var(--bold);
-            color: var(--colorbj);
+            font-weight: 700;
+            color: #006BC0;
         }
         .sw-case-metric-label {
             font-size: 11px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-top: 2px;
         }
 
         /* ========== 7. ROI ========== */
         .sw-roi {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sw-roi-inner {
             display: grid;
@@ -606,12 +598,12 @@
         }
         .sw-roi-card {
             background: #fff;
-            border-radius: var(--radius15);
+            border-radius: 15px;
             padding: 24px;
             text-align: center;
         }
         .sw-roi-card.highlight {
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
         }
         .sw-roi-card-label {
@@ -623,7 +615,7 @@
         }
         .sw-roi-card-val {
             font-size: 32px;
-            font-weight: var(--bold);
+            font-weight: 700;
         }
         .sw-roi-card.highlight .sw-roi-card-val {
             color: #fff;
@@ -633,7 +625,7 @@
         }
         .sw-roi-card-desc {
             font-size: 12px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-top: 6px;
         }
         .sw-roi-card.highlight .sw-roi-card-desc {
@@ -641,12 +633,12 @@
         }
         .sw-roi-bars {
             background: #fff;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             padding: 32px;
         }
         .sw-roi-bar-title {
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 20px;
         }
         .sw-roi-bar-item {
@@ -659,18 +651,18 @@
             margin-bottom: 8px;
         }
         .sw-roi-bar-label span:last-child {
-            font-weight: var(--bold);
-            color: var(--colorbj);
+            font-weight: 700;
+            color: #006BC0;
         }
         .sw-roi-bar-bg {
-            background: var(--colord8d);
+            background: #E2E8F0;
             height: 12px;
             border-radius: 100px;
             overflow: hidden;
         }
         .sw-roi-bar-fill {
             height: 100%;
-            background: var(--colorbj);
+            background: #006BC0;
             border-radius: 100px;
         }
 
@@ -682,10 +674,10 @@
         }
         .sw-cert-card {
             background: #fff;
-            border-radius: var(--radius15);
+            border-radius: 15px;
             padding: 32px 24px;
             text-align: center;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
         }
         .sw-cert-icon {
             font-size: 48px;
@@ -693,12 +685,12 @@
         }
         .sw-cert-title {
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 8px;
         }
         .sw-cert-desc {
             font-size: 13px;
-            color: var(--color8b8);
+            color: #64748B;
         }
 
         /* ========== 9. FAQ ========== */
@@ -707,12 +699,12 @@
             margin: 0 auto;
         }
         .sw-faq-item {
-            border-bottom: 1px solid var(--colord8d);
+            border-bottom: 1px solid #E2E8F0;
         }
         .sw-faq-q {
             padding: 20px 0;
             font-size: 17px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -721,12 +713,12 @@
         .sw-faq-q::after {
             content: '+';
             font-size: 24px;
-            color: var(--colorbj);
+            color: #006BC0;
         }
         .sw-faq-a {
             padding-bottom: 20px;
             font-size: 15px;
-            color: var(--color8b8);
+            color: #64748B;
             display: none;
         }
         .sw-faq-item.active .sw-faq-a {
@@ -738,7 +730,7 @@
 
         /* ========== 10. CTA ========== */
         .sw-cta {
-            background: var(--colorbj2);
+            background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
             padding: 80px 0;
             text-align: center;
         }
@@ -757,7 +749,7 @@
             max-width: 600px;
             margin: 0 auto;
             background: #fff;
-            border-radius: var(--radius20);
+            border-radius: 20px;
             padding: 40px;
         }
         .sw-form-group {
@@ -766,30 +758,30 @@
         .sw-form-label {
             display: block;
             font-size: 14px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             margin-bottom: 8px;
         }
         .sw-form-input {
             width: 100%;
             padding: 14px 18px;
-            border: 1px solid var(--colord8d);
-            border-radius: var(--radius10);
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
             font-size: 15px;
-            font-family: var(--medium);
+            font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
         }
         .sw-form-input:focus {
             outline: none;
-            border-color: var(--colorbj);
+            border-color: #006BC0;
         }
         .sw-form-submit {
             width: 100%;
             padding: 16px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border: none;
-            border-radius: var(--radius10);
+            border-radius: 10px;
             font-size: 16px;
-            font-weight: var(--semibold);
+            font-weight: 600;
             cursor: pointer;
             transition: background .2s;
         }
@@ -1116,7 +1108,7 @@
                 </div>
             </div>
         </div>
-        <div style="text-align:center; margin-top:24px; font-size:14px; color:var(--color8b8);">
+        <div style="text-align:center; margin-top:24px; font-size:14px; color:#64748B;">
             💡 需求图片 (每个场景): 800×600 | 优先级: 🔴 高<br>
             工厂/仓库/商业建筑/数据中心/太阳能车棚 - 各1张
         </div>
@@ -1312,8 +1304,8 @@
                     <div class="sw-roi-bar-label">Năm 11-25 <span>Lợi nhuận</span></div>
                     <div class="sw-roi-bar-bg"><div class="sw-roi-bar-fill" style="width:100%; background:linear-gradient(90deg,#006BC0,#00E2E0)"></div></div>
                 </div>
-                <div style="margin-top:20px; text-align:center; font-size:15px; color:var(--color8b8);">
-                    <strong style="color:var(--colorSuccess);">ROI: 8-10 lần</strong> | Thời gian hoàn vốn: <strong>4-5 năm</strong>
+                <div style="margin-top:20px; text-align:center; font-size:15px; color:#64748B;">
+                    <strong style="color:#16A34A;">ROI: 8-10 lần</strong> | Thời gian hoàn vốn: <strong>4-5 năm</strong>
                 </div>
             </div>
         </div>
@@ -1349,7 +1341,7 @@
                 <p class="sw-cert-desc">Kết nối lưới điện địa phương</p>
             </div>
         </div>
-        <div style="text-align:center; margin-top:32px; font-size:14px; color:var(--color8b8);">
+        <div style="text-align:center; margin-top:32px; font-size:14px; color:#64748B;">
             💡 需求图片: 认证证书扫描件 (TÜV/CE/ISO/当地) | 尺寸: 300×200 | 优先级: 🔴 高
         </div>
     </div>
@@ -1425,7 +1417,11 @@ document.querySelectorAll('.sw-faq-q').forEach(q => {
     });
 });
 </script>
+<div id="footer-placeholder"></div>
 <script src="assets/js/components-vn.js"></script>
-
+<script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=3674460090ed13238562f32c5af0bc0"></script>
+<script src="Public/En/js/public.js"></script>
+<script src="Public/En/js/common.js"></script>
+<script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
 </body>
 </html>

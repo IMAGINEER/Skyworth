@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="lenis lenis-smooth">
 <head>
     <meta charset="UTF-8">
+    <base href="../">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolaMate - Giải pháp điện mặt trời ban công | Skyworth Solar Vietnam</title>
     <meta name="description" content="SolaMate - Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một. Đầu tư 35.999 THB, tiết kiệm 9.2 lần trong 30 năm.">
@@ -10,31 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <script src="Public/En/js/jquery.min.js"></script>
 
     <style>
-        :root {
-            --colorbj: #006BC0;
-            --colorbj1: #F0F7FF;
-            --colorbj2: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
-            --color1e1: #1E293B;
-            --color8b8: #64748B;
-            --colord8d: #E2E8F0;
-            --color33: #334155;
-            --colorSuccess: #16A34A;
-            --colorWarning: #F59E0B;
-            --radius10: 10px;
-            --radius15: 15px;
-            --radius20: 20px;
-            --medium: 'Be Vietnam Pro', -apple-system, sans-serif;
-            --semibold: 600;
-            --bold: 700;
-        }
-
+        /* Removed :root variables to avoid header style conflicts */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: var(--medium);
-            color: var(--color1e1);
+            font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+            color: #1E293B;
             line-height: 1.6;
             background: #fff;
         }
@@ -50,7 +42,7 @@
 
         /* ========== 0. Breadcrumb ========== */
         .sm-breadcrumb {
-            background: var(--colorbj1);
+            background: #F0F7FF;
             padding: 12px 0;
             font-size: 14px;
         }
@@ -59,35 +51,35 @@
             align-items: center;
             gap: 8px;
         }
-        .sm-breadcrumb a { color: var(--color8b8); transition: color .2s; }
-        .sm-breadcrumb a:hover { color: var(--colorbj); }
-        .sm-breadcrumb-sep { color: var(--colord8d); }
-        .sm-breadcrumb-cur { color: var(--color1e1); font-weight: var(--semibold); }
+        .sm-breadcrumb a { color: #64748B; transition: color .2s; }
+        .sm-breadcrumb a:hover { color: #006BC0; }
+        .sm-breadcrumb-sep { color: #E2E8F0; }
+        .sm-breadcrumb-cur { color: #1E293B; font-weight: 600; }
 
         /* ========== Section Commons ========== */
         .sm-section { padding: 80px 0; }
-        .sm-section-dark { background: var(--color1e1); color: #fff; }
-        .sm-section-gray { background: var(--colorbj1); }
+        .sm-section-dark { background: #1E293B; color: #fff; }
+        .sm-section-gray { background: #F0F7FF; }
         .sm-section-hd { margin-bottom: 48px; }
         .sm-section-hd.center { text-align: center; }
         .sm-section-title {
             font-size: 42px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             line-height: 1.2;
             margin-bottom: 12px;
         }
         .sm-section-dark .sm-section-title { color: #fff; }
         .sm-section-sub {
             font-size: 18px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.6;
         }
         .sm-section-dark .sm-section-sub { color: rgba(255,255,255,.7); }
 
         /* ========== 1. Hero Section ========== */
         .sm-hero {
-            background: linear-gradient(180deg, #fff 0%, var(--colorbj1) 100%);
+            background: linear-gradient(180deg, #fff 0%, #F0F7FF 100%);
             padding: 60px 0 80px;
             position: relative;
             overflow: hidden;
@@ -112,7 +104,7 @@
         }
         .sm-product-line {
             display: inline-block;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             padding: 6px 16px;
             border-radius: 100px;
@@ -124,18 +116,18 @@
         .sm-hero-title {
             font-size: 64px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             line-height: 1.1;
             margin-bottom: 16px;
         }
         .sm-hero-sub-title {
             font-size: 22px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-bottom: 24px;
         }
         .sm-hero-desc {
             font-size: 16px;
-            color: var(--color33);
+            color: #334155;
             line-height: 1.7;
             margin-bottom: 32px;
         }
@@ -149,7 +141,7 @@
             align-items: center;
             gap: 8px;
             padding: 16px 32px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border-radius: 100px;
             font-size: 16px;
@@ -167,15 +159,15 @@
             gap: 8px;
             padding: 16px 32px;
             background: transparent;
-            color: var(--colorbj);
-            border: 2px solid var(--colorbj);
+            color: #006BC0;
+            border: 2px solid #006BC0;
             border-radius: 100px;
             font-size: 16px;
             font-weight: 600;
             transition: all .2s;
         }
         .sm-btn-outline:hover {
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
         }
         .sm-hero-badges {
@@ -189,10 +181,10 @@
             gap: 6px;
             padding: 8px 14px;
             background: rgba(255,255,255,.8);
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
             border-radius: 100px;
             font-size: 13px;
-            color: var(--color33);
+            color: #334155;
         }
         .sm-hero-features {
             display: flex;
@@ -208,7 +200,7 @@
         .sm-hero-feature-icon {
             width: 36px;
             height: 36px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -218,7 +210,7 @@
         .sm-hero-feature span {
             font-size: 15px;
             font-weight: 500;
-            color: var(--color33);
+            color: #334155;
         }
         .sm-hero-visual {
             position: relative;
@@ -233,7 +225,7 @@
             gap: 24px;
             margin-top: 40px;
             padding-top: 40px;
-            border-top: 1px solid var(--colord8d);
+            border-top: 1px solid #E2E8F0;
         }
         .sm-spec-item {
             text-align: center;
@@ -241,13 +233,13 @@
         .sm-spec-val {
             font-size: 36px;
             font-weight: 700;
-            color: var(--colorbj);
+            color: #006BC0;
             line-height: 1;
         }
         .sm-spec-unit { font-size: 18px; }
         .sm-spec-label {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-top: 4px;
         }
 
@@ -336,7 +328,7 @@
         .sm-what-content {
             font-size: 18px;
             line-height: 1.8;
-            color: var(--color8b8);
+            color: #64748B;
         }
         .sm-what-content p { margin-bottom: 20px; }
         .sm-what-features {
@@ -350,7 +342,7 @@
             align-items: center;
             gap: 12px;
             padding: 16px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 12px;
         }
         .sm-what-feature-icon {
@@ -359,7 +351,7 @@
         .sm-what-feature-text {
             font-size: 15px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
         }
         .sm-what-cards {
             display: none;
@@ -372,7 +364,7 @@
             align-items: center;
             gap: 20px;
             padding: 20px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 16px;
             transition: all .2s;
         }
@@ -383,7 +375,7 @@
         .sm-what-card-icon {
             width: 56px;
             height: 56px;
-            background: var(--colorbj);
+            background: #006BC0;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -394,12 +386,12 @@
         .sm-what-card-title {
             font-size: 16px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
         }
 
         /* ========== 4. Key Benefits ========== */
         .sm-benefits {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-benefits-grid {
             display: grid;
@@ -420,7 +412,7 @@
         .sm-benefit-icon {
             width: 72px;
             height: 72px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -431,19 +423,19 @@
         .sm-benefit-num {
             font-size: 13px;
             font-weight: 700;
-            color: var(--colorbj);
+            color: #006BC0;
             letter-spacing: .1em;
             margin-bottom: 8px;
         }
         .sm-benefit-title {
             font-size: 20px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 12px;
         }
         .sm-benefit-desc {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.6;
         }
 
@@ -454,11 +446,11 @@
         .sm-install-tabs {
             display: flex;
             gap: 0;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 48px;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
         }
         .sm-install-tab {
             flex: 1;
@@ -467,10 +459,10 @@
             cursor: pointer;
             background: #fff;
             border: none;
-            border-right: 1px solid var(--colord8d);
+            border-right: 1px solid #E2E8F0;
             font-size: 16px;
             font-weight: 600;
-            color: var(--color8b8);
+            color: #64748B;
             transition: all .2s;
             display: flex;
             align-items: center;
@@ -478,8 +470,8 @@
             gap: 8px;
         }
         .sm-install-tab:last-child { border-right: none; }
-        .sm-install-tab.active { background: var(--colorbj); color: #fff; }
-        .sm-install-tab:hover:not(.active) { background: #e0f0ff; color: var(--colorbj); }
+        .sm-install-tab.active { background: #006BC0; color: #fff; }
+        .sm-install-tab:hover:not(.active) { background: #e0f0ff; color: #006BC0; }
 
         .sm-install-panel { display: none; }
         .sm-install-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
@@ -492,7 +484,7 @@
             aspect-ratio: 4/3;
             border-radius: 20px;
             overflow: hidden;
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-install-sub-imgs {
             display: grid;
@@ -503,7 +495,7 @@
             aspect-ratio: 1;
             border-radius: 12px;
             overflow: hidden;
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
 
         .sm-install-info {
@@ -512,8 +504,8 @@
         .sm-install-tag {
             display: inline-block;
             padding: 6px 14px;
-            background: var(--colorbj1);
-            color: var(--colorbj);
+            background: #F0F7FF;
+            color: #006BC0;
             border-radius: 100px;
             font-size: 13px;
             font-weight: 600;
@@ -522,12 +514,12 @@
         .sm-install-title {
             font-size: 32px;
             font-weight: 700;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 16px;
         }
         .sm-install-desc {
             font-size: 16px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.7;
             margin-bottom: 24px;
         }
@@ -540,31 +532,31 @@
             align-items: center;
             gap: 12px;
             padding: 12px 16px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 10px;
             margin-bottom: 8px;
             font-size: 15px;
-            color: var(--color1e1);
+            color: #1E293B;
         }
         .sm-install-features li::before {
             content: '✓';
-            color: var(--colorbj);
+            color: #006BC0;
             font-weight: 700;
         }
         .sm-install-scenarios {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
         }
-        .sm-install-scenarios strong { color: var(--color1e1); }
+        .sm-install-scenarios strong { color: #1E293B; }
 
         /* ========== 6. Models & Specs ========== */
         .sm-models {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-models-table-wrap {
             overflow-x: auto;
             border-radius: 16px;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
             background: #fff;
         }
         .sm-models-table {
@@ -573,7 +565,7 @@
             min-width: 800px;
         }
         .sm-models-table thead th {
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             padding: 18px 20px;
             font-size: 14px;
@@ -582,16 +574,16 @@
             white-space: nowrap;
         }
         .sm-models-table tbody tr:nth-child(odd) td { background: #fff; }
-        .sm-models-table tbody tr:nth-child(even) td { background: var(--colorbj1); }
+        .sm-models-table tbody tr:nth-child(even) td { background: #F0F7FF; }
         .sm-models-table tbody tr:hover td { background: #e8f4ff; }
         .sm-models-table td {
             padding: 16px 20px;
             font-size: 14px;
-            border-bottom: 1px solid var(--colord8d);
+            border-bottom: 1px solid #E2E8F0;
         }
         .sm-models-table td:first-child {
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
         }
         .sm-model-tag {
             display: inline-block;
@@ -606,7 +598,7 @@
         .sm-models-note {
             margin-top: 16px;
             font-size: 13px;
-            color: var(--color8b8);
+            color: #64748B;
             font-style: italic;
         }
 
@@ -622,10 +614,10 @@
         .sm-power-card {
             border-radius: 20px;
             padding: 40px 32px;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
         }
         .sm-power-card-std {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-power-card-pro {
             background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
@@ -637,7 +629,7 @@
             font-weight: 600;
             margin-bottom: 8px;
         }
-        .sm-power-card-std .sm-power-model { color: var(--colorbj); }
+        .sm-power-card-std .sm-power-model { color: #006BC0; }
         .sm-power-card-pro .sm-power-model { color: rgba(255,255,255,.7); }
         .sm-power-title {
             font-size: 32px;
@@ -649,7 +641,7 @@
             font-weight: 700;
             margin-bottom: 24px;
         }
-        .sm-power-card-std .sm-power-yield { color: var(--colorbj); }
+        .sm-power-card-std .sm-power-yield { color: #006BC0; }
         .sm-power-card-pro .sm-power-yield { color: #00E2E0; }
         .sm-power-yield-unit {
             font-size: 18px;
@@ -695,12 +687,12 @@
             font-size: 32px;
             font-weight: 700;
         }
-        .sm-power-card-std .sm-power-savings-value { color: var(--colorbj); }
+        .sm-power-card-std .sm-power-savings-value { color: #006BC0; }
         .sm-power-card-pro .sm-power-savings-value { color: #fff; }
 
         /* ========== 8. ROI Analysis ========== */
         .sm-roi {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-roi-inner {
             display: grid;
@@ -719,31 +711,31 @@
             border-radius: 16px;
             padding: 24px;
             text-align: center;
-            border: 2px solid var(--colord8d);
+            border: 2px solid #E2E8F0;
         }
         .sm-roi-card.highlight {
-            border-color: var(--colorbj);
+            border-color: #006BC0;
             background: linear-gradient(135deg, rgba(0,107,192,.1) 0%, rgba(0,180,180,.1) 100%);
         }
         .sm-roi-card-label {
             font-size: 13px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-bottom: 8px;
         }
         .sm-roi-card-value {
             font-size: 32px;
             font-weight: 700;
-            color: var(--colorbj);
+            color: #006BC0;
             line-height: 1.1;
         }
-        .sm-roi-card-highlight .sm-roi-card-value { color: var(--colorSuccess); }
+        .sm-roi-card-highlight .sm-roi-card-value { color: #16A34A; }
         .sm-roi-card-unit {
             font-size: 14px;
             font-weight: 400;
         }
         .sm-roi-card-desc {
             font-size: 12px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-top: 8px;
         }
         .sm-roi-highlights {
@@ -754,14 +746,14 @@
             align-items: flex-start;
             gap: 12px;
             padding: 14px 0;
-            border-bottom: 1px solid var(--colord8d);
+            border-bottom: 1px solid #E2E8F0;
             font-size: 15px;
             line-height: 1.5;
         }
         .sm-roi-highlights li:last-child { border-bottom: none; }
         .sm-roi-highlights li::before {
             content: '→';
-            color: var(--colorbj);
+            color: #006BC0;
             font-weight: 700;
             flex-shrink: 0;
         }
@@ -775,7 +767,7 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 24px;
-            color: var(--color1e1);
+            color: #1E293B;
         }
         .sm-roi-chart-bar {
             margin-bottom: 20px;
@@ -788,10 +780,10 @@
         }
         .sm-roi-chart-label span:last-child {
             font-weight: 700;
-            color: var(--colorbj);
+            color: #006BC0;
         }
         .sm-roi-chart-bg {
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 100px;
             height: 12px;
             overflow: hidden;
@@ -799,7 +791,7 @@
         .sm-roi-chart-fill {
             height: 100%;
             border-radius: 100px;
-            background: linear-gradient(90deg, var(--colorbj), #00b4b4);
+            background: linear-gradient(90deg, #006BC0, #00b4b4);
         }
 
         /* ========== 9. Certifications ========== */
@@ -816,7 +808,7 @@
             align-items: center;
             gap: 20px;
             padding: 20px;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             border-radius: 16px;
             transition: all .2s;
         }
@@ -842,12 +834,12 @@
         .sm-cert-name {
             font-size: 16px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 4px;
         }
         .sm-cert-desc {
             font-size: 13px;
-            color: var(--color8b8);
+            color: #64748B;
             margin-bottom: 12px;
         }
         .sm-cert-placeholder {
@@ -858,7 +850,7 @@
             border-radius: 8px;
             padding: 12px;
             font-size: 13px;
-            color: var(--color8b8);
+            color: #64748B;
         }
         .sm-cert-placeholder span {
             margin-right: 8px;
@@ -866,7 +858,7 @@
 
         /* ========== 10. Installation Process ========== */
         .sm-process {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-process-grid {
             display: grid;
@@ -879,7 +871,7 @@
         .sm-process-num {
             width: 40px;
             height: 40px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border-radius: 50%;
             display: flex;
@@ -898,12 +890,12 @@
         .sm-process-title {
             font-size: 14px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 4px;
         }
         .sm-process-desc {
             font-size: 12px;
-            color: var(--color8b8);
+            color: #64748B;
         }
 
         /* ========== 11. Use Cases ========== */
@@ -918,7 +910,7 @@
         .sm-case-card {
             border-radius: 20px;
             overflow: hidden;
-            background: var(--colorbj1);
+            background: #F0F7FF;
             transition: all .3s;
         }
         .sm-case-card:hover {
@@ -935,7 +927,7 @@
         .sm-case-tag {
             display: inline-block;
             padding: 4px 10px;
-            background: var(--colorbj);
+            background: #006BC0;
             color: #fff;
             border-radius: 100px;
             font-size: 11px;
@@ -945,17 +937,17 @@
         .sm-case-title {
             font-size: 18px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 8px;
         }
         .sm-case-desc {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
         }
 
         /* ========== 12. FAQ ========== */
         .sm-faq {
-            background: var(--colorbj1);
+            background: #F0F7FF;
         }
         .sm-faq-grid {
             display: grid;
@@ -966,17 +958,17 @@
             background: #fff;
             border-radius: 16px;
             padding: 24px;
-            border: 1px solid var(--colord8d);
+            border: 1px solid #E2E8F0;
         }
         .sm-faq-question {
             font-size: 16px;
             font-weight: 600;
-            color: var(--color1e1);
+            color: #1E293B;
             margin-bottom: 12px;
         }
         .sm-faq-answer {
             font-size: 14px;
-            color: var(--color8b8);
+            color: #64748B;
             line-height: 1.6;
         }
 
@@ -1004,7 +996,7 @@
             gap: 8px;
             padding: 18px 48px;
             background: #fff;
-            color: var(--colorbj);
+            color: #006BC0;
             border-radius: 100px;
             font-size: 18px;
             font-weight: 600;
@@ -1017,7 +1009,7 @@
 
         /* ========== Footer ========== */
         .sm-footer {
-            background: var(--color1e1);
+            background: #1E293B;
             color: rgba(255,255,255,.7);
             padding: 40px 0;
             text-align: center;
@@ -1081,7 +1073,7 @@
             .sm-benefits-grid { grid-template-columns: 1fr; }
             .sm-install-panel.active { grid-template-columns: 1fr; }
             .sm-install-tabs { flex-direction: column; }
-            .sm-install-tab { border-right: none; border-bottom: 1px solid var(--colord8d); }
+            .sm-install-tab { border-right: none; border-bottom: 1px solid #E2E8F0; }
             .sm-power-grid { grid-template-columns: 1fr; }
             .sm-roi-inner { grid-template-columns: 1fr; }
             .sm-roi-compare { grid-template-columns: 1fr; }
@@ -1997,6 +1989,11 @@
             document.getElementById('install-' + type).classList.add('active');
         }
     </script>
+    <div id="footer-placeholder"></div>
     <script src="assets/js/components-vn.js"></script>
+    <script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=3674460090ed13238562f32c5af0bc0"></script>
+    <script src="Public/En/js/public.js"></script>
+    <script src="Public/En/js/common.js"></script>
+    <script>$(function(){$('.ys-hd-pc').addClass('ishover').off('mouseenter mouseleave mousemove');});</script>
 </body>
 </html>
