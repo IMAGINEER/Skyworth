@@ -90,11 +90,11 @@
 │       · 瓦片/石板屋顶                           │
 │     - SolaLoft (阳光房/车棚)                     │
 ├─────────────────────────────────────────────────┤
-│  5. 核心优势 (Core Advantages)                   │
-│     - 高发电量 (98.6%效率)                      │
-│     - 可靠电池 (LiFePO4)                         │
-│     - 智能运维 (Solavita Cloud)                 │
-│     - 30年品质 (3x验收)                         │
+│  5. 一站式解决方案 (The 4 Pillars) ★ 核心              │
+│     - 全栈自研产品 (Full-Stack R&D)                     │
+│     - 原厂集成设计 (Factory Integration)                │
+│     - 本地授权施工 (Certified Delivery)                  │
+│     - 原厂质保运维 (Single-Source Warranty)             │
 ├─────────────────────────────────────────────────┤
 │  6. 产品规格 (System Specifications)              │
 │     - 功率选择 (5kW/10kW/15kW/20kW)             │

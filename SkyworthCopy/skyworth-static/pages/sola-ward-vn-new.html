@@ -44,7 +44,7 @@
         .ys-cont1600 { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
 
         /* Hero */
-        .sw-hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 100px 0; position: relative; overflow: hidden; }
+        .sw-hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 60px 0 80px; position: relative; overflow: hidden; }
         .sw-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>') repeat; background-size: 200px; }
         .sw-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
         .sw-hero-badge { display: inline-block; padding: 6px 16px; background: rgba(0,107,192,0.2); border: 1px solid rgba(0,107,192,0.3); border-radius: 100px; font-size: 13px; color: var(--colorbj); font-weight: 600; margin-bottom: 24px; }
@@ -52,13 +52,13 @@
         .sw-hero-sub { font-size: 20px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.6; }
         .sw-hero-specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--colord8d); }
         .sw-hero-spec { text-align: center; }
-        .sw-hero-spec-val { font-size: 36px; font-weight: 700; color: var(--colorbj); line-height: 1; }
+        .sw-hero-spec-val { font-size: 36px; font-weight: 700; color:#EEE; line-height: 1; }
         .sw-hero-spec-unit { font-size: 18px; }
-        .sw-hero-spec-label { font-size: 14px; color: var(--color8b8); margin-top: 4px; }
+        .sw-hero-spec-label { font-size: 14px; color: #E0E0E0; margin-top: 4px; }
         .sw-hero-features { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
         .sw-hero-feature { display: flex; align-items: center; gap: 10px; }
         .sw-hero-feature-icon { width: 36px; height: 36px; background: var(--colorbj1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-        .sw-hero-feature span { font-size: 15px; font-weight: 500; color: var(--color33); }
+        .sw-hero-feature span { font-size: 15px; font-weight: 500; color:#EEE; }
         .sw-hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
         .sw-btn-solid { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: var(--colorbj); color: #fff; border-radius: 100px; font-size: 16px; font-weight: 600; transition: all 0.2s; }
         .sw-btn-solid:hover { background: var(--colorbj2); transform: translateY(-2px); }
@@ -114,13 +114,15 @@
         .sw-roof-subtypes { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
         .sw-roof-subtype { padding: 8px 16px; background: var(--colorbj1); color: var(--colorbj); border-radius: 8px; font-size: 13px; font-weight: 600; }
 
-        /* Advantages */
-        .sw-adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-        .sw-adv-card { background: #fff; border-radius: var(--radius20); padding: 32px 24px; text-align: center; border: 1px solid var(--colord8d); transition: all 0.3s; }
-        .sw-adv-card:hover { border-color: var(--colorbj); transform: translateY(-4px); }
-        .sw-adv-icon { width: 64px; height: 64px; background: var(--colorbj1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 20px; }
-        .sw-adv-title { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
-        .sw-adv-desc { font-size: 14px; color: var(--color8b8); line-height: 1.5; }
+        /* 4 Pillars */
+        .sw-pillars { background: var(--colorbj1); }
+        .sw-pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .sw-pillar-card { background: #fff; border-radius: var(--radius20); padding: 32px 24px; text-align: center; transition: all 0.3s; }
+        .sw-pillar-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,107,192,0.12); }
+        .sw-pillar-icon { width: 72px; height: 72px; background: var(--colorbj1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px; }
+        .sw-pillar-num { font-size: 12px; color: var(--colorbj); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 12px; }
+        .sw-pillar-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+        .sw-pillar-desc { font-size: 14px; color: var(--color8b8); line-height: 1.5; }
 
         /* Specs */
         .sw-specs-table { width: 100%; border-collapse: collapse; border-radius: var(--radius15); overflow: hidden; border: 1px solid var(--colord8d); background: #fff; }
@@ -182,8 +184,7 @@
 
         /* Responsive */
         @media (max-width: 1200px) {
-            .sw-hero-inner { grid-template-columns: 1fr; }
-            .sw-hero-visual { display: none; }
+            .sw-hero-inner { grid-template-columns: 1fr; }            
             .sw-adv-grid { grid-template-columns: repeat(2, 1fr); }
             .sw-epc-steps { grid-template-columns: repeat(4, 1fr); }
             .sw-epc-arrow { display: none; }
@@ -210,6 +211,7 @@
     </style>
 </head>
 <body>
+    <div id="header-nav-placeholder"></div>
     <!-- Breadcrumb -->
     <div class="sw-breadcrumb">
         <div class="sw-breadcrumb-inner">
@@ -328,10 +330,14 @@
                                 <p style="font-size:14px;color:var(--color8b8);margin-top:4px;">Thủ tục phức tạp, không rõ quy trình</p>
                             </div>
                         </li>
+                        <li>
+                            <span class="sw-problem-icon">🎨</span>
+                            <div>
+                                <strong>Lo ngại ảnh hưởng đến thẩm mỹ ngôi nhà</strong>
+                                <p style="font-size:14px;color:var(--color8b8);margin-top:4px;">Sợ hỏng kiến trúc, mất giá trị thẩm mỹ</p>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="sw-problem-solution">
-                        <h4>→ SolaWard: 3 kịch bản — phù hợp mọi nhu cầu gia đình</h4>
-                    </div>
                 </div>
             </div>
         </div>
@@ -452,33 +458,45 @@
         </div>
     </section>
 
-    <!-- Core Advantages -->
-    <section class="sw-section">
+    <!-- 4 Pillars -->
+    <section class="sw-section sw-pillars">
         <div class="ys-cont1600">
             <div class="sw-section-hd center">
-                <h2 class="sw-section-title">Bốn Trụ Cột Kỹ Thuật</h2>
-                <p class="sw-section-sub">Mọi hệ thống SolaWard được xây dựng trên bốn trụ cột kỹ thuật để đạt hiệu suất và độ tin cậy tối đa.</p>
+                <h2 class="sw-section-title">One-Stop Solution</h2>
+                <p class="sw-section-sub">Giải pháp toàn diện từ sản phẩm đến bảo hành.</p>
             </div>
-            <div class="sw-adv-grid">
-                <div class="sw-adv-card">
-                    <div class="sw-adv-icon">⚡</div>
-                    <h4 class="sw-adv-title">Hiệu Suất Cao</h4>
-                    <p class="sw-adv-desc">Hiệu suất biến tần tối đa 98.6%, MPPT效率99.9%，确保最大化发电量。</p>
+            <div class="sw-pillars-grid">
+                <div class="sw-pillar-card">
+                    <div class="sw-pillar-icon">🔧</div>
+                    <div class="sw-pillar-num">PILLAR 1</div>
+                    <h3 class="sw-pillar-title">Full-Stack R&D</h3>
+                    <p class="sw-pillar-desc">
+                        100% sản phẩm nội bộ - từ pin, biến tần đến giá đỡ. Loại bỏ rủi ro tương thích, tăng 2% hiệu suất hệ thống.
+                    </p>
                 </div>
-                <div class="sw-adv-card">
-                    <div class="sw-adv-icon">🔋</div>
-                    <h4 class="sw-adv-title">Pin LiFePO₄ An Toàn</h4>
-                    <p class="sw-adv-desc">磷酸铁锂电池，6000次循环寿命，10年质保，热稳定性好。</p>
+                <div class="sw-pillar-card">
+                    <div class="sw-pillar-icon">🛡️</div>
+                    <div class="sw-pillar-num">PILLAR 2</div>
+                    <h3 class="sw-pillar-title">Factory Integration</h3>
+                    <p class="sw-pillar-desc">
+                        Thiết kế tích hợp cấp nhà máy - AFCI, Rapid Shutdown, tối ưu DC/AC. An toàn công nghiệp, không rủi ro.
+                    </p>
                 </div>
-                <div class="sw-adv-card">
-                    <div class="sw-adv-icon">☁️</div>
-                    <h4 class="sw-adv-title">Solavita Cloud</h4>
-                    <p class="sw-adv-desc">24/7智能运维平台，实时监控，远程诊断，AI优化建议。</p>
+                <div class="sw-pillar-card">
+                    <div class="sw-pillar-icon">✅</div>
+                    <div class="sw-pillar-num">PILLAR 3</div>
+                    <h3 class="sw-pillar-title">Certified Delivery</h3>
+                    <p class="sw-pillar-desc">
+                        Đối tác thi công địa phương được chứng nhận. Quy trình chuẩn hóa, kiểm tra số hóa, đảm bảo chất lượng.
+                    </p>
                 </div>
-                <div class="sw-adv-card">
-                    <div class="sw-adv-icon">🛡️</div>
-                    <h4 class="sw-adv-title">30年品质</h4>
-                    <p class="sw-adv-desc">3倍验收标准，IP65防护等级，专业EPC团队，售后响应快。</p>
+                <div class="sw-pillar-card">
+                    <div class="sw-pillar-icon">📈</div>
+                    <div class="sw-pillar-num">PILLAR 4</div>
+                    <h3 class="sw-pillar-title">Warranty & O&M</h3>
+                    <p class="sw-pillar-desc">
+                        Bảo hành 1 nguồn cho toàn hệ thống. O&M cloud platform + AI predictive maintenance + phản hồi nhanh.
+                    </p>
                 </div>
             </div>
         </div>
@@ -818,7 +836,6 @@
             });
         });
     </script>
-
-    <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script><!-- https://respond.io -->
+    <script src="assets/js/components-vn.js"></script>
 </body>
 </html>

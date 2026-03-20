@@ -1434,6 +1434,8 @@ const footerHTML = `		<footer class="ys-footer">
     </footer>
 
     <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=3674460090ed13238562f32c5af0bc0"></script><!-- https://respond.io -->
+    <!-- respond.io growth tool -->
+    <script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script>
 `;
 
 
