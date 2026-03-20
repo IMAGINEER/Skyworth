@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolaWard Pro - Giải pháp năng lượng mặt trời C&I | Skyworth Solar Vietnam</title>
+    <meta name="description" content="SolaWard Pro - Giải pháp năng lượng mặt trời từ 30kW đến MW. Hệ thống hoàn chỉnh từ sản phẩm đến thiết kế, thi công và bảo hành.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --colorbj: #006BC0;
+            --colorbj1: #F0F7FF;
+            --colorbj2: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%);
+            --color1e1: #1E293B;
+            --color8b8: #64748B;
+            --colord8d: #E2E8F0;
+            --color33: #334155;
+            --colorSuccess: #16A34A;
+            --colorWarning: #F59E0B;
+            --radius10: 10px;
+            --radius15: 15px;
+            --radius20: 20px;
+            --medium: 'Be Vietnam Pro', -apple-system, sans-serif;
+            --semibold: 600;
+            --bold: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--medium);
+            color: var(--color1e1);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .ys-cont1600 {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== 0. Breadcrumb ========== */
+        .sw-breadcrumb {
+            background: var(--colorbj1);
+            padding: 12px 0;
+            font-size: 14px;
+        }
+        .sw-breadcrumb-inner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sw-breadcrumb a { color: var(--color8b8); transition: color .2s; }
+        .sw-breadcrumb a:hover { color: var(--colorbj); }
+        .sw-breadcrumb-sep { color: var(--colord8d); }
+        .sw-breadcrumb-cur { color: var(--color1e1); font-weight: var(--semibold); }
+
+        /* ========== Section Commons ========== */
+        .sw-section { padding: 80px 0; }
+        .sw-section-dark { background: var(--color1e1); color: #fff; }
+        .sw-section-gray { background: var(--colorbj1); }
+        .sw-section-hd { margin-bottom: 48px; }
+        .sw-section-hd.center { text-align: center; }
+        .sw-section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color1e1);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .sw-section-dark .sw-section-title { color: #fff; }
+        .sw-section-sub {
+            font-size: 18px;
+            color: var(--color8b8);
+            line-height: 1.6;
+        }
+        .sw-section-dark .sw-section-sub { color: rgba(255,255,255,.7); }
+
+        /* ========== 1. Hero Section ========== */
+        .sw-hero {
+            background: linear-gradient(180deg, #fff 0%, var(--colorbj1) 100%);
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .sw-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 60%;
+            height: 160%;
+            background: radial-gradient(ellipse, rgba(0,107,192,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .sw-hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .sw-hero-badge {
+            display: inline-block;
+            background: var(--colorbj);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: var(--semibold);
+            margin-bottom: 20px;
+        }
+        .sw-hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--color1e1);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .sw-hero-title span {
+            background: var(--colorbj2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .sw-hero-desc {
+            font-size: 20px;
+            color: var(--color8b8);
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+        .sw-hero-btns {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .sw-btn-solid {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: var(--colorbj);
+            color: #fff;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: var(--semibold);
+            transition: all .2s;
+        }
+        .sw-btn-solid:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,107,192,.25);
+            color: #fff;
+        }
+        .sw-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: #fff;
+            color: var(--colorbj);
+            border: 2px solid var(--colorbj);
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: var(--semibold);
+            transition: all .2s;
+        }
+        .sw-btn-outline:hover {
+            background: var(--colorbj1);
+            color: var(--colorbj);
+        }
+        .sw-hero-features {
+            display: flex;
+            gap: 32px;
+        }
+        .sw-hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            color: var(--color1e1);
+            font-weight: var(--semibold);
+        }
+        .sw-hero-feature-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--colorbj1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .sw-hero-visual {
+            position: relative;
+            border-radius: var(--radius20);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+        }
+        .sw-hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sw-hero-visual-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,.6);
+            text-align: center;
+            padding: 24px;
+        }
+        .sw-hero-visual-placeholder-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+        .sw-hero-visual-placeholder-title {
+            font-size: 18px;
+            font-weight: var(--semibold);
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .sw-hero-visual-placeholder-desc {
+            font-size: 14px;
+            max-width: 280px;
+        }
+
+        /* Hero Specs */
+        .sw-hero-specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--colord8d);
+        }
+        .sw-spec-item {
+            text-align: center;
+        }
+        .sw-spec-val {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--colorbj);
+            line-height: 1;
+        }
+        .sw-spec-unit { font-size: 18px; }
+        .sw-spec-label {
+            font-size: 14px;
+            color: var(--color8b8);
+            margin-top: 4px;
+        }
+
+        /* ========== 2. Pain Points + Why Us ========== */
+        .sw-pain {
+            background: #fff;
+        }
+        .sw-pain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: stretch;
+        }
+        .sw-pain-list .sw-pain-item {
+            flex: 1;
+        }
+        .sw-compare-table {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .sw-compare-table table {
+            flex: 1;
+        }
+        .sw-pain-item {
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background: var(--colorbj1);
+            border-radius: var(--radius15);
+            border-left: 4px solid var(--colorbj);
+        }
+        .sw-pain-item-num {
+            width: 32px;
+            height: 32px;
+            background: var(--colorbj);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: var(--bold);
+            flex-shrink: 0;
+        }
+        .sw-pain-item-content h4 {
+            font-size: 17px;
+            font-weight: var(--semibold);
+            margin-bottom: 6px;
+        }
+        .sw-pain-item-content p {
+            font-size: 14px;
+            color: var(--color8b8);
+            line-height: 1.5;
+        }
+        .sw-compare-table {
+            background: var(--color1e1);
+            border-radius: var(--radius20);
+            padding: 32px;
+            color: #fff;
+        }
+        .sw-compare-table h3 {
+            font-size: 22px;
+            font-weight: var(--bold);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .sw-compare-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sw-compare-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: rgba(255,255,255,.5);
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        .sw-compare-table th:last-child {
+            text-align: center;
+            color: var(--colorbj);
+        }
+        .sw-compare-table td {
+            padding: 14px 16px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        .sw-compare-table td:last-child {
+            text-align: center;
+        }
+        .sw-compare-table tr:last-child td {
+            border-bottom: none;
+        }
+        .sw-compare-plus {
+            color: var(--colorSuccess);
+            font-weight: var(--bold);
+        }
+        .sw-compare-minus {
+            color: #ef4444;
+            font-weight: var(--bold);
+        }
+
+        /* ========== 3. 4 Pillars ========== */
+        .sw-pillars {
+            background: var(--colorbj1);
+        }
+        .sw-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .sw-pillar-card {
+            background: #fff;
+            border-radius: var(--radius20);
+            padding: 32px 24px;
+            text-align: center;
+            transition: all .3s;
+        }
+        .sw-pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,107,192,.12);
+        }
+        .sw-pillar-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--colorbj1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+        .sw-pillar-num {
+            font-size: 12px;
+            color: var(--colorbj);
+            font-weight: var(--bold);
+            letter-spacing: .1em;
+            margin-bottom: 12px;
+        }
+        .sw-pillar-title {
+            font-size: 20px;
+            font-weight: var(--bold);
+            margin-bottom: 12px;
+            color: var(--color1e1);
+        }
+        .sw-pillar-desc {
+            font-size: 14px;
+            color: var(--color8b8);
+            line-height: 1.6;
+        }
+
+        /* ========== 4. Applications ========== */
+        .sw-apps-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .sw-app-card {
+            position: relative;
+            border-radius: var(--radius20);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+            cursor: pointer;
+        }
+        .sw-app-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s;
+        }
+        .sw-app-card:hover img {
+            transform: scale(1.08);
+        }
+        .sw-app-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+        }
+        .sw-app-card-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        .sw-app-card-title {
+            font-size: 18px;
+            font-weight: var(--bold);
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .sw-app-card-sub {
+            font-size: 13px;
+            color: rgba(255,255,255,.6);
+        }
+        .sw-app-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,.5);
+            text-align: center;
+            padding: 16px;
+        }
+
+        /* ========== 5. System Ecosystem ========== */
+        .sw-ecosystem {
+            background: var(--color1e1);
+            color: #fff;
+        }
+        .sw-ecosystem-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .sw-eco-node {
+            background: rgba(255,255,255,.1);
+            border-radius: var(--radius20);
+            padding: 32px;
+            text-align: center;
+            min-width: 160px;
+            border: 1px solid rgba(255,255,255,.15);
+        }
+        .sw-eco-node-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        .sw-eco-node-title {
+            font-size: 16px;
+            font-weight: var(--semibold);
+        }
+        .sw-eco-arrow {
+            font-size: 32px;
+            color: var(--colorbj);
+        }
+        .sw-ecosystem-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 15px;
+            color: rgba(255,255,255,.6);
+        }
+
+        /* ========== 6. Cases ========== */
+        .sw-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .sw-case-card {
+            background: #fff;
+            border-radius: var(--radius20);
+            overflow: hidden;
+            border: 1px solid var(--colord8d);
+            transition: all .3s;
+        }
+        .sw-case-card:hover {
+            box-shadow: 0 16px 48px rgba(0,0,0,.1);
+            transform: translateY(-4px);
+        }
+        .sw-case-img {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+            position: relative;
+        }
+        .sw-case-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sw-case-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,.4);
+        }
+        .sw-case-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--colorbj);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: var(--semibold);
+        }
+        .sw-case-body {
+            padding: 24px;
+        }
+        .sw-case-loc {
+            font-size: 13px;
+            color: var(--colorbj);
+            font-weight: var(--semibold);
+            margin-bottom: 8px;
+        }
+        .sw-case-title {
+            font-size: 20px;
+            font-weight: var(--bold);
+            margin-bottom: 16px;
+        }
+        .sw-case-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .sw-case-metric {
+            background: var(--colorbj1);
+            padding: 12px;
+            border-radius: var(--radius10);
+            text-align: center;
+        }
+        .sw-case-metric-val {
+            font-size: 18px;
+            font-weight: var(--bold);
+            color: var(--colorbj);
+        }
+        .sw-case-metric-label {
+            font-size: 11px;
+            color: var(--color8b8);
+            margin-top: 2px;
+        }
+
+        /* ========== 7. ROI ========== */
+        .sw-roi {
+            background: var(--colorbj1);
+        }
+        .sw-roi-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .sw-roi-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .sw-roi-card {
+            background: #fff;
+            border-radius: var(--radius15);
+            padding: 24px;
+            text-align: center;
+        }
+        .sw-roi-card.highlight {
+            background: var(--colorbj);
+            color: #fff;
+        }
+        .sw-roi-card-label {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .sw-roi-card.highlight .sw-roi-card-label {
+            color: rgba(255,255,255,.7);
+        }
+        .sw-roi-card-val {
+            font-size: 32px;
+            font-weight: var(--bold);
+        }
+        .sw-roi-card.highlight .sw-roi-card-val {
+            color: #fff;
+        }
+        .sw-roi-card-unit {
+            font-size: 14px;
+        }
+        .sw-roi-card-desc {
+            font-size: 12px;
+            color: var(--color8b8);
+            margin-top: 6px;
+        }
+        .sw-roi-card.highlight .sw-roi-card-desc {
+            color: rgba(255,255,255,.6);
+        }
+        .sw-roi-bars {
+            background: #fff;
+            border-radius: var(--radius20);
+            padding: 32px;
+        }
+        .sw-roi-bar-title {
+            font-size: 16px;
+            font-weight: var(--semibold);
+            margin-bottom: 20px;
+        }
+        .sw-roi-bar-item {
+            margin-bottom: 16px;
+        }
+        .sw-roi-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .sw-roi-bar-label span:last-child {
+            font-weight: var(--bold);
+            color: var(--colorbj);
+        }
+        .sw-roi-bar-bg {
+            background: var(--colord8d);
+            height: 12px;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+        .sw-roi-bar-fill {
+            height: 100%;
+            background: var(--colorbj);
+            border-radius: 100px;
+        }
+
+        /* ========== 8. Certifications ========== */
+        .sw-certs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .sw-cert-card {
+            background: #fff;
+            border-radius: var(--radius15);
+            padding: 32px 24px;
+            text-align: center;
+            border: 1px solid var(--colord8d);
+        }
+        .sw-cert-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        .sw-cert-title {
+            font-size: 16px;
+            font-weight: var(--semibold);
+            margin-bottom: 8px;
+        }
+        .sw-cert-desc {
+            font-size: 13px;
+            color: var(--color8b8);
+        }
+
+        /* ========== 9. FAQ ========== */
+        .sw-faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .sw-faq-item {
+            border-bottom: 1px solid var(--colord8d);
+        }
+        .sw-faq-q {
+            padding: 20px 0;
+            font-size: 17px;
+            font-weight: var(--semibold);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sw-faq-q::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--colorbj);
+        }
+        .sw-faq-a {
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: var(--color8b8);
+            display: none;
+        }
+        .sw-faq-item.active .sw-faq-a {
+            display: block;
+        }
+        .sw-faq-item.active .sw-faq-q::after {
+            content: '-';
+        }
+
+        /* ========== 10. CTA ========== */
+        .sw-cta {
+            background: var(--colorbj2);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .sw-cta-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .sw-cta-sub {
+            font-size: 18px;
+            color: rgba(255,255,255,.8);
+            margin-bottom: 40px;
+        }
+        .sw-cta-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: var(--radius20);
+            padding: 40px;
+        }
+        .sw-form-group {
+            margin-bottom: 20px;
+        }
+        .sw-form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: var(--semibold);
+            margin-bottom: 8px;
+        }
+        .sw-form-input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--colord8d);
+            border-radius: var(--radius10);
+            font-size: 15px;
+            font-family: var(--medium);
+        }
+        .sw-form-input:focus {
+            outline: none;
+            border-color: var(--colorbj);
+        }
+        .sw-form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--colorbj);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius10);
+            font-size: 16px;
+            font-weight: var(--semibold);
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .sw-form-submit:hover {
+            background: #0052a3;
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 1200px) {
+            .sw-pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-apps-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 1024px) {
+            .sw-hero-inner { grid-template-columns: 1fr; }
+            .sw-hero-visual { display: none; }
+            .sw-pain-grid { grid-template-columns: 1fr; }
+            .sw-roi-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .sw-hero-specs { grid-template-columns: repeat(2, 1fr); }
+
+            .sw-hero-title { font-size: 40px; }
+            .sw-section-title { font-size: 32px; }
+            .sw-pillars-grid { grid-template-columns: 1fr; }
+            .sw-apps-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-cases-grid { grid-template-columns: 1fr; }
+            .sw-certs-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-hero-btns { flex-direction: column; }
+            .sw-hero-features { flex-direction: column; gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .sw-apps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 0. Breadcrumb -->
+<div class="sw-breadcrumb">
+    <div class="ys-cont1600 sw-breadcrumb-inner">
+        <a href="index.html">Trang chủ</a>
+        <span class="sw-breadcrumb-sep">/</span>
+        <a href="business/business-pv.html">Doanh nghiệp</a>
+        <span class="sw-breadcrumb-sep">/</span>
+        <span class="sw-breadcrumb-cur">SolaWard Pro</span>
+    </div>
+</div>
+
+<!-- 1. Hero Section -->
+<section class="sw-hero">
+    <div class="ys-cont1600">
+        <div class="sw-hero-inner">
+            <div>
+                <div class="sw-hero-badge">Giải Pháp C&I</div>
+                <h1 class="sw-hero-title">SolaMate Pro <br/> The Ultimate <span>High-Power PV Ecosystem</span></h1>
+                <p class="sw-hero-desc">
+                    Stop piecing together your solar project. Experience a true roof-to-grid, one-stop solution with fully integrated hardware, certified local delivery, and single-source lifetime support.
+                </p>
+                <div class="sw-hero-btns">
+                    <a href="#contact" class="sw-btn-solid">Tìm đơn vị lắp đặt →</a>
+                    <a href="#" class="sw-btn-outline">Tải brochure</a>
+                </div>
+                <div class="sw-hero-features">
+                    <div class="sw-hero-feature">
+                        <div class="sw-hero-feature-icon">🔧</div>
+                        <span>100% Full-Stack R&D</span>
+                    </div>
+                    <div class="sw-hero-feature">
+                        <div class="sw-hero-feature-icon">🛡️</div>
+                        <span>Factory Integration</span>
+                    </div>
+                    <div class="sw-hero-feature">
+                        <div class="sw-hero-feature-icon">✅</div>
+                        <span>Certified Installers</span>
+                    </div>
+                    <div class="sw-hero-feature">
+                        <div class="sw-hero-feature-icon">📈</div>
+                        <span>30-Year Warranty</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sw-hero-visual">
+                <!-- 需求图片: 1920x1080 工厂/仓库太阳能系统全景 -->
+                <div class="sw-hero-visual-placeholder">
+                    <div class="sw-hero-visual-placeholder-icon">🏭</div>
+                    <div class="sw-hero-visual-placeholder-title">Factory Solar System</div>
+                    <div class="sw-hero-visual-placeholder-desc">
+                        图片描述: 工厂屋顶太阳能系统全景图<br>
+                        尺寸: 1920×1080 | 优先级: 🔴 高
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sw-hero-specs">
+                    <div class="sw-spec-item">
+                        <div class="sw-spec-val">30kW<span class="sw-spec-unit">-MW</span></div>
+                        <div class="sw-spec-label">Công suất</div>
+                    </div>
+                    <div class="sw-spec-item">
+                        <div class="sw-spec-val">98.6<span class="sw-spec-unit">%</span></div>
+                        <div class="sw-spec-label">Hiệu suất</div>
+                    </div>
+                    <div class="sw-spec-item">
+                        <div class="sw-spec-val">10<span class="sw-spec-unit">+</span></div>
+                        <div class="sw-spec-label">Năm bảo hành</div>
+                    </div>
+                    <div class="sw-spec-item">
+                        <div class="sw-spec-val">30<span class="sw-spec-unit">năm</span></div>
+                        <div class="sw-spec-label">Tuổi thọ hệ thống</div>
+                    </div>
+                </div>
+    </div>
+</section>
+
+<!-- 2. Pain Points + Why Us -->
+<section class="sw-section sw-pain">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Tại Sao Doanh Nghiệp Lo Lắng?</h2>
+            <p class="sw-section-sub">6 thách thức phổ biến khi lắp đặt năng lượng mặt trời</p>
+        </div>
+        <div class="sw-pain-grid">
+            <div class="sw-pain-list">
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">1</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Sản phẩm không tương thích</h4>
+                        <p>Pin, biến tần, giá đỡ từ nhiều hãng khác nhau - lo ngại thông số không khớp ảnh hưởng hiệu suất</p>
+                    </div>
+                </div>
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">2</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Chi phí đầu tư ban đầu cao</h4>
+                        <p>Thiết bị + lắp đặt + thủ tục phức tạp - không biết bắt đầu từ đâu, tiết kiệm ở đâu</p>
+                    </div>
+                </div>
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">3</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Chất lượng thi công không đồng đều</h4>
+                        <p>Sợ tìm phải đội thi công không chuyên nghiệp, bảo trì sau này không ai chịu trách nhiệm</p>
+                    </div>
+                </div>
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">4</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Rủi ro an toàn</h4>
+                        <p>Lo ngại thiết kế điện không hợp lý gây cháy nổ, thiếu bảo vệ tắt nhanh</p>
+                    </div>
+                </div>
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">5</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Khó khăn trong vận hành</h4>
+                        <p>Thiết bị trục trặc không biết kêu ai bảo hành, thiếu giám sát từ xa và bảo trì dự đoán</p>
+                    </div>
+                </div>
+                <div class="sw-pain-item">
+                    <div class="sw-pain-item-num">6</div>
+                    <div class="sw-pain-item-content">
+                        <h4>Lợi tức đầu tư không rõ ràng</h4>
+                        <p>Không biết thực sự tiết kiệm được bao nhiêu tiền điện, khó tính toán thời gian hoàn vốn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sw-compare-table">
+                <h3>SolaWard Pro vs. Giải Pháp Truyền Thống</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tiêu chí</th>
+                            <th>SolaWard Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tương thích sản phẩm</td>
+                            <td><span class="sw-compare-plus">✅ 100% khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td>Hiệu suất hệ thống</td>
+                            <td><span class="sw-compare-plus">✅ +2% extra</span></td>
+                        </tr>
+                        <tr>
+                            <td>An toàn</td>
+                            <td><span class="sw-compare-plus">✅ AFCI + Rapid Shutdown</span></td>
+                        </tr>
+                        <tr>
+                            <td>Thi công</td>
+                            <td><span class="sw-compare-plus">✅ Đội ngũ chứng nhận</span></td>
+                        </tr>
+                        <tr>
+                            <td>Bảo hành</td>
+                            <td><span class="sw-compare-plus">✅ 1 nguồn duy nhất</span></td>
+                        </tr>
+                        <tr>
+                            <td>Giám sát</td>
+                            <td><span class="sw-compare-plus">✅ AI dự đoán</span></td>
+                        </tr>
+                        <tr>
+                            <td>LCOE</td>
+                            <td><span class="sw-compare-plus">✅ Tối thiểu hóa</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. 4 Pillars -->
+<section class="sw-section sw-pillars">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">One-Stop Solution</h2>
+            <p class="sw-section-sub">Giải pháp toàn diện từ sản phẩm đến bảo hành.</p>
+        </div>
+        <div class="sw-pillars-grid">
+            <div class="sw-pillar-card">
+                <div class="sw-pillar-icon">🔧</div>
+                <div class="sw-pillar-num">PILLAR 1</div>
+                <h3 class="sw-pillar-title">Full-Stack R&D</h3>
+                <p class="sw-pillar-desc">
+                    100% sản phẩm nội bộ - từ pin, biến tần đến giá đỡ. Loại bỏ rủi ro tương thích, tăng 2% hiệu suất hệ thống.
+                </p>
+            </div>
+            <div class="sw-pillar-card">
+                <div class="sw-pillar-icon">🛡️</div>
+                <div class="sw-pillar-num">PILLAR 2</div>
+                <h3 class="sw-pillar-title">Factory Integration</h3>
+                <p class="sw-pillar-desc">
+                    Thiết kế tích hợp cấp nhà máy - AFCI, Rapid Shutdown, tối ưu DC/AC. An toàn công nghiệp, không rủi ro.
+                </p>
+            </div>
+            <div class="sw-pillar-card">
+                <div class="sw-pillar-icon">✅</div>
+                <div class="sw-pillar-num">PILLAR 3</div>
+                <h3 class="sw-pillar-title">Certified Delivery</h3>
+                <p class="sw-pillar-desc">
+                    Đối tác thi công địa phương được chứng nhận. Quy trình chuẩn hóa, kiểm tra số hóa, đảm bảo chất lượng.
+                </p>
+            </div>
+            <div class="sw-pillar-card">
+                <div class="sw-pillar-icon">📈</div>
+                <div class="sw-pillar-num">PILLAR 4</div>
+                <h3 class="sw-pillar-title">Warranty & O&M</h3>
+                <p class="sw-pillar-desc">
+                    Bảo hành 1 nguồn cho toàn hệ thống. O&M cloud platform + AI predictive maintenance + phản hồi nhanh.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Applications -->
+<section class="sw-section">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Ứng Dụng Đa Dạng</h2>
+            <p class="sw-section-sub">Phù hợp mọi quy mô và loại hình doanh nghiệp</p>
+        </div>
+        <div class="sw-apps-grid">
+            <div class="sw-app-card">
+                <div class="sw-app-placeholder">
+                    <div class="sw-app-card-icon">🏭</div>
+                    <div class="sw-app-card-title">Nhà máy</div>
+                    <div class="sw-app-card-sub">30kW - MW</div>
+                </div>
+                <div class="sw-app-card-overlay">
+                    <div class="sw-app-card-icon">🏭</div>
+                    <div class="sw-app-card-title">Nhà máy</div>
+                    <div class="sw-app-card-sub">Tự phát tự tiêu, giá điện cao điểm</div>
+                </div>
+            </div>
+            <div class="sw-app-card">
+                <div class="sw-app-placeholder">
+                    <div class="sw-app-card-icon">🏪</div>
+                    <div class="sw-app-card-title">Kho bãi</div>
+                    <div class="sw-app-card-sub">100kW - 500kW</div>
+                </div>
+                <div class="sw-app-card-overlay">
+                    <div class="sw-app-card-icon">🏪</div>
+                    <div class="sw-app-card-title">Kho bãi & Logistics</div>
+                    <div class="sw-app-card-sub">Diện tích lớn, giảm chi phí logistics</div>
+                </div>
+            </div>
+            <div class="sw-app-card">
+                <div class="sw-app-placeholder">
+                    <div class="sw-app-card-icon">🏢</div>
+                    <div class="sw-app-card-title">Tòa nhà</div>
+                    <div class="sw-app-card-sub">50kW - 200kW</div>
+                </div>
+                <div class="sw-app-card-overlay">
+                    <div class="sw-app-card-icon">🏢</div>
+                    <div class="sw-app-card-title">Tòa nhà thương mại</div>
+                    <div class="sw-app-card-sub">Nâng cao hình ảnh ESG</div>
+                </div>
+            </div>
+            <div class="sw-app-card">
+                <div class="sw-app-placeholder">
+                    <div class="sw-app-card-icon">💻</div>
+                    <div class="sw-app-card-title">Data Center</div>
+                    <div class="sw-app-card-sub">200kW - MW</div>
+                </div>
+                <div class="sw-app-card-overlay">
+                    <div class="sw-app-card-icon">💻</div>
+                    <div class="sw-app-card-title">Hạ tầng số</div>
+                    <div class="sw-app-card-sub">Nguồn dự phòng tin cậy</div>
+                </div>
+            </div>
+            <div class="sw-app-card">
+                <div class="sw-app-placeholder">
+                    <div class="sw-app-card-icon">🚗</div>
+                    <div class="sw-app-card-title">Carport</div>
+                    <div class="sw-app-card-sub">50kW - 200kW</div>
+                </div>
+                <div class="sw-app-card-overlay">
+                    <div class="sw-app-card-icon">🚗</div>
+                    <div class="sw-app-card-title">Bãi đỗ xe</div>
+                    <div class="sw-app-card-sub">Che nắng + sạc + phát điện</div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:24px; font-size:14px; color:var(--color8b8);">
+            💡 需求图片 (每个场景): 800×600 | 优先级: 🔴 高<br>
+            工厂/仓库/商业建筑/数据中心/太阳能车棚 - 各1张
+        </div>
+    </div>
+</section>
+
+<!-- 5. System Ecosystem (Video) -->
+<section class="sw-section sw-ecosystem">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Hệ Sinh Thái Hoàn Chỉnh</h2>
+            <p class="sw-section-sub">Roof-to-Grid - Từ mái đến lưới điện</p>
+        </div>
+        <div class="sw-ecosystem-flow">
+            <div class="sw-eco-node">
+                <div class="sw-eco-node-icon">☀️</div>
+                <div class="sw-eco-node-title">Solar Panel<br>Tấm pin</div>
+            </div>
+            <div class="sw-eco-arrow">→</div>
+            <div class="sw-eco-node">
+                <div class="sw-eco-node-icon">⚡</div>
+                <div class="sw-eco-node-title">Inverter<br>Biến tần</div>
+            </div>
+            <div class="sw-eco-arrow">→</div>
+            <div class="sw-eco-node">
+                <div class="sw-eco-node-icon">🔋</div>
+                <div class="sw-eco-node-title">Battery<br>Pin</div>
+            </div>
+            <div class="sw-eco-arrow">→</div>
+            <div class="sw-eco-node">
+                <div class="sw-eco-node-icon">🏠</div>
+                <div class="sw-eco-node-title">Load<br>Tải</div>
+            </div>
+            <div class="sw-eco-arrow">→</div>
+            <div class="sw-eco-node">
+                <div class="sw-eco-node-icon">🔌</div>
+                <div class="sw-eco-node-title">Grid<br>Lưới</div>
+            </div>
+        </div>
+        <div class="sw-ecosystem-note">
+            📹 视频需求: Roof-to-Grid 系统演示视频<br>
+            内容: 面板→逆变器→储能→负载→电网 全流程动画演示<br>
+            格式: MP4/WebM | 时长: 30-60秒 | 尺寸: 1920×1080 | 优先级: 🔴 高
+        </div>
+    </div>
+</section>
+
+<!-- 6. Cases -->
+<section class="sw-section" id="cases">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Dự Án Thực Tế</h2>
+            <p class="sw-section-sub">Các dự án đã triển khai thành công</p>
+        </div>
+        <div class="sw-cases-grid">
+            <div class="sw-case-card">
+                <div class="sw-case-img">
+                    <div class="sw-case-placeholder">
+                        🏭<br>Factory 150kW
+                    </div>
+                    <div class="sw-case-badge">Nhà máy</div>
+                </div>
+                <div class="sw-case-body">
+                    <div class="sw-case-loc">Bangkok, Thailand</div>
+                    <h3 class="sw-case-title">Hệ thống PV mái nhà máy 150 kW</h3>
+                    <div class="sw-case-metrics">
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">150 kW</div>
+                            <div class="sw-case-metric-label">Công suất</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">175,200</div>
+                            <div class="sw-case-metric-label">kWh/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">684K</div>
+                            <div class="sw-case-metric-label">THB/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">4.4 năm</div>
+                            <div class="sw-case-metric-label">Hoàn vốn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sw-case-card">
+                <div class="sw-case-img">
+                    <div class="sw-case-placeholder">
+                        🏪<br>Warehouse 200kW
+                    </div>
+                    <div class="sw-case-badge">Kho bãi</div>
+                </div>
+                <div class="sw-case-body">
+                    <div class="sw-case-loc">Hanoi, Vietnam</div>
+                    <h3 class="sw-case-title">Hệ thống PV kho logistics 200 kW</h3>
+                    <div class="sw-case-metrics">
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">200 kW</div>
+                            <div class="sw-case-metric-label">Công suất</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">240,000</div>
+                            <div class="sw-case-metric-label">kWh/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">960M</div>
+                            <div class="sw-case-metric-label">VND/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">4.2 năm</div>
+                            <div class="sw-case-metric-label">Hoàn vốn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sw-case-card">
+                <div class="sw-case-img">
+                    <div class="sw-case-placeholder">
+                        🏢<br>Building 100kW
+                    </div>
+                    <div class="sw-case-badge">Thương mại</div>
+                </div>
+                <div class="sw-case-body">
+                    <div class="sw-case-loc">Ho Chi Minh, Vietnam</div>
+                    <h3 class="sw-case-title">Hệ thống PV tòa nhà 100 kW</h3>
+                    <div class="sw-case-metrics">
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">100 kW</div>
+                            <div class="sw-case-metric-label">Công suất</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">120,000</div>
+                            <div class="sw-case-metric-label">kWh/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">480M</div>
+                            <div class="sw-case-metric-label">VND/năm</div>
+                        </div>
+                        <div class="sw-case-metric">
+                            <div class="sw-case-metric-val">5 năm</div>
+                            <div class="sw-case-metric-label">Hoàn vốn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. ROI -->
+<section class="sw-section sw-roi">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Lợi Tức Đầu Tư</h2>
+            <p class="sw-section-sub">Dựa trên hệ thống 100kW</p>
+        </div>
+        <div class="sw-roi-inner">
+            <div>
+                <div class="sw-roi-stats">
+                    <div class="sw-roi-card">
+                        <div class="sw-roi-card-label">Chi phí đầu tư</div>
+                        <div class="sw-roi-card-val">~11M <span class="sw-roi-card-unit">THB</span></div>
+                        <div class="sw-roi-card-desc">hoặc ~9B VND</div>
+                    </div>
+                    <div class="sw-roi-card highlight">
+                        <div class="sw-roi-card-label">Tiết kiệm/năm</div>
+                        <div class="sw-roi-card-val">480K <span class="sw-roi-card-unit">THB</span></div>
+                        <div class="sw-roi-card-desc">~384M VND</div>
+                    </div>
+                    <div class="sw-roi-card">
+                        <div class="sw-roi-card-label">Carbon giảm</div>
+                        <div class="sw-roi-card-val">60K <span class="sw-roi-card-unit">kg</span></div>
+                        <div class="sw-roi-card-desc">CO2/năm</div>
+                    </div>
+                    <div class="sw-roi-card">
+                        <div class="sw-roi-card-label">25 năm tổng</div>
+                        <div class="sw-roi-card-val">12M <span class="sw-roi-card-unit">THB</span></div>
+                        <div class="sw-roi-card-desc">~9.6B VND</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sw-roi-bars">
+                <div class="sw-roi-bar-title">Thời gian hoàn vốn</div>
+                <div class="sw-roi-bar-item">
+                    <div class="sw-roi-bar-label">Năm 1-4 <span>Đầu tư</span></div>
+                    <div class="sw-roi-bar-bg"><div class="sw-roi-bar-fill" style="width:16%"></div></div>
+                </div>
+                <div class="sw-roi-bar-item">
+                    <div class="sw-roi-bar-label">Năm 5-10 <span>Tiết kiệm</span></div>
+                    <div class="sw-roi-bar-bg"><div class="sw-roi-bar-fill" style="width:40%"></div></div>
+                </div>
+                <div class="sw-roi-bar-item">
+                    <div class="sw-roi-bar-label">Năm 11-25 <span>Lợi nhuận</span></div>
+                    <div class="sw-roi-bar-bg"><div class="sw-roi-bar-fill" style="width:100%; background:linear-gradient(90deg,#006BC0,#00E2E0)"></div></div>
+                </div>
+                <div style="margin-top:20px; text-align:center; font-size:15px; color:var(--color8b8);">
+                    <strong style="color:var(--colorSuccess);">ROI: 8-10 lần</strong> | Thời gian hoàn vốn: <strong>4-5 năm</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. Certifications -->
+<section class="sw-section">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Chứng Nhận & Tiêu Chuẩn</h2>
+            <p class="sw-section-sub">Đạt các tiêu chuẩn quốc tế và địa phương</p>
+        </div>
+        <div class="sw-certs-grid">
+            <div class="sw-cert-card">
+                <div class="sw-cert-icon">🔬</div>
+                <h4 class="sw-cert-title">TÜV Rheinland</h4>
+                <p class="sw-cert-desc">Chứng nhận an toàn quốc tế</p>
+            </div>
+            <div class="sw-cert-card">
+                <div class="sw-cert-icon">🇪🇺</div>
+                <h4 class="sw-cert-title">CE</h4>
+                <p class="sw-cert-desc">Tiêu chuẩn châu Âu</p>
+            </div>
+            <div class="sw-cert-card">
+                <div class="sw-cert-icon">🏢</div>
+                <h4 class="sw-cert-title">ISO 9001</h4>
+                <p class="sw-cert-desc">Hệ thống quản lý chất lượng</p>
+            </div>
+            <div class="sw-cert-card">
+                <div class="sw-cert-icon">⚡</div>
+                <h4 class="sw-cert-title">PEA/EVN</h4>
+                <p class="sw-cert-desc">Kết nối lưới điện địa phương</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:32px; font-size:14px; color:var(--color8b8);">
+            💡 需求图片: 认证证书扫描件 (TÜV/CE/ISO/当地) | 尺寸: 300×200 | 优先级: 🔴 高
+        </div>
+    </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="sw-section sw-section-gray">
+    <div class="ys-cont1600">
+        <div class="sw-section-hd center">
+            <h2 class="sw-section-title">Câu Hỏi Thường Gặp</h2>
+        </div>
+        <div class="sw-faq-list">
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">SolaWard Pro phù hợp quy mô nào?</div>
+                <div class="sw-faq-a">Từ 30kW đến MW, phù hợp nhà máy, kho bãi, tòa nhà thương mại và các dự án quy mô lớn.</div>
+            </div>
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">Thời gian lắp đặt bao lâu?</div>
+                <div class="sw-faq-a">Tùy quy mô, thông thường 30-90 ngày từ khi ký hợp đồng đến vận hành.</div>
+            </div>
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">Bảo hành bao lâu?</div>
+                <div class="sw-faq-a">Tấm pin 30 năm, biến tần 10 năm, giá đỡ 15 năm, hệ thống 10 năm.</div>
+            </div>
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">Có hỗ trợ tài chính không?</div>
+                <div class="sw-faq-a">Có, chúng tôi cung cấp cả EPC (đầu tư sở hữu) và PPA (thuê + mua điện) hai mô hình kinh doanh.</div>
+            </div>
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">Dịch vụ O&M bao gồm gì?</div>
+                <div class="sw-faq-a">Giám sát 24/7 từ xa, bảo trì định kỳ, bảo trì dự đoán bằng AI, và phản hồi kỹ thuật nhanh chóng.</div>
+            </div>
+            <div class="sw-faq-item">
+                <div class="sw-faq-q">Làm sao đảm bảo chất lượng thi công?</div>
+                <div class="sw-faq-a">Chỉ đối tác thi công được chứng nhận mới được lắp đặt, quy trình chuẩn hóa và kiểm tra số hóa.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 10. CTA -->
+<section class="sw-section sw-cta" id="contact">
+    <div class="ys-cont1600">
+        <h2 class="sw-cta-title">Sẵn Sàng Bắt Đầu?</h2>
+        <p class="sw-cta-sub">Nhận tư vấn miễn phí và báo giá chi tiết cho dự án của bạn</p>
+        <div class="sw-cta-form">
+            <div class="sw-form-group">
+                <label class="sw-form-label">Tên doanh nghiệp / Họ và tên</label>
+                <input type="text" class="sw-form-input" placeholder="Nhập tên của bạn">
+            </div>
+            <div class="sw-form-group">
+                <label class="sw-form-label">Email</label>
+                <input type="email" class="sw-form-input" placeholder="email@company.com">
+            </div>
+            <div class="sw-form-group">
+                <label class="sw-form-label">Số điện thoại</label>
+                <input type="tel" class="sw-form-input" placeholder="+84 xxx xxx xxx">
+            </div>
+            <div class="sw-form-group">
+                <label class="sw-form-label">Quy mô dự án (kW)</label>
+                <input type="text" class="sw-form-input" placeholder="VD: 100 kW">
+            </div>
+            <button type="submit" class="sw-form-submit">Gửi yêu cầu →</button>
+        </div>
+    </div>
+</section>
+
+<script>
+// FAQ Toggle
+document.querySelectorAll('.sw-faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+    });
+});
+</script>
+
+</body>
+</html>

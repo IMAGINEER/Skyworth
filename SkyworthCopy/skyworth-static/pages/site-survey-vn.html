@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Lịch Khảo Sát — SKYWORTH Solavita Vietnam</title>
+    <meta name="description" content="Đặt lịch khảo sát hiện trường miễn phí cho hệ thống điện mặt trời." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --colorbj: #006BC0;
+            --colorbj1: #f0f7fc;
+            --colorbj2: #0052a3;
+            --color1e1: #1e293b;
+            --color8b8: #64748b;
+            --colord8d: #e2e8f0;
+            --colorred: #dc2626;
+            --radius20: 20px;
+            --radius15: 15px;
+            --radius10: 10px;
+            --medium: 'Be Vietnam Pro', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--medium); color: var(--color1e1); line-height: 1.6; background: #fff; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* Breadcrumb */
+        .ss-breadcrumb { background: var(--colorbj1); padding: 16px 0; }
+        .ss-breadcrumb-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color8b8); }
+        .ss-breadcrumb a:hover { color: var(--colorbj); }
+        .ss-breadcrumb-sep { color: var(--colord8d); }
+
+        /* Hero */
+        .ss-hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 80px 0; text-align: center; }
+        .ss-hero-title { font-size: 48px; color: #fff; font-weight: 700; margin-bottom: 16px; }
+        .ss-hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+
+        /* Benefits */
+        .ss-benefits { background: var(--colorbj1); padding: 60px 0; }
+        .ss-benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .ss-benefit-card { text-align: center; padding: 24px; background: #fff; border-radius: var(--radius15); }
+        .ss-benefit-icon { width: 56px; height: 56px; background: var(--colorbj1); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 16px; }
+        .ss-benefit-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+        .ss-benefit-desc { font-size: 13px; color: var(--color8b8); }
+
+        /* Auth Required */
+        .ss-auth-required { max-width: 600px; margin: 0 auto; padding: 0 24px; }
+        .ss-auth-card { background: #fff; border-radius: var(--radius20); padding: 48px; box-shadow: 0 8px 40px rgba(0,0,0,0.08); border: 1px solid var(--colord8d); text-align: center; }
+        .ss-auth-icon { width: 80px; height: 80px; background: var(--colorbj1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin: 0 auto 24px; }
+        .ss-auth-title { font-size: 24px; font-weight: 600; margin-bottom: 12px; }
+        .ss-auth-desc { color: var(--color8b8); margin-bottom: 32px; }
+
+        /* Social Buttons */
+        .ss-social-btns { display: flex; gap: 12px; margin-bottom: 24px; }
+        .ss-social-btn {
+            flex: 1; padding: 14px; border-radius: var(--radius10); border: 2px solid var(--colord8d);
+            background: #fff; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; font-weight: 600;
+        }
+        .ss-social-btn:hover { border-color: var(--colorbj); background: var(--colorbj1); }
+        .ss-social-btn img { width: 20px; height: 20px; }
+
+        .ss-auth-divider { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; color: var(--color8b8); font-size: 13px; }
+        .ss-auth-divider::before, .ss-auth-divider::after { content: ''; flex: 1; height: 1px; background: var(--colord8d); }
+
+        /* Form Section */
+        .ss-form-section { padding: 80px 0; }
+        .ss-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .ss-form-card { background: #fff; border-radius: var(--radius20); padding: 48px; box-shadow: 0 8px 40px rgba(0,0,0,0.08); border: 1px solid var(--colord8d); }
+        .ss-form-title { font-size: 28px; font-weight: 600; margin-bottom: 8px; text-align: center; }
+        .ss-form-sub { font-size: 14px; color: var(--color8b8); margin-bottom: 40px; text-align: center; }
+
+        .ss-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .ss-form-group { margin-bottom: 20px; }
+        .ss-form-label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--color1e1); }
+        .ss-form-label span { color: var(--colorred); }
+        .ss-form-input, .ss-form-select, .ss-form-textarea {
+            width: 100%; padding: 14px 16px; font-size: 15px; font-family: var(--medium);
+            border: 2px solid var(--colord8d); border-radius: var(--radius10);
+            transition: border-color 0.2s, box-shadow 0.2s; background: #fff;
+        }
+        .ss-form-input:focus, .ss-form-select:focus, .ss-form-textarea:focus {
+            outline: none; border-color: var(--colorbj); box-shadow: 0 0 0 3px rgba(0,107,192,0.1);
+        }
+        .ss-form-textarea { min-height: 100px; resize: vertical; }
+        .ss-form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 40px; }
+
+        /* Date/Time Row */
+        .ss-datetime-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+        /* Roof Info */
+        .ss-roof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .ss-roof-option {
+            padding: 20px; border: 2px solid var(--colord8d); border-radius: var(--radius15);
+            cursor: pointer; transition: all 0.2s; text-align: center;
+        }
+        .ss-roof-option:hover { border-color: var(--colorbj1); }
+        .ss-roof-option.selected { border-color: var(--colorbj); background: var(--colorbj1); }
+        .ss-roof-option input { display: none; }
+        .ss-roof-icon { font-size: 32px; margin-bottom: 8px; }
+        .ss-roof-name { font-weight: 600; font-size: 14px; }
+
+        /* User Bar */
+        .ss-user-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; background: var(--colorbj1); border-radius: var(--radius15); margin-bottom: 32px; }
+        .ss-user-info { display: flex; align-items: center; gap: 12px; }
+        .ss-user-avatar { width: 40px; height: 40px; background: var(--colorbj); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .ss-user-name { font-weight: 600; }
+        .ss-user-email { font-size: 13px; color: var(--color8b8); }
+        .ss-logout-btn { font-size: 13px; color: var(--colorbj); cursor: pointer; text-decoration: underline; }
+
+        /* Submit */
+        .ss-form-submit {
+            width: 100%; padding: 18px 32px; background: var(--colorbj); color: #fff;
+            font-size: 16px; font-weight: 600; border: none; border-radius: var(--radius10);
+            cursor: pointer; transition: all 0.2s; font-family: var(--medium); margin-top: 16px;
+        }
+        .ss-form-submit:hover { background: var(--colorbj2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,107,192,0.3); }
+        .ss-form-note { font-size: 13px; color: var(--color8b8); margin-top: 16px; text-align: center; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .ss-hero-title { font-size: 36px; }
+            .ss-form-card { padding: 24px; }
+            .ss-form-row, .ss-datetime-row { grid-template-columns: 1fr; }
+            .ss-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .ss-roof-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb -->
+    <div class="ss-breadcrumb">
+        <div class="ss-breadcrumb-inner">
+            <a href="index.html">Trang chủ</a>
+            <span class="ss-breadcrumb-sep">/</span>
+            <a href="contact-us-vn.html">Liên Hệ</a>
+            <span class="ss-breadcrumb-sep">/</span>
+            <span>Đặt Lịch Khảo Sát</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="ss-hero">
+        <div class="ss-inner">
+            <h1 class="ss-hero-title">Đặt Lịch Khảo Sát Miễn Phí</h1>
+            <p class="ss-hero-sub">Đội ngũ kỹ thuật của chúng tôi sẽ đến kiểm tra hiện trường và tư vấn giải pháp phù hợp nhất cho ngôi nhà của bạn.</p>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="ss-benefits">
+        <div class="ss-benefits-grid">
+            <div class="ss-benefit-card">
+                <div class="ss-benefit-icon">📏</div>
+                <h4 class="ss-benefit-title">Đo Đạc Chính Xác</h4>
+                <p class="ss-benefit-desc">Đo diện tích mái, góc nghiêng và hướng chính xác</p>
+            </div>
+            <div class="ss-benefit-card">
+                <div class="ss-benefit-icon">💡</div>
+                <h4 class="ss-benefit-title">Tư Vấn Tận Tâm</h4>
+                <p class="ss-benefit-desc">Kỹ thuật viên tư vấn giải pháp phù hợp nhất</p>
+            </div>
+            <div class="ss-benefit-card">
+                <div class="ss-benefit-icon">📋</div>
+                <h4 class="ss-benefit-title">Báo Giá Chi Tiết</h4>
+                <p class="ss-benefit-desc">Cung cấp báo giá chi tiết và phương án lắp đặt</p>
+            </div>
+            <div class="ss-benefit-card">
+                <div class="ss-benefit-icon">✅</div>
+                <h4 class="ss-benefit-title">Hoàn Toàn Miễn Phí</h4>
+                <p class="ss-benefit-desc">Không phí khảo sát, không ràng buộc</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="ss-form-section">
+        <div class="ss-inner">
+
+            <!-- Not Logged In: Show Auth -->
+            <div id="ss-auth-section">
+                <div class="ss-auth-card">
+                    <div class="ss-auth-icon">🔒</div>
+                    <h2 class="ss-auth-title">Cần Đăng Nhập Để Tiếp Tục</h2>
+                    <p class="ss-auth-desc">Vui lòng đăng nhập hoặc đăng ký để đặt lịch khảo sát miễn phí.</p>
+
+                    <div class="ss-social-btns">
+                        <button class="ss-social-btn" onclick="socialLogin('google')">
+                            <img src="assets/images/icons/google-icon.svg" alt="Google" onerror="this.style.display='none'">
+                            <span>Google</span>
+                        </button>
+                        <button class="ss-social-btn" onclick="socialLogin('facebook')">
+                            <img src="assets/images/icons/facebook-icon.svg" alt="Facebook" onerror="this.style.display='none'">
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+
+                    <div class="ss-auth-divider">hoặc</div>
+
+                    <form onsubmit="return quickLogin(event)">
+                        <div class="ss-form-group" style="text-align:left;">
+                            <label class="ss-form-label">Email / Điện thoại</label>
+                            <input type="text" class="ss-form-input" name="login_id" placeholder="Nhập email hoặc số điện thoại">
+                        </div>
+                        <div class="ss-form-group" style="text-align:left;">
+                            <label class="ss-form-label">Mật khẩu</label>
+                            <input type="password" class="ss-form-input" name="password" placeholder="Nhập mật khẩu">
+                        </div>
+                        <button type="submit" class="ss-form-submit">Đăng Nhập</button>
+                    </form>
+
+                    <p style="margin-top:20px;font-size:14px;color:var(--color8b8);">
+                        Chưa có tài khoản? <a href="contact-us-vn.html" style="color:var(--colorbj);font-weight:600;">Đăng ký ngay</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Logged In: Show Form -->
+            <div id="ss-form-section" style="display:none;">
+                <div class="ss-form-card">
+                    <h2 class="ss-form-title">Thông Tin Khảo Sát</h2>
+                    <p class="ss-form-sub">Điền đầy đủ thông tin bên dưới, chúng tôi sẽ liên hệ xác nhận trong vòng 24 giờ.</p>
+
+                    <!-- User Info Bar -->
+                    <div class="ss-user-bar">
+                        <div class="ss-user-info">
+                            <div class="ss-user-avatar" id="ss-avatar">👤</div>
+                            <div>
+                                <div class="ss-user-name" id="ss-name">Nguyễn Văn A</div>
+                                <div class="ss-user-email" id="ss-email">user@example.com</div>
+                            </div>
+                        </div>
+                        <span class="ss-logout-btn" onclick="logout()">Đăng xuất</span>
+                    </div>
+
+                    <form id="surveyForm" onsubmit="return submitSurvey(event)">
+                        <!-- Personal Info -->
+                        <div class="ss-form-row">
+                            <div class="ss-form-group">
+                                <label class="ss-form-label">Họ Và Tên <span>*</span></label>
+                                <input type="text" class="ss-form-input" name="full_name" id="survey_name" required>
+                            </div>
+                            <div class="ss-form-group">
+                                <label class="ss-form-label">Số Điện Thoại <span>*</span></label>
+                                <input type="tel" class="ss-form-input" name="phone" id="survey_phone" required>
+                            </div>
+                        </div>
+
+                        <div class="ss-form-group">
+                            <label class="ss-form-label">Email <span>*</span></label>
+                            <input type="email" class="ss-form-input" name="email" id="survey_email" required>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="ss-form-group">
+                            <label class="ss-form-label">Địa Chỉ Lắp Đặt <span>*</span></label>
+                            <input type="text" class="ss-form-input" name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, thành phố">
+                        </div>
+
+                        <!-- Roof Type -->
+                        <div class="ss-form-group">
+                            <label class="ss-form-label">Loại Mái <span>*</span></label>
+                            <div class="ss-roof-grid">
+                                <label class="ss-roof-option" onclick="selectRoof(this)">
+                                    <input type="radio" name="roof_type" value="flat" required>
+                                    <div class="ss-roof-icon">🏢</div>
+                                    <div class="ss-roof-name">Mái Bằng</div>
+                                </label>
+                                <label class="ss-roof-option" onclick="selectRoof(this)">
+                                    <input type="radio" name="roof_type" value="sloped">
+                                    <div class="ss-roof-icon">🏠</div>
+                                    <div class="ss-roof-name">Mái Dốc</div>
+                                </label>
+                                <label class="ss-roof-option" onclick="selectRoof(this)">
+                                    <input type="radio" name="roof_type" value="tile">
+                                    <div class="ss-roof-icon">🏛️</div>
+                                    <div class="ss-roof-name">Mái Ngói</div>
+                                </label>
+                                <label class="ss-roof-option" onclick="selectRoof(this)">
+                                    <input type="radio" name="roof_type" value="balcony">
+                                    <div class="ss-roof-icon">🌅</div>
+                                    <div class="ss-roof-name">Ban Công</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Product Interest -->
+                        <div class="ss-form-row">
+                            <div class="ss-form-group">
+                                <label class="ss-form-label">Sản Phẩm Quan Tâm <span>*</span></label>
+                                <select class="ss-form-select" name="product_interest" required>
+                                    <option value="">-- Chọn sản phẩm --</option>
+                                    <option value="sola-mate">SolaMate - Điện mặt trời ban công</option>
+                                    <option value="sola-ward">SolaWard - Điện mặt trời mái nhà</option>
+                                    <option value="hybrid">Hệ thống Hybrid (có pin)</option>
+                                    <option value="grid-tied">Hệ thống hòa lưới</option>
+                                </select>
+                            </div>
+                            <div class="ss-form-group">
+                                <label class="ss-form-label">Ngân Sách Dự Kiến</label>
+                                <select class="ss-form-select" name="budget">
+                                    <option value="">-- Chọn ngân sách --</option>
+                                    <option value="under-50m">Dưới 50 triệu VND</option>
+                                    <option value="50-100m">50 - 100 triệu VND</option>
+                                    <option value="100-200m">100 - 200 triệu VND</option>
+                                    <option value="200-500m">200 - 500 triệu VND</option>
+                                    <option value="over-500m">Trên 500 triệu VND</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Date/Time -->
+                        <div class="ss-form-group">
+                            <label class="ss-form-label">Ngày Và Giờ Mong Muốn <span>*</span></label>
+                            <div class="ss-datetime-row">
+                                <input type="date" class="ss-form-input" name="survey_date" required>
+                                <select class="ss-form-select" name="survey_time" required>
+                                    <option value="">-- Chọn khung giờ --</option>
+                                    <option value="morning">Buổi sáng (8:00 - 12:00)</option>
+                                    <option value="afternoon">Buổi chiều (13:00 - 18:00)</option>
+                                </select>
+                                <select class="ss-form-select" name="priority">
+                                    <option value="normal">Ưu tiên bình thường</option>
+                                    <option value="high">Cần khảo sát sớm</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="ss-form-group">
+                            <label class="ss-form-label">Ghi Chú Thêm</label>
+                            <textarea class="ss-form-textarea" name="notes" placeholder="Thông tin thêm về mái nhà, điện hiện tại, hoặc yêu cầu đặc biệt..."></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="ss-form-submit">Đặt Lịch Khảo Sát →</button>
+                        <p class="ss-form-note">Bằng việc đặt lịch, bạn đồng ý với chính sách bảo mật của chúng tôi.</p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // Social Login
+        function socialLogin(provider) {
+            alert('【' + provider.toUpperCase() + ' 第三方登录】\n\n此功能需要后端配合实现 OAuth 2.0 流程。\n\n需要的资源：\n- Google: Google OAuth 2.0 API 配置\n- Facebook: Facebook Login API 配置\n\n图标文件路径：assets/images/icons/');
+        }
+
+        // Quick Login (Mock)
+        function quickLogin(e) {
+            e.preventDefault();
+            const loginId = e.target.login_id.value;
+
+            if(!loginId) {
+                alert('Vui lòng nhập email hoặc số điện thoại!');
+                return false;
+            }
+
+            // Mock login
+            const user = {
+                name: 'Nguyễn Văn A',
+                email: loginId.includes('@') ? loginId : loginId + '@example.com',
+                phone: loginId.includes('@') ? '' : loginId
+            };
+
+            setAuthUser(user);
+            alert('Đăng nhập thành công!');
+            return false;
+        }
+
+        // Roof Selection
+        function selectRoof(element) {
+            document.querySelectorAll('.ss-roof-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+        }
+
+        // Submit Survey
+        function submitSurvey(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Survey form submitted:', data);
+
+            alert('Cảm ơn bạn đã đặt lịch! Chúng tôi sẽ liên hệ xác nhận trong vòng 24 giờ.');
+            e.target.reset();
+            document.querySelectorAll('.ss-roof-option').forEach(opt => opt.classList.remove('selected'));
+            return false;
+        }
+
+        // Auth Management
+        function setAuthUser(user) {
+            localStorage.setItem('ct_user', JSON.stringify(user));
+            showSurveyForm(user);
+        }
+
+        function logout() {
+            localStorage.removeItem('ct_user');
+            showAuthSection();
+        }
+
+        function showSurveyForm(user) {
+            document.getElementById('ss-auth-section').style.display = 'none';
+            document.getElementById('ss-form-section').style.display = 'block';
+
+            // Update user info
+            document.getElementById('ss-name').textContent = user.name || 'Người dùng';
+            document.getElementById('ss-email').textContent = user.email || '';
+
+            // Pre-fill form
+            document.getElementById('survey_name').value = user.name || '';
+            document.getElementById('survey_email').value = user.email || '';
+            document.getElementById('survey_phone').value = user.phone || '';
+
+            // Set avatar initial
+            if(user.name) {
+                document.getElementById('ss-avatar').textContent = user.name.charAt(0).toUpperCase();
+            }
+        }
+
+        function showAuthSection() {
+            document.getElementById('ss-auth-section').style.display = 'block';
+            document.getElementById('ss-form-section').style.display = 'none';
+        }
+
+        // Check auth on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const userStr = localStorage.getItem('ct_user');
+            if(userStr) {
+                try {
+                    const user = JSON.parse(userStr);
+                    showSurveyForm(user);
+                } catch(e) {
+                    showAuthSection();
+                }
+            } else {
+                showAuthSection();
+            }
+        });
+    </script>
+
+    <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script><!-- https://respond.io -->
+</body>
+</html>

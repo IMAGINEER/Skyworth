@@ -302,8 +302,8 @@ Giải pháp năng lượng mặt trời tùy chỉnh cho ngôi nhà của bạn
 - Tuổi thọ hệ thống 30 năm
 
 [按钮]
-- Nhận Báo Giá Miễn Phí
-- Xem Tính Toán ROI
+- Tìm đơn vị lắp đặt (查找安装商)
+- Tải brochure (下载手册)
 ```
 
 ### 7.2 痛点引入文案
@@ -317,6 +317,7 @@ Giải pháp năng lượng mặt trời cho mọi gia đình
 - Khu vực hay bị cắt điện?
 - Muốn giảm phụ thuộc vào lưới điện?
 - Cần nguồn điện dự phòng khi mất điện?
+- Lo ngại ảnh hưởng đến thẩm mỹ ngôi nhà?
 
 [解决方案]
 → SolaWard: 3 kịch bản — phù hợp mọi nhu cầu gia đình

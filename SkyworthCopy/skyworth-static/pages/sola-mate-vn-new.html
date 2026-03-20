@@ -194,6 +194,32 @@
             font-size: 13px;
             color: var(--color33);
         }
+        .sm-hero-features {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+        .sm-hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sm-hero-feature-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--colorbj1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .sm-hero-feature span {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color33);
+        }
         .sm-hero-visual {
             position: relative;
         }
@@ -1092,14 +1118,26 @@
                         cắm điện, tạo ra điện năng và bắt đầu tiết kiệm ngay từ ngày đầu tiên.
                     </p>
                     <div class="sm-hero-btns">
-                        <a href="contact-us.html" class="sm-btn-solid">Nhận báo giá →</a>
-                        <a href="#specs" class="sm-btn-outline">Xem chi tiết</a>
+                        <a href="contact-us.html" class="sm-btn-solid">Đặt hàng ngay →</a>
+                        <a href="#" class="sm-btn-outline">Tải brochure</a>
                     </div>
-                    <div class="sm-hero-badges">
-                        <span class="sm-badge">🏆 Red Dot Design Award</span>
-                        <span class="sm-badge">⚡ Plug & Play</span>
-                        <span class="sm-badge">☁️ Solavita Cloud</span>
-                        <span class="sm-badge">🔒 Zero-Export</span>
+                    <div class="sm-hero-features">
+                        <div class="sm-hero-feature">
+                            <div class="sm-hero-feature-icon">🏆</div>
+                            <span>Red Dot Design Award</span>
+                        </div>
+                        <div class="sm-hero-feature">
+                            <div class="sm-hero-feature-icon">⚡</div>
+                            <span>Plug & Play</span>
+                        </div>
+                        <div class="sm-hero-feature">
+                            <div class="sm-hero-feature-icon">☁️</div>
+                            <span>Solavita Cloud</span>
+                        </div>
+                        <div class="sm-hero-feature">
+                            <div class="sm-hero-feature-icon">🔒</div>
+                            <span>Zero-Export</span>
+                        </div>
                     </div>
                 </div>
                 <div class="sm-hero-visual">

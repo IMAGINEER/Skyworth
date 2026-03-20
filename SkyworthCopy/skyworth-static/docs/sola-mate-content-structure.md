@@ -171,8 +171,8 @@ Xây dựng trạm phát điện cá nhân của bạn dễ dàng như lắp rá
 - 9.2倍投资回报
 
 [按钮]
-- Nhận báo giá (获取报价)
-- Xem chi tiết (查看详情)
+- Đặt hàng ngay (立即订购)
+- Tải brochure (下载手册)
 
 [认证徽章]
 🏆 Giải thưởng thiết kế Red Dot

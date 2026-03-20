@@ -50,10 +50,15 @@
         .sw-hero-badge { display: inline-block; padding: 6px 16px; background: rgba(0,107,192,0.2); border: 1px solid rgba(0,107,192,0.3); border-radius: 100px; font-size: 13px; color: var(--colorbj); font-weight: 600; margin-bottom: 24px; }
         .sw-hero-title { font-size: 56px; color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
         .sw-hero-sub { font-size: 20px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.6; }
-        .sw-hero-specs { display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
-        .sw-hero-spec { }
-        .sw-hero-spec-val { font-size: 32px; color: #fff; font-weight: 700; }
-        .sw-hero-spec-label { font-size: 14px; color: rgba(255,255,255,0.5); }
+        .sw-hero-specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--colord8d); }
+        .sw-hero-spec { text-align: center; }
+        .sw-hero-spec-val { font-size: 36px; font-weight: 700; color: var(--colorbj); line-height: 1; }
+        .sw-hero-spec-unit { font-size: 18px; }
+        .sw-hero-spec-label { font-size: 14px; color: var(--color8b8); margin-top: 4px; }
+        .sw-hero-features { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+        .sw-hero-feature { display: flex; align-items: center; gap: 10px; }
+        .sw-hero-feature-icon { width: 36px; height: 36px; background: var(--colorbj1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .sw-hero-feature span { font-size: 15px; font-weight: 500; color: var(--color33); }
         .sw-hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
         .sw-btn-solid { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: var(--colorbj); color: #fff; border-radius: 100px; font-size: 16px; font-weight: 600; transition: all 0.2s; }
         .sw-btn-solid:hover { background: var(--colorbj2); transform: translateY(-2px); }
@@ -194,8 +199,10 @@
         @media (max-width: 768px) {
             .sw-hero-title { font-size: 40px; }
             .sw-section-title { font-size: 32px; }
-            .sw-hero-specs { gap: 24px; }
+            .sw-hero-specs { grid-template-columns: repeat(2, 1fr); gap: 16px; padding-top: 24px; }
             .sw-hero-spec-val { font-size: 24px; }
+            .sw-hero-features { flex-direction: column; gap: 12px; }
+            .sw-hero-btns { flex-direction: column; }
             .sw-adv-grid { grid-template-columns: 1fr; }
             .sw-epc-steps { grid-template-columns: 1fr; }
             .sw-certs-grid { grid-template-columns: 1fr; }
@@ -225,28 +232,27 @@
                         Hệ thống điện mặt trời tùy chỉnh cho ngôi nhà của bạn — từ 5kW đến 30kW.
                         Giải pháp SolaRoof và SolaLoft phù hợp mọi loại mái.
                     </p>
-                    <div class="sw-hero-specs">
-                        <div class="sw-hero-spec">
-                            <div class="sw-hero-spec-val">5-30kW</div>
-                            <div class="sw-hero-spec-label">Công suất hệ thống</div>
-                        </div>
-                        <div class="sw-hero-spec">
-                            <div class="sw-hero-spec-val">98.6%</div>
-                            <div class="sw-hero-spec-label">Hiệu suất biến tần</div>
-                        </div>
-                        <div class="sw-hero-spec">
-                            <div class="sw-hero-spec-val">10 năm</div>
-                            <div class="sw-hero-spec-label">Bảo hành</div>
-                        </div>
-                    </div>
                     <div class="sw-hero-btns">
-                        <a href="contact-us.html" class="sw-btn-solid">Nhận Báo Giá Miễn Phí →</a>
-                        <a href="#roi" class="sw-btn-outline">Xem ROI</a>
+                        <a href="contact-us.html" class="sw-btn-solid">Tìm đơn vị lắp đặt →</a>
+                        <a href="#" class="sw-btn-outline">Tải brochure</a>
                     </div>
-                    <div class="sw-hero-badges">
-                        <span class="sw-badge">✓ TÜV Certified</span>
-                        <span class="sw-badge">✓ LiFePO₄ Battery</span>
-                        <span class="sw-badge">✓ Solavita Cloud</span>
+                    <div class="sw-hero-features">
+                        <div class="sw-hero-feature">
+                            <div class="sw-hero-feature-icon">⚡</div>
+                            <span>Hiệu suất 98.6%</span>
+                        </div>
+                        <div class="sw-hero-feature">
+                            <div class="sw-hero-feature-icon">🔋</div>
+                            <span>Pin LiFePO₄</span>
+                        </div>
+                        <div class="sw-hero-feature">
+                            <div class="sw-hero-feature-icon">🛡️</div>
+                            <span>TÜV Certified</span>
+                        </div>
+                        <div class="sw-hero-feature">
+                            <div class="sw-hero-feature-icon">☁️</div>
+                            <span>Solavita Cloud</span>
+                        </div>
                     </div>
                 </div>
                 <div class="sw-hero-visual">
@@ -259,6 +265,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="sw-hero-specs">
+                <div class="sw-hero-spec">
+                    <div class="sw-hero-spec-val">5-30<span class="sw-hero-spec-unit">kW</span></div>
+                    <div class="sw-hero-spec-label">Công suất</div>
+                </div>
+                <div class="sw-hero-spec">
+                    <div class="sw-hero-spec-val">98.6<span class="sw-hero-spec-unit">%</span></div>
+                    <div class="sw-hero-spec-label">Hiệu suất</div>
+                </div>
+                <div class="sw-hero-spec">
+                    <div class="sw-hero-spec-val">10<span class="sw-hero-spec-unit">+</span></div>
+                    <div class="sw-hero-spec-label">Năm bảo hành</div>
+                </div>
+                <div class="sw-hero-spec">
+                    <div class="sw-hero-spec-val">30<span class="sw-hero-spec-unit">năm</span></div>
+                    <div class="sw-hero-spec-label">Tuổi thọ</div>
                 </div>
             </div>
         </div>
