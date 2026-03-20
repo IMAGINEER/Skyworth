@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolaWard — Giải Pháp Điện Mặt Trời Dân Dụng | SKYWORTH</title>
+    <meta name="description" content="SolaWard — Hệ thống điện mặt trời dân dụng tùy chỉnh của Skyworth. Công suất 5kW–30kW, giải pháp SolaRoof và SolaLoft." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --colorbj: #006BC0;
+            --colorbj1: #f0f7fc;
+            --colorbj2: #0052a3;
+            --color1e1: #1e293b;
+            --color8b8: #64748b;
+            --colord8d: #e2e8f0;
+            --radius20: 20px;
+            --radius15: 15px;
+            --radius10: 10px;
+            --medium: 'Be Vietnam Pro', sans-serif;
+            --semibold: 'Be Vietnam Pro', sans-serif;
+            --bold: 'Be Vietnam Pro', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--medium); color: var(--color1e1); line-height: 1.6; background: #fff; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* Breadcrumb */
+        .sw-breadcrumb { background: var(--colorbj1); padding: 16px 0; }
+        .sw-breadcrumb-inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color8b8); }
+        .sw-breadcrumb a:hover { color: var(--colorbj); }
+        .sw-breadcrumb-sep { color: var(--colord8d); }
+        .sw-breadcrumb-cur { color: var(--color1e1); font-weight: 600; }
+
+        /* Common */
+        .sw-section { padding: 80px 0; }
+        .sw-section-hd { margin-bottom: 48px; max-width: 800px; }
+        .sw-section-hd.center { text-align: center; margin: 0 auto 48px; }
+        .sw-section-title { font-size: 40px; font-weight: 600; color: var(--color1e1); margin-bottom: 12px; line-height: 1.2; }
+        .sw-section-sub { font-size: 18px; color: var(--color8b8); line-height: 1.6; }
+        .ys-cont1600 { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        .sw-hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 100px 0; position: relative; overflow: hidden; }
+        .sw-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>') repeat; background-size: 200px; }
+        .sw-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+        .sw-hero-badge { display: inline-block; padding: 6px 16px; background: rgba(0,107,192,0.2); border: 1px solid rgba(0,107,192,0.3); border-radius: 100px; font-size: 13px; color: var(--colorbj); font-weight: 600; margin-bottom: 24px; }
+        .sw-hero-title { font-size: 56px; color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
+        .sw-hero-sub { font-size: 20px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.6; }
+        .sw-hero-specs { display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
+        .sw-hero-spec { }
+        .sw-hero-spec-val { font-size: 32px; color: #fff; font-weight: 700; }
+        .sw-hero-spec-label { font-size: 14px; color: rgba(255,255,255,0.5); }
+        .sw-hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .sw-btn-solid { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: var(--colorbj); color: #fff; border-radius: 100px; font-size: 16px; font-weight: 600; transition: all 0.2s; }
+        .sw-btn-solid:hover { background: var(--colorbj2); transform: translateY(-2px); }
+        .sw-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border: 2px solid rgba(255,255,255,0.3); color: #fff; border-radius: 100px; font-size: 16px; font-weight: 600; transition: all 0.2s; }
+        .sw-btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+        .sw-hero-visual { position: relative; }
+        .sw-hero-img { border-radius: var(--radius20); overflow: hidden; aspect-ratio: 4/3; background: var(--colorbj1); }
+        .sw-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+        /* Placeholder */
+        .sw-hero-img .placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--color8b8); background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+        .sw-hero-img .placeholder-text { font-size: 14px; text-align: center; padding: 20px; }
+        .sw-hero-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+        .sw-badge { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: rgba(255,255,255,0.1); border-radius: 100px; font-size: 13px; color: rgba(255,255,255,0.8); }
+
+        /* Problem */
+        .sw-problem { background: var(--colorbj1); }
+        .sw-problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .sw-problem-img { border-radius: var(--radius20); overflow: hidden; aspect-ratio: 4/3; background: #fff; }
+        .sw-problem-img .placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--color8b8); background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); }
+        .sw-problem-content h2 { font-size: 36px; margin-bottom: 24px; }
+        .sw-problem-list { list-style: none; }
+        .sw-problem-list li { display: flex; align-items: flex-start; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--colord8d); font-size: 16px; }
+        .sw-problem-list li:last-child { border-bottom: none; }
+        .sw-problem-icon { width: 32px; height: 32px; background: #fee2e2; color: #dc2626; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+        .sw-problem-solution { margin-top: 32px; padding: 24px; background: var(--colorbj); border-radius: var(--radius15); color: #fff; }
+        .sw-problem-solution h4 { font-size: 18px; margin-bottom: 8px; }
+
+        /* Scenarios */
+        .sw-scenarios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .sw-scenario-card { background: #fff; border-radius: var(--radius20); padding: 32px; border: 2px solid var(--colord8d); transition: all 0.3s; }
+        .sw-scenario-card:hover { border-color: var(--colorbj); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,107,192,0.1); }
+        .sw-scenario-icon { width: 64px; height: 64px; background: var(--colorbj1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+        .sw-scenario-name { font-size: 22px; font-weight: 600; margin-bottom: 12px; }
+        .sw-scenario-desc { font-size: 15px; color: var(--color8b8); margin-bottom: 20px; line-height: 1.6; }
+        .sw-scenario-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        .sw-scenario-tag { padding: 6px 12px; background: var(--colorbj1); color: var(--colorbj); border-radius: 100px; font-size: 12px; font-weight: 600; }
+
+        /* Roof Solutions */
+        .sw-roof { background: var(--colorbj1); }
+        .sw-roof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .sw-roof-card { background: #fff; border-radius: var(--radius20); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .sw-roof-img { aspect-ratio: 16/10; background: #e2e8f0; position: relative; overflow: hidden; }
+        .sw-roof-img .placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--color8b8); background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%); }
+        .sw-roof-label { position: absolute; top: 16px; left: 16px; padding: 6px 14px; background: rgba(0,0,0,0.6); color: #fff; border-radius: 100px; font-size: 12px; font-weight: 600; }
+        .sw-roof-body { padding: 28px; }
+        .sw-roof-name { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+        .sw-roof-subtitle { font-size: 14px; color: var(--colorbj); font-weight: 600; margin-bottom: 16px; }
+        .sw-roof-desc { font-size: 15px; color: var(--color8b8); line-height: 1.6; margin-bottom: 20px; }
+        .sw-roof-features { list-style: none; }
+        .sw-roof-features li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; font-size: 14px; color: var(--color1e1); }
+        .sw-roof-features li::before { content: '✓'; color: var(--colorbj); font-weight: 700; flex-shrink: 0; }
+        /* SolaRoof Sub */
+        .sw-roof-subtypes { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+        .sw-roof-subtype { padding: 8px 16px; background: var(--colorbj1); color: var(--colorbj); border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+        /* Advantages */
+        .sw-adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .sw-adv-card { background: #fff; border-radius: var(--radius20); padding: 32px 24px; text-align: center; border: 1px solid var(--colord8d); transition: all 0.3s; }
+        .sw-adv-card:hover { border-color: var(--colorbj); transform: translateY(-4px); }
+        .sw-adv-icon { width: 64px; height: 64px; background: var(--colorbj1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 20px; }
+        .sw-adv-title { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+        .sw-adv-desc { font-size: 14px; color: var(--color8b8); line-height: 1.5; }
+
+        /* Specs */
+        .sw-specs-table { width: 100%; border-collapse: collapse; border-radius: var(--radius15); overflow: hidden; border: 1px solid var(--colord8d); background: #fff; }
+        .sw-specs-table thead th { background: var(--colorbj); color: #fff; padding: 16px 20px; font-size: 14px; font-weight: 600; text-align: left; }
+        .sw-specs-table tbody tr:nth-child(odd) td { background: #fff; }
+        .sw-specs-table tbody tr:nth-child(even) td { background: var(--colorbj1); }
+        .sw-specs-table td { padding: 14px 20px; font-size: 14px; border-bottom: 1px solid var(--colord8d); }
+        .sw-specs-table td:first-child { font-weight: 600; color: var(--color1e1); }
+        .sw-specs-note { margin-top: 16px; font-size: 13px; color: var(--color8b8); }
+
+        /* ROI */
+        .sw-roi { background: var(--colorbj1); }
+        .sw-roi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        .sw-roi-card { background: #fff; border-radius: var(--radius20); padding: 32px; text-align: center; border: 2px solid var(--colord8d); }
+        .sw-roi-card.highlight { border-color: var(--colorbj); background: var(--colorbj1); }
+        .sw-roi-label { font-size: 14px; color: var(--color8b8); margin-bottom: 8px; }
+        .sw-roi-value { font-size: 36px; font-weight: 700; color: var(--colorbj); }
+        .sw-roi-unit { font-size: 16px; }
+        .sw-roi-note { font-size: 13px; color: var(--color8b8); margin-top: 8px; }
+        .sw-roi-features { list-style: none; margin-top: 32px; }
+        .sw-roi-features li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--colord8d); font-size: 15px; }
+        .sw-roi-features li:last-child { border-bottom: none; }
+        .sw-roi-features li::before { content: '✓'; color: var(--colorbj); font-weight: 700; }
+
+        /* Certs */
+        .sw-certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .sw-cert-card { background: #fff; border-radius: var(--radius15); padding: 24px; text-align: center; border: 1px solid var(--colord8d); }
+        .sw-cert-img { width: 120px; height: 80px; margin: 0 auto 16px; background: var(--colorbj1); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .sw-cert-img .placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--color8b8); font-size: 12px; text-align: center; padding: 8px; }
+        .sw-cert-name { font-size: 14px; font-weight: 600; }
+
+        /* EPC */
+        .sw-epc { background: var(--colorbj1); }
+        .sw-epc-steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; }
+        .sw-epc-step { text-align: center; position: relative; }
+        .sw-epc-num { width: 40px; height: 40px; background: var(--colorbj); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 12px; font-size: 16px; }
+        .sw-epc-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .sw-epc-desc { font-size: 12px; color: var(--color8b8); line-height: 1.4; }
+        .sw-epc-arrow { position: absolute; right: -16px; top: 20px; color: var(--colorbj); font-size: 20px; z-index: 1; }
+
+        /* Cases */
+        .sw-cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .sw-case-card { background: #fff; border-radius: var(--radius20); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .sw-case-img { aspect-ratio: 16/10; background: #e2e8f0; }
+        .sw-case-img .placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--color8b8); background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); }
+        .sw-case-body { padding: 24px; }
+        .sw-case-name { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .sw-case-info { font-size: 14px; color: var(--color8b8); margin-bottom: 12px; }
+        .sw-case-specs { display: flex; gap: 16px; font-size: 13px; }
+        .sw-case-spec { display: flex; align-items: center; gap: 6px; }
+        .sw-case-spec strong { color: var(--colorbj); }
+
+        /* CTA */
+        .sw-cta { background: linear-gradient(135deg, var(--colorbj) 0%, var(--colorbj2) 100%); padding: 100px 0; text-align: center; }
+        .sw-cta-title { font-size: 48px; color: #fff; font-weight: 700; margin-bottom: 16px; }
+        .sw-cta-sub { font-size: 20px; color: rgba(255,255,255,0.8); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .sw-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 18px 48px; background: #fff; color: var(--colorbj); border-radius: 100px; font-size: 18px; font-weight: 600; transition: all 0.2s; }
+        .sw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sw-hero-inner { grid-template-columns: 1fr; }
+            .sw-hero-visual { display: none; }
+            .sw-adv-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-epc-steps { grid-template-columns: repeat(4, 1fr); }
+            .sw-epc-arrow { display: none; }
+        }
+        @media (max-width: 1024px) {
+            .sw-problem-grid { grid-template-columns: 1fr; }
+            .sw-scenarios-grid { grid-template-columns: 1fr; }
+            .sw-roof-grid { grid-template-columns: 1fr; }
+            .sw-roi-grid { grid-template-columns: 1fr; }
+            .sw-certs-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-cases-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .sw-hero-title { font-size: 40px; }
+            .sw-section-title { font-size: 32px; }
+            .sw-hero-specs { gap: 24px; }
+            .sw-hero-spec-val { font-size: 24px; }
+            .sw-adv-grid { grid-template-columns: 1fr; }
+            .sw-epc-steps { grid-template-columns: 1fr; }
+            .sw-certs-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb -->
+    <div class="sw-breadcrumb">
+        <div class="sw-breadcrumb-inner">
+            <a href="index.html">Trang chủ</a>
+            <span class="sw-breadcrumb-sep">/</span>
+            <a href="residential/residential-pv.html">Hộ gia đình</a>
+            <span class="sw-breadcrumb-sep">/</span>
+            <span class="sw-breadcrumb-cur">SolaWard</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="sw-hero">
+        <div class="ys-cont1600">
+            <div class="sw-hero-inner">
+                <div>
+                    <div class="sw-hero-badge">Giải Pháp Điện Mặt Trời Dân Dụng</div>
+                    <h1 class="sw-hero-title">SolaWard</h1>
+                    <p class="sw-hero-sub">
+                        Hệ thống điện mặt trời tùy chỉnh cho ngôi nhà của bạn — từ 5kW đến 30kW.
+                        Giải pháp SolaRoof và SolaLoft phù hợp mọi loại mái.
+                    </p>
+                    <div class="sw-hero-specs">
+                        <div class="sw-hero-spec">
+                            <div class="sw-hero-spec-val">5-30kW</div>
+                            <div class="sw-hero-spec-label">Công suất hệ thống</div>
+                        </div>
+                        <div class="sw-hero-spec">
+                            <div class="sw-hero-spec-val">98.6%</div>
+                            <div class="sw-hero-spec-label">Hiệu suất biến tần</div>
+                        </div>
+                        <div class="sw-hero-spec">
+                            <div class="sw-hero-spec-val">10 năm</div>
+                            <div class="sw-hero-spec-label">Bảo hành</div>
+                        </div>
+                    </div>
+                    <div class="sw-hero-btns">
+                        <a href="contact-us.html" class="sw-btn-solid">Nhận Báo Giá Miễn Phí →</a>
+                        <a href="#roi" class="sw-btn-outline">Xem ROI</a>
+                    </div>
+                    <div class="sw-hero-badges">
+                        <span class="sw-badge">✓ TÜV Certified</span>
+                        <span class="sw-badge">✓ LiFePO₄ Battery</span>
+                        <span class="sw-badge">✓ Solavita Cloud</span>
+                    </div>
+                </div>
+                <div class="sw-hero-visual">
+                    <div class="sw-hero-img">
+                        <div class="placeholder">
+                            <img src="" alt="" style="display:none;">
+                            <div class="placeholder-text">
+                                【产品主图】家庭屋顶太阳能系统全景<br>
+                                尺寸: 1920×1080px | 优先级: 🔴 高
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="sw-section sw-problem">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Giải pháp cho mọi gia đình</h2>
+                <p class="sw-section-sub">Từ hòa lưới đơn giản đến độc lập hoàn toàn, SolaWard mang đến giải pháp năng lượng mặt trời phù hợp với nhu cầu của bạn.</p>
+            </div>
+            <div class="sw-problem-grid">
+                <div class="sw-problem-img">
+                    <div class="placeholder">
+                        <div class="placeholder-text">
+                            【痛点图】电费高/停电困扰<br>
+                            尺寸: 800×600px | 优先级: 🔴 高
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-problem-content">
+                    <h2>Bạn đang gặp vấn đề này?</h2>
+                    <ul class="sw-problem-list">
+                        <li>
+                            <span class="sw-problem-icon">💰</span>
+                            <div>
+                                <strong>Tiền điện hàng tháng cao</strong>
+                                <p style="font-size:14px;color:var(--color8b8);margin-top:4px;">Hóa đơn điện tăng liên tục mỗi tháng</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sw-problem-icon">⚡</span>
+                            <div>
+                                <strong>Khu vực hay bị cắt điện</strong>
+                                <p style="font-size:14px;color:var(--color8b8);margin-top:4px;">Mất điện ảnh hưởng đến sinh hoạt</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="sw-problem-icon">🏠</span>
+                            <div>
+                                <strong>Muốn lắp đặt nhưng không biết bắt đầu từ đâu</strong>
+                                <p style="font-size:14px;color:var(--color8b8);margin-top:4px;">Thủ tục phức tạp, không rõ quy trình</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="sw-problem-solution">
+                        <h4>→ SolaWard: 3 kịch bản — phù hợp mọi nhu cầu gia đình</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Scenarios -->
+    <section class="sw-section">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Ba Kịch Bản Ứng Dụng</h2>
+                <p class="sw-section-sub">SolaWard thích ứng với môi trường lưới điện, nhu cầu điện năng và mục tiêu năng lượng của bạn.</p>
+            </div>
+            <div class="sw-scenarios-grid">
+                <div class="sw-scenario-card">
+                    <div class="sw-scenario-icon">🔌</div>
+                    <h3 class="sw-scenario-name">Hòa Lưới (Grid-tied)</h3>
+                    <p class="sw-scenario-desc">Hệ thống đơn giản nhất, phù hợp với khu vực có lưới điện ổn định. Toàn bộ điện sản xuất ra sử dụng trong nhà, thừa bán cho điện lưới.</p>
+                    <div class="sw-scenario-tags">
+                        <span class="sw-scenario-tag">Chi phí thấp</span>
+                        <span class="sw-scenario-tag">Dễ lắp đặt</span>
+                        <span class="sw-scenario-tag">Bán điện thừa</span>
+                    </div>
+                </div>
+                <div class="sw-scenario-card">
+                    <div class="sw-scenario-icon">🔋</div>
+                    <h3 class="sw-scenario-name">Hybrid (Lưu Trữ)</h3>
+                    <p class="sw-scenario-desc">Kết hợp pin lưu trữ LiFePO₄, cho phép tích điện ban ngày sử dụng ban đêm. Chống mất điện, tối ưu hóa chi phí điện.</p>
+                    <div class="sw-scenario-tags">
+                        <span class="sw-scenario-tag">Pin dự phòng</span>
+                        <span class="sw-scenario-tag">Tối ưu giá điện</span>
+                        <span class="sw-scenario-tag">An tâm nhất</span>
+                    </div>
+                </div>
+                <div class="sw-scenario-card">
+                    <div class="sw-scenario-icon">🏝️</div>
+                    <h3 class="sw-scenario-name">Độc Lập (Off-grid)</h3>
+                    <p class="sw-scenario-desc">Hoàn toàn tách khỏi lưới điện, phù hợp với khu vực chưa có điện lưới hoặc muốn tự chủ năng lượng hoàn toàn.</p>
+                    <div class="sw-scenario-tags">
+                        <span class="sw-scenario-tag">Không phụ thuộc lưới</span>
+                        <span class="sw-scenario-tag">Cho vùng sâu</span>
+                        <span class="sw-scenario-tag">Tự chủ 100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roof Solutions -->
+    <section class="sw-section sw-roof">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Giải Pháp Lắp Đặt Trên Mái</h2>
+                <p class="sw-section-sub">SolaWard đáp ứng cả mái bằng và mái dốc với thiết kế chuyên dụng.</p>
+            </div>
+            <div class="sw-roof-grid">
+                <!-- SolaRoof -->
+                <div class="sw-roof-card">
+                    <div class="sw-roof-img">
+                        <div class="placeholder">
+                            <div class="placeholder-text">
+                                【SolaRoof】斜屋顶/平屋顶/瓦片屋顶安装<br>
+                                尺寸: 800×500px | 优先级: 🔴 高
+                            </div>
+                        </div>
+                        <span class="sw-roof-label">SolaRoof</span>
+                    </div>
+                    <div class="sw-roof-body">
+                        <div class="sw-roof-name">Giải Pháp Trên Mái</div>
+                        <div class="sw-roof-subtitle">Phù hợp mọi loại mái</div>
+                        <p class="sw-roof-desc">
+                            Giải pháp lắp đặt linh hoạt cho các loại mái khác nhau — từ mái bằng đến mái dốc, mái ngói hay mái tôn.
+                        </p>
+                        <ul class="sw-roof-features">
+                            <li>Tương thích mái bằng, mái dốc, mái ngói, mái tôn</li>
+                            <li>Góc nghiêng điều chỉnh tối ưu hóa sản lượng</li>
+                            <li>Xuyên mái tối thiểu — bảo vệ kết cấu mái</li>
+                            <li>Thiết kế mô-đun mở rộng từ 5kW đến 30kW+</li>
+                        </ul>
+                        <div class="sw-roof-subtypes">
+                            <span class="sw-roof-subtype">Mái dốc</span>
+                            <span class="sw-roof-subtype">Mái bằng</span>
+                            <span class="sw-roof-subtype">Mái ngói</span>
+                            <span class="sw-roof-subtype">Mái tôn</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- SolaLoft -->
+                <div class="sw-roof-card">
+                    <div class="sw-roof-img">
+                        <div class="placeholder">
+                            <div class="placeholder-text">
+                                【SolaLoft】太阳能阳光房/车棚<br>
+                                尺寸: 800×500px | 优先级: 🔴 高
+                            </div>
+                        </div>
+                        <span class="sw-roof-label">SolaLoft</span>
+                    </div>
+                    <div class="sw-roof-body">
+                        <div class="sw-roof-name">Giải Pháp Solar Pergola</div>
+                        <div class="sw-roof-subtitle">Không gian sống mở rộng</div>
+                        <p class="sw-roof-desc">
+                            Biến không gian bên dưới thành vườn trời hoặc khu giải trí chức năng. Thiết kế mái 5° đảm bảo che phủ ánh sáng quanh năm.
+                        </p>
+                        <ul class="sw-roof-features">
+                            <li>Trụ đỡ cao 2,7m tạo không gian giải trí rộng rãi</li>
+                            <li>Thiết kế mái 5° tối đa hóa sản lượng điện</li>
+                            <li>Chống mưa, chống ẩm, làm mát và cách nhiệt</li>
+                            <li>Chứng nhận TÜV Rheinland — chống bão cấp 12</li>
+                        </ul>
+                        <div class="sw-roof-subtypes">
+                            <span class="sw-roof-subtype">Vườn trời</span>
+                            <span class="sw-roof-subtype">Chỗ đậu xe</span>
+                            <span class="sw-roof-subtype">Khu nghỉ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advantages -->
+    <section class="sw-section">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Bốn Trụ Cột Kỹ Thuật</h2>
+                <p class="sw-section-sub">Mọi hệ thống SolaWard được xây dựng trên bốn trụ cột kỹ thuật để đạt hiệu suất và độ tin cậy tối đa.</p>
+            </div>
+            <div class="sw-adv-grid">
+                <div class="sw-adv-card">
+                    <div class="sw-adv-icon">⚡</div>
+                    <h4 class="sw-adv-title">Hiệu Suất Cao</h4>
+                    <p class="sw-adv-desc">Hiệu suất biến tần tối đa 98.6%, MPPT效率99.9%，确保最大化发电量。</p>
+                </div>
+                <div class="sw-adv-card">
+                    <div class="sw-adv-icon">🔋</div>
+                    <h4 class="sw-adv-title">Pin LiFePO₄ An Toàn</h4>
+                    <p class="sw-adv-desc">磷酸铁锂电池，6000次循环寿命，10年质保，热稳定性好。</p>
+                </div>
+                <div class="sw-adv-card">
+                    <div class="sw-adv-icon">☁️</div>
+                    <h4 class="sw-adv-title">Solavita Cloud</h4>
+                    <p class="sw-adv-desc">24/7智能运维平台，实时监控，远程诊断，AI优化建议。</p>
+                </div>
+                <div class="sw-adv-card">
+                    <div class="sw-adv-icon">🛡️</div>
+                    <h4 class="sw-adv-title">30年品质</h4>
+                    <p class="sw-adv-desc">3倍验收标准，IP65防护等级，专业EPC团队，售后响应快。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Specifications -->
+    <section class="sw-section" id="specs">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Thông Số Kỹ Thuật</h2>
+                <p class="sw-section-sub">Lựa chọn công suất phù hợp với nhu cầu gia đình</p>
+            </div>
+            <table class="sw-specs-table">
+                <thead>
+                    <tr>
+                        <th>Thông số</th>
+                        <th>5kW</th>
+                        <th>10kW</th>
+                        <th>15kW</th>
+                        <th>20kW</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Công suất hệ thống</td>
+                        <td>5kW (5670Wp)</td>
+                        <td>10kW (11930Wp)</td>
+                        <td>15kW (17600Wp)</td>
+                        <td>20kW (23860Wp)</td>
+                    </tr>
+                    <tr>
+                        <td>Công suất biến tần</td>
+                        <td>5kW</td>
+                        <td>10kW</td>
+                        <td>15kW</td>
+                        <td>20kW</td>
+                    </tr>
+                    <tr>
+                        <td>Hiệu suất biến tần</td>
+                        <td>98.4%</td>
+                        <td>98.6%</td>
+                        <td>98.6%</td>
+                        <td>98.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng tấm pin</td>
+                        <td>10</td>
+                        <td>22</td>
+                        <td>32</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>Diện tích lắp đặt</td>
+                        <td>~25m²</td>
+                        <td>~55m²</td>
+                        <td>~80m²</td>
+                        <td>~110m²</td>
+                    </tr>
+                    <tr>
+                        <td>Pin lưu trữ (Option)</td>
+                        <td>5-15kWh</td>
+                        <td>10-30kWh</td>
+                        <td>15-45kWh</td>
+                        <td>20-60kWh</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="sw-specs-note">* Thông số có thể thay đổi tùy theo cấu hình cụ thể. Vui lòng liên hệ để được tư vấn chi tiết.</p>
+        </div>
+    </section>
+
+    <!-- ROI Analysis -->
+    <section class="sw-section sw-roi" id="roi">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Lợi Tức Đầu Tư</h2>
+                <p class="sw-section-sub">Dựa trên hệ thống 10kW, điều kiện thị trường điện Việt Nam.</p>
+            </div>
+            <div class="sw-roi-grid">
+                <div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+                        <div class="sw-roi-card">
+                            <div class="sw-roi-label">Giá điện lưới</div>
+                            <div class="sw-roi-value">3.500 <span class="sw-roi-unit">VND/kWh</span></div>
+                            <div class="sw-roi-note">Giá điện sinh hoạt bậc 4</div>
+                        </div>
+                        <div class="sw-roi-card highlight">
+                            <div class="sw-roi-label">Chi phí điện SolaWard</div>
+                            <div class="sw-roi-value">700 <span class="sw-roi-unit">VND/kWh</span></div>
+                            <div class="sw-roi-note">Tiết kiệm 80%</div>
+                        </div>
+                        <div class="sw-roi-card">
+                            <div class="sw-roi-label">Đầu tư ban đầu</div>
+                            <div class="sw-roi-value">~208 <span class="sw-roi-unit">Triệu VND</span></div>
+                            <div class="sw-roi-note">Bao gồm pin (Option)</div>
+                        </div>
+                        <div class="sw-roi-card highlight">
+                            <div class="sw-roi-label">Thời gian hoàn vốn</div>
+                            <div class="sw-roi-value">4-5 <span class="sw-roi-unit">Năm</span></div>
+                            <div class="sw-roi-note">Tùy mức tiêu thụ</div>
+                        </div>
+                    </div>
+                    <ul class="sw-roi-features">
+                        <li>Công suất <15kW — không cần giấy phép đặc biệt</li>
+                        <li>Hệ thống hybrid — sử dụng cả ngày, pin dự phòng</li>
+                        <li>App Solavita Cloud theo dõi — biết doanh thu mỗi ngày</li>
+                        <li>Bảo hành 10 năm — yên tâm sử dụng dài hạn</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="sw-roi-card" style="background: linear-gradient(135deg, #006BC0 0%, #00b4b4 100%); border:none; color:#fff;">
+                        <div class="sw-roi-label" style="color:rgba(255,255,255,0.7);">Tổng lợi nhuận 25 năm</div>
+                        <div class="sw-roi-value" style="color:#fff;font-size:48px;">~1.5 <span class="sw-roi-unit">Tỷ VND</span></div>
+                        <div class="sw-roi-note" style="color:rgba(255,255,255,0.6);">Bao gồm tiết kiệm điện + bán điện thừa</div>
+                        <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2);">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span>Năm 5</span>
+                                <span style="font-weight:700;">~250 Triệu</span>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span>Năm 10</span>
+                                <span style="font-weight:700;">~550 Triệu</span>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                                <span>Năm 15</span>
+                                <span style="font-weight:700;">~900 Triệu</span>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;">
+                                <span>Năm 25</span>
+                                <span style="font-weight:700;">~1.5 Tỷ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="sw-section">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Chứng Nhận & Bảo Hành</h2>
+                <p class="sw-section-sub">Chất lượng được quốc tế công nhận</p>
+            </div>
+            <div class="sw-certs-grid">
+                <div class="sw-cert-card">
+                    <div class="sw-cert-img">
+                        <div class="placeholder">
+                            【TÜV认证证书】<br>
+                            300×200px
+                        </div>
+                    </div>
+                    <div class="sw-cert-name">TÜV Rheinland</div>
+                </div>
+                <div class="sw-cert-card">
+                    <div class="sw-cert-img">
+                        <div class="placeholder">
+                            【CE认证证书】<br>
+                            300×200px
+                        </div>
+                    </div>
+                    <div class="sw-cert-name">CE Certification</div>
+                </div>
+                <div class="sw-cert-card">
+                    <div class="sw-cert-img">
+                        <div class="placeholder">
+                            【ISO质量体系】<br>
+                            300×200px
+                        </div>
+                    </div>
+                    <div class="sw-cert-name">ISO 9001</div>
+                </div>
+                <div class="sw-cert-card">
+                    <div class="sw-cert-img">
+                        <div class="placeholder">
+                            【当地电网准入】<br>
+                            300×200px
+                        </div>
+                    </div>
+                    <div class="sw-cert-name">EVN Approved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EPC Process -->
+    <section class="sw-section sw-epc">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Quy Trình EPC 7 Bước</h2>
+                <p class="sw-section-sub">Từ tư vấn đến vận hành — đội ngũ chuyên nghiệp hỗ trợ toàn trình</p>
+            </div>
+            <div class="sw-epc-steps">
+                <div class="sw-epc-step">
+                    <div class="sw-epc-num">1</div>
+                    <h4 class="sw-epc-title">Tư Vấn</h4>
+                    <p class="sw-epc-desc">Hiểu nhu cầu, giới thiệu sản phẩm, báo giá sơ bộ</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">2</div>
+                    <h4 class="sw-epc-title">Khảo Sát</h4>
+                    <p class="sw-epc-desc">Đo đạc mái, kiểm tra điện, đánh giá hiện trạng</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">3</div>
+                    <h4 class="sw-epc-title">Thiết Kế</h4>
+                    <p class="sw-epc-desc">Tùy chỉnh phương án, 3D效果图, báo giá chi tiết</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">4</div>
+                    <h4 class="sw-epc-title">Xin Phép</h4>
+                    <p class="sw-epc-desc">Nộp đơn đăng ký, xin phép lắp đặt với EVN</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">5</div>
+                    <h4 class="sw-epc-title">Lắp Đặt</h4>
+                    <p class="sw-epc-desc">Đội ngũ kỹ thuật chuyên nghiệp, đảm bảo tiến độ</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">6</div>
+                    <h4 class="sw-epc-title">Nghiệm Thu</h4>
+                    <p class="sw-epc-desc">Kiểm tra hệ thống, hướng dẫn sử dụng, bàn giao</p>
+                </div>
+                <div class="sw-epc-step">
+                    <span class="sw-epc-arrow">→</span>
+                    <div class="sw-epc-num">7</div>
+                    <h4 class="sw-epc-title">Vận Hành</h4>
+                    <p class="sw-epc-desc">Giám sát 24/7, bảo trì định kỳ, bảo hành dài hạn</p>
+                </div>
+            </div>
+            <!-- EPC Images -->
+            <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px;">
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【咨询沟通】400×300px
+                </div>
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【现场勘测】400×300px
+                </div>
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【方案设计】400×300px
+                </div>
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【专业安装】400×300px
+                </div>
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【验收并网】400×300px
+                </div>
+                <div style="aspect-ratio:4/3;background:var(--colorbj1);border-radius:var(--radius10);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--color8b8);text-align:center;padding:8px;">
+                    【运维服务】400×300px
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="sw-section">
+        <div class="ys-cont1600">
+            <div class="sw-section-hd center">
+                <h2 class="sw-section-title">Dự Án Tiêu Biểu</h2>
+                <p class="sw-section-sub">Những ngôi nhà đã lắp đặt SolaWard và hưởng lợi từ năng lượng mặt trời</p>
+            </div>
+            <div class="sw-cases-grid">
+                <div class="sw-case-card">
+                    <div class="sw-case-img">
+                        <div class="placeholder">
+                            【案例1】别墅屋顶<br>
+                            600×400px
+                        </div>
+                    </div>
+                    <div class="sw-case-body">
+                        <h4 class="sw-case-name">Biệt Thự Quận 7, TP.HCM</h4>
+                        <p class="sw-case-info">Lắp đặt tháng 3/2025</p>
+                        <div class="sw-case-specs">
+                            <span class="sw-case-spec">Công suất: <strong>10kW</strong></span>
+                            <span class="sw-case-spec">Tiết kiệm: <strong>4.5 Triệu/tháng</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-case-card">
+                    <div class="sw-case-img">
+                        <div class="placeholder">
+                            【案例2】独栋房屋<br>
+                            600×400px
+                        </div>
+                    </div>
+                    <div class="sw-case-body">
+                        <h4 class="sw-case-name">Nhà Phố Huyện Bình Chánh</h4>
+                        <p class="sw-case-info">Lắp đặt tháng 5/2025</p>
+                        <div class="sw-case-specs">
+                            <span class="sw-case-spec">Công suất: <strong>8kW</strong></span>
+                            <span class="sw-case-spec">Tiết kiệm: <strong>3.2 Triệu/tháng</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-case-card">
+                    <div class="sw-case-img">
+                        <div class="placeholder">
+                            【案例3】联排别墅<br>
+                            600×400px
+                        </div>
+                    </div>
+                    <div class="sw-case-body">
+                        <h4 class="sw-case-name">Townhouse Khu Đô Thị Phú Mỹ Hưng</h4>
+                        <p class="sw-case-info">Lắp đặt tháng 7/2025</p>
+                        <div class="sw-case-specs">
+                            <span class="sw-case-spec">Công suất: <strong>12kW</strong></span>
+                            <span class="sw-case-spec">Tiết kiệm: <strong>5.8 Triệu/tháng</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sw-cta">
+        <div class="ys-cont1600">
+            <h2 class="sw-cta-title">Sẵn Sàng Tiết Kiệm Điện?</h2>
+            <p class="sw-cta-sub">Nhận đề xuất SolaWard tùy chỉnh — bao gồm thiết kế công suất, dự báo ROI và đánh giá hiện trường miễn phí.</p>
+            <a href="contact-us.html" class="sw-cta-btn">Liên Hệ Ngay →</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script><!-- https://respond.io -->
+</body>
+</html>
