@@ -6,51 +6,65 @@
 
 > **Menu Type:** 产品下拉
 
-### ⚡ 能亮站 SolaMate
+### 🔆 SolaMate (阳台光伏) - 第一个
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
+| 阳台光伏 | Điện mặt trời ban công | Balcony Solar |
 | 阳台款 | Ban công | Balcony |
 | 遮阳款 | Che nắng | Sunshade |
 | 地面款 | Mặt đất | Ground |
 
-### ☀️ 阳老金 SolaWard
+### 🏠 SolaHome (自发自用 - Off-Grid)
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
 | 屋顶款 | Mái nhà | SolaRoof |
-| 阳光房 | Phòng nắng | SolaLoft |
-| 余电上网 | Bán điện lưới | On-Grid |
-| 自发自用 | Tự tiêu thụ | Off-Grid |
-| 光储一体 | PV&ESS | PV&ESS |
+| 阳光房 | Phòng kính năng lượng | SolaLoft |
 
-### 📱 户用APP
+### 🔋 SolaHome Pro (配储能 - Hybrid)
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
-| Cloud APP | Cloud APP | Cloud APP |
+| Hệ thống lưu trữ (ESS) | Hệ thống lưu trữ (ESS) | ESS Solution |
+| Hybrid 方案 | Giải pháp Hybrid | Hybrid Solution |
+| Giải pháp hòa lưới | Giải pháp hòa lưới | On-Grid Solution |
 
 ---
 
-## 2. 工商业光伏 / Doanh Nghiệp / Business
+## 2. 商业光伏 / Doanh Nghiệp / Business
 
 > **Menu Type:** 产品下拉
 
-### 🎯 SolaWard Pro
+### 🎯 C & I Solutions (工商业解决方案)
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
-| 工商业解决方案 | Giải pháp C&I | C & I Solutions |
-| 工商业APP | Cloud APP Pro | Cloud APP Pro |
+| AI Data Infrastructure | Hạ tầng dữ liệu AI | AI Data Infrastructure |
+| Cold Storage | Kho lạnh | Cold Storage |
+| EV Charger | Trạm sạc xe điện | EV Charger |
+| Office Building | Tòa nhà văn phòng | Office Building |
+| Healthcare | Y tế & Bệnh viện | Healthcare |
+| Financial Solution | Hỗ trợ tài chính | Financial Solution |
 
-### 🛠️ EPC Services
+### 🌐 Large Scale Solutions (大型解决方案)
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
-| E企发 (Turnkey EPC) | Tổng thầu EPC | Turnkey EPC |
-| E企省 (Fixed-Rate PPA) | PPA Giá cố định | Fixed-Rate PPA |
-| E企赢 (Flexible PPA) | PPA Linh hoạt | Flexible PPA |
+| Ground Power Plant | Nhà máy mặt đất | Ground Power Plant |
+| Floating | Điện mặt trời nổi | Floating Power Plant |
+| Agrivoltaics | Nông - điện kép | Agrivoltaics |
+| Offshore | Điện mặt trời trên biển | Offshore Solar |
 
 ---
 
 ## 3. 产品 / Sản Phẩm / Products
 
-> **Menu Type:** 产品下拉
+> **Menu Type:** 产品下拉（首项为阳台光伏）
+
+### 🔆 阳台光伏 - 首项
+| 中文 | Tiếng Việt | English |
+|------|-------------|---------|
+| 阳台光伏 | Điện mặt trời ban công | Balcony Solar |
+| 阳台款 | Ban công | Balcony |
+| 遮阳款 | Che nắng | Sunshade |
+| 地面款 | Mặt đất | Ground |
+| 墙面款 | Áp tường | Wall |
 
 ### 🔆 光伏组件 PV Modules
 | 中文 | Tiếng Việt | English |
@@ -88,7 +102,12 @@
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
 | For Tile Roof | Cho mái ngói | For Tile Roof |
-| For Slate Roof | Cho mái ardoisa | For Slate Roof |
+| For Slate Roof | Cho mái đá đen | For Slate Roof |
+
+### 🔐 质保查询
+| 中文 | Tiếng Việt | English |
+|------|-------------|---------|
+| 查询质保 | Tra cứu bảo hành | Warranty Check |
 
 ### 📦 全部产品
 | 中文 | Tiếng Việt | English |
@@ -101,12 +120,12 @@
 
 > **Menu Type:** 链接列表
 
-| 中文 | Tiếng Việt | English | Icon |
-|------|-------------|---------|------|
-| 合作伙伴首页 | Trang chủ đối tác | Partner Home | 🏠 |
-| 商家加盟表单 | Đăng ký installer | Become an Installer | 🤝 |
-| 资质和证书 | Chứng chỉ | Certificates | 📜 |
-| 合作伙伴登录 | Đăng nhập đối tác | Partner Login | 🔐 |
+| 中文 | Tiếng Việt | English |
+|------|-------------|---------|
+| 国家服务商模式 | Nhà cung cấp cấp quốc gia | National Service Provider |
+| 经销商模式 | Chính sách đại lý | Distributor Model |
+| 成为合作伙伴 | Trở thành đối tác | Become a Partner |
+| 合作伙伴登录 | Đăng nhập đối tác | Partner Login |
 
 ---
 
@@ -114,13 +133,13 @@
 
 > **Menu Type:** 链接列表
 
-| 中文 | Tiếng Việt | English | Icon |
-|------|-------------|---------|------|
-| 问AI | Hỏi AI | Ask AI | 💬 |
-| 常见问题 | Câu hỏi thường gặp | FAQ | ❓ |
-| 光伏百科 | Wiki năng lượng mặt trời | Wiki | 📖 |
-| 下载中心 | Tải xuống | Download | ⬇️ |
-| 用户登录 | Đăng nhập người dùng | User Login | 🔑 |
+| 中文 | Tiếng Việt | English |
+|------|-------------|---------|
+| 问AI | Hỏi AI | Ask AI |
+| 常见问题 | Câu hỏi thường gặp | FAQ |
+| 光伏百科 | Kiến thức Solar | Wiki |
+| 下载中心 | Trung tâm tải về | Download |
+| 用户登录 | Đăng nhập người dùng | User Login |
 
 ---
 
@@ -128,8 +147,8 @@
 
 | 功能 | 中文 | Tiếng Việt | English |
 |------|------|-------------|---------|
-| 📊 | 明白纸 | Máy tính ROI | ROI Calculator |
-| 📧 | 联系我们 | Liên hệ | Contact Us |
+| 📊 | ROI计算器 | Tính toán hiệu quả (ROI) | ROI Calculator |
+| 📱 | Cloud APP | Cloud APP | Cloud APP |
 
 ---
 
@@ -137,23 +156,19 @@
 
 | 图标 | 含义 |
 |------|---------|
-| ⚡ | 能亮站 SolaMate / 工商业储能 C&I ESS |
-| ☀️ | 阳老金 SolaWard |
-| 🎯 | Pro版本 SolaWard Pro |
-| 📱 | 应用程序 App |
-| 📏 | 踏勘/测量 Survey |
-| 🔆 | 光伏组件 PV Modules |
+| 🔆 | 光伏组件 PV Modules / SolaMate |
 | 🔌 | 逆变器 Inverter |
 | 🔋 | 储能系统 ESS/Battery |
 | 🔧 | 支架系统 Mounting |
-| 📦 | 全部产品 All Products |
+| 🏠 | SolaHome |
+| 🔐 | 质保 Warranty |
+| 🎯 | C&I Solutions |
+| 🌐 | Large Scale Solutions |
+| 📱 | Cloud APP |
+| 📊 | ROI Calculator |
 | 🛠️ | 服务 EPC/Service |
-| 🏠 | 首页 Home |
-| 🤝 | 代理商 Service Partner |
-| 📜 | 证书 Certificates |
-| 🔐 | 登录 Login |
+| 🤝 | 合作伙伴 Partner |
 | 💬 | AI助手 AI Assistant |
 | ❓ | 常见问题 FAQ |
 | 📖 | 百科 Wiki |
 | ⬇️ | 下载 Download |
-| 🔑 | 用户 User |

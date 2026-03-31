@@ -213,6 +213,12 @@
                                     Tôi đồng ý cho SKYWORTH thu thập và xử lý thông tin cá nhân của tôi theo <a href="#" style="color:var(--colorbj);">Chính sách bảo mật</a>. <span style="color:var(--colorred)">*</span>
                                 </label>
                             </div>
+                            <div class="ct-form-checkbox">
+                                <input type="checkbox" id="marketing" name="marketing">
+                                <label for="marketing">
+                                    Tôi đồng ý nhận thông tin về sản phẩm và dịch vụ qua email/điện thoại.
+                                </label>
+                            </div>
                             <button type="submit" class="ct-btn-primary">Đăng Ký</button>
                         </form>
                     </div>
@@ -279,6 +285,10 @@
                                     <input type="email" class="ct-form-input" name="msg_email" id="msg_email" required>
                                 </div>
                                 <div class="ct-form-group">
+                                    <label class="ct-form-label">Điện thoại</label>
+                                    <input type="tel" class="ct-form-input" name="msg_phone" id="msg_phone" placeholder="+84 xxx xxx xxx">
+                                </div>
+                                <div class="ct-form-group">
                                     <label class="ct-form-label">Sản phẩm quan tâm</label>
                                     <select class="ct-form-select" name="msg_product">
                                         <option value="">-- Chọn sản phẩm --</option>
@@ -294,9 +304,15 @@
                                     <textarea class="ct-form-textarea" name="msg_content" required placeholder="Cho chúng tôi biết thêm về nhu cầu của bạn..."></textarea>
                                 </div>
                                 <div class="ct-form-checkbox">
-                                    <input type="checkbox" id="msg_optin" name="msg_optin">
-                                    <label for="msg_optin">
-                                        Tôi đồng ý nhận thông tin về sản phẩm và dịch vụ qua email/điện thoại.
+                                    <input type="checkbox" id="msg_privacy" name="msg_privacy" checked>
+                                    <label for="msg_privacy">
+                                        Tôi đồng ý để SKYWORTH liên hệ lại theo thông tin tôi cung cấp. <span style="color:var(--colorred)">*</span>
+                                    </label>
+                                </div>
+                                <div class="ct-form-checkbox">
+                                    <input type="checkbox" id="msg_marketing" name="msg_marketing">
+                                    <label for="msg_marketing">
+                                        Tôi muốn nhận tin tức và ưu đãi từ SKYWORTH.
                                     </label>
                                 </div>
                                 <button type="submit" class="ct-btn-primary">Gửi Tin Nhắn →</button>
@@ -308,8 +324,13 @@
         </div>
     </section>
 
+    <!-- API Client & Auth -->
+    <script src="/SkyworthCopy/skyworth-static/assets/js/api-client.js"></script>
+    <script src="/SkyworthCopy/skyworth-static/assets/js/auth.js"></script>
+
+    <!-- Tab switching -->
     <script>
-        // Tab switching
+        // Override switchTab for event listener compatibility
         function switchTab(tab) {
             document.querySelectorAll('.ct-auth-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.ct-form-content').forEach(f => f.classList.remove('active'));
@@ -322,105 +343,6 @@
                 document.getElementById('register-form').classList.add('active');
             }
         }
-
-        // Social Login
-        function socialLogin(provider) {
-            alert('【' + provider.toUpperCase() + ' 第三方登录】\n\n此功能需要后端配合实现 OAuth 2.0 流程。\n\n需要的资源：\n- Google: Google OAuth 2.0 API 配置\n- Facebook: Facebook Login API 配置\n\n图标文件路径：assets/images/icons/');
-        }
-
-        // Mock Login
-        function handleLogin(e) {
-            e.preventDefault();
-            const form = e.target;
-            const loginId = form.login_id.value;
-
-            // Mock login success
-            const user = {
-                name: 'Nguyễn Văn A',
-                email: loginId.includes('@') ? loginId : 'user@example.com',
-                phone: loginId.includes('@') ? '' : loginId
-            };
-
-            setAuthUser(user);
-            alert('Đăng nhập thành công!');
-            return false;
-        }
-
-        // Mock Register
-        function handleRegister(e) {
-            e.preventDefault();
-            const form = e.target;
-            const formData = new FormData(form);
-
-            const user = {
-                name: formData.get('full_name'),
-                email: formData.get('email'),
-                phone: formData.get('phone')
-            };
-
-            setAuthUser(user);
-            alert('Đăng ký thành công! Chào mừng ' + user.name);
-            return false;
-        }
-
-        // Handle Message
-        function handleMessage(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData.entries());
-
-            console.log('Message submitted:', data);
-            alert('Tin nhắn đã được gửi! Chúng tôi sẽ phản hồi trong 24 giờ.');
-            e.target.reset();
-            return false;
-        }
-
-        // Auth User Management
-        function setAuthUser(user) {
-            localStorage.setItem('ct_user', JSON.stringify(user));
-            updateUIForLoggedIn(user);
-        }
-
-        function logout() {
-            localStorage.removeItem('ct_user');
-            updateUIForLoggedOut();
-            alert('Đã đăng xuất!');
-        }
-
-        function updateUIForLoggedIn(user) {
-            // Show user message form
-            document.getElementById('message-form-guest').style.display = 'none';
-            document.getElementById('message-form-user').style.display = 'block';
-
-            // Pre-fill form
-            document.getElementById('msg_name').value = user.name;
-            document.getElementById('msg_email').value = user.email;
-        }
-
-        function updateUIForLoggedOut() {
-            // Show guest message form
-            document.getElementById('message-form-guest').style.display = 'block';
-            document.getElementById('message-form-user').style.display = 'none';
-
-            // Clear form
-            document.getElementById('msg_name').value = '';
-            document.getElementById('msg_email').value = '';
-        }
-
-        // Check auth on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const userStr = localStorage.getItem('ct_user');
-            if(userStr) {
-                try {
-                    const user = JSON.parse(userStr);
-                    updateUIForLoggedIn(user);
-                } catch(e) {
-                    updateUIForLoggedOut();
-                }
-            } else {
-                updateUIForLoggedOut();
-            }
-        });
     </script>
 
     <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script><!-- https://respond.io -->

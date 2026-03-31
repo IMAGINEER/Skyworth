@@ -131,6 +131,7 @@ const headerNavHTML = `<header class="ys-header">
             <div class="mod-head2-wrap">
                 <ul class="head-nav">
                     <!-- 一级，选中添加类名yxnav-active1 act -->
+                    <!-- 1. 户用光伏 Dân Dụng -->
                     <li class="head-nav-item ">
                             <div class="head-nav-item-nub">
                                 <a href="#"  class="head-nav-item-title">Dân Dụng</a>
@@ -142,7 +143,7 @@ const headerNavHTML = `<header class="ys-header">
                                                 <ul class="hpsl-list">
                                                     <!-- SolaMate - 阳台图标 -->
                                                     <li class="hpsl-list-item">
-                                                        <a href="pages/sola-mate-vn.html" title="" class="hpsl-list-item-link">
+                                                        <a href="pages/sola-mate-vn-new.html" title="" class="hpsl-list-item-link">
                                                             <div class="hlil-pic">
                                                                 <img src="Public/Uploads/uploadfile/images/20250830/icon-balcony.svg" alt="Balcony">
                                                             </div>
@@ -152,30 +153,32 @@ const headerNavHTML = `<header class="ys-header">
                                                             </div>
                                                         </a>
                                                     </li>
-                                                    <!-- SolaWard - 使用 SolaMate 图标 -->
+                                                    <!-- SolaHome -->
                                                     <li class="hpsl-list-item">
-                                                        <a href="pages/sola-ward-vn.html" title="" class="hpsl-list-item-link">
+                                                        <a href="pages/sola-ward-vn-new.html" title="" class="hpsl-list-item-link">
                                                             <div class="hlil-pic">
-                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon24.svg" alt="SolaWard">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon24.svg" alt="SolaHome">
                                                             </div>
-                                                            <p>SolaWard</p>
+                                                            <p>SolaHome</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- SolaHome Pro -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="pages/sola-ward-pro-vn-new.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="SolaHome Pro">
+                                                            </div>
+                                                            <p>SolaHome Pro</p>
                                                             <div class="hlil-bgs">
                                                                 <img src="Public/En/images/a1_bg_04.png" alt="">
                                                             </div>
                                                         </a>
                                                     </li>
                                                 </ul>
-                                                <!-- Cloud App - 套用 All Products 按钮样式 -->
-                                                <div class="hpsl-btn hpsl-btn1">
-                                                    <div class="std-btn1">
-                                                        <a href="pages/software-cloud.html" title="" class="std-btn1-box">
-                                                            <p>Cloud APP</p>
-                                                            <div class="std-btn1-icon">
-                                                                <img src="Public/En/images/a1_icon_07.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
+                                                <!-- Cloud App 按钮已移除，移至右上角 -->
                                             </div>
                                             <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
                                                 <ul class="hpsr-list">
@@ -183,8 +186,8 @@ const headerNavHTML = `<header class="ys-header">
                                                     <li class="hpsr-list-item">
                                                         <div class="hpsr-list-item-lis">
                                                             <div class="hpfr-link">
-                                                                <a href="pages/sola-mate-vn.html" title="" class="hpft-link-box">
-                                                                    <p>SolaMate Series</p>
+                                                                <a href="pages/sola-mate-vn-new.html" title="" class="hpft-link-box">
+                                                                    <p>SolaMate</p>
                                                                     <div class="hpft-link-icons">
                                                                         <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                     </div>
@@ -193,7 +196,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <ul class="hlil-thrul">
                                                                 <!-- Balcony 阳台款 -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-mate-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-mate-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Balcony">
@@ -208,7 +211,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                 </li>
                                                                 <!-- Sunshade 遮阳款 -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-mate-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-mate-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Sunshade">
@@ -223,7 +226,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                 </li>
                                                                 <!-- Ground 落地款 -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-mate-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-mate-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Ground">
@@ -239,12 +242,12 @@ const headerNavHTML = `<header class="ys-header">
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                    <!-- SolaWard 子产品 -->
+                                                    <!-- SolaHome 子产品 (SolaRoof/SolaLoft) -->
                                                     <li class="hpsr-list-item">
                                                         <div class="hpsr-list-item-lis">
                                                             <div class="hpfr-link">
-                                                                <a href="pages/sola-ward-vn.html" title="" class="hpft-link-box">
-                                                                    <p>SolaWard Series</p>
+                                                                <a href="pages/sola-ward-vn-new.html" title="" class="hpft-link-box">
+                                                                    <p>SolaHome</p>
                                                                     <div class="hpft-link-icons">
                                                                         <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                     </div>
@@ -253,7 +256,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <ul class="hlil-thrul">
                                                                 <!-- SolaRoof 屋顶款 -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-ward-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="SolaRoof">
@@ -268,7 +271,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                 </li>
                                                                 <!-- SolaLoft 阁楼款 -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-ward-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="SolaLoft">
@@ -284,154 +287,57 @@ const headerNavHTML = `<header class="ys-header">
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                                                                            </div>
-                        </li><li class="head-nav-item ">
-                            <div class="head-nav-item-nub">
-                                <a href="#"  class="head-nav-item-title">Doanh Nghiệp</a>
-                                <!-- 下拉类型二：产品下拉样式 -->
-                                <div class="head-nav-item-down head-pull-second">
-                                    <div class="ys-cont1600">
-                                        <div class="head-pull-second-cont">
-                                            <div class="head-pull-second-le">
-                                                <ul class="hpsl-list">
-                                                    <!-- SolaWard Pro -->
-                                                    <li class="hpsl-list-item">
-                                                        <a href="pages/sola-ward-vn.html" title="" class="hpsl-list-item-link">
-                                                            <div class="hlil-pic">
-                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon28.svg" alt="a1icon28.svg">
-                                                            </div>
-                                                            <p>SolaWard Pro</p>
-                                                            <div class="hlil-bgs">
-                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <!-- Cloud APP Pro -->
-                                                <div class="hpsl-btn hpsl-btn1">
-                                                    <div class="std-btn1">
-                                                        <a href="pages/software-cloud.html" title="" class="std-btn1-box">
-                                                            <p>Cloud APP Pro</p>
-                                                            <div class="std-btn1-icon">
-                                                                <img src="Public/En/images/a1_icon_07.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- EPC Service -->
-                                                <div class="hpsl-btn hpsl-btn1">
-                                                    <div class="std-btn1">
-                                                        <a href="product/epc-service.html" title="" class="std-btn1-box">
-                                                            <p>EPC Service</p>
-                                                            <div class="std-btn1-icon">
-                                                                <img src="Public/En/images/a1_icon_07.svg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
-                                                <ul class="hpsr-list">
-                                                    <!-- SolaWard Pro 子产品 - 由 Solutions 转换 -->
+                                                    <!-- SolaHome Pro 子产品 (ESS/Hybrid/On-Grid) -->
                                                     <li class="hpsr-list-item">
                                                         <div class="hpsr-list-item-lis">
                                                             <div class="hpfr-link">
-                                                                <a href="pages/sola-ward-vn.html" title="" class="hpft-link-box">
-                                                                    <p>One-stop C & I Solutions</p>
+                                                                <a href="pages/sola-ward-pro-vn-new.html" title="" class="hpft-link-box">
+                                                                    <p>SolaHome Pro</p>
                                                                     <div class="hpft-link-icons">
                                                                         <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                     </div>
                                                                 </a>
                                                             </div>
                                                             <ul class="hlil-thrul">
-                                                                <!-- Commercial & Industrial -->
+                                                                <!-- ESS Solution -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Commercial">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="ESS">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>AI Data Infrastructure</p>
+                                                                            <p>Hệ thống lưu trữ (ESS)</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
                                                                         </div>
                                                                     </a>
                                                                 </li>
-                                                                <!-- Cold Storage -->
+                                                                <!-- Hybrid Solution -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Cold Storage">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Hybrid">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Cold Storage</p>
+                                                                            <p>Hybrid Solution</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
                                                                         </div>
                                                                     </a>
                                                                 </li>
-                                                                <!-- EV Charger -->
+                                                                <!-- On-Grid Solution -->
                                                                 <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
                                                                         <div class="ys-imgbox-cover">
                                                                             <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="EV Charger">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="On-Grid">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>EV Charger</p>
-                                                                        </div>
-                                                                        <div class="htll-bgs">
-                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <!-- Office Building -->
-                                                                <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
-                                                                        <div class="ys-imgbox-cover">
-                                                                            <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Office">
-                                                                        </div>
-                                                                        <div class="htll-word">
-                                                                            <p>Office Building</p>
-                                                                        </div>
-                                                                        <div class="htll-bgs">
-                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <!-- Healthcare -->
-                                                                <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
-                                                                        <div class="ys-imgbox-cover">
-                                                                            <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Healthcare">
-                                                                        </div>
-                                                                        <div class="htll-word">
-                                                                            <p>Healthcare</p>
-                                                                        </div>
-                                                                        <div class="htll-bgs">
-                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <!-- Financial Solution -->
-                                                                <li class="hlil-thrul-li">
-                                                                    <a href="pages/sola-ward-vn.html" title="" class="hlil-thrul-li-link">
-                                                                        <div class="ys-imgbox-cover">
-                                                                            <img src="Public/En/images/d_pics02.png" alt="">
-                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Financial">
-                                                                        </div>
-                                                                        <div class="htll-word">
-                                                                            <p>Financial Solution</p>
+                                                                            <p>Giải pháp hòa lưới</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -446,75 +352,326 @@ const headerNavHTML = `<header class="ys-header">
                                         </div>
                                     </div>
                                 </div>                                                                                            </div>
-                        </li><li class="head-nav-item ">
+                        </li>
+                        <!-- 2. 商业光伏 Doanh Nghiệp -->
+                        <li class="head-nav-item ">
+                            <div class="head-nav-item-nub">
+                                <a href="#"  class="head-nav-item-title">Doanh Nghiệp</a>
+                                <!-- 下拉类型二：产品下拉样式 -->
+                                <div class="head-nav-item-down head-pull-second">
+                                    <div class="ys-cont1600">
+                                        <div class="head-pull-second-cont">
+                                            <div class="head-pull-second-le">
+                                                <ul class="hpsl-list">
+                                                    <!-- C & I Solutions -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="pages/sola-ward-pro-vn-new.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon28.svg" alt="C&I">
+                                                            </div>
+                                                            <p>C & I Solutions</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- Large Scale Solutions -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="#" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon24.svg" alt="Large Scale">
+                                                            </div>
+                                                            <p>Large Scale</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
+                                                <ul class="hpsr-list">
+                                                    <!-- C & I Solutions 子产品 -->
+                                                    <li class="hpsr-list-item">
+                                                        <div class="hpsr-list-item-lis">
+                                                            <div class="hpfr-link">
+                                                                <a href="pages/sola-ward-pro-vn-new.html" title="" class="hpft-link-box">
+                                                                    <p>C & I Solutions</p>
+                                                                    <div class="hpft-link-icons">
+                                                                        <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <ul class="hlil-thrul">
+                                                                <!-- AI Data Infrastructure -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="AI Data">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>AI Data Infrastructure</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Cold Storage -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Cold Storage">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Cold Storage</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- EV Charger -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="EV Charger">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>EV Charger</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Office Building -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Office">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Office Building</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Healthcare -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Healthcare">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Y tế & Bệnh viện</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Financial Solution -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="pages/sola-ward-pro-vn-new.html" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Financial">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Hỗ trợ tài chính</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <!-- Large Scale Solutions 子产品 -->
+                                                    <li class="hpsr-list-item">
+                                                        <div class="hpsr-list-item-lis">
+                                                            <div class="hpfr-link">
+                                                                <a href="#" title="" class="hpft-link-box">
+                                                                    <p>Large Scale Solutions</p>
+                                                                    <div class="hpft-link-icons">
+                                                                        <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <ul class="hlil-thrul">
+                                                                <!-- Ground Power Plant -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="#" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Ground">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Ground Power Plant</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Floating -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="#" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Floating">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Điện mặt trời nổi</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Agrivoltaics -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="#" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Agrivoltaics">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Agrivoltaics</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <!-- Offshore -->
+                                                                <li class="hlil-thrul-li">
+                                                                    <a href="#" title="" class="hlil-thrul-li-link">
+                                                                        <div class="ys-imgbox-cover">
+                                                                            <img src="Public/En/images/d_pics02.png" alt="">
+                                                                            <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Offshore">
+                                                                        </div>
+                                                                        <div class="htll-word">
+                                                                            <p>Điện mặt trời trên biển</p>
+                                                                        </div>
+                                                                        <div class="htll-bgs">
+                                                                            <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                                                                            </div>
+                        </li>
+                        <!-- 3. 产品 Sản Phẩm -->
+                        <li class="head-nav-item ">
                             <div class="head-nav-item-nub">
                                 <a href="product/pv-inverter.html"  class="head-nav-item-title">Sản Phẩm</a>
-                                                                <div class="head-nav-item-down head-pull-second">
-                                        <div class="ys-cont1600">
-                                            <div class="head-pull-second-cont">
-                                                <div class="head-pull-second-le">
-                                                    <ul class="hpsl-list">
-                                                        <!-- PV Modules -->
-                                                        <li class="hpsl-list-item">
-                                                            <a href="product/pv-module.html" title="" class="hpsl-list-item-link">
-                                                                <div class="hlil-pic">
-                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon21.svg" alt="a1icon21.svg">
-                                                                </div>
-                                                                <p>Tấm Pin PV</p>
-                                                                <div class="hlil-bgs">
-                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
+                                <!-- 下拉类型二：产品下拉样式 -->
+                                <div class="head-nav-item-down head-pull-second">
+                                    <div class="ys-cont1600">
+                                        <div class="head-pull-second-cont">
+                                            <div class="head-pull-second-le">
+                                                <ul class="hpsl-list">
+                                                    <!-- 阳台光伏 Balcony Solar - 第一项 -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/balcony-solar.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/icon-balcony.svg" alt="Balcony">
+                                                            </div>
+                                                            <p>Điện Mặt Trời Ban Công</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- PV Modules -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/pv-module.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon21.svg" alt="a1icon21.svg">
+                                                            </div>
+                                                            <p>Tấm Pin PV</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- PV Inverters -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/pv-inverter.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon19.svg" alt="a1icon19.svg">
+                                                            </div>
+                                                            <p>Inverter PV</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- Residential ESS -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
+                                                            </div>
+                                                            <p>Lưu Trữ Gia Đình</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- C&I ESS -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
+                                                            </div>
+                                                            <p>Lưu Trữ C&I</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <!-- Mounting System -->
+                                                    <li class="hpsl-list-item">
+                                                        <a href="product/mounting-system.html" title="" class="hpsl-list-item-link">
+                                                            <div class="hlil-pic">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon22.svg" alt="a1icon22.svg">
+                                                            </div>
+                                                            <p>Hệ Thống Gắn Kết</p>
+                                                            <div class="hlil-bgs">
+                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- 按钮区域：查询质保 + 全部产品 -->
+                                                <div style="display:flex;gap:12px;margin-top:12px;">
+                                                    <div class="hpsl-btn hpsl-btn1">
+                                                        <div class="std-btn1">
+                                                            <a href="#" title="" class="std-btn1-box">
+                                                                <p>Tra Cứu Bảo Hành</p>
+                                                                <div class="std-btn1-icon">
+                                                                    <img src="Public/En/images/a1_icon_07.svg" alt="">
                                                                 </div>
                                                             </a>
-                                                        </li>
-                                                        <!-- PV Inverters -->
-                                                        <li class="hpsl-list-item">
-                                                            <a href="product/pv-inverter.html" title="" class="hpsl-list-item-link">
-                                                                <div class="hlil-pic">
-                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon19.svg" alt="a1icon19.svg">
-                                                                </div>
-                                                                <p>Inverter PV</p>
-                                                                <div class="hlil-bgs">
-                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <!-- Residential ESS -->
-                                                        <li class="hpsl-list-item">
-                                                            <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
-                                                                <div class="hlil-pic">
-                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
-                                                                </div>
-                                                                <p>Lưu Trữ Gia Đình</p>
-                                                                <div class="hlil-bgs">
-                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <!-- C&I ESS -->
-                                                        <li class="hpsl-list-item">
-                                                            <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
-                                                                <div class="hlil-pic">
-                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
-                                                                </div>
-                                                                <p>Lưu Trữ C&I</p>
-                                                                <div class="hlil-bgs">
-                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <!-- Mounting System -->
-                                                        <li class="hpsl-list-item">
-                                                            <a href="product/mounting-system.html" title="" class="hpsl-list-item-link">
-                                                                <div class="hlil-pic">
-                                                                    <img src="Public/Uploads/uploadfile/images/20250830/a1icon22.svg" alt="a1icon22.svg">
-                                                                </div>
-                                                                <p>Hệ Thống Gắn Kết</p>
-                                                                <div class="hlil-bgs">
-                                                                    <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
+                                                    </div>
                                                     <div class="hpsl-btn hpsl-btn1">
                                                         <div class="std-btn1">
                                                             <a href="product/pv-inverter.html"  title="" class="std-btn1-box">
@@ -526,8 +683,80 @@ const headerNavHTML = `<header class="ys-header">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="head-pull-second-ri">
+                                            </div>
+                                                <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
                                                     <ul class="hpsr-list">
+                                                        <!-- 阳台光伏子产品 -->
+                                                        <li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/balcony-solar.html" title="" class="hpft-link-box">
+                                                                        <p>Điện Mặt Trời Ban Công</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <li class="hlil-thrul-li">
+                                                                        <a href="product/balcony-solar/balcony-solar/railing-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/RailingMountingsmall-942.png" alt="Railing">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Railing Mounting</p>
+                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="hlil-thrul-li">
+                                                                        <a href="product/balcony-solar/balcony-solar/sunshade-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/SunshadeMountingsmall.png" alt="Sunshade">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Sunshade Mounting</p>
+                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="hlil-thrul-li">
+                                                                        <a href="product/balcony-solar/balcony-solar/ground-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/GroundMountingsmall.png" alt="Ground">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Ground Mounting</p>
+                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="hlil-thrul-li">
+                                                                        <a href="product/balcony-solar/balcony-solar/wall-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/WallMountingsmall.png" alt="Wall">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Wall Mounting</p>
+                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
                                                         <li class="hpsr-list-item">
                                                             <div class="hpsr-list-item-lis">
                                                                 <div class="hpfr-link">
@@ -535,7 +764,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                         <p>Residential PV Inverter</p>
                                                                         <div class="hpft-link-icons">
                                                                             <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
+                                                                        </div>
                                                                     </a>
                                                                 </div>
                                                                 <ul class="hlil-thrul">
@@ -921,7 +1150,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hptu-li-le-icon">
                                                                 <img src="Public/Uploads/uploadfile/images/20250901/xiala04.svg" alt="xiala04.svg">
                                                             </div>
-                                                            <p>Partner Home</p>
+                                                            <p>Nhà cung cấp cấp quốc gia</p>
                                                         </div>
                                                         <div class="hptu-li-ri-icon">
                                                             <img src="Public/En/images/a1_icon_07_1.svg" alt="">
@@ -933,7 +1162,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hptu-li-le-icon">
                                                                 <img src="Public/Uploads/uploadfile/images/20250901/icon07.svg" alt="icon07.svg">
                                                             </div>
-                                                            <p>Become an Installer</p>
+                                                            <p>Chính sách đại lý</p>
                                                         </div>
                                                         <div class="hptu-li-ri-icon">
                                                             <img src="Public/En/images/a1_icon_07_1.svg" alt="">
@@ -945,7 +1174,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hptu-li-le-icon">
                                                                 <img src="Public/Uploads/uploadfile/images/20250901/icon43-317.svg" alt="icon43-317.svg">
                                                             </div>
-                                                            <p>Certificates</p>
+                                                            <p>Trở thành đối tác</p>
                                                         </div>
                                                         <div class="hptu-li-ri-icon">
                                                             <img src="Public/En/images/a1_icon_07_1.svg" alt="">
@@ -957,7 +1186,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hptu-li-le-icon">
                                                                 <img src="Public/Uploads/uploadfile/images/20250902/icon05-300.svg" alt="icon05-300.svg">
                                                             </div>
-                                                            <p>Đăng Nhập Đối Tác</p>
+                                                            <p>Đăng nhập đối tác</p>
                                                         </div>
                                                         <div class="hptu-li-ri-icon">
                                                             <img src="Public/En/images/a1_icon_07_1.svg" alt="">
@@ -1014,7 +1243,7 @@ const headerNavHTML = `<header class="ys-header">
                                                     <a href="#"  title="" class="hptu-li-link">
                                                         <div class="hptu-li-le">
                                                             <div class="hptu-li-le-icon">
-                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala01.svg" alt="xiala_01.svg">
+                                                                <img src="Public/Uploads/uploadfile/images/20250901/xiala01.svg" alt="xiala01.svg">
                                                             </div>
                                                             <p>Tải Xuống</p>
                                                         </div>
@@ -1049,8 +1278,8 @@ const headerNavHTML = `<header class="ys-header">
                         </a>
                     </div>
                     <div class="std-btn3 nomre">
-                        <a href="contact-us.html" target="_self" title="Liên Hệ" class="std-btn3-box">
-                            <p data-text="Liên Hệ">Liên Hệ</p>
+                        <a href="pages/software-cloud.html" target="_self" title="Cloud APP" class="std-btn3-box">
+                            <p data-text="Cloud APP">Cloud APP</p>
                             <div class="std-btn3-bg">
                                 <div class="std-btn3-bg-side"></div>
                             </div>
@@ -1106,6 +1335,7 @@ const headerNavHTML = `<header class="ys-header">
                 <div class="ys-phmenu-scroll">
                     <ul class="ys-ph-nav">
                         <!-- 有下级时加类名ys-phnav-haschild 不需要判断加减号有无 -->
+                        <!-- 1. Dân Dụng -->
                         <li class="ys-phnav-haschild ">
                             <div class="ys-phnav-lisbox">
                                 <a href="#" >
@@ -1117,26 +1347,32 @@ const headerNavHTML = `<header class="ys-header">
                             <ul>
                                 <li class=" ">
                                     <div class="ys-phnav-lisbox">
-                                        <a href="#" >
+                                        <a href="pages/sola-mate-vn-new.html" >
                                             <div class="ys-phnav-header-font">SolaMate</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
-                                        <a href="#" >
-                                            <div class="ys-phnav-header-font">SolaWard</div>
+                                        <a href="pages/sola-ward-vn-new.html" >
+                                            <div class="ys-phnav-header-font">SolaHome</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
-                                        <a href="#" >
-                                            <div class="ys-phnav-header-font">Cloud APP</div>
+                                        <a href="pages/sola-ward-pro-vn-new.html" >
+                                            <div class="ys-phnav-header-font">SolaHome Pro</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 2. Doanh Nghiệp -->
+                        <li class="ys-phnav-haschild ">
                             <div class="ys-phnav-lisbox">
                                 <a href="#" >
                                     <div class="ys-phnav-header-font">Doanh Nghiệp</div>
@@ -1147,19 +1383,68 @@ const headerNavHTML = `<header class="ys-header">
                             <ul>
                                 <li class=" ">
                                     <div class="ys-phnav-lisbox">
-                                        <a href="#" >
-                                            <div class="ys-phnav-header-font">SolaWard Pro</div>
+                                        <a href="pages/sola-ward-pro-vn-new.html" >
+                                            <div class="ys-phnav-header-font">C & I Solutions</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Cloud APP Pro</div>
+                                            <div class="ys-phnav-header-font">Large Scale</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 3. Sản Phẩm -->
+                        <li class="ys-phnav-haschild ">
+                            <div class="ys-phnav-lisbox">
+                                <a href="#" >
+                                    <div class="ys-phnav-header-font">Sản Phẩm</div>
+                                </a>
+                                <div class="ys-phnav-icon"></div>
+                            </div>
+                            <!-- 二级 -->
+                            <ul>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/balcony-solar.html" >
+                                            <div class="ys-phnav-header-font">Điện Mặt Trời Ban Công</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                </li>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/pv-module.html" >
+                                            <div class="ys-phnav-header-font">Tấm Pin PV</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                </li>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="product/pv-inverter.html" >
+                                            <div class="ys-phnav-header-font">Inverter PV</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                </li>
+                                <li class=" ">
+                                    <div class="ys-phnav-lisbox">
+                                        <a href="#" >
+                                            <div class="ys-phnav-header-font">Tra Cứu Bảo Hành</div>
+                                        </a>
+                                        <div class="ys-phnav-icon"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 4. Kênh đối tác -->
+                        <li class="ys-phnav-haschild ">
                             <div class="ys-phnav-lisbox">
                                 <a href="#" >
                                     <div class="ys-phnav-header-font">Kênh đối tác</div>
@@ -1171,32 +1456,38 @@ const headerNavHTML = `<header class="ys-header">
                                 <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Trang Đối Tác</div>
+                                            <div class="ys-phnav-header-font">Nhà cung cấp cấp quốc gia</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Trở Thành Nhà Lắp Đặt</div>
+                                            <div class="ys-phnav-header-font">Chính sách đại lý</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Tìm Sản Phẩm</div>
+                                            <div class="ys-phnav-header-font">Trở thành đối tác</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li><li class=" ">
+                                </li>
+                                <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Đăng Nhập Đối Tác</div>
+                                            <div class="ys-phnav-header-font">Đăng nhập đối tác</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
-                                                                    </li>                            </ul>                        </li><li class="ys-phnav-haschild ">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ys-phnav-haschild ">
                             <div class="ys-phnav-lisbox">
                                 <a href="#" >
                                     <div class="ys-phnav-header-font">Hỗ Trợ</div>
@@ -1222,7 +1513,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                     </li><li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Bách Khoa Năng Lượng Mặt Trời</div>
+                                            <div class="ys-phnav-header-font">Kiến thức Solar</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
@@ -1236,7 +1527,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                     </li><li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Tải Xuống</div>
+                                            <div class="ys-phnav-header-font">Trung tâm tải về</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
@@ -1321,7 +1612,7 @@ const headerNavHTML = `<header class="ys-header">
                 <!-- Mobile bottom buttons -->
                 <div style="display:flex;gap:10px;padding:16px 15px;border-top:1px solid rgba(255,255,255,.1);">
                     <a href="javascript:void(0);" id="roi-calc-trigger-ph" style="flex:1;display:block;text-align:center;padding:12px 0;background:#006BC0;color:#fff;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">ROI Calculator</a>
-                    <a href="contact-us.html" style="flex:1;display:block;text-align:center;padding:12px 0;background:#fff;color:#006BC0;border:1px solid #006BC0;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">Liên Hệ</a>
+                    <a href="pages/software-cloud.html" style="flex:1;display:block;text-align:center;padding:12px 0;background:#fff;color:#006BC0;border:1px solid #006BC0;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">Cloud APP</a>
                 </div>
             </div>
         </nav>
@@ -1430,14 +1721,10 @@ const footerHTML = `		<footer class="ys-footer">
                     </li>                </ul>
             </div>
         </div>
-    </div>
-    </footer>
-
-    <!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=3674460090ed13238562f32c5af0bc0"></script><!-- https://respond.io -->
-    <!-- respond.io growth tool -->
-    <script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script>
-`;
-
+    </div>   
+    
+</footer>
+<!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__growth_tool" src="https://cdn.respond.io/widget/widget.js?wId=af837d18-663b-407f-a780-b782f83cffcc"></script><!-- https://respond.io -->`;
 
 // Inject immediately (script runs at end of body, DOM is ready)
 (function () {
@@ -1526,23 +1813,15 @@ const footerHTML = `		<footer class="ys-footer">
         });
       }
     });
-    // 点击关闭按钮关闭弹窗
     if (overlay && closeBtn) {
       closeBtn.addEventListener('click', function () {
         overlay.style.display = 'none';
       });
     }
-    // form 提交成功后关闭弹窗 (通过监听 sc-hidden 类变化)
     if (overlay) {
-      var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          if (mutation.attributeName === 'class' && overlay.classList.contains('sc-hidden')) {
-            overlay.style.display = 'none';
-            overlay.classList.remove('sc-hidden'); // 重置状态
-          }
-        });
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) overlay.style.display = 'none';
       });
-      observer.observe(overlay, { attributes: true });
     }
   };
   document.body.appendChild(script);
