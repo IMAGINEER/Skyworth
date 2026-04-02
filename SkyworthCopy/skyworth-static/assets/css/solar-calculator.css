@@ -75,6 +75,15 @@
   background: var(--sc-accent); cursor: pointer; border: none;
 }
 .sc-slider-val { min-width: 42px; text-align: right; font-size: 15px; font-weight: 600; color: var(--sc-accent2); }
+.sc-ess-inline { display: flex; align-items: center; gap: 16px; }
+.sc-slider-wrap { display: flex; align-items: center; gap: 10px; flex: 1; }
+.sc-ess-wrap {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(255,255,255,.1); border-radius: 8px;
+  background: rgba(255,255,255,.06); padding: 0 12px; height: 38px;
+}
+.sc-checkbox { width: 18px; height: 18px; accent-color: var(--sc-accent); cursor: pointer; }
+.sc-checkbox-label { font-size: 13px; color: rgba(255,255,255,.8); cursor: pointer; white-space: nowrap; margin-left: -18px; }
 
 /* Input group */
 .sc-input-group {

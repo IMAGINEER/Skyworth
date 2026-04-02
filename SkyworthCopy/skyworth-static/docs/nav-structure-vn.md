@@ -9,7 +9,6 @@
 ### 🔆 SolaMate (阳台光伏) - 第一个
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
-| 阳台光伏 | Điện mặt trời ban công | Balcony Solar |
 | 阳台款 | Ban công | Balcony |
 | 遮阳款 | Che nắng | Sunshade |
 | 地面款 | Mặt đất | Ground |
@@ -17,8 +16,8 @@
 ### 🏠 SolaHome (自发自用 - Off-Grid)
 | 中文 | Tiếng Việt | English |
 |------|-------------|---------|
-| 屋顶款 | Mái nhà | SolaRoof |
-| 阳光房 | Phòng kính năng lượng | SolaLoft |
+| 金装房 | SolaRoof（Mái nhà） | SolaRoof |
+| 小阳楼 | SolaLoft （Phòng kính） | SolaLoft |
 
 ### 🔋 SolaHome Pro (配储能 - Hybrid)
 | 中文 | Tiếng Việt | English |
@@ -27,6 +26,7 @@
 | Hybrid 方案 | Giải pháp Hybrid | Hybrid Solution |
 | Giải pháp hòa lưới | Giải pháp hòa lưới | On-Grid Solution |
 
+### EPC Services (Dịch vụ EPC)
 ---
 
 ## 2. 商业光伏 / Doanh Nghiệp / Business
@@ -51,6 +51,7 @@
 | Agrivoltaics | Nông - điện kép | Agrivoltaics |
 | Offshore | Điện mặt trời trên biển | Offshore Solar |
 
+### EPC Services (Dịch vụ EPC)
 ---
 
 ## 3. 产品 / Sản Phẩm / Products
@@ -64,7 +65,6 @@
 | 阳台款 | Ban công | Balcony |
 | 遮阳款 | Che nắng | Sunshade |
 | 地面款 | Mặt đất | Ground |
-| 墙面款 | Áp tường | Wall |
 
 ### 🔆 光伏组件 PV Modules
 | 中文 | Tiếng Việt | English |
@@ -163,7 +163,6 @@
 | 🏠 | SolaHome |
 | 🔐 | 质保 Warranty |
 | 🎯 | C&I Solutions |
-| 🌐 | Large Scale Solutions |
 | 📱 | Cloud APP |
 | 📊 | ROI Calculator |
 | 🛠️ | 服务 EPC/Service |

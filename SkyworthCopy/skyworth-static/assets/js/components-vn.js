@@ -178,7 +178,17 @@ const headerNavHTML = `<header class="ys-header">
                                                         </a>
                                                     </li>
                                                 </ul>
-                                                <!-- Cloud App 按钮已移除，移至右上角 -->
+                                                <!-- EPC Service 按钮 -->
+                                                <div class="hpsl-btn hpsl-btn1">
+                                                    <div class="std-btn1">
+                                                        <a href="product/epc-service.html" title="" class="std-btn1-box">
+                                                            <p>Dịch vụ EPC</p>
+                                                            <div class="std-btn1-icon">
+                                                                <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
                                                 <ul class="hpsr-list">
@@ -202,7 +212,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Balcony">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Balcony</p>
+                                                                            <p>Ban công</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -217,7 +227,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Sunshade">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Sunshade</p>
+                                                                            <p>Che nắng</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -232,7 +242,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Ground">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Ground</p>
+                                                                            <p>Mặt đất</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -262,7 +272,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="SolaRoof">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>SolaRoof</p>
+                                                                            <p>SolaRoof (Mái nhà)</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -277,7 +287,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="SolaLoft">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>SolaLoft</p>
+                                                                            <p>SolaLoft (Phòng kính)</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -307,7 +317,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="ESS">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Hệ thống lưu trữ (ESS)</p>
+                                                                            <p>Lưu trữ năng lượng</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -322,7 +332,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Hybrid">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Hybrid Solution</p>
+                                                                            <p>Hệ thống Hybrid</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -337,7 +347,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="On-Grid">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Giải pháp hòa lưới</p>
+                                                                            <p>Hệ thống hòa lưới</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -381,13 +391,24 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hlil-pic">
                                                                 <img src="Public/Uploads/uploadfile/images/20250830/a1icon24.svg" alt="Large Scale">
                                                             </div>
-                                                            <p>Large Scale</p>
+                                                            <p>Quy mô lớn</p>
                                                             <div class="hlil-bgs">
                                                                 <img src="Public/En/images/a1_bg_04.png" alt="">
                                                             </div>
                                                         </a>
                                                     </li>
                                                 </ul>
+                                                <!-- EPC Service 按钮 -->
+                                                <div class="hpsl-btn hpsl-btn1">
+                                                    <div class="std-btn1">
+                                                        <a href="product/epc-service.html" title="" class="std-btn1-box">
+                                                            <p>Dịch vụ EPC</p>
+                                                            <div class="std-btn1-icon">
+                                                                <img src="Public/En/images/a1_icon_07.svg" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="head-pull-second-ri" style="overflow:visible;max-height:none;">
                                                 <ul class="hpsr-list">
@@ -411,7 +432,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="AI Data">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>AI Data Infrastructure</p>
+                                                                            <p>Hạ tầng dữ liệu AI</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -426,7 +447,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Cold Storage">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Cold Storage</p>
+                                                                            <p>Kho lạnh</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -441,7 +462,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="EV Charger">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>EV Charger</p>
+                                                                            <p>Trạm sạc xe điện</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -456,7 +477,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Office">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Office Building</p>
+                                                                            <p>Tòa nhà văn phòng</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -501,7 +522,7 @@ const headerNavHTML = `<header class="ys-header">
                                                         <div class="hpsr-list-item-lis">
                                                             <div class="hpfr-link">
                                                                 <a href="#" title="" class="hpft-link-box">
-                                                                    <p>Large Scale Solutions</p>
+                                                                    <p>Giải pháp quy mô lớn</p>
                                                                     <div class="hpft-link-icons">
                                                                         <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                     </div>
@@ -516,7 +537,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                             <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="Ground">
                                                                         </div>
                                                                         <div class="htll-word">
-                                                                            <p>Ground Power Plant</p>
+                                                                            <p>Nhà máy mặt đất</p>
                                                                         </div>
                                                                         <div class="htll-bgs">
                                                                             <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -605,7 +626,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hlil-pic">
                                                                 <img src="Public/Uploads/uploadfile/images/20250830/a1icon21.svg" alt="a1icon21.svg">
                                                             </div>
-                                                            <p>Tấm Pin PV</p>
+                                                            <p>Tấm pin năng lượng mặt trời</p>
                                                             <div class="hlil-bgs">
                                                                 <img src="Public/En/images/a1_bg_04.png" alt="">
                                                             </div>
@@ -617,31 +638,19 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hlil-pic">
                                                                 <img src="Public/Uploads/uploadfile/images/20250830/a1icon19.svg" alt="a1icon19.svg">
                                                             </div>
-                                                            <p>Inverter PV</p>
+                                                            <p>Biến tần</p>
                                                             <div class="hlil-bgs">
                                                                 <img src="Public/En/images/a1_bg_04.png" alt="">
                                                             </div>
                                                         </a>
                                                     </li>
-                                                    <!-- Residential ESS -->
+                                                    <!-- ESS (合并Lưu Trữ Gia Đình + Lưu Trữ C&I) -->
                                                     <li class="hpsl-list-item">
                                                         <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
                                                             <div class="hlil-pic">
-                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
+                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="ESS">
                                                             </div>
-                                                            <p>Lưu Trữ Gia Đình</p>
-                                                            <div class="hlil-bgs">
-                                                                <img src="Public/En/images/a1_bg_04.png" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <!-- C&I ESS -->
-                                                    <li class="hpsl-list-item">
-                                                        <a href="product/battery-storage-system.html" title="" class="hpsl-list-item-link">
-                                                            <div class="hlil-pic">
-                                                                <img src="Public/Uploads/uploadfile/images/20250830/a1icon20.svg" alt="a1icon20.svg">
-                                                            </div>
-                                                            <p>Lưu Trữ C&I</p>
+                                                            <p>Giải pháp pin lưu trữ (ESS)</p>
                                                             <div class="hlil-bgs">
                                                                 <img src="Public/En/images/a1_bg_04.png" alt="">
                                                             </div>
@@ -661,21 +670,11 @@ const headerNavHTML = `<header class="ys-header">
                                                     </li>
                                                 </ul>
                                                 <!-- 按钮区域：查询质保 + 全部产品 -->
-                                                <div style="display:flex;gap:12px;margin-top:12px;">
+                                                <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
                                                     <div class="hpsl-btn hpsl-btn1">
                                                         <div class="std-btn1">
                                                             <a href="#" title="" class="std-btn1-box">
                                                                 <p>Tra Cứu Bảo Hành</p>
-                                                                <div class="std-btn1-icon">
-                                                                    <img src="Public/En/images/a1_icon_07.svg" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hpsl-btn hpsl-btn1">
-                                                        <div class="std-btn1">
-                                                            <a href="product/pv-inverter.html"  title="" class="std-btn1-box">
-                                                                <p>Tất Cả Sản Phẩm</p>
                                                                 <div class="std-btn1-icon">
                                                                     <img src="Public/En/images/a1_icon_07.svg" alt="">
                                                                 </div>
@@ -705,7 +704,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                                 <img src="Public/Uploads/uploadfile/images/20260109/RailingMountingsmall-942.png" alt="Railing">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>Railing Mounting</p>
+                                                                                <p>Ban công</p>
                                                                             </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -719,7 +718,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                                 <img src="Public/Uploads/uploadfile/images/20260109/SunshadeMountingsmall.png" alt="Sunshade">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>Sunshade Mounting</p>
+                                                                                <p>Che nắng</p>
                                                                             </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -733,21 +732,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                                 <img src="Public/Uploads/uploadfile/images/20260109/GroundMountingsmall.png" alt="Ground">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>Ground Mounting</p>
-                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="hlil-thrul-li">
-                                                                        <a href="product/balcony-solar/balcony-solar/wall-mounting.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20260109/WallMountingsmall.png" alt="Wall">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>Wall Mounting</p>
+                                                                                <p>Mặt đất</p>
                                                                             </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -761,118 +746,14 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hpsr-list-item-lis">
                                                                 <div class="hpfr-link">
                                                                     <a href="product/pv-inverter7fe4.html?tp=45"  title="" class="hpft-link-box">
-                                                                        <p>Residential PV Inverter</p>
+                                                                        <p>Biến tần (Inverter)</p>
                                                                         <div class="hpft-link-icons">
                                                                             <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                         </div>
                                                                     </a>
                                                                 </div>
                                                                 <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-1-3ktl-s1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/13.3.png" alt="1-3.3.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 1-3.3KTL-S1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-4-6ktl-s1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/46.png" alt="4-6.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 4-6KTL-S1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-7-10ktl-s1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/710.png" alt="7-10.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 7-10KTL-S1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/residential-pv-inverter/sw-10-25ktl-s1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/1025.png" alt="10-25.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 10-25KTL-S1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>                                                                </ul>
-                                                            </div><div class="hpsr-list-item-lis">
-                                                                <div class="hpfr-link">
-                                                                    <a href="product/pv-inverter4593.html?tp=46"  title="" class="hpft-link-box">
-                                                                        <p>Business PV Inverter</p>
-                                                                        <div class="hpft-link-icons">
-                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
-                                                                    </a>
-                                                                </div>
-                                                                <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/business/sw-30-33ktl-s1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/3033.png" alt="30-33.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 30-33KTL-S1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/pv-inverter/business/sw40-60ktl-t1.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20250830/4060.png" alt="40-60.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>SW 40-60KTL-T1</p>
-                                                                                                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>                                                                </ul>
-                                                            </div>                                                        </li><li class="hpsr-list-item">
-                                                            <div class="hpsr-list-item-lis">
-                                                                <div class="hpfr-link">
-                                                                    <a href="product/battery-storage-systemc89e.html?tp=66"  title="" class="hpft-link-box">
-                                                                        <p>Residential ESS</p>
-                                                                        <div class="hpft-link-icons">
-                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
-                                                                    </a>
-                                                                </div>
-                                                                <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
+                                                                    <li class="hlil-thrul-li ">
                                                                         <a href="product/battery-storage-system/residential-ess/svh-3-6kh-s1.html" title="" class="hlil-thrul-li-link">
                                                                             <div class="ys-imgbox-cover">
                                                                                 <img src="Public/En/images/d_pics02.png" alt="">
@@ -918,7 +799,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                                 <img src="Public/Uploads/uploadfile/images/20250901/5.1220.png" alt="5.12-20.png">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>SWR5.12--20.48-H1</p>
+                                                                                <p>SWR5.12-20.48-H1</p>
                                                                                                                                                             </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -928,15 +809,14 @@ const headerNavHTML = `<header class="ys-header">
                                                             </div><div class="hpsr-list-item-lis">
                                                                 <div class="hpfr-link">
                                                                     <a href="product/battery-storage-systemcf48.html?tp=67"  title="" class="hpft-link-box">
-                                                                        <p>C&I ESS</p>
+                                                                        <p>Lưu trữ C&I</p>
                                                                         <div class="hpft-link-icons">
                                                                             <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
+                                                                        </div>
                                                                     </a>
                                                                 </div>
                                                                 <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
+                                                                    <li class="hlil-thrul-li ">
                                                                         <a href="product/battery-storage-system/c-i-ess/swh-29-50kh-t1.html" title="" class="hlil-thrul-li-link">
                                                                             <div class="ys-imgbox-cover">
                                                                                 <img src="Public/En/images/d_pics02.png" alt="">
@@ -979,81 +859,15 @@ const headerNavHTML = `<header class="ys-header">
                                                             </div>                                                        </li><li class="hpsr-list-item">
                                                             <div class="hpsr-list-item-lis">
                                                                 <div class="hpfr-link">
-                                                                    <a href="product/balcony-solar2005.html?tp=77"  title="" class="hpft-link-box">
-                                                                        <p>Balcony Solar</p>
+                                                                    <a href="product/battery-storage-systemc89e.html?tp=66"  title="" class="hpft-link-box">
+                                                                        <p>Giải pháp pin lưu trữ (ESS)</p>
                                                                         <div class="hpft-link-icons">
                                                                             <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
+                                                                        </div>
                                                                     </a>
                                                                 </div>
                                                                 <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
-                                                                        <a href="product/balcony-solar/balcony-solar/railing-mounting.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20260109/RailingMountingsmall-942.png" alt="Railing Mounting-small.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>Railing Mounting</p>
-                                                                                <p><span>430W</span></p>                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/balcony-solar/balcony-solar/sunshade-mounting.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20260109/SunshadeMountingsmall.png" alt="Sunshade Mounting-small.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>Sunshade Mounting</p>
-                                                                                <p><span>430W</span></p>                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/balcony-solar/balcony-solar/ground-mounting.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20260109/GroundMountingsmall.png" alt="Ground  Mounting-small.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>Ground  Mounting</p>
-                                                                                <p><span>430W</span></p>                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li><li class="hlil-thrul-li ">
-                                                                        <a href="product/balcony-solar/balcony-solar/wall-mounting.html" title="" class="hlil-thrul-li-link">
-                                                                            <div class="ys-imgbox-cover">
-                                                                                <img src="Public/En/images/d_pics02.png" alt="">
-                                                                                <img src="Public/Uploads/uploadfile/images/20260109/WallMountingsmall.png" alt="Wall Mounting-small.png">
-                                                                            </div>
-                                                                            <div class="htll-word">
-                                                                                <p>Wall Mounting</p>
-                                                                                <p><span>430W</span></p>                                                                            </div>
-                                                                            <div class="htll-bgs">
-                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                    </li>                                                                </ul>
-                                                            </div>                                                        </li><li class="hpsr-list-item">
-                                                            <div class="hpsr-list-item-lis">
-                                                                <div class="hpfr-link">
-                                                                    <a href="product/pv-module3a87.html?tp=38"  title="" class="hpft-link-box">
-                                                                        <p>PV Module</p>
-                                                                        <div class="hpft-link-icons">
-                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
-                                                                        </div> 
-                                                                    </a>
-                                                                </div>
-                                                                <ul class="hlil-thrul">
-                                                                    <!-- 选中添加类名yxnav-active3 act -->
-                                                                     <li class="hlil-thrul-li ">
+                                                                    <li class="hlil-thrul-li ">
                                                                         <a href="product/pv-module/modules/m10-series.html" title="" class="hlil-thrul-li-link">
                                                                             <div class="ys-imgbox-cover">
                                                                                 <img src="Public/En/images/d_pics02.png" alt="">
@@ -1096,8 +910,8 @@ const headerNavHTML = `<header class="ys-header">
                                                             </div>                                                        </li><li class="hpsr-list-item">
                                                             <div class="hpsr-list-item-lis">
                                                                 <div class="hpfr-link">
-                                                                    <a href="product/mounting-systemcf33.html?tp=68"  title="" class="hpft-link-box">
-                                                                        <p>Mounting System</p>
+                                                                    <a href="product/balcony-solar2005.html?tp=77"  title="" class="hpft-link-box">
+                                                                        <p>Balcony Solar</p>
                                                                         <div class="hpft-link-icons">
                                                                             <img src="Public/En/images/nav_arrows01.svg" alt="">
                                                                         </div> 
@@ -1106,13 +920,64 @@ const headerNavHTML = `<header class="ys-header">
                                                                 <ul class="hlil-thrul">
                                                                     <!-- 选中添加类名yxnav-active3 act -->
                                                                      <li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/railing-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/RailingMountingsmall-942.png" alt="Railing Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Ban công</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/sunshade-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/SunshadeMountingsmall.png" alt="Sunshade Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Che nắng</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/balcony-solar/balcony-solar/ground-mounting.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20260109/GroundMountingsmall.png" alt="Ground  Mounting-small.png">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>Ground  Mounting</p>
+                                                                                <p><span>430W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/pv-module3a87.html?tp=38"  title="" class="hpft-link-box">
+                                                                        <p>Tấm pin năng lượng mặt trời</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <li class="hlil-thrul-li ">
                                                                         <a href="product/mounting-system/mounting/for-tile-roof.html" title="" class="hlil-thrul-li-link">
                                                                             <div class="ys-imgbox-cover">
                                                                                 <img src="Public/En/images/d_pics02.png" alt="">
                                                                                 <img src="Public/Uploads/uploadfile/images/20250428/1.png" alt="Stainless steel solar roof hook for tile mounting systems, featuring adjustable base plate with multiple holes for flexible installation">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>For Tile  Roof</p>
+                                                                                <p>Cho mái ngói</p>
                                                                                                                                                             </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
@@ -1125,8 +990,59 @@ const headerNavHTML = `<header class="ys-header">
                                                                                 <img src="Public/Uploads/uploadfile/images/20250428/2.png" alt="Waterproof solar roof mounting bracket with base plate and adjustable L-foot, designed for metal roof photovoltaic installations">
                                                                             </div>
                                                                             <div class="htll-word">
-                                                                                <p>For Slate Roof</p>
+                                                                                <p>Cho mái đá đen</p>
                                                                                                                                                             </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>                                                                </ul>
+                                                            </div>                                                        </li><li class="hpsr-list-item">
+                                                            <div class="hpsr-list-item-lis">
+                                                                <div class="hpfr-link">
+                                                                    <a href="product/mounting-systemcf33.html?tp=68"  title="" class="hpft-link-box">
+                                                                        <p>Hệ Thống Gắn Kết</p>
+                                                                        <div class="hpft-link-icons">
+                                                                            <img src="Public/En/images/nav_arrows01.svg" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <ul class="hlil-thrul">
+                                                                    <li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/m10-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/M10SERIES-893.png" alt="Solavita Black all-glass solar panel with monocrystalline cells arranged in a full-black module design, viewed from the front">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>M10 SERIES</p>
+                                                                                <p><span>420-645W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/g12-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/G12SERIES.png" alt="210 Monocrystalline half-cell solar panel with silver aluminum frame, ideal for high-efficiency residential or commercial PV installations.">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>G12 SERIES </p>
+                                                                                <p><span>630-720W</span></p>                                                                            </div>
+                                                                            <div class="htll-bgs">
+                                                                                <img src="Public/En/images/a1_bg_05.png" alt="">
+                                                                            </div>
+                                                                        </a>
+                                                                    </li><li class="hlil-thrul-li ">
+                                                                        <a href="product/pv-module/modules/g12r-series.html" title="" class="hlil-thrul-li-link">
+                                                                            <div class="ys-imgbox-cover">
+                                                                                <img src="Public/En/images/d_pics02.png" alt="">
+                                                                                <img src="Public/Uploads/uploadfile/images/20250425/G12RSERIES.png" alt="High-efficiency monocrystalline half-cell solar panel with white backsheet and silver frame, designed for large-scale commercial and utility solar installations">
+                                                                            </div>
+                                                                            <div class="htll-word">
+                                                                                <p>G12R SERIES </p>
+                                                                                <p><span>440-630W</span></p>                                                                            </div>
                                                                             <div class="htll-bgs">
                                                                                 <img src="Public/En/images/a1_bg_05.png" alt="">
                                                                             </div>
@@ -1257,7 +1173,7 @@ const headerNavHTML = `<header class="ys-header">
                                                             <div class="hptu-li-le-icon">
                                                                 <img src="Public/Uploads/uploadfile/images/20250902/icon05-300.svg" alt="icon05-300.svg">
                                                             </div>
-                                                            <p>User Login</p>
+                                                            <p>Đăng nhập người dùng</p>
                                                         </div>
                                                         <div class="hptu-li-ri-icon">
                                                             <img src="Public/En/images/a1_icon_07_1.svg" alt="">
@@ -1271,7 +1187,7 @@ const headerNavHTML = `<header class="ys-header">
                 <div class="head-other">
                     <div class="std-btn3">
                         <a href="javascript:void(0);" class="std-btn3-box" id="roi-calc-trigger">
-                            <p data-text="ROI Calculator">ROI Calculator</p>
+                            <p data-text="Tính toán hiệu quả (ROI)">Tính toán hiệu quả (ROI)</p>
                             <div class="std-btn3-bg">
                                 <div class="std-btn3-bg-side"></div>
                             </div>
@@ -1392,7 +1308,7 @@ const headerNavHTML = `<header class="ys-header">
                                 <li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Large Scale</div>
+                                            <div class="ys-phnav-header-font">Quy mô lớn</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
@@ -1520,7 +1436,7 @@ const headerNavHTML = `<header class="ys-header">
                                                                     </li><li class=" ">
                                     <div class="ys-phnav-lisbox">
                                         <a href="#" >
-                                            <div class="ys-phnav-header-font">Đăng Nhập</div>
+                                            <div class="ys-phnav-header-font">Đăng nhập người dùng</div>
                                         </a>
                                         <div class="ys-phnav-icon"></div>
                                     </div>
@@ -1611,7 +1527,7 @@ const headerNavHTML = `<header class="ys-header">
                 </div>
                 <!-- Mobile bottom buttons -->
                 <div style="display:flex;gap:10px;padding:16px 15px;border-top:1px solid rgba(255,255,255,.1);">
-                    <a href="javascript:void(0);" id="roi-calc-trigger-ph" style="flex:1;display:block;text-align:center;padding:12px 0;background:#006BC0;color:#fff;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">ROI Calculator</a>
+                    <a href="javascript:void(0);" id="roi-calc-trigger-ph" style="flex:1;display:block;text-align:center;padding:12px 0;background:#006BC0;color:#fff;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">Tính toán hiệu quả (ROI)</a>
                     <a href="pages/software-cloud.html" style="flex:1;display:block;text-align:center;padding:12px 0;background:#fff;color:#006BC0;border:1px solid #006BC0;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">Cloud APP</a>
                 </div>
             </div>

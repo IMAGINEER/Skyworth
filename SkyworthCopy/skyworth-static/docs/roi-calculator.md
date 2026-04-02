@@ -9,8 +9,8 @@
 
 ROI Calculator 是一个面向越南市场的太阳能投资回报计算器组件，提供以下核心功能：
 
-- 8 个越南城市的峰值日照时数数据
-- 8 种产品型号选择（SolaMate 2 款 + SolaWard 6 款）
+- 17个越南城市的峰值日照时数数据
+- 6 种产品型号选择（SolaMate 2 款 + SolaHome 6 款）
 - 自给率、电费单价等参数可调
 - 线索获取机制（用户需填写信息解锁完整报告）
 - 5 个 KPI 卡片 + 30 年累积收益时间轴
@@ -23,31 +23,43 @@ ROI Calculator 是一个面向越南市场的太阳能投资回报计算器组�
 
 ```javascript
 var CITIES = {
-  'Ho Chi Minh City': { peakHours: 1460 },  // 胡志明市
-  'Hanoi':             { peakHours: 1150 },  // 河内
-  'Da Nang':           { peakHours: 1380 },  // 岘港
-  'Hai Phong':         { peakHours: 1180 },  // 海防
-  'Can Tho':           { peakHours: 1420 },  // 芹苴
-  'Nha Trang':         { peakHours: 1500 },  // 芽庄
-  'Binh Duong':        { peakHours: 1440 },  // 平阳
-  'Dong Nai':          { peakHours: 1430 }   // 同奈
-};
-```
+  'Ho Chi Minh City': { peakHours: 1580 },  // ↑ 实测略高
+  'Hanoi':             { peakHours: 1100 },  // ↑ 北部修正
+  'Da Nang':           { peakHours: 1480 },  // ↑ 中部优化
+  'Hai Phong':         { peakHours: 1120 },  // ↑ 同北部
+  'Can Tho':           { peakHours: 1550 },  // ↑ 南部
+  'Nha Trang':         { peakHours: 1620 },  // ↑ 高辐射带
+  'Binh Duong':        { peakHours: 1560 },  // ↑ 工业区
+  'Dong Nai':          { peakHours: 1540 }，   // ↑ 工业区
 
+  'Ninh Thuan':   { peakHours: 1750 },  // 全国最高辐射
+  'Binh Thuan':   { peakHours: 1680 },  // 极优光照+低降雨
+  'Tay Ninh':     { peakHours: 1580 },  // 南部高辐射带
+  'Binh Phuoc':   { peakHours: 1600 },  // 全国潜力最大（47GW）
+  'Gia Lai':      { peakHours: 1550 },  // 高原高辐射
+  'Dak Lak':      { peakHours: 1530 },  // 稳定高日照
+
+  'Ba Ria-Vung Tau': { peakHours: 1500 }, // 沿海稳定高辐射
+  'Long An':      { peakHours: 1520 },  // 工商业+南部辐射
+  'Khanh Hoa':    { peakHours: 1600 }   // 含芽庄高辐射区
+};
+
+```
 **说明**：peakHours 为年峰值日照时数（hours/year），数据来源于越南各城市平均太阳辐照度。
+**数据源**：https://energydata.info/dataset/vietnam-solar-radiation-measurement-data（2026年更新）
 
 ### 2.2 产品数据 (PRODUCTS)
 
 | 产品名称 | 功率 (W) | 价格 (VND) |
 |---------|---------|-----------|
+SolaMate系列
 | SolaMate 1-to-2 (900W) | 900 | 16,600,000 |
-| SolaMate 1-to-4 (1800W) | 1800 | 29,900,000 |
-| SolaWard 5kW (5670W) | 5670 | 110,960,000 |
-| SolaWard 10kW (11930W) | 11930 | 208,000,000 |
-| SolaWard 15kW (17600W) | 17600 | 298,000,000 |
-| SolaWard 20kW (23860W) | 23860 | 385,000,000 |
-| SolaWard 25kW (29530W) | 29530 | 468,000,000 |
-| SolaWard 30kW (35790W) | 35790 | 550,000,000 |
+| SolaMate 1-to-4 (1800W) | 1800 | 30000000 |
+SolaHome系列
+| SolaRoof 5kW (5.04kWp) | 5670 | 69000000 |
+| SolaRoof 10kW (10.08kWp) | 11930 | 129000000 |
+| SolaLoft 5kW (5.04kWp) | 5670 | 79000000 |
+| SolaLoft 10kW (10.08kWp) | 11930 | 149000000 |
 
 ### 2.3 默认参数
 

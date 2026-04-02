@@ -9,30 +9,38 @@
 
   /* ========== City Data (Vietnam) ========== */
   var CITIES = {
-    'Ho Chi Minh City':  { peakHours: 1460 },
-    'Hanoi':             { peakHours: 1150 },
-    'Da Nang':           { peakHours: 1380 },
-    'Hai Phong':         { peakHours: 1180 },
-    'Can Tho':           { peakHours: 1420 },
-    'Nha Trang':         { peakHours: 1500 },
-    'Binh Duong':        { peakHours: 1440 },
-    'Dong Nai':          { peakHours: 1430 }
+    'Ho Chi Minh City': { peakHours: 1580 },
+    'Hanoi':            { peakHours: 1100 },
+    'Da Nang':          { peakHours: 1480 },
+    'Hai Phong':        { peakHours: 1120 },
+    'Can Tho':          { peakHours: 1550 },
+    'Nha Trang':        { peakHours: 1620 },
+    'Binh Duong':       { peakHours: 1560 },
+    'Dong Nai':         { peakHours: 1540 },
+    'Ninh Thuan':       { peakHours: 1750 },
+    'Binh Thuan':       { peakHours: 1680 },
+    'Tay Ninh':         { peakHours: 1580 },
+    'Binh Phuoc':       { peakHours: 1600 },
+    'Gia Lai':          { peakHours: 1550 },
+    'Dak Lak':          { peakHours: 1530 },
+    'Ba Ria-Vung Tau':  { peakHours: 1500 },
+    'Long An':          { peakHours: 1520 },
+    'Khanh Hoa':        { peakHours: 1600 }
   };
 
   var PRODUCTS = [
-    { name: 'SolaMate 1-to-2 (900W)',    power: 900,    cost: 16600000 },
-    { name: 'SolaMate 1-to-4 (1800W)',   power: 1800,   cost: 29900000 },
-    { name: 'SolaWard 5kW (5670W)',      power: 5670,   cost: 110960000 },
-    { name: 'SolaWard 10kW (11930W)',    power: 11930,  cost: 208000000 },
-    { name: 'SolaWard 15kW (17600W)',    power: 17600,  cost: 298000000 },
-    { name: 'SolaWard 20kW (23860W)',    power: 23860,  cost: 385000000 },
-    { name: 'SolaWard 25kW (29530W)',    power: 29530,  cost: 468000000 },
-    { name: 'SolaWard 30kW (35790W)',    power: 35790,  cost: 550000000 }
+    { name: 'SolaMate 1-to-2 (900W)',   power: 900,    cost: 16600000 },
+    { name: 'SolaMate 1-to-4 (1800W)',  power: 1800,   cost: 30000000 },
+    { name: 'SolaRoof 5kW (5.04kWp)',   power: 5670,   cost: 69000000 },
+    { name: 'SolaRoof 10kW (10.08kWp)', power: 11930,  cost: 129000000 },
+    { name: 'SolaLoft 5kW (5.04kWp)',   power: 5670,   cost: 79000000 },
+    { name: 'SolaLoft 10kW (10.08kWp)', power: 11930,  cost: 149000000 }
   ];
 
   var CURRENCY = 'VND';
   var DEFAULT_GRID_PRICE = 2103;
   var DEFAULT_FIT_PRICE = 0;
+  var DEFAULT_SELF_USE = 80;
 
   /* ========== Helpers ========== */
   function fmtVND(v) {
@@ -63,7 +71,7 @@
     city: 'Ho Chi Minh City',
     productIdx: 0,
     gridPrice: DEFAULT_GRID_PRICE,
-    selfUse: 80,
+    selfUse: DEFAULT_SELF_USE,
     fitPrice: DEFAULT_FIT_PRICE,
     unlocked: false
   };
@@ -71,26 +79,63 @@
   function getCity() { return CITIES[state.city]; }
   function getProduct() { return PRODUCTS[state.productIdx]; }
 
+  /* ========== Degradation ========== */
+  // Year 1: 100%, Year 2: 99%, then -0.4827%/year linear
+  // 30-year cumulative total = 93% of no-degradation total
+  var DEG_RATE = 0.004827; // ~0.4827% per year
+
+  function getDegradation(year) {
+    if (year <= 1) return 1.0;
+    if (year === 2) return 0.99;
+    var deg = 0.99 - (year - 2) * DEG_RATE;
+    return deg;
+  }
+
   /* ========== Calculation ========== */
   function calc() {
     var city = getCity();
     var prod = getProduct();
     var powerKW = prod.power / 1000;
-    var annualGen = powerKW * city.peakHours;
     var selfRate = state.selfUse / 100;
-    var annualRev = (annualGen * selfRate * state.gridPrice) + (annualGen * (1 - selfRate) * state.fitPrice);
-    var payback = annualRev > 0 ? prod.cost / annualRev : Infinity;
-    var roi30 = annualRev > 0 ? (annualRev * 30) / prod.cost : 0;
-    var lcoe = annualGen > 0 ? prod.cost / (annualGen * 30) : 0;
-    var total30 = annualRev * 30;
+
+    // Year 1 generation (for display)
+    var annualGen = powerKW * city.peakHours;
+
+    // 30-year cumulative calculation
+    var totalGen30 = 0;
+    var totalRev30 = 0;
+    var cumulativeRev = 0;
+    var payback = Infinity;
+    var yearlyData = [];
+
+    for (var y = 1; y <= 30; y++) {
+      var deg = getDegradation(y);
+      var gen = powerKW * city.peakHours * deg;
+      var rev = (gen * selfRate * state.gridPrice) + (gen * (1 - selfRate) * state.fitPrice);
+      totalGen30 += gen;
+      totalRev30 += rev;
+      cumulativeRev += rev;
+
+      yearlyData.push({ year: y, gen: gen, rev: rev, deg: deg });
+
+      if (payback === Infinity && cumulativeRev >= prod.cost) {
+        payback = y - 1 + (prod.cost - (cumulativeRev - rev)) / rev;
+      }
+    }
+
+    var roi30 = totalRev30 > 0 ? (totalRev30 / prod.cost) : 0;
+    var lcoe = totalGen30 > 0 ? prod.cost / totalGen30 : 0;
+
     return {
       annualGen: annualGen,
-      annualRev: annualRev,
+      annualRev: (annualGen * selfRate * state.gridPrice) + (annualGen * (1 - selfRate) * state.fitPrice),
       payback: payback,
       roi30: roi30,
       lcoe: lcoe,
-      total30: total30,
-      cost: prod.cost
+      total30: totalRev30,
+      cost: prod.cost,
+      totalGen30: totalGen30,
+      yearlyData: yearlyData
     };
   }
 
@@ -125,9 +170,10 @@
     sidebar.appendChild(field('Grid Electricity Price', gridGroup));
 
     // Self-use slider
-    refs.selfSlider = el('input', { className: 'sc-slider', type: 'range', min: '0', max: '100', value: '80', onInput: onSelfUse });
-    refs.selfVal = el('span', { className: 'sc-slider-val' }, ['80%']);
-    sidebar.appendChild(field('Self-use Rate', el('div', { className: 'sc-slider-wrap' }, [refs.selfSlider, refs.selfVal])));
+    refs.selfSlider = el('input', { className: 'sc-slider', type: 'range', min: '0', max: '100', value: String(DEFAULT_SELF_USE), onInput: onSelfUse });
+    refs.selfVal = el('span', { className: 'sc-slider-val' }, [DEFAULT_SELF_USE + '%']);
+    var selfSliderWrap = el('div', { className: 'sc-slider-wrap' }, [refs.selfSlider, refs.selfVal]);
+    sidebar.appendChild(field('Self-use Rate', selfSliderWrap));
 
     // FIT price
     refs.fitInput = el('input', { className: 'sc-input', type: 'number', step: 'any', value: String(DEFAULT_FIT_PRICE), onInput: onFitPrice });
@@ -140,7 +186,11 @@
   function field(label, control) {
     var wrap = el('div', { className: 'sc-field' });
     wrap.appendChild(el('label', { className: 'sc-label' }, [label]));
-    wrap.appendChild(control);
+    if (Array.isArray(control)) {
+      control.forEach(function (c) { wrap.appendChild(c); });
+    } else {
+      wrap.appendChild(control);
+    }
     return wrap;
   }
 
