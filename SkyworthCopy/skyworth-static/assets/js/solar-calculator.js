@@ -29,12 +29,19 @@
   };
 
   var PRODUCTS = [
-    { name: 'SolaMate 1-to-2 (900W)',   power: 900,    cost: 16600000 },
-    { name: 'SolaMate 1-to-4 (1800W)',  power: 1800,   cost: 30000000 },
-    { name: 'SolaRoof 5kW (5.04kWp)',   power: 5670,   cost: 69000000 },
-    { name: 'SolaRoof 10kW (10.08kWp)', power: 11930,  cost: 129000000 },
-    { name: 'SolaLoft 5kW (5.04kWp)',   power: 5670,   cost: 79000000 },
-    { name: 'SolaLoft 10kW (10.08kWp)', power: 11930,  cost: 149000000 }
+    // SolaMate系列
+    { name: 'SolaMate 1-to-2 (900W)',   power: 900,    cost: 16600000, hasEss: false },
+    { name: 'SolaMate 1-to-4 (1800W)',  power: 1800,   cost: 30000000, hasEss: false },
+    // SolaHome系列
+    { name: 'SolaRoof 5kW (5.04kWp)',   power: 5040,   cost: 69000000, hasEss: false },
+    { name: 'SolaRoof 10kW (10.08kWp)', power: 10080,  cost: 129000000, hasEss: false },
+    { name: 'SolaLoft 5kW (5.04kWp)',   power: 5040,   cost: 79000000, hasEss: false },
+    { name: 'SolaLoft 10kW (10.08kWp)', power: 10080,  cost: 149000000, hasEss: false },
+    // SolaHome Pro系列 (配储)
+    { name: 'SolaRoof 5kW Pro (5.04kWp)',  power: 5040,   cost: 76000000, hasEss: true },
+    { name: 'SolaRoof 10kW Pro (10.08kWp)', power: 10080,  cost: 136000000, hasEss: true },
+    { name: 'SolaLoft 5kW Pro (5.04kWp)',  power: 5040,   cost: 89000000, hasEss: true },
+    { name: 'SolaLoft 10kW Pro (11.34kW)',  power: 11340,  cost: 169000000, hasEss: true }
   ];
 
   var CURRENCY = 'VND';
@@ -363,6 +370,16 @@
   }
   function onProductChange() {
     state.productIdx = parseInt(refs.productSel.value, 10);
+    var prod = getProduct();
+    if (prod.hasEss) {
+      state.selfUse = 100;
+      refs.selfSlider.value = '100';
+      refs.selfVal.textContent = '100%';
+    } else {
+      state.selfUse = DEFAULT_SELF_USE;
+      refs.selfSlider.value = String(DEFAULT_SELF_USE);
+      refs.selfVal.textContent = DEFAULT_SELF_USE + '%';
+    }
     if (state.unlocked) render();
   }
   function onGridPrice() {

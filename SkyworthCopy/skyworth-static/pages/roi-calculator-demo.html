@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar ROI Calculator - Demo</title>
+    <link rel="stylesheet" href="../assets/css/solar-calculator.css">
+    <style>
+        body { background: #f4c97d20; padding: 40px 20px; }
+        .demo-wrap { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #155ccd; margin-bottom: 40px; font-size: 2rem; }
+        h2 { font-size: 1.4rem; margin: 40px 0 20px; color: #155ccd; border-bottom: 2px solid #268bea40; padding-bottom: 10px; }
+        h3 { font-size: 1.1rem; margin: 20px 0 10px; color: #1a1a1a; }
+        p { color: #555; margin-bottom: 16px; }
+        .intro { font-size: 1.1rem; color: #666; max-width: 800px; margin-bottom: 40px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+        th { background: #155ccd; color: #fff; font-weight: 600; }
+        tr:hover { background: #f8fafc; }
+        .formula { background: #155ccd; padding: 20px; border-radius: 12px; margin: 16px 0; }
+        .formula strong { color: #f4c97d; display: block; margin-bottom: 8px; }
+        .formula code { color: #fff; font-size: 14px; line-height: 1.8; background: rgba(0,0,0,0.2); padding: 2px 6px; border-radius: 4px; }
+        .highlight { color: #155ccd; font-weight: 600; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 8px; }
+        .tag-pro { background: rgba(21,92,205,.15); color: #155ccd; }
+        .sc-root { margin: 0 auto; box-shadow: 0 8px 40px rgba(21,92,205,.15); }
+        .sc-roi-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #155ccd, #268bea);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+        .sc-kpi { position: relative; }
+        .sc-kpi-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #155ccd, #268bea);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+        .sc-kpi.highlight .sc-kpi-badge {
+            background: linear-gradient(135deg, #a29974, #f4c97d);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-wrap">
+        <h1>越南在线明白纸 （Solar ROI Calculator）</h1>
+        <p class="intro">太阳能投资回报计算器 — 帮助您估算屋顶太阳能系统的投资回报周期与收益。面向越南市场，基于当地日照数据和电价进行计算。</p>
+
+        <h2>一、产品系列</h2>
+        <table>
+            <thead><tr><th>系列</th><th>产品型号</th><th>功率</th><th>价格 (VND)</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td rowspan="2"><strong>SolaMate</strong><br><span style="color:#888;font-size:12px;">阳台光伏</span></td><td>SolaMate 1-to-2 (900W)</td><td>900 W</td><td>16,600,000</td><td>适用于小型阳台场景</td></tr>
+                <tr><td>SolaMate 1-to-4 (1800W)</td><td>1,800 W</td><td>30,000,000</td><td>适用于中型阳台场景</td></tr>
+                <tr><td rowspan="4"><strong>SolaHome</strong><br><span style="color:#888;font-size:12px;">户用EPC方案</span></td><td>SolaRoof 5kW (5.04kWp)</td><td>5,040 W</td><td>69,000,000</td><td rowspan="4">自用为主，余电上网</td></tr>
+                <tr><td>SolaRoof 10kW (10.08kWp)</td><td>10,080 W</td><td>129,000,000</td></tr>
+                <tr><td>SolaLoft 5kW (5.04kWp)</td><td>5,040 W</td><td>79,000,000</td></tr>
+                <tr><td>SolaLoft 10kW (10.08kWp)</td><td>10,080 W</td><td>149,000,000</td></tr>
+                <tr><td rowspan="4"><strong>SolaHome Pro</strong><br><span style="color:#888;font-size:12px;">配储系统</span></td><td>SolaRoof 5kW Pro (5.04kWp) <span class="tag tag-pro">配储</span></td><td>5,040 W</td><td>76,000,000</td><td rowspan="4">搭配储能系统，自用率自动100%</td></tr>
+                <tr><td>SolaRoof 10kW Pro (10.08kWp) <span class="tag tag-pro">配储</span></td><td>10,080 W</td><td>136,000,000</td></tr>
+                <tr><td>SolaLoft 5kW Pro (5.04kWp) <span class="tag tag-pro">配储</span></td><td>5,040 W</td><td>89,000,000</td></tr>
+                <tr><td>SolaLoft 10kW Pro (11.34kW) <span class="tag tag-pro">配储</span></td><td>11,340 W</td><td>169,000,000</td></tr>
+            </tbody>
+        </table>
+
+        <h2>二、城市峰值日照时数</h2>
+        <p>不同城市年均峰值日照时数（小时/年），数据来源：越南国家电力公司 EVN</p>
+        <table>
+            <thead><tr><th>城市</th><th>峰值日照时数 (h/年)</th><th>区域</th></tr></thead>
+            <tbody>
+                <tr><td>胡志明市 (Ho Chi Minh City)</td><td>1,580</td><td>南部</td></tr>
+                <tr><td>河内 (Hanoi)</td><td>1,100</td><td>北部</td></tr>
+                <tr><td>岘港 (Da Nang)</td><td>1,480</td><td>中部</td></tr>
+                <tr><td>海防 (Hai Phong)</td><td>1,120</td><td>北部</td></tr>
+                <tr><td>芹苴 (Can Tho)</td><td>1,550</td><td>南部</td></tr>
+                <tr><td>芽庄 (Nha Trang)</td><td>1,620</td><td>中部高辐射带</td></tr>
+                <tr><td>平阳 (Binh Duong)</td><td>1,560</td><td>南部工业区</td></tr>
+                <tr><td>同奈 (Dong Nai)</td><td>1,540</td><td>南部工业区</td></tr>
+                <tr><td class="highlight">宁顺 (Ninh Thuan)</td><td class="highlight">1,750</td><td>全国最高辐射</td></tr>
+                <tr><td>平顺 (Binh Thuan)</td><td>1,680</td><td>极优光照+低降雨</td></tr>
+                <tr><td>西宁 (Tay Ninh)</td><td>1,580</td><td>南部高辐射带</td></tr>
+                <tr><td>平福 (Binh Phuoc)</td><td>1,600</td><td>全国潜力最大</td></tr>
+                <tr><td>嘉莱 (Gia Lai)</td><td>1,550</td><td>高原高辐射</td></tr>
+                <tr><td>得乐 (Dak Lak)</td><td>1,530</td><td>稳定高日照</td></tr>
+                <tr><td>巴地头顿 (Ba Ria-Vung Tau)</td><td>1,500</td><td>沿海稳定高辐射</td></tr>
+                <tr><td>隆安 (Long An)</td><td>1,520</td><td>工商业+南部辐射</td></tr>
+                <tr><td>庆和 (Khanh Hoa)</td><td>1,600</td><td>含芽庄高辐射区</td></tr>
+            </tbody>
+        </table>
+
+        <h2>三、计算逻辑</h2>
+        <h3>3.1 光伏衰减率</h3>
+        <p>光伏系统效率随时间逐年衰减，采用线性衰减模型：</p>
+        <table>
+            <thead><tr><th>年份</th><th>效率系数</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td>Year 1</td><td>100%</td><td>完整发电</td></tr>
+                <tr><td>Year 2</td><td>99%</td><td>首年衰减 1%</td></tr>
+                <tr><td>Year 10</td><td>~95.66%</td><td>每年衰减 0.4827%</td></tr>
+                <tr><td>Year 30</td><td>~85%</td><td>30年累计发电为无衰减的 93%</td></tr>
+            </tbody>
+        </table>
+
+        <h3>3.2 核心公式</h3>
+        <div class="formula">
+            <strong>Step 1: 年发电量</strong>
+            <code>年发电量 = 功率(kW) × 峰值日照时数 × 衰减系数</code><br><br>
+            <strong>Step 2: 年收益</strong>
+            <code>年收益 = 发电量 × 自用率 × 电网电价 + 发电量 × (1-自用率) × 上网电价</code><br><br>
+            <strong>Step 3: 30年累加（逐年计算）</strong>
+            <code>累计收益 += 当年收益</code><br><br>
+            <strong>Step 4: 回收期</strong>
+            <code>回收期 = 累计收益首次 ≥ 成本的年份</code><br><br>
+            <strong>Step 5: ROI倍数</strong>
+            <code>ROI = 30年累计总收益 / 成本</code>
+        </div>
+
+        <h2>四、交互演示</h2>
+        <div class="sc-root">
+            <div class="sc-sidebar">
+                <div class="sc-sidebar-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e2e0" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    ROI Calculator
+                </div>
+                <p class="sc-sidebar-sub">Vietnam solar investment estimator</p>
+
+                <div class="sc-field">
+                    <label class="sc-label">City</label>
+                    <select class="sc-select" id="demo-city">
+                        <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+                        <option value="Hanoi">Hanoi</option>
+                        <option value="Da Nang">Da Nang</option>
+                        <option value="Hai Phong">Hai Phong</option>
+                        <option value="Can Tho">Can Tho</option>
+                        <option value="Nha Trang">Nha Trang</option>
+                        <option value="Binh Duong">Binh Duong</option>
+                        <option value="Dong Nai">Dong Nai</option>
+                        <option value="Ninh Thuan">Ninh Thuan</option>
+                        <option value="Binh Thuan">Binh Thuan</option>
+                        <option value="Tay Ninh">Tay Ninh</option>
+                        <option value="Binh Phuoc">Binh Phuoc</option>
+                        <option value="Gia Lai">Gia Lai</option>
+                        <option value="Dak Lak">Dak Lak</option>
+                        <option value="Ba Ria-Vung Tau">Ba Ria-Vung Tau</option>
+                        <option value="Long An">Long An</option>
+                        <option value="Khanh Hoa">Khanh Hoa</option>
+                    </select>
+                </div>
+
+                <div class="sc-field">
+                    <label class="sc-label">Product</label>
+                    <select class="sc-select" id="demo-product">
+                        <option value="0">SolaMate 1-to-2 (900W)</option>
+                        <option value="1">SolaMate 1-to-4 (1800W)</option>
+                        <option value="2">SolaRoof 5kW (5.04kWp)</option>
+                        <option value="3">SolaRoof 10kW (10.08kWp)</option>
+                        <option value="4">SolaLoft 5kW (5.04kWp)</option>
+                        <option value="5">SolaLoft 10kW (10.08kWp)</option>
+                        <option value="6">SolaRoof 5kW Pro (5.04kWp) [ESS]</option>
+                        <option value="7">SolaRoof 10kW Pro (10.08kWp) [ESS]</option>
+                    </select>
+                </div>
+
+                <div class="sc-field">
+                    <label class="sc-label">Grid Electricity Price</label>
+                    <div class="sc-input-group">
+                        <input type="number" class="sc-input" id="demo-grid-price" value="2103" step="any">
+                        <span class="sc-input-unit">VND/kWh</span>
+                    </div>
+                </div>
+
+                <div class="sc-field">
+                    <label class="sc-label">Self-use Rate</label>
+                    <div class="sc-slider-wrap">
+                        <input type="range" class="sc-slider" id="demo-self-slider" min="0" max="100" value="80">
+                        <span class="sc-slider-val" id="demo-self-val">80%</span>
+                    </div>
+                </div>
+
+                <div class="sc-field">
+                    <label class="sc-label">Feed-in Tariff</label>
+                    <div class="sc-input-group">
+                        <input type="number" class="sc-input" id="demo-fit-price" value="0" step="any">
+                        <span class="sc-input-unit">VND/kWh</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sc-main">
+                <div class="sc-main-title">Investment Analysis</div>
+                <div class="sc-main-sub" id="demo-subtitle">-</div>
+
+                <div class="sc-kpi-grid">
+                    <div class="sc-kpi">
+                        <div class="sc-kpi-label">Year 1 Generation</div>
+                        <div class="sc-kpi-val" id="kpi-gen">-</div>
+                    </div>
+                    <div class="sc-kpi">
+                        <div class="sc-kpi-label">Year 1 Revenue</div>
+                        <div class="sc-kpi-val" id="kpi-rev">-</div>
+                    </div>
+                    <div class="sc-kpi highlight">
+                        <div class="sc-kpi-label">Payback Period</div>
+                        <div class="sc-kpi-val" id="kpi-payback">-</div>
+                    </div>
+                    <div class="sc-kpi">
+                        <div class="sc-kpi-label">10-Year Return</div>
+                        <span class="sc-kpi-badge" id="kpi-10yr-roi">-</span>
+                        <div class="sc-kpi-val" id="kpi-10yr">-</div>
+                    </div>
+                    <div class="sc-kpi">
+                        <div class="sc-kpi-label">25-Year Return</div>
+                        <span class="sc-kpi-badge" id="kpi-25yr-roi">-</span>
+                        <div class="sc-kpi-val" id="kpi-25yr">-</div>
+                    </div>
+                    <div class="sc-kpi highlight">
+                        <div class="sc-kpi-label">30-Year Return</div>
+                        <span class="sc-kpi-badge" id="kpi-30yr-roi">-</span>
+                        <div class="sc-kpi-val" id="kpi-30yr">-</div>
+                    </div>
+                    </div>
+
+                <div class="sc-chart">
+                    <div class="sc-chart-title">Cumulative Return Timeline</div>
+                    <div class="sc-chart-bars" id="demo-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3>实时计算公式</h3>
+        <div class="formula" id="formula-display">
+            <div id="formula-content">
+                <strong>Year 1 发电量</strong>
+                <code id="f-gen">-</code><br><br>
+                <strong>Year 1 收益</strong>
+                <code id="f-rev">-</code><br><br>
+                <strong>投资回收期</strong>
+                <code id="f-payback">-</code><br><br>
+                <strong>10年ROI</strong>
+                <code id="f-10yr">-</code><br><br>
+                <strong>25年ROI</strong>
+                <code id="f-25yr">-</code><br><br>
+                <strong>30年ROI</strong>
+                <code id="f-30yr">-</code>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== Data from solar-calculator.js =====
+        var CITIES = {
+            'Ho Chi Minh City': { peakHours: 1580 },
+            'Hanoi':            { peakHours: 1100 },
+            'Da Nang':          { peakHours: 1480 },
+            'Hai Phong':        { peakHours: 1120 },
+            'Can Tho':          { peakHours: 1550 },
+            'Nha Trang':        { peakHours: 1620 },
+            'Binh Duong':       { peakHours: 1560 },
+            'Dong Nai':         { peakHours: 1540 },
+            'Ninh Thuan':       { peakHours: 1750 },
+            'Binh Thuan':       { peakHours: 1680 },
+            'Tay Ninh':         { peakHours: 1580 },
+            'Binh Phuoc':       { peakHours: 1600 },
+            'Gia Lai':          { peakHours: 1550 },
+            'Dak Lak':          { peakHours: 1530 },
+            'Ba Ria-Vung Tau':  { peakHours: 1500 },
+            'Long An':          { peakHours: 1520 },
+            'Khanh Hoa':        { peakHours: 1600 }
+        };
+
+        var PRODUCTS = [
+            { name: 'SolaMate 1-to-2 (900W)',   power: 900,    cost: 16600000, hasEss: false },
+            { name: 'SolaMate 1-to-4 (1800W)',  power: 1800,   cost: 30000000, hasEss: false },
+            { name: 'SolaRoof 5kW (5.04kWp)',   power: 5040,   cost: 69000000, hasEss: false },
+            { name: 'SolaRoof 10kW (10.08kWp)', power: 10080,  cost: 129000000, hasEss: false },
+            { name: 'SolaLoft 5kW (5.04kWp)',   power: 5040,   cost: 79000000, hasEss: false },
+            { name: 'SolaLoft 10kW (10.08kWp)', power: 10080,  cost: 149000000, hasEss: false },
+            { name: 'SolaRoof 5kW Pro (5.04kWp)',  power: 5040,   cost: 76000000, hasEss: true },
+            { name: 'SolaRoof 10kW Pro (10.08kWp)', power: 10080,  cost: 136000000, hasEss: true },
+            { name: 'SolaLoft 5kW Pro (5.04kWp)',  power: 5040,   cost: 89000000, hasEss: true },
+            { name: 'SolaLoft 10kW Pro (11.34kW)',  power: 11340,  cost: 169000000, hasEss: true }
+        ];
+
+        var DEG_RATE = 0.004827;
+        var DEFAULT_GRID_PRICE = 2103;
+        var DEFAULT_FIT_PRICE = 0;
+        var DEFAULT_SELF_USE = 80;
+
+        function getDegradation(year) {
+            if (year <= 1) return 1.0;
+            if (year === 2) return 0.99;
+            return 0.99 - (year - 2) * DEG_RATE;
+        }
+
+        function calc(cityKey, productIdx, gridPrice, fitPrice, selfUse) {
+            var city = CITIES[cityKey];
+            var prod = PRODUCTS[productIdx];
+            var powerKW = prod.power / 1000;
+            var selfRate = selfUse / 100;
+
+            var totalGen30 = 0;
+            var totalRev30 = 0;
+            var cumulativeRev = 0;
+            var payback = Infinity;
+            var yearlyData = [];
+
+            for (var y = 1; y <= 30; y++) {
+                var deg = getDegradation(y);
+                var gen = powerKW * city.peakHours * deg;
+                var rev = (gen * selfRate * gridPrice) + (gen * (1 - selfRate) * fitPrice);
+                totalGen30 += gen;
+                totalRev30 += rev;
+                cumulativeRev += rev;
+                yearlyData.push({ year: y, gen: gen, rev: rev, cumRev: cumulativeRev });
+
+                if (payback === Infinity && cumulativeRev >= prod.cost) {
+                    payback = y - 1 + (prod.cost - (cumulativeRev - rev)) / rev;
+                }
+            }
+
+            return {
+                annualGen: yearlyData[0].gen,
+                annualRev: yearlyData[0].rev,
+                payback: payback,
+                roi30: totalRev30 / prod.cost,
+                lcoe: prod.cost / totalGen30,
+                total30: totalRev30,
+                yearlyData: yearlyData
+            };
+        }
+
+        function fmtVND(n) {
+            if (n >= 1e9) return (n / 1e9).toFixed(1) + 'B';
+            if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+            if (n >= 1e3) return (n / 1e3).toFixed(0) + 'K';
+            return n.toFixed(0);
+        }
+
+        function render() {
+            var cityKey = document.getElementById('demo-city').value;
+            var prodIdx = parseInt(document.getElementById('demo-product').value);
+            var gridPrice = parseFloat(document.getElementById('demo-grid-price').value) || DEFAULT_GRID_PRICE;
+            var fitPrice = parseFloat(document.getElementById('demo-fit-price').value) || DEFAULT_FIT_PRICE;
+            var selfUse = parseInt(document.getElementById('demo-self-slider').value) || DEFAULT_SELF_USE;
+
+            var prod = PRODUCTS[prodIdx];
+            var city = CITIES[cityKey];
+
+            // Auto-set self-use for ESS products
+            if (prod.hasEss) {
+                selfUse = 100;
+                document.getElementById('demo-self-slider').value = 100;
+                document.getElementById('demo-self-val').textContent = '100%';
+            } else {
+                document.getElementById('demo-self-val').textContent = selfUse + '%';
+            }
+
+            var result = calc(cityKey, prodIdx, gridPrice, fitPrice, selfUse);
+
+            // Subtitle
+            document.getElementById('demo-subtitle').textContent = prod.name + ' · ' + cityKey + ' (' + city.peakHours + 'h peak sun)';
+
+            // Yearly ROI Badges
+            var cost = prod.cost;
+            document.getElementById('kpi-10yr-roi').textContent = (result.yearlyData[9].cumRev / cost).toFixed(1) + 'x';
+            document.getElementById('kpi-25yr-roi').textContent = (result.yearlyData[24].cumRev / cost).toFixed(1) + 'x';
+            document.getElementById('kpi-30yr-roi').textContent = (result.yearlyData[29].cumRev / cost).toFixed(1) + 'x';
+
+            // KPIs
+            document.getElementById('kpi-gen').textContent = fmtVND(result.annualGen) + ' kWh';
+            document.getElementById('kpi-rev').textContent = fmtVND(result.annualRev) + ' VND';
+            document.getElementById('kpi-payback').textContent = result.payback === Infinity ? '∞' : result.payback.toFixed(1) + ' years';
+            document.getElementById('kpi-10yr').textContent = fmtVND(result.yearlyData[9].cumRev) + ' VND';
+            document.getElementById('kpi-25yr').textContent = fmtVND(result.yearlyData[24].cumRev) + ' VND';
+            document.getElementById('kpi-30yr').textContent = fmtVND(result.yearlyData[29].cumRev) + ' VND';
+
+            // Chart
+            var chart = document.getElementById('demo-chart');
+            var maxRev = result.yearlyData[result.yearlyData.length - 1].cumRev;
+            var milestones = [5, 10, 15, 20, 25, 30];
+            chart.innerHTML = '';
+            milestones.forEach(function(y) {
+                var d = result.yearlyData[y - 1];
+                var paybackMilestone = result.payback !== Infinity ? milestones.find(function(m) { return m >= result.payback; }) : null;
+                var isPayback = y === paybackMilestone;
+                var row = document.createElement('div');
+                row.className = 'sc-bar-row';
+                row.innerHTML =
+                    '<span class="sc-bar-label">Year ' + y + '</span>' +
+                    '<div class="sc-bar-track">' +
+                        '<div class="sc-bar-fill' + (isPayback ? ' payback' : '') + '" style="width:' + (d.cumRev / maxRev * 100) + '%"></div>' +
+                    '</div>' +
+                    '<span class="sc-bar-val' + (isPayback ? ' sc-bar-val-pb' : '') + '">' + fmtVND(d.cumRev) + ' VND' + (isPayback ? ' \u2190 payback' : '') + '</span>';
+                chart.appendChild(row);
+            });
+
+            // Formula Display
+            var powerKW = prod.power / 1000;
+            var selfRate = selfUse / 100;
+            var deg1 = getDegradation(1);
+            var gen1 = powerKW * city.peakHours * deg1;
+            var rev1 = (gen1 * selfRate * gridPrice) + (gen1 * (1 - selfRate) * fitPrice);
+
+            document.getElementById('f-gen').textContent =
+                powerKW.toFixed(3) + ' kW × ' + city.peakHours + ' h × ' + (deg1 * 100).toFixed(1) + '% = ' + gen1.toFixed(0) + ' kWh';
+
+            document.getElementById('f-rev').textContent =
+                gen1.toFixed(0) + ' kWh × ' + (selfRate * 100).toFixed(0) + '% × ' + gridPrice + ' + ' +
+                gen1.toFixed(0) + ' kWh × ' + ((1 - selfRate) * 100).toFixed(0) + '% × ' + fitPrice + ' = ' + rev1.toFixed(0) + ' VND';
+
+            document.getElementById('f-payback').textContent =
+                result.payback === Infinity ? '成本无法回收' : '第 ' + result.payback.toFixed(1) + ' 年累计收益 ≥ ' + fmtVND(cost) + ' VND';
+
+            document.getElementById('f-10yr').textContent =
+                result.yearlyData[9].cumRev.toFixed(0) + ' VND ÷ ' + cost + ' VND = ' + (result.yearlyData[9].cumRev / cost).toFixed(2) + 'x';
+
+            document.getElementById('f-25yr').textContent =
+                result.yearlyData[24].cumRev.toFixed(0) + ' VND ÷ ' + cost + ' VND = ' + (result.yearlyData[24].cumRev / cost).toFixed(2) + 'x';
+
+            document.getElementById('f-30yr').textContent =
+                result.yearlyData[29].cumRev.toFixed(0) + ' VND ÷ ' + cost + ' VND = ' + (result.yearlyData[29].cumRev / cost).toFixed(2) + 'x';
+        }
+
+        // Event listeners
+        document.getElementById('demo-city').addEventListener('change', render);
+        document.getElementById('demo-product').addEventListener('change', render);
+        document.getElementById('demo-grid-price').addEventListener('input', render);
+        document.getElementById('demo-fit-price').addEventListener('input', render);
+        document.getElementById('demo-self-slider').addEventListener('input', function() {
+            var prod = PRODUCTS[parseInt(document.getElementById('demo-product').value)];
+            if (!prod.hasEss) {
+                document.getElementById('demo-self-val').textContent = this.value + '%';
+            }
+            render();
+        });
+
+        // Init
+        render();
+    </script>
+</body>
+</html>

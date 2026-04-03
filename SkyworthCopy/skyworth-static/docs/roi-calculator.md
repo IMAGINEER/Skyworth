@@ -10,8 +10,10 @@
 ROI Calculator 是一个面向越南市场的太阳能投资回报计算器组件，提供以下核心功能：
 
 - 17个越南城市的峰值日照时数数据
-- 6 种产品型号选择（SolaMate 2 款 + SolaHome 6 款）
+- 10 种产品型号选择（SolaMate 2 款 + SolaHome 4 款 + SolaHome Pro 4 款）
 - 自给率、电费单价等参数可调
+- **SolaHome Pro 系列自动拉满自用率至 100%**（配储产品）
+- 考虑光伏系统衰减率（每年 0.4827%，30 年累计发电为无衰减的 93%）
 - 线索获取机制（用户需填写信息解锁完整报告）
 - 5 个 KPI 卡片 + 30 年累积收益时间轴
 
@@ -31,7 +33,6 @@ var CITIES = {
   'Nha Trang':         { peakHours: 1620 },  // ↑ 高辐射带
   'Binh Duong':        { peakHours: 1560 },  // ↑ 工业区
   'Dong Nai':          { peakHours: 1540 }，   // ↑ 工业区
-
   'Ninh Thuan':   { peakHours: 1750 },  // 全国最高辐射
   'Binh Thuan':   { peakHours: 1680 },  // 极优光照+低降雨
   'Tay Ninh':     { peakHours: 1580 },  // 南部高辐射带
@@ -50,16 +51,23 @@ var CITIES = {
 
 ### 2.2 产品数据 (PRODUCTS)
 
-| 产品名称 | 功率 (W) | 价格 (VND) |
-|---------|---------|-----------|
+| 产品名称 | 功率 (W) | 价格 (VND) | 配储 |
+|---------|---------|-----------|------|
 SolaMate系列
-| SolaMate 1-to-2 (900W) | 900 | 16,600,000 |
-| SolaMate 1-to-4 (1800W) | 1800 | 30000000 |
+| SolaMate 1-to-2 (900W) | 900 | 16,600,000 | 否 |
+| SolaMate 1-to-4 (1800W) | 1800 | 30,000,000 | 否 |
 SolaHome系列
-| SolaRoof 5kW (5.04kWp) | 5670 | 69000000 |
-| SolaRoof 10kW (10.08kWp) | 11930 | 129000000 |
-| SolaLoft 5kW (5.04kWp) | 5670 | 79000000 |
-| SolaLoft 10kW (10.08kWp) | 11930 | 149000000 |
+| SolaRoof 5kW (5.04kWp) | 5040 | 69,000,000 | 否 |
+| SolaRoof 10kW (10.08kWp) | 10080 | 129,000,000 | 否 |
+| SolaLoft 5kW (5.04kWp) | 5040 | 79,000,000 | 否 |
+| SolaLoft 10kW (10.08kWp) | 10080 | 149,000,000 | 否 |
+SolaHome Pro系列 (配储)
+| SolaRoof 5kW Pro (5.04kWp) | 5040 | 76,000,000 | **是** |
+| SolaRoof 10kW Pro (10.08kWp) | 10080 | 136,000,000 | **是** |
+| SolaLoft 5kW Pro (5.04kWp) | 5040 | 89,000,000 | **是** |
+| SolaLoft 10kW Pro (11.34kW) | 11340 | 169,000,000 | **是** |
+
+> **配储说明**：选择 SolaHome Pro 系列时，自用率自动设置为 100%
 
 ### 2.3 默认参数
 
@@ -73,41 +81,70 @@ var DEFAULT_SELF_USE = 80;     // 默认自用率 80%
 
 ## 三、计算逻辑
 
-### 3.1 核心公式
+### 3.1 衰减率 (Degradation)
+
+光伏系统考虑线性衰减，参数如下：
+
+| 参数 | 值 | 说明 |
+|-----|-----|------|
+| Year 1 | 100% | 完整发电 |
+| Year 2 | 99% | 首年衰减 1% |
+| 衰减率 | 0.4827%/年 | 线性衰减 |
+| Year 30 | ~85% | 30年累计发电为无衰减的 93% |
 
 ```javascript
-function calc() {
-  // 1. 年发电量 (kWh/年)
-  var annualGen = powerKW * city.peakHours;
+var DEG_RATE = 0.004827; // ~0.4827% per year
 
-  // 2. 年收益 (VND/年)
-  var annualRev = (annualGen * selfRate * gridPrice)    // 自用部分
-                + (annualGen * (1-selfRate) * fitPrice); // 上网部分
-
-  // 3. 投资回收期 (年)
-  var payback = prod.cost / annualRev;
-
-  // 4. 30 年 ROI (%)
-  var roi30 = (annualRev * 30) / prod.cost * 100;
-
-  // 5. 平准化度电成本 LCOE (VND/kWh)
-  var lcoe = prod.cost / (annualGen * 30);
-
-  // 6. 30 年总收益 (VND)
-  var total30 = annualRev * 30;
+function getDegradation(year) {
+  if (year <= 1) return 1.0;
+  if (year === 2) return 0.99;
+  return 0.99 - (year - 2) * DEG_RATE;
 }
 ```
 
-### 3.2 参数说明
+### 3.2 核心公式
+
+```javascript
+function calc() {
+  // 1. 每年发电量 (kWh/年) - 考虑衰减率
+  // Year N 发电量 = powerKW * peakHours * degradation(N)
+
+  // 2. 30年循环累加
+  for (var y = 1; y <= 30; y++) {
+    var deg = getDegradation(y);
+    var gen = powerKW * city.peakHours * deg;
+    var rev = (gen * selfRate * gridPrice) + (gen * (1-selfRate) * fitPrice);
+    totalGen30 += gen;
+    totalRev30 += rev;
+
+    // 3. 逐年计算回收期
+    cumulativeRev += rev;
+    if (payback === Infinity && cumulativeRev >= cost) {
+      payback = y - 1 + (cost - (cumulativeRev - rev)) / rev;
+    }
+  }
+
+  // 4. 30 年 ROI
+  var roi30 = totalRev30 / cost;
+
+  // 5. 平准化度电成本 LCOE (VND/kWh)
+  var lcoe = cost / totalGen30;
+}
+```
+
+### 3.3 参数说明
 
 | 参数 | 说明 | 单位 |
 |-----|------|------|
 | powerKW | 产品功率 | kW |
 | city.peakHours | 城市年峰值日照时数 | hours/year |
-| selfRate | 自用率 (用户可调) | % |
+| selfRate | 自用率 (用户可调，SolaHome Pro 自动 100%) | % |
 | gridPrice | 电网电价 | VND/kWh |
 | fitPrice | 上网电价 | VND/kWh |
 | prod.cost | 产品价格 | VND |
+| degradation | 衰减系数 (0~1) | - |
+| totalGen30 | 30年累计发电量 | kWh |
+| totalRev30 | 30年累计收益 | VND |
 
 ---
 
@@ -120,11 +157,11 @@ function calc() {
 
 ### 4.2 表单界面
 
-1. **城市选择**：下拉菜单，选择越南 8 个城市
-2. **产品选择**：下拉菜单，选择 8 种产品型号
+1. **城市选择**：下拉菜单，选择越南 17 个城市
+2. **产品选择**：下拉菜单，选择 10 种产品型号
 3. **参数调节**：
    - 电网电价 (VND/kWh) - 默认 2103
-   - 自用率 (%) - 默认 80%
+   - 自用率 (%) - 默认 80%，选择 SolaHome Pro 系列时自动 100%
    - 上网电价 (VND/kWh) - 默认 0
 
 ### 4.3 线索解锁机制
@@ -137,11 +174,12 @@ function calc() {
 
 | 指标 | 说明 |
 |-----|------|
-| 年发电量 | Annual Generation (kWh) |
-| 年收益 | Annual Revenue |
-| 投资回收期 | Payback Period (年) |
-| 30 年 ROI | 30-Year ROI (%) |
-| LCOE | 平准化度电成本 (VND/kWh) |
+| 年发电量 | Year 1 发电量 (kWh)，未考虑衰减 |
+| 年收益 | Year 1 收益 (VND)，全额自用/上网 |
+| 投资回收期 | 累计收益首次超过成本的年份 (年) |
+| 30 年 ROI | 30年累计总收益 / 成本 |
+| LCOE | 平准化度电成本 (VND/kWh)，考虑30年衰减 |
+| 30年总收益 | 30年累计发电收益 (VND) |
 
 ---
 
