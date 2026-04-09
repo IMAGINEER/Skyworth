@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hợp tác cùng Skyworth Vietnam - Trở thành đối tác</title>
+    <meta name="description" content="Trở thành đối tác của Skyworth Vietnam - Phân phối, lắp đặt và các giải pháp năng lượng mặt trời cho thị trường Việt Nam.">
+    <base href="../">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/solar-calculator.css">
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+        :root {
+            --primary: #006BC0;
+            --primary-light: #00E2E0;
+            --yellow: #f4c97d;
+            --yellow-dark: #a29974;
+            --dark: #1E293B;
+            --text: #1E293B;
+            --bg-light: rgba(0, 107, 192, 0.05);
+            --brand-gradient: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .ys-cont1600 { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+        .std-padd120-top { padding: 120px 0 0; }
+        .std-padd120 { padding: 120px 0; }
+        .std-h3 { font-size: 48px; font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 40px; }
+        .std-h3 span { color: var(--primary); }
+        .std-mar40 { margin-bottom: 40px; }
+        .std-text2 { font-size: 16px; color: #64748B; line-height: 1.6; }
+        .std-text1 { font-size: 14px; color: #94A3B8; }
+        .std-h5 { font-size: 20px; font-weight: 600; color: var(--dark); }
+        .std-h6 { font-size: 18px; font-weight: 600; color: var(--dark); }
+        .std-title5 { font-size: 18px; font-weight: 600; color: var(--dark); }
+        .std-btn3 { display: inline-block; }
+        .std-btn3-box { display: flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; transition: all .3s; }
+        .std-btn3-box:hover { background: var(--primary-light); transform: translateY(-2px); }
+        .std-btn3-bg { display: none; }
+
+        /* ===== Header ===== */
+        .vn-header { background: var(--primary); }
+        .vn-header-top { background: var(--dark); }
+        .vn-header-main { background: var(--primary); padding: 15px 0; }
+        .vn-header-main .ys-cont1600 { display: flex; align-items: center; justify-content: space-between; }
+        .vn-logo img { height: 40px; }
+        .vn-nav { display: flex; gap: 32px; }
+        .vn-nav a { color: #fff; font-weight: 500; font-size: 15px; transition: color .2s; }
+        .vn-nav a:hover { color: var(--yellow); }
+        .vn-nav a.active { color: var(--yellow); }
+
+        /* ===== Hero Banner ===== */
+        .partner-banner {
+            background: var(--brand-gradient);
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .partner-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        .partner-banner h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .partner-banner h1 span { color: var(--yellow); }
+        .partner-banner p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+
+        /* ===== Benefits Section ===== */
+        .partner-benefits { padding: 100px 0; background: #fff; }
+        .partner-benefits h2 { text-align: center; margin-bottom: 60px; }
+        .benefits-swiper { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 20px; scroll-snap-type: x mandatory; }
+        .benefit-card {
+            flex: 0 0 300px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 32px 24px;
+            scroll-snap-align: start;
+            border: 1px solid rgba(21,92,205,0.1);
+            transition: all .3s;
+        }
+        .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(21,92,205,0.15); }
+        .benefit-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .benefit-icon svg { width: 28px; height: 28px; stroke: #fff; fill: none; }
+        .benefit-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+        .benefit-card p { font-size: 14px; color: #64748B; line-height: 1.6; }
+
+        /* ===== Find Partnership Section ===== */
+        .partner-find { padding: 100px 0; background: var(--bg-light); }
+        .partner-find h2 { text-align: center; margin-bottom: 60px; }
+        .partnership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .partnership-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all .3s;
+            scroll-snap-align: start;
+        }
+        .partnership-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(21,92,205,0.12); }
+        .partnership-card-img { height: 180px; overflow: hidden; background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+        .partnership-card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .partnership-card-cont { padding: 24px; }
+        .partnership-card h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .partnership-card .desc { font-size: 14px; color: #64748B; margin-bottom: 16px; line-height: 1.5; }
+        .partnership-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+            transition: gap .2s;
+        }
+        .partnership-card-link:hover { gap: 12px; color: var(--primary-light); }
+        .partnership-card-link svg { width: 16px; height: 16px; }
+
+        /* ===== Easy Steps ===== */
+        .partner-steps { padding: 100px 0; background: #fff; }
+        .partner-steps h2 { text-align: center; margin-bottom: 60px; }
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .step-item { text-align: center; }
+        .step-num {
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+        }
+        .step-item h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .step-item p { font-size: 14px; color: #64748B; line-height: 1.5; }
+
+        /* ===== FAQ ===== */
+        .partner-faq { padding: 100px 0; background: var(--bg-light); }
+        .partner-faq h2 { text-align: center; margin-bottom: 60px; }
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #fff; border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+        .faq-q { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; color: var(--dark); }
+        .faq-q svg { width: 20px; height: 20px; transition: transform .3s; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { display: none; padding: 0 24px 20px; color: #64748B; font-size: 15px; line-height: 1.6; }
+        .faq-item.open .faq-a { display: block; }
+
+        /* ===== CTA ===== */
+        .partner-cta {
+            background: var(--brand-gradient);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .partner-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        .partner-cta h2 { font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px; position: relative; }
+        .partner-cta p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; position: relative; }
+        .partner-cta .std-btn3-box { background: var(--yellow); color: var(--dark); font-size: 18px; padding: 18px 48px; }
+        .partner-cta .std-btn3-box:hover { background: #fff; transform: translateY(-2px); }
+
+        /* ===== Footer ===== */
+        .vn-footer { background: var(--dark); color: #fff; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+        .footer-brand h3 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+        .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 20px; }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+        .footer-social a:hover { background: var(--primary); }
+        .footer-col h4 { font-size: 14px; font-weight: 700; color: var(--yellow); margin-bottom: 16px; text-transform: uppercase; letter-spacing: .05em; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { font-size: 14px; color: rgba(255,255,255,0.7); transition: color .2s; }
+        .footer-col a:hover { color: var(--yellow); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.5); }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .partnership-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .partner-banner h1 { font-size: 48px; }
+            .std-h3 { font-size: 36px; }
+            .partnership-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .vn-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="vn-header">
+        <div class="vn-header-top">
+            <div class="ys-cont1600" style="display:flex;justify-content:flex-end;padding:8px 24px;">
+                <a href="tel:19001234" style="color:#fff;font-size:13px;">📞 1900 1234</a>
+            </div>
+        </div>
+        <div class="vn-header-main">
+            <div class="ys-cont1600">
+                <a href="index-vn.html" class="vn-logo">
+                    <img src="Public/Uploads/uploadfile/images/20250830/LOGOfanbai.svg" alt="Skyworth">
+                </a>
+                <nav class="vn-nav">
+                    <a href="sola-mate-vn-new.html">SolaMate</a>
+                    <a href="sola-ward-vn-new.html">SolaHome</a>
+                    <a href="sola-ward-pro-vn-new.html">SolaHome Pro</a>
+                    <a href="roi-calculator-demo.html">ROI Calculator</a>
+                    <a href="partner-vn.html" class="active">Hợp tác</a>
+                    <a href="contact-us-vn.html">Liên hệ</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main class="ys-main">
+        <!-- Hero Banner -->
+        <section class="partner-banner">
+            <div class="ys-cont1600">
+                <h1 class="wow ys-fadeup1"><span>HỢP TÁC</span><br>CÙng SKYWORTH</h1>
+                <p class="wow ys-fadeup2">Chọn mô hình hợp tác phù hợp với bạn</p>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="partner-benefits std-padd120-top">
+            <div class="ys-cont1600">
+                <h2 class="std-h3 wow ys-fadeup1">Quyền lợi <span>Độc quyền</span><br>dành cho Đối tác</h2>
+                <div class="benefits-swiper">
+                    <div class="benefit-card wow ys-fadeup1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <h3>Ưu đãi hấp dẫn</h3>
+                        <p>Chương trình ưu đãi toàn diện để hỗ trợ sự phát triển kinh doanh cùng có lợi.</p>
+                    </div>
+                    <div class="benefit-card wow ys-fadeup1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                        <h3>Đào tạo chuyên nghiệp</h3>
+                        <p>Tiếp cận đào tạo miễn phí qua Sigenius Academy - Trang bị kiến thức bền vững về sản phẩm và giải pháp.</p>
+                    </div>
+                    <div class="benefit-card wow ys-fadeup1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+                        </div>
+                        <h3>Nền tảng đặt hàng</h3>
+                        <p>Hệ thống đặt hàng trực tuyến đầu ngành - Đặt hàng nhanh chóng, theo dõi đầy đủ từ đơn hàng đến giao hàng.</p>
+                    </div>
+                    <div class="benefit-card wow ys-fadeup1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Ưu tiên sản phẩm mới</h3>
+                        <p>Tiếp cận sớm các sản phẩm và giải pháp mới nhất cùng cơ hội tiếp thị chung.</p>
+                    </div>
+                    <div class="benefit-card wow ys-fadeup1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Hỗ trợ vận hành</h3>
+                        <p>Đội ngũ chuyên gia vận hành hỗ trợ phân tích và lập kế hoạch cải thiện hiệu suất kinh doanh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Partnership -->
+        <section class="partner-find std-padd120-top">
+            <div class="ys-cont1600">
+                <h2 class="std-h3 wow ys-fadeup1">Tìm chương trình <span>hợp tác</span><br>phù hợp với bạn</h2>
+                <div class="partnership-grid">
+                    <!-- Distributor -->
+                    <div class="partnership-card wow ys-fadeup1">
+                        <div class="partnership-card-img">
+                            <img src="Public/Uploads/uploadfile/images/20250417/e1img01.jpg" alt="Distributor">
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>Nhà phân phối</h3>
+                            <p class="desc">Phân phối rộng rãi sản phẩm Skyworth</p>
+                            <a href="#" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Installer -->
+                    <div class="partnership-card wow ys-fadeup1">
+                        <div class="partnership-card-img">
+                            <img src="Public/Uploads/uploadfile/images/20250417/e1img02.jpg" alt="Installer">
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>Nhà lắp đặt</h3>
+                            <p class="desc">Cung cấp dịch vụ lắp đặt từ đầu đến cuối</p>
+                            <a href="#" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- OEM Partner -->
+                    <div class="partnership-card wow ys-fadeup1">
+                        <div class="partnership-card-img">
+                            <img src="Public/Uploads/uploadfile/images/20250417/e1img03.jpg" alt="OEM Partner">
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>OEM Partner</h3>
+                            <p class="desc">Đối tác sản xuất thiết bị gốc để cùng phát triển các giải pháp tùy chỉnh</p>
+                            <a href="#" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Strategic Partner -->
+                    <div class="partnership-card wow ys-fadeup1">
+                        <div class="partnership-card-img">
+                            <img src="Public/Uploads/uploadfile/images/20250424/e1img04.jpg" alt="Strategic Partner">
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>Strategic Partner</h3>
+                            <p class="desc">Hợp tác dự án cho doanh nghiệp lớn hoặc tiện ích công cộng</p>
+                            <a href="#" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- NSP - National Service Partner -->
+                    <div class="partnership-card wow ys-fadeup1" style="border-color: var(--primary);">
+                        <div class="partnership-card-img" style="background: linear-gradient(135deg, var(--primary), var(--primary-light));">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" style="width:100%;height:100%;padding:40px;">
+                                <path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+                            </svg>
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>Đối tác Dịch vụ Quốc gia <span style="color:var(--primary);font-size:14px;">NSP</span></h3>
+                            <p class="desc">Mô hình EPC - Skyworth cung cấp hệ thống, sản phẩm và hỗ trợ sau bán hàng</p>
+                            <a href="partner-country-vn.html" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Agents -->
+                    <div class="partnership-card wow ys-fadeup1" style="border-color: var(--yellow-dark);">
+                        <div class="partnership-card-img" style="background: linear-gradient(135deg, var(--yellow-dark), var(--yellow));">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" style="width:100%;height:100%;padding:40px;">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="partnership-card-cont">
+                            <h3>Đại lý <span style="color:var(--yellow-dark);font-size:14px;">Agents</span></h3>
+                            <p class="desc">Cung cấp dịch vụ EPC cho khách hàng cuối dưới sự quản lý của NSP</p>
+                            <a href="partner-dealer-vn.html" class="partnership-card-link">
+                                Tìm hiểu thêm
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Easy Steps -->
+        <section class="partner-steps std-padd120">
+            <div class="ys-cont1600">
+                <h2 class="std-h3 wow ys-fadeup1">Các bước dễ dàng để trở thành<br><span>Đối tác Skyworth</span></h2>
+                <div class="steps-grid">
+                    <div class="step-item wow ys-fadeup1">
+                        <div class="step-num">1</div>
+                        <h4>Đăng ký trực tuyến</h4>
+                        <p>Điền thông tin vào mẫu đơn hợp tác trực tuyến</p>
+                    </div>
+                    <div class="step-item wow ys-fadeup1">
+                        <div class="step-num">2</div>
+                        <h4>Đánh giá</h4>
+                        <p>Đội ngũ của chúng tôi sẽ đánh giá tư cách kinh doanh của bạn</p>
+                    </div>
+                    <div class="step-item wow ys-fadeup1">
+                        <div class="step-num">3</div>
+                        <h4>Hỗ trợ khởi động</h4>
+                        <p>Đào tạo và phân phối tài nguyên để khởi động</p>
+                    </div>
+                    <div class="step-item wow ys-fadeup1">
+                        <div class="step-num">4</div>
+                        <h4>Chính thức</h4>
+                        <p>Trở thành đối tác chính thức và chia sẻ thành công</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="partner-faq std-padd120">
+            <div class="ys-cont1600">
+                <h2 class="std-h3 wow ys-fadeup1">Câu hỏi <span>thường gặp</span></h2>
+                <div class="faq-wrap">
+                    <div class="faq-item wow ys-fadeup1">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>Làm thế nào để trở thành đối tác kênh?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Chỉ cần đăng ký trực tuyến và cung cấp càng nhiều thông tin về doanh nghiệp của bạn càng tốt. Quản lý kênh địa phương sẽ đánh giá đầy đủ và liên hệ lại. Khi bạn vượt qua tất cả các đánh giá, bạn sẽ trở thành đối tác được chứng nhận.
+                        </div>
+                    </div>
+                    <div class="faq-item wow ys-fadeup1">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>Làm thế nào để tránh xung đột lợi ích giữa các đối tác kênh?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Skyworth nỗ lực thận trọng và công bằng nhất có thể khi thiết kế và thực hiện chiến lược kênh. Mục tiêu kênh được đặt ra khách quan và hợp lý, được điều chỉnh kịp thời dựa trên xu hướng thị trường. Chính sách kênh minh bạch và có sẵn cho các đối tác.
+                        </div>
+                    </div>
+                    <div class="faq-item wow ys-fadeup1">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>Các đối tác kênh được xếp hạng như thế nào?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Chúng tôi tiến hành đánh giá hàng năm đối với tất cả các đối tác kênh được chứng nhận. Khi bạn trở thành đối tác được chứng nhận, bạn sẽ có cơ hội đạt được cấp Kim cương hoặc Bạch kim dựa trên điểm hiệu suất hàng năm. Bạn sẽ được trao chứng chỉ và quyền lợi thương mại có thể nhận được.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="partner-cta">
+            <div class="ys-cont1600">
+                <h2 class="wow ys-fadeup1">Sẵn sàng tham gia<br>mạng lưới Skyworth?</h2>
+                <p class="wow ys-fadeup2">Trải nghiệm quản lý năng lượng liền mạch với Skyworth Cloud</p>
+                <a href="contact-us-vn.html" class="std-btn3 wow ys-fadeup3">
+                    <span class="std-btn3-box" data-text="Trở thành Đối tác">Trở thành Đối tác</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="vn-footer">
+        <div class="ys-cont1600">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>SKYWORTH</h3>
+                    <p>Tập đoàn Skyworth - Thành lập năm 1988, chuyên cung cấp giải pháp năng lượng mặt trời và lưu trữ năng lượng cho thị trường Việt Nam.</p>
+                    <div class="footer-social">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sản phẩm</h4>
+                    <ul>
+                        <li><a href="sola-mate-vn-new.html">SolaMate</a></li>
+                        <li><a href="sola-ward-vn-new.html">SolaHome</a></li>
+                        <li><a href="sola-ward-pro-vn-new.html">SolaHome Pro</a></li>
+                        <li><a href="roi-calculator-demo.html">ROI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Tài liệu tải về</a></li>
+                        <li><a href="#">Bảo hành</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Cộng đồng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><a href="partner-vn.html">Hợp tác</a></li>
+                        <li><a href="contact-us-vn.html">Liên hệ</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Sự kiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skyworth Photovoltaic Vietnam. All rights reserved.</p>
+                <p>Powered by Yongsy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            item.classList.toggle('open');
+        }
+        $(document).ready(function() {
+            // Mobile nav toggle if needed
+        });
+    </script>
+</body>
+</html>

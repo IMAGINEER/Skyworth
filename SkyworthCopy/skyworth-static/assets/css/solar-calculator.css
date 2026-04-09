@@ -1,10 +1,10 @@
 /* ===== Solar ROI Calculator Component — Vietnam + Lead Unlock ===== */
 .sc-root {
-  --sc-dark: #155ccd;
-  --sc-dark2: #268bea;
-  --sc-accent: #f4c97d;
-  --sc-accent2: #f4c97d;
-  --sc-blue: #155ccd;
+  --sc-dark: #006BC0;
+  --sc-dark2: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
+  --sc-accent: #00E2E0;
+  --sc-accent2: #00E2E0;
+  --sc-blue: #006BC0;
   --sc-green: #22c55e;
   --sc-orange: #a29974;
   --sc-yellow: #f4c97d;
@@ -47,7 +47,7 @@
 .sc-field { display: flex; flex-direction: column; gap: 6px; }
 .sc-label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.85); letter-spacing: .02em; }
 .sc-select, .sc-input {
-  background: var(--sc-dark2);
+  background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 8px;
   color: #fff;
@@ -180,12 +180,12 @@
 .sc-lead-msg.info { color: var(--sc-blue); }
 
 .sc-lead-submit {
-  padding: 13px 0; border: none; border-radius: 8px;
-  background: linear-gradient(135deg, #155ccd, #268bea); color: #fff;
+  padding: 13px 0; border: none; border-radius: 80px;
+  background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%); color: #fff;
   font-size: 16px; font-weight: 700; cursor: pointer;
-  font-family: var(--sc-font); transition: transform .2s, box-shadow .2s;
+  font-family: var(--sc-font); transition: all .4s ease;
 }
-.sc-lead-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(21,92,205,.3); }
+.sc-lead-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,107,192,.3); }
 
 /* ---- KPI Cards ---- */
 .sc-kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
@@ -198,7 +198,7 @@
 .sc-kpi-label { font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
 .sc-kpi-val { font-size: 28px; font-weight: 800; color: #1a1a1a; line-height: 1.1; }
 .sc-kpi-unit { font-size: 14px; font-weight: 500; color: #999; margin-left: 2px; }
-.sc-kpi.highlight { background: linear-gradient(135deg, #155ccd, #268bea); border-color: transparent; }
+.sc-kpi.highlight { background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%); border-color: transparent; }
 .sc-kpi.highlight .sc-kpi-label { color: rgba(255,255,255,.85); }
 .sc-kpi.highlight .sc-kpi-val { color: #fff; }
 .sc-kpi.highlight .sc-kpi-unit { color: rgba(255,255,255,.7); }
@@ -212,11 +212,11 @@
 .sc-bar-track { flex: 1; height: 14px; background: #eef1f6; border-radius: 7px; overflow: hidden; }
 .sc-bar-fill {
   height: 100%; border-radius: 7px;
-  background: linear-gradient(90deg, #155ccd, #268bea);
+  background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
   transition: width .5s ease; min-width: 2px;
 }
-.sc-bar-fill.payback { background: linear-gradient(90deg, #a29974, #f4c97d); }
-.sc-bar-fill.full { background: linear-gradient(90deg, #155ccd, #268bea); }
+.sc-bar-fill.payback { background: linear-gradient(100deg, #a29974 0%, #f4c97d 100%); }
+.sc-bar-fill.full { background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%); }
 .sc-bar-val { width: 120px; font-size: 13px; color: #444; font-weight: 600; flex-shrink: 0; }
 .sc-bar-val-pb { color: #a29974; }
 

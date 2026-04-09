@@ -1734,11 +1734,6 @@ const footerHTML = `		<footer class="ys-footer">
         overlay.style.display = 'none';
       });
     }
-    if (overlay) {
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) overlay.style.display = 'none';
-      });
-    }
   };
   document.body.appendChild(script);
 })();

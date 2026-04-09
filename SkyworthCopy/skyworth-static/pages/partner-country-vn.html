@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đối tác Dịch vụ Quốc gia (NSP) - Skyworth Vietnam</title>
+    <meta name="description" content="Trở thành Đối tác Dịch vụ Quốc gia Skyworth - Mô hình EPC cho thị trường Việt Nam.">
+    <base href="../">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link href="Public/En/fonts/iconfont/iconfont.css" rel="stylesheet" />
+    <link href="Public/En/css/public.css" rel="stylesheet" />
+    <link href="Public/En/css/base-v4.0.min.css" rel="stylesheet" />
+    <link href="Public/En/css/main.css" rel="stylesheet" />
+    <link href="Public/En/css/media.css" rel="stylesheet" />
+    <link href="Public/En/cookie/css/privacy.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/solar-calculator.css">
+    <script src="Public/En/js/jquery.min.js"></script>
+    <style>
+        :root {
+            --primary: #006BC0;
+            --primary-light: #00E2E0;
+            --yellow: #f4c97d;
+            --yellow-dark: #a29974;
+            --dark: #1E293B;
+            --text: #1E293B;
+            --bg-light: rgba(0, 107, 192, 0.05);
+            --brand-gradient: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .ys-cont1600 { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+        .std-padd120-top { padding: 120px 0 0; }
+        .std-padd120 { padding: 120px 0; }
+        .std-h3 { font-size: 48px; font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 40px; }
+        .std-h3 span { color: var(--primary); }
+        .std-mar40 { margin-bottom: 40px; }
+        .std-text2 { font-size: 16px; color: #64748B; line-height: 1.6; }
+        .std-text1 { font-size: 14px; color: #94A3B8; }
+        .std-btn3 { display: inline-block; }
+        .std-btn3-box { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; transition: all .3s; }
+        .std-btn3-box:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+        /* ===== Header ===== */
+        .vn-header { background: var(--primary); }
+        .vn-header-top { background: var(--dark); }
+        .vn-header-main { background: var(--primary); padding: 15px 0; }
+        .vn-header-main .ys-cont1600 { display: flex; align-items: center; justify-content: space-between; }
+        .vn-logo img { height: 40px; }
+        .vn-nav { display: flex; gap: 32px; }
+        .vn-nav a { color: #fff; font-weight: 500; font-size: 15px; transition: color .2s; }
+        .vn-nav a:hover { color: var(--yellow); }
+        .vn-nav a.active { color: var(--yellow); }
+
+        /* ===== Hero Banner ===== */
+        .nsp-banner {
+            background: var(--brand-gradient);
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .nsp-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        .nsp-banner h1 {
+            font-size: 64px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .nsp-banner h1 span { color: var(--yellow); }
+        .nsp-banner p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .nsp-badge {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--dark);
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* ===== Mode Introduction ===== */
+        .mode-intro { padding: 100px 0; background: #fff; }
+        .mode-diagram {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 60px;
+            margin-bottom: 60px;
+        }
+        .mode-diagram h3 { font-size: 24px; font-weight: 700; color: var(--dark); text-align: center; margin-bottom: 40px; }
+        .flow-diagram { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+        .flow-item {
+            text-align: center;
+            padding: 20px 30px;
+        }
+        .flow-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 40px;
+        }
+        .flow-icon.skyworth { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+        .flow-icon.nsp { background: linear-gradient(135deg, var(--yellow-dark), var(--yellow)); }
+        .flow-icon.agent { background: linear-gradient(135deg, var(--primary-light), #4ade80); }
+        .flow-icon.user { background: linear-gradient(135deg, #64748B, #94A3B8); }
+        .flow-icon svg { width: 48px; height: 48px; stroke: #fff; fill: none; stroke-width: 1.5; }
+        .flow-item h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .flow-item p { font-size: 13px; color: #64748B; }
+        .flow-arrow {
+            font-size: 32px;
+            color: var(--primary);
+            padding: 0 10px;
+        }
+        .mode-roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .role-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        .role-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .role-icon svg { width: 36px; height: 36px; stroke: #fff; fill: none; stroke-width: 1.5; }
+        .role-card h4 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+        .role-card p { font-size: 14px; color: #64748B; line-height: 1.6; }
+
+        /* ===== Benefits ===== */
+        .nsp-benefits { padding: 100px 0; background: var(--bg-light); }
+        .nsp-benefits h2 { text-align: center; margin-bottom: 60px; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .benefit-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            border: 1px solid #e2e8f0;
+            transition: all .3s;
+        }
+        .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(21,92,205,0.12); }
+        .benefit-num {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .benefit-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .benefit-card p { font-size: 14px; color: #64748B; line-height: 1.6; }
+
+        /* ===== Process Steps ===== */
+        .nsp-steps { padding: 100px 0; background: #fff; }
+        .nsp-steps h2 { text-align: center; margin-bottom: 60px; }
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .step-item { text-align: center; position: relative; }
+        .step-num {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+        }
+        .step-item h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .step-item p { font-size: 14px; color: #64748B; line-height: 1.5; }
+        .steps-grid .step-item:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            top: 36px;
+            right: -20px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        /* ===== FAQ ===== */
+        .nsp-faq { padding: 100px 0; background: var(--bg-light); }
+        .nsp-faq h2 { text-align: center; margin-bottom: 60px; }
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #fff; border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+        .faq-q { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; color: var(--dark); }
+        .faq-q svg { width: 20px; height: 20px; transition: transform .3s; flex-shrink: 0; margin-left: 16px; }
+        .faq-item.open .faq-q svg { transform: rotate(180deg); }
+        .faq-a { display: none; padding: 0 24px 20px; color: #64748B; font-size: 15px; line-height: 1.6; }
+        .faq-item.open .faq-a { display: block; }
+
+        /* ===== CTA ===== */
+        .nsp-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .nsp-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        .nsp-cta h2 { font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px; position: relative; }
+        .nsp-cta p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; position: relative; }
+        .nsp-cta .std-btn3-box { background: var(--yellow); color: var(--dark); font-size: 18px; padding: 18px 48px; }
+        .nsp-cta .std-btn3-box:hover { background: #fff; transform: translateY(-2px); }
+
+        /* ===== Footer ===== */
+        .vn-footer { background: var(--dark); color: #fff; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+        .footer-brand h3 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+        .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 20px; }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+        .footer-social a:hover { background: var(--primary); }
+        .footer-col h4 { font-size: 14px; font-weight: 700; color: var(--yellow); margin-bottom: 16px; text-transform: uppercase; letter-spacing: .05em; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { font-size: 14px; color: rgba(255,255,255,0.7); transition: color .2s; }
+        .footer-col a:hover { color: var(--yellow); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.5); }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid .step-item:not(:last-child)::after { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .mode-roles { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nsp-banner h1 { font-size: 42px; }
+            .std-h3 { font-size: 36px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .flow-diagram { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); padding: 10px 0; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .vn-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="vn-header">
+        <div class="vn-header-top">
+            <div class="ys-cont1600" style="display:flex;justify-content:flex-end;padding:8px 24px;">
+                <a href="tel:19001234" style="color:#fff;font-size:13px;">📞 1900 1234</a>
+            </div>
+        </div>
+        <div class="vn-header-main">
+            <div class="ys-cont1600">
+                <a href="index-vn.html" class="vn-logo">
+                    <img src="Public/Uploads/uploadfile/images/20250830/LOGOfanbai.svg" alt="Skyworth">
+                </a>
+                <nav class="vn-nav">
+                    <a href="sola-mate-vn-new.html">SolaMate</a>
+                    <a href="sola-ward-vn-new.html">SolaHome</a>
+                    <a href="sola-ward-pro-vn-new.html">SolaHome Pro</a>
+                    <a href="roi-calculator-demo.html">ROI Calculator</a>
+                    <a href="partner-vn.html" class="active">Hợp tác</a>
+                    <a href="contact-us-vn.html">Liên hệ</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main class="ys-main">
+        <!-- Hero -->
+        <section class="nsp-banner">
+            <div class="ys-cont1600">
+                <div class="nsp-badge">NSP - National Service Partner</div>
+                <h1 class="wow ys-fadeup1">Đối tác Dịch vụ <span>Quốc gia</span></h1>
+                <p class="wow ys-fadeup2">Mô hình EPC - Kiến tạo hệ sinh thái năng lượng bền vững</p>
+            </div>
+        </section>
+
+        <!-- Mode Introduction -->
+        <section class="mode-intro std-padd120-top">
+            <div class="ys-cont1600">
+                <div class="mode-diagram">
+                    <h3>Mô hình hợp tác EPC</h3>
+                    <div class="flow-diagram">
+                        <div class="flow-item">
+                            <div class="flow-icon skyworth">
+                                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <h4>Skyworth</h4>
+                            <p>Nền tảng & Sản phẩm</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon nsp">
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <h4>NSP</h4>
+                            <p>Tuyển dụng Đại lý</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon agent">
+                                <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            </div>
+                            <h4>Đại lý EPC</h4>
+                            <p>Dịch vụ lắp đặt</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon user">
+                                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                            <h4>Khách hàng</h4>
+                            <p>Người dùng cuối</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mode-roles">
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+                        </div>
+                        <h4>Skyworth</h4>
+                        <p>Cung cấp hệ thống nền tảng, sản phẩm (pin, inverter, panel), và hỗ trợ sau bán hàng toàn diện.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h4>NSP - Đối tác Dịch vụ Quốc gia</h4>
+                        <p>Quản lý kênh phân phối, tuyển dụng và hỗ trợ các Đại lý EPC trong khu vực.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h4>Đại lý EPC</h4>
+                        <p>Cung cấp dịch vụ khảo sát, thiết kế, lắp đặt và bảo hành cho khách hàng cuối.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="nsp-benefits std-padd120">
+            <div class="ys-cont1600">
+                <h2 class="std-h3">Tại sao chọn <span>mô hình NSP</span>?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-num">1</div>
+                        <h3>Không áp lực tồn kho</h3>
+                        <p>Skyworth cung cấp hệ thống tồn kho sản phẩm - Bạn tập trung vào phát triển kênh lắp đặt.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-num">2</div>
+                        <h3>Hỗ trợ tuyển dụng kênh</h3>
+                        <p>Được hưởng thương hiệu mạnh, tài liệu marketing và chiến lược kinh doanh từ Skyworth.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-num">3</div>
+                        <h3>Đào tạo EPC chuyên nghiệp</h3>
+                        <p>Tiếp cận Sigenius Academy - Đào tạo toàn diện về sản phẩm, kỹ thuật và vận hành.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-num">4</div>
+                        <h3>Hệ sinh thái sản phẩm đầy đủ</h3>
+                        <p>Panel năng lượng mặt trời, inverter, pin lưu trữ và phụ kiện - Tất cả từ một nhà cung cấp.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-num">5</div>
+                        <h3>Bảo hành và hậu mãi</h3>
+                        <p>Đội ngũ chăm sóc khách hàng thống nhất, chính sách bảo hành rõ ràng và hỗ trợ kỹ thuật 24/7.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-num">6</div>
+                        <h3>Chương trình khuyến khích</h3>
+                        <p>Hoàn tiền theo hiệu suất, phần thưởng hàng năm và ưu đãi đặc biệt cho đối tác xuất sắc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps -->
+        <section class="nsp-steps std-padd120">
+            <div class="ys-cont1600">
+                <h2 class="std-h3">Quy trình <span>trở thành</span> NSP</h2>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h4>Đăng ký</h4>
+                        <p>Điền thông tin doanh nghiệp vào mẫu đơn đăng ký trực tuyến</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h4>Đánh giá</h4>
+                        <p>Đội ngũ Skyworth đánh giá tư cách kinh doanh và tiềm năng thị trường</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h4>Ký hợp đồng</h4>
+                        <p>Đào tạo sản phẩm, nhận tài liệu marketing và bắt đầu hoạt động</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h4>Chính thức</h4>
+                        <p>Trở thành NSP chính thức và bắt đầu xây dựng mạng lưới Đại lý</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="nsp-faq std-padd120">
+            <div class="ys-cont1600">
+                <h2 class="std-h3">Câu hỏi <span>thường gặp</span></h2>
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>NSP khác với Nhà phân phối như thế nào?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            NSP (National Service Partner) hoạt động theo mô hình EPC - tập trung vào việc xây dựng và quản lý mạng lưới Đại lý lắp đặt, không cần đầu tư tồn kho lớn. Nhà phân phối hoạt động theo mô hình thương mại - mua và bán sản phẩm.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>Yêu cầu gì để trở thành NSP?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Yêu cầu cơ bản bao gồm: Đăng ký kinh doanh hợp lệ, kinh nghiệm trong ngành năng lượng hoặc xây dựng, năng lực tài chính để hỗ trợ hoạt động, và cam kết xây dựng mạng lưới dịch vụ EPC trong khu vực.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>NSP có được bảo vệ khu vực không?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Có, mỗi NSP được chỉ định cho một khu vực nhất định với chính sách bảo vệ khu vực để tránh cạnh tranh nội bộ, đảm bảo NSP có thể yên tâm phát triển thị trường.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>NSP kiếm lợi nhuận từ đâu?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            NSP kiếm lợi nhuận từ: Hoa hồng dịch vụ khi giới thiệu Đại lý EPC, phí quản lý kênh, và các chương trình khuyến khích hiệu suất từ Skyworth.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span>Đào tạo bao gồm những gì?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-a">
+                            Sigenius Academy cung cấp đào tạo toàn diện: Sản phẩm và công nghệ Skyworth, kỹ thuật lắp đặt, vận hành hệ thống, marketing và bán hàng, quản lý kênh phân phối.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="nsp-cta">
+            <div class="ys-cont1600">
+                <h2>Bắt đầu hành trình<br>Đối tác Dịch vụ Quốc gia</h2>
+                <p>Đăng ký ngay để trở thành NSP tại Việt Nam</p>
+                <a href="contact-us-vn.html" class="std-btn3">
+                    <span class="std-btn3-box">Đăng ký ngay</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="vn-footer">
+        <div class="ys-cont1600">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>SKYWORTH</h3>
+                    <p>Tập đoàn Skyworth - Thành lập năm 1988, chuyên cung cấp giải pháp năng lượng mặt trời và lưu trữ năng lượng cho thị trường Việt Nam.</p>
+                    <div class="footer-social">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sản phẩm</h4>
+                    <ul>
+                        <li><a href="sola-mate-vn-new.html">SolaMate</a></li>
+                        <li><a href="sola-ward-vn-new.html">SolaHome</a></li>
+                        <li><a href="sola-ward-pro-vn-new.html">SolaHome Pro</a></li>
+                        <li><a href="roi-calculator-demo.html">ROI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Tài liệu tải về</a></li>
+                        <li><a href="#">Bảo hành</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Cộng đồng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><a href="partner-vn.html">Hợp tác</a></li>
+                        <li><a href="contact-us-vn.html">Liên hệ</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Sự kiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skyworth Photovoltaic Vietnam. All rights reserved.</p>
+                <p>Powered by Yongsy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            item.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
