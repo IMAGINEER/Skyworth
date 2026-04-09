@@ -35,9 +35,7 @@
         img { max-width: 100%; height: auto; display: block; }
 
         .ys-cont1600 {
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 0 24px;
+            width:92% ;
         }
 
         /* ========== 0. Breadcrumb ========== */
@@ -57,7 +55,7 @@
         .sm-breadcrumb-cur { color: #1E293B; font-weight: 600; }
 
         /* ========== Section Commons ========== */
-        .sm-section { padding: 100px 0; }
+        .sm-section { padding: 80px 0; }
         .sm-section-dark { background: #1E293B; color: #fff; }
         .sm-section-gray { background: #F0F7FF; }
         .sm-section-hd { margin-bottom: 48px; }
@@ -80,7 +78,7 @@
         /* ========== 1. Hero Section ========== */
         .sm-hero {
             background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
-            padding: 100px 0;
+            padding: 80px 0;
             position: relative;
             overflow: hidden;
         }
@@ -244,8 +242,8 @@
 
         /* ========== 2. Problem Statement ========== */
         .sm-problem {
-            background: linear-gradient(100deg, #1E293B 0%, #334155 100%);
-            color: #fff;
+            background: #fff;
+            color: #1E293B;
             padding: 100px 0;
         }
         .sm-problem-grid {
@@ -288,7 +286,7 @@
             align-items: flex-start;
             gap: 12px;
             padding: 16px 0;
-            border-bottom: 1px solid rgba(255,255,255,.2);
+            border-bottom: 1px solid rgba(0,0,0,.1);
             font-size: 16px;
         }
         .sm-problem-list li::before {
@@ -297,10 +295,10 @@
             color: #00E2E0;
         }
         .sm-problem-solution {
-            background: rgba(255,255,255,.1);
+            background: #F0F7FF;
             border-radius: 16px;
             padding: 24px;
-            border: 1px solid rgba(255,255,255,.2);
+            border: 1px solid #D8D9E0;
         }
         .sm-problem-solution-title {
             font-size: 18px;
@@ -312,13 +310,16 @@
             border-radius: 16px;
             overflow: hidden;
             aspect-ratio: 4/3;
-            background: rgba(255,255,255,.05);
+            background: #F0F7FF;
         }
 
         /* ========== 3. What is SolaMate ========== */
         .sm-what {
-            background: #fff;
+            background: linear-gradient(100deg, #1E293B 0%, #334155 100%);
+            color: #fff;
         }
+        .sm-what .sm-section-title { color: #fff; }
+        .sm-what .sm-section-sub { color: rgba(255,255,255,.7); }
         .sm-what-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -328,7 +329,7 @@
         .sm-what-content {
             font-size: 18px;
             line-height: 1.8;
-            color: #64748B;
+            color: rgba(255,255,255,.7);
         }
         .sm-what-content p { margin-bottom: 20px; }
         .sm-what-features {
@@ -342,7 +343,7 @@
             align-items: center;
             gap: 12px;
             padding: 16px;
-            background: #F0F7FF;
+            background: rgba(255,255,255,.1);
             border-radius: 12px;
         }
         .sm-what-feature-icon {
@@ -351,7 +352,7 @@
         .sm-what-feature-text {
             font-size: 15px;
             font-weight: 600;
-            color: #1E293B;
+            color: #fff;
         }
         .sm-what-cards {
             display: none;
@@ -564,8 +565,10 @@
             border-collapse: collapse;
             min-width: 800px;
         }
+        .sm-models-table thead {
+            background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%);
+        }
         .sm-models-table thead th {
-            background: #1E293B;
             color: #fff;
             padding: 18px 20px;
             font-size: 14px;
@@ -871,7 +874,7 @@
         .sm-process-num {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #a29974 0%, #f4c97d 100%);
+            background: #006BC0;
             color: #fff;
             border-radius: 50%;
             display: flex;
