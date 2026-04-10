@@ -1721,7 +1721,8 @@ const footerHTML = `		<footer class="ys-footer">
     var trigger = document.getElementById('roi-calc-trigger');
     var closeBtn = document.getElementById('roi-modal-close');
     var triggerPh = document.getElementById('roi-calc-trigger-ph');
-    [trigger, triggerPh].forEach(function (btn) {
+    var triggerInpage = document.getElementById('roi-calc-trigger-inpage');
+    [trigger, triggerPh, triggerInpage].forEach(function (btn) {
       if (overlay && btn) {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
