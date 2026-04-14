@@ -1,0 +1,17 @@
+{
+    "chat.mcp.discovery.enabled": {
+        "cursor-workspace": true
+    },
+    "chat.mcp.serverSampling": {},
+    "mcpServers": {
+        "agent-browser": {
+            "command": "powershell.exe",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "C:\\Users\\符雨纯\\AppData\\Roaming\\npm\\agent-browser.ps1"
+            ]
+        }
+    }
+}

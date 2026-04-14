@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <base href="../">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolaMate - Giải pháp điện mặt trời ban công | Skyworth Solar Vietnam</title>
-    <meta name="description" content="SolaMate - Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một. Đầu tư ban đầu tối ưu, hoàn vốn trong 3.5 năm.">
+    <title>SolaMate - Giải pháp điện mặt trời ban công | SKYWORTH Solar Vietnam</title>
+    <meta name="description" content="SolaMate - Bộ điện mặt trời ban công lắp đặt nhanh tất cả trong một. Đầu tư ban đầu tối ưu, hoàn vốn trong 5.4 năm.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,18 +107,18 @@
             line-height: 1.1;
             margin-bottom: 16px;
         }
-        .sm-hero-title .sola { color: #FF6B00; }
-        .sm-hero-title .mate { color: #006BC0; }
+        .sm-hero-title .sola { color: #FF6B00; margin-right: -2px; }
+        .sm-hero-title .mate { color: #006BC0; margin-left: -2px; }
         .sm-hero-sub-title {
-            font-size: 22px;
+            font-size: 32px;
             color: #fff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 0 8px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.8);
             margin-bottom: 24px;
         }
         .sm-hero-desc {
             font-size: 16px;
             color: #fff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 0 8px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.8);
             line-height: 1.7;
             margin-bottom: 32px;
         }
@@ -190,7 +190,7 @@
         .sm-hero-feature-icon {
             width: 36px;
             height: 36px;
-            background: rgba(0,107,192,0.1);
+            background: linear-gradient(100deg, rgba(164,151,116,0.4) 0%, rgba(244,201,125,0.4) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -200,8 +200,8 @@
         .sm-hero-feature span {
             font-size: 15px;
             font-weight: 500;
-            color: #fff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            color: #f4c97d;
+            text-shadow: 0 0 8px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.8);
         }
         .sm-hero-visual {
             position: relative;
@@ -518,36 +518,51 @@
         }
         .sm-install-tabs {
             display: flex;
-            gap: 0;
-            background: #F0F7FF;
-            border-radius: 16px;
-            overflow: hidden;
+            gap: 16px;
             margin-bottom: 48px;
-            border: 1px solid #E2E8F0;
         }
         .sm-install-tab {
+            position: relative;
             flex: 1;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            background: #fff;
-            border: none;
-            border-right: 1px solid #E2E8F0;
-            font-size: 16px;
-            font-weight: 600;
-            color: #64748B;
-            transition: all .4s ease;
+            height: 200px;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
-            gap: 8px;
+            padding-bottom: 16px;
+            cursor: pointer;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all .3s;
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(100deg, #E2E8F0, #E2E8F0) border-box;
+            border: 3px solid transparent;
         }
-        .sm-install-tab:last-child { border-right: none; }
-        .sm-install-tab.active { background: linear-gradient(100deg, #006BC0 0%, #00E2E0 100%); color: #fff; }
-        .sm-install-tab:hover:not(.active) { background: #e0f0ff; color: #006BC0; }
+
+        .sm-install-tab.active {
+            background: linear-gradient(100deg, #006BC0, #00E2E0) border-box;
+            border: 3px solid transparent;
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,107,192,0.3);
+        }
+        .sm-install-tab:hover:not(.active) {
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(100deg, #006BC0, #00E2E0) border-box;
+            border: 3px solid transparent;
+        }
+        .sm-install-tab-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 15px;
+            color: #1E293B;
+        }
+        .sm-install-tab.active .sm-install-tab-label {
+            color: #006BC0;
+        }
 
         .sm-install-panel { display: none; }
-        .sm-install-panel.active { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: start; }
+        .sm-install-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 
         .sm-install-gallery {
             display: grid;
@@ -557,7 +572,6 @@
             border-radius: 20px;
             overflow: hidden;
             background: #F0F7FF;
-            aspect-ratio: 3/1;
         }
         .sm-install-sub-imgs {
             display: grid;
@@ -1044,27 +1058,54 @@
         .sm-faq {
             background: #F0F7FF;
         }
-        .sm-faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
+        .sm-faq-list {
+            max-width: 900px;
+            margin: 0 auto;
         }
         .sm-faq-item {
             background: #fff;
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 12px;
             border: 1px solid #E2E8F0;
+            overflow: hidden;
         }
         .sm-faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 20px 24px;
             font-size: 16px;
             font-weight: 600;
             color: #1E293B;
-            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .sm-faq-question:hover {
+            color: #006BC0;
+        }
+        .sm-faq-question::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 400;
+            color: #006BC0;
+            transition: transform .3s;
+        }
+        .sm-faq-item.open .sm-faq-question::after {
+            transform: rotate(45deg);
         }
         .sm-faq-answer {
-            font-size: 14px;
+            display: none;
+            padding: 0 24px 20px;
+            font-size: 15px;
             color: #64748B;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+        .sm-faq-item.open .sm-faq-answer {
+            display: block;
+        }
+        .sm-faq-answer strong {
+            color: #006BC0;
         }
 
         /* ========== 13. CTA ========== */
@@ -1155,6 +1196,13 @@
             .sm-hero-title { font-size: 48px; }
             .sm-benefits-grid { grid-template-columns: repeat(2, 1fr); }
             .sm-process-grid { grid-template-columns: repeat(3, 1fr); }
+            .sm-what-features-row {
+                flex-wrap: wrap;
+            }
+            .sm-what-features-row .sm-what-feature {
+                flex: 1 1 calc(50% - 12px);
+                max-width: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1170,14 +1218,25 @@
             .sm-what-features { grid-template-columns: 1fr; }
             .sm-benefits-grid { grid-template-columns: 1fr; }
             .sm-install-panel.active { grid-template-columns: 1fr; }
-            .sm-install-tabs { flex-direction: column; }
-            .sm-install-tab { border-right: none; border-bottom: 1px solid #E2E8F0; }
+            .sm-install-tabs { flex-wrap: wrap; gap: 12px; }
+            .sm-install-tab { flex: 1 1 calc(33.33% - 12px); border-radius: 12px; }
+            .sm-install-tab:last-child { border-radius: 12px; }
             .sm-power-grid { grid-template-columns: 1fr; }
             .sm-roi-inner { grid-template-columns: 1fr; }
             .sm-roi-compare { grid-template-columns: 1fr; }
             .sm-process-grid { grid-template-columns: repeat(2, 1fr); }
             .sm-cases-grid { grid-template-columns: 1fr; }
             .sm-faq-grid { grid-template-columns: 1fr; }
+            .sm-what-features-row {
+                flex-wrap: wrap;
+            }
+            .sm-what-features-row .sm-what-feature {
+                flex: 1 1 calc(50% - 12px);
+                max-width: none;
+            }
+            .sm-certs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -1210,8 +1269,7 @@
                     <h1 class="sm-hero-title"><span class="sola">Sola</span><span class="mate">Mate</span></h1>
                     <p class="sm-hero-sub-title">Cắm là chạy, Tiết kiệm ngay hóa đơn điện</p>
                     <p class="sm-hero-desc">
-                        Cắt giảm hóa đơn điện bậc thang EVN. Lắp đặt cực dễ, an toàn tuyệt đối trước mưa bão.
-                        Đầu tư một lần, Tự chủ nguồn điện trong 30 năm.
+                        Giải pháp SKYWORTH cho ban công. Lắp đặt 15 phút, an toàn tuyệt đối, hoàn vốn nhanh chóng.
                     </p>
                     <div class="sm-hero-btns">
                         <a href="contact-us.html" class="sm-btn-solid">Nhận báo giá →</a>
@@ -1223,7 +1281,7 @@
                             <span>Chứng nhận TUV</span>
                         </div>
                         <div class="sm-hero-feature">
-                            <div class="sm-hero-feature-icon">⚡</div>
+                            <div class="sm-hero-feature-icon">🔌</div>
                             <span>Plug & Play</span>
                         </div>
                         <div class="sm-hero-feature">
@@ -1243,11 +1301,11 @@
                     <div class="sm-spec-label">Dải công suất</div>
                 </div>
                 <div class="sm-spec-item">
-                    <div class="sm-spec-val">60  <span class="sm-spec-unit">phút</span></div>
+                    <div class="sm-spec-val">15  <span class="sm-spec-unit">phút</span></div>
                     <div class="sm-spec-label">Lắp đặt nhanh nhất</div>
                 </div>
                 <div class="sm-spec-item">
-                    <div class="sm-spec-val">4.4 <span class="sm-spec-unit">năm</span></div>
+                    <div class="sm-spec-val">5.4 <span class="sm-spec-unit">năm</span></div>
                     <div class="sm-spec-label">Hoàn vốn</div>
                 </div>
                 <div class="sm-spec-item">
@@ -1269,15 +1327,15 @@
                         <span class="sm-problem-highlight">khiến bạn đau đầu?</span>
                     </h2>
                     <ul class="sm-problem-list">
-                        <li>Dùng càng nhiều, giá điện EVN càng đắt?</li>
+                        <li>Mùa nóng đến, hóa đơn điện "nhảy múa"?</li>
                         <li>Hóa đơn điện lên tới hàng triệu đồng mỗi tháng?</li>
-                        <li>Sợ pin rơi trúng người khi lắp trên ban công?</li>
+                        <li>Lo lắng giàn pin rơi vỡ, mất an toàn?</li>
                         <li>Lo lắng chập cháy điện khi trời mưa?</li>
                         <li>Ngại thủ tục xin phép lắp đặt rườm rà?</li>
                     </ul>
                     <div class="sm-problem-solution">
                         <div class="sm-problem-solution-title">→ Giải pháp: SolaMate – Trạm điện ban công an toàn nhất.</div>
-                        <p>Giải pháp plug-and-play đơn giản, hạn chế tối đa thủ tục rườm rà. Lắp đặt nhanh chóng (chỉ từ 60 phút).</p>
+                        <p>Giải pháp plug-and-play đơn giản, hạn chế tối đa thủ tục rườm rà. Lắp đặt nhanh chóng (chỉ từ 15 phút).</p>
                     </div>
                     <div style="margin-top:24px;">
                         <a href="contact-us.html" style="display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:linear-gradient(100deg,#006BC0,#00E2E0);color:#fff;border-radius:80px;font-size:16px;font-weight:600;text-decoration:none;transition:all .4s ease;">Nhận báo giá →</a>
@@ -1291,6 +1349,7 @@
     </section>
 
     <!-- ========== 3+4. Merged: What + Benefits ========== -->
+    <!--
     <section class="sm-section sm-what" style="background: url('assets/images/vietnam_balcony.jpg') center/cover no-repeat, linear-gradient(100deg, rgba(30,41,59,0.9) 0%, rgba(51,65,85,0.85) 100%);">
         <div class="ys-cont1600">
             <div class="sm-section-hd center">
@@ -1298,7 +1357,7 @@
                 <p class="sm-section-sub">Bộ điện mặt trời "tất cả trong một" — thiết kế cho đa dạng không gian sống</p>
             </div>
             <div class="sm-what-intro">
-                <p><strong>SolaMate</strong> là giải pháp điện mặt trời ban công hoàn chỉnh từ Skyworth. Như một món đồ gia dụng cao cấp, chỉ cần mở hộp, lắp ráp theo hướng dẫn và cắm vào ổ điện là bạn đã có trạm phát điện cá nhân của mình!</p>
+                <p><strong>SolaMate</strong> là giải pháp điện mặt trời ban công hoàn chỉnh từ SKYWORTH. Như một món đồ gia dụng cao cấp, chỉ cần mở hộp, lắp ráp theo hướng dẫn và cắm vào ổ điện là bạn đã có trạm phát điện cá nhân của mình!</p>
             </div>
             <div class="sm-benefits-grid">
                 <div class="sm-benefit-card">
@@ -1312,21 +1371,21 @@
                     <img src="assets/images/detail.jpg" alt="detail" class="sm-benefit-icon">
                     <h3 class="sm-benefit-title">Thiết kế Bauhaus</h3>
                     <p class="sm-benefit-desc">
-                        Phong cách Bauhaus tối giản, màu đen sang trọng — nâng tầm kiến trúc ngôi nhà. <strong>Red Dot Award</strong>
+Thiết kế Bauhaus sang trọng, màu đen tinh tế — nâng tầm kiến trúc ngôi nhà.
                     </p>
                 </div>
                 <div class="sm-benefit-card">
                     <img src="assets/images/antiback.jpg" alt="antiback" class="sm-benefit-icon">
                     <h3 class="sm-benefit-title">Chống phát ngược (Zero-export)</h3>
                     <p class="sm-benefit-desc">
-                        Tự động ngăn dòng điện phát ngược ra lưới, đảm bảo an toàn và tuân thủ quy định.
+Công Nghệ Zero-Export: Tự động ngắt dòng dư, chuẩn quy định EVN.
                     </p>
                 </div>
                 <div class="sm-benefit-card">
                     <img src="assets/images/smartapp.jpg" alt="smart app" class="sm-benefit-icon">
                     <h3 class="sm-benefit-title">Giám sát qua App</h3>
                     <p class="sm-benefit-desc">
-                        Giám sát hiệu suất và điều khiển hệ thống mọi lúc, mọi nơi với ứng dụng Skyworth Smart App.
+                        Giám sát hiệu suất và điều khiển hệ thống mọi lúc, mọi nơi với ứng dụng SKYWORTH Smart App.
                     </p>
                 </div>
                 <div class="sm-benefit-card">
@@ -1339,6 +1398,23 @@
             </div>
         </div>
     </section>
+    -->
+    <section class="sm-section sm-what-infographic">
+        <div class="ys-cont1600">
+        </div>
+    </section>
+    <style>
+        .sm-what-infographic {
+            background: url('assets/images/ccw1ktccw1ktccw1.png') center/contain no-repeat;
+            min-height: 700px;
+            padding: 40px 0;
+        }
+        @media (max-width: 768px) {
+            .sm-what-infographic {
+                min-height: 250px;
+            }
+        }
+    </style>
 
     <!-- ========== 5. Installation Types ========== -->
     <section class="sm-section sm-install" id="install">
@@ -1350,13 +1426,16 @@
 
             <div class="sm-install-tabs">
                 <div class="sm-install-tab active" onclick="switchInstall('balcony', this)">
-                    🏠 Ban công
+                    <img src="assets/images/raling.jpg" alt="Ban công" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                    <span class="sm-install-tab-label">🏠 Ban công</span>
                 </div>
                 <div class="sm-install-tab" onclick="switchInstall('sunshade', this)">
-                    ☂️ Mái che
+                    <img src="assets/images/sunshade.jpg" alt="Mái che" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                    <span class="sm-install-tab-label">☂️ Mái che</span>
                 </div>
                 <div class="sm-install-tab" onclick="switchInstall('ground', this)">
-                    🌿 Sân vườn
+                    <img src="assets/images/adjustable.jpg" alt="Sân vườn" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                    <span class="sm-install-tab-label">🌿 Sân vườn</span>
                 </div>
             </div>
 
@@ -1364,18 +1443,7 @@
             <div class="sm-install-panel active" id="install-balcony">
                 <div class="sm-install-gallery">
                     <div class="sm-install-main-img">
-                        <img src="assets/images/rale.jpg" alt="阳台实装整体图" style="width:100%;border-radius:16px;object-fit:cover;">
-                    </div>
-                    <div class="sm-install-sub-imgs">
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/page_04_img_01.jpg" alt="Microinverter + 防水接线盒" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/raling.jpg" alt="面板角度调节示意图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/baohaose.jpg" alt="安装套件包实物图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
+                        <img src="assets/images/page_04_img_01.jpg" alt="阳台实装整体图" style="width:100%;border-radius:16px;object-fit:cover;">
                     </div>
                 </div>
                 <div class="sm-install-info">
@@ -1405,17 +1473,6 @@
                     <div class="sm-install-main-img">
                         <img src="assets/images/shade.jpg" alt="停车位/走道遮阳光伏棚实装案例" style="width:100%;border-radius:16px;object-fit:cover;">
                     </div>
-                    <div class="sm-install-sub-imgs">
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/store.jpg" alt="光伏遮阳棚整体效果图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/sunshade.jpg" alt="支架结构特写" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/package.jpg" alt="快速安装扣具细节图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                    </div>
                 </div>
                 <div class="sm-install-info">
                     <span class="sm-install-tag">SWM800-S · SWM1600-S</span>
@@ -1442,18 +1499,7 @@
             <div class="sm-install-panel" id="install-ground">
                 <div class="sm-install-gallery">
                     <div class="sm-install-main-img">
-                        <img src="assets/images/ground.jpg" alt="独栋房屋庭院/花园光伏亭实装案例" style="width:100%;border-radius:16px;object-fit:cover;">
-                    </div>
-                    <div class="sm-install-sub-imgs">
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/camp.jpg" alt="可折叠光伏板收折状态图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/groud2.jpg" alt="可调支架角度范围示意图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
-                        <div class="sm-install-sub-img">
-                            <img src="assets/images/6-27.png" alt="便携移动轮子细节图" style="width:100%;border-radius:12px;object-fit:cover;">
-                        </div>
+                        <img src="assets/images/camp.jpg" alt="独栋房屋庭院/花园光伏亭实装案例" style="width:100%;border-radius:16px;object-fit:cover;">
                     </div>
                 </div>
                 <div class="sm-install-info">
@@ -1486,19 +1532,23 @@
             <div class="sm-what-features-row">
                 <div class="sm-what-feature">
                     <span class="sm-what-feature-icon">📦</span>
-                    <span class="sm-what-feature-text"><strong>Trọn bộ trong 1 hộp</strong><br/>Đầy đủ thiết bị, sẵn sàng lắp đặt ngay</span>
+                    <span class="sm-what-feature-text"><strong>Mở khung</strong><br/>Triển khai bộ giá đỡ đã được lắp ráp sẵn từ nhà máy</span>
+                </div>
+                <div class="sm-what-feature">
+                    <span class="sm-what-feature-icon">🔧</span>
+                    <span class="sm-what-feature-text"><strong>Lắp đặt</strong><br/>Treo hệ thống lên ban công hoặc đặt trực tiếp trên sàn/mái nhà</span>
+                </div>
+                <div class="sm-what-feature">
+                    <span class="sm-what-feature-icon">📐</span>
+                    <span class="sm-what-feature-text"><strong>Căn chỉnh</strong><br/>Chọn 1 trong 4 góc nghiêng (25°, 30°, 35°, 40°) để tối ưu hóa hiệu suất hấp thụ nắng</span>
                 </div>
                 <div class="sm-what-feature">
                     <span class="sm-what-feature-icon">🔌</span>
-                    <span class="sm-what-feature-text"><strong>Cắm là chạy</strong><br/>Lắp đặt tức thì, không cần kỹ thuật phức tạp</span>
+                    <span class="sm-what-feature-text"><strong>Kết nối</strong><br/>Cắm dây nguồn trực tiếp vào ổ điện trong nhà</span>
                 </div>
                 <div class="sm-what-feature">
                     <span class="sm-what-feature-icon">📱</span>
-                    <span class="sm-what-feature-text"><strong>Giám sát thông minh</strong><br/>Quản lý dễ dàng qua App 24/7</span>
-                </div>
-                <div class="sm-what-feature">
-                    <span class="sm-what-feature-icon">💰</span>
-                    <span class="sm-what-feature-text"><strong>Sinh lời ngay</strong><br/>Tối ưu chi phí, hoàn vốn nhanh chóng</span>
+                    <span class="sm-what-feature-text"><strong>Vận hành</strong><br/>Tải Smart App và kết nối Wi-Fi để giám sát điện năng.</span>
                 </div>
             </div>
         </div>
@@ -1592,17 +1642,17 @@
                 <div class="sm-power-card sm-power-card-std">
                     <div class="sm-power-model">SWM800 · 900W</div>
                     <div class="sm-power-title">1-to-2 · 900 W</div>
-                    <div class="sm-power-yield">~3.0 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
+                    <div class="sm-power-yield">~3.6 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
                     <ul class="sm-power-devices">
                         <li>
                             <span class="sm-power-device-icon">💡</span>
                             Bóng đèn × 6
-                            <span class="sm-power-device-time">20 giờ</span>
+                            <span class="sm-power-device-time">15 giờ</span>
                         </li>
                         <li>
                             <span class="sm-power-device-icon">📺</span>
                             TV × 2
-                            <span class="sm-power-device-time">cả ngày</span>
+                            <span class="sm-power-device-time">7 giờ</span>
                         </li>
                         <li>
                             <span class="sm-power-device-icon">🧊</span>
@@ -1612,13 +1662,13 @@
                     </ul>
                     <div class="sm-power-savings">
                         <div class="sm-power-savings-label">Tiết kiệm điện hàng tháng</div>
-                        <div class="sm-power-savings-value">~600.000 VND</div>
+                        <div class="sm-power-savings-value">~230.278 VND</div>
                     </div>
                 </div>
                 <div class="sm-power-card sm-power-card-pro">
                     <div class="sm-power-model">SWM1600 · 1800W</div>
                     <div class="sm-power-title">1-to-4 · 1800 W</div>
-                    <div class="sm-power-yield">~6.0 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
+                    <div class="sm-power-yield">~7.2 kWh<span class="sm-power-yield-unit"> / ngày</span></div>
                     <ul class="sm-power-devices">
                         <li>
                             <span class="sm-power-device-icon">❄️</span>
@@ -1638,7 +1688,7 @@
                     </ul>
                     <div class="sm-power-savings">
                         <div class="sm-power-savings-label">Tiết kiệm điện hàng tháng</div>
-                        <div class="sm-power-savings-value">~900.000 VND</div>
+                        <div class="sm-power-savings-value">~460.557 VND</div>
                     </div>
                 </div>
             </div>
@@ -1661,30 +1711,30 @@
                     <div class="sm-roi-compare">
                         <div class="sm-roi-card">
                             <div class="sm-roi-card-label">Giá điện lưới EVN (bậc cao)</div>
-                            <div class="sm-roi-card-value">~3.500<span class="sm-roi-card-unit"> VND/kWh</span></div>
-                            <div class="sm-roi-card-desc">Mức giá sinh hoạt bậc 4-5</div>
+                            <div class="sm-roi-card-value">~3.393<span class="sm-roi-card-unit"> VND/kWh</span></div>
+                            <div class="sm-roi-card-desc">Mức giá sinh hoạt bậc 6</div>
                         </div>
                         <div class="sm-roi-card highlight">
                             <div class="sm-roi-card-label">Với SolaMate</div>
-                            <div class="sm-roi-card-value">~700<span class="sm-roi-card-unit"> VND/kWh</span></div>
+                            <div class="sm-roi-card-value">~380 <span class="sm-roi-card-unit"> VND/kWh</span></div>
                             <div class="sm-roi-card-desc">Tiết kiệm 80%</div>
                         </div>
                         <div class="sm-roi-card">
                             <div class="sm-roi-card-label">Đầu tư ban đầu</div>
-                            <div class="sm-roi-card-value">~25<span class="sm-roi-card-unit"> Triệu VND</span></div>
+                            <div class="sm-roi-card-value">~30<span class="sm-roi-card-unit"> Triệu VND</span></div>
                             <div class="sm-roi-card-desc">Giá bộ thiết bị đầy đủ</div>
                         </div>
                         <div class="sm-roi-card highlight">
                             <div class="sm-roi-card-label">Thời gian hoàn vốn</div>
-                            <div class="sm-roi-card-value">3.5<span class="sm-roi-card-unit"> năm</span></div>
-                            <div class="sm-roi-card-desc">ROI nhanh nhất thị trường</div>
+                            <div class="sm-roi-card-value">5.4<span class="sm-roi-card-unit"> năm</span></div>
+                            <div class="sm-roi-card-desc">ROI 5.5 lần trong 30 năm</div>
                         </div>
                     </div>
                     <ul class="sm-roi-highlights">
                         <li>Không cần xin phép lưới điện (hệ thống nhỏ)</li>
                         <li>Cắt ngay lượng điện giá cao nhất trong nhà</li>
                         <li>An tâm sử dụng với bảo hành dài hạn</li>
-                        <li>Tận hưởng điện miễn phí trong >25 năm tiếp theo</li>
+                        <li>Tận hưởng điện miễn phí trong >24 năm tiếp theo</li>
                     </ul>
                     <a href="javascript:void(0);" id="roi-calc-trigger-inpage" style="display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:linear-gradient(100deg,#006BC0,#00E2E0);color:#fff;border-radius:80px;font-size:16px;font-weight:600;text-decoration:none;transition:all .4s ease;">Tự tính toán →</a>
                 </div>
@@ -1693,34 +1743,34 @@
                     <div class="sm-roi-chart-bar">
                         <div class="sm-roi-chart-label">
                             <span>Năm 5</span>
-                            <span>~35 Triệu</span>
+                            <span>~27.6 Triệu</span>
                         </div>
                         <div class="sm-roi-chart-bg">
-                            <div class="sm-roi-chart-fill" style="width: 15%;"></div>
+                            <div class="sm-roi-chart-fill" style="width: 21%;"></div>
                         </div>
                     </div>
                     <div class="sm-roi-chart-bar">
                         <div class="sm-roi-chart-label">
                             <span>Năm 10</span>
-                            <span>~100 Triệu</span>
+                            <span>~55.3 Triệu</span>
                         </div>
                         <div class="sm-roi-chart-bg">
-                            <div class="sm-roi-chart-fill" style="width: 40%;"></div>
+                            <div class="sm-roi-chart-fill" style="width: 42%;"></div>
                         </div>
                     </div>
                     <div class="sm-roi-chart-bar">
                         <div class="sm-roi-chart-label">
                             <span>Năm 15</span>
-                            <span>~180 Triệu</span>
+                            <span>~110.5 Triệu</span>
                         </div>
                         <div class="sm-roi-chart-bg">
-                            <div class="sm-roi-chart-fill" style="width: 65%;"></div>
+                            <div class="sm-roi-chart-fill" style="width: 64%;"></div>
                         </div>
                     </div>
                     <div class="sm-roi-chart-bar">
                         <div class="sm-roi-chart-label">
-                            <span>Năm 25</span>
-                            <span>~600 Triệu</span>
+                            <span>Năm 30</span>
+                            <span>~165 Triệu</span>
                         </div>
                         <div class="sm-roi-chart-bg">
                             <div class="sm-roi-chart-fill" style="width: 100%;"></div>
@@ -1729,7 +1779,7 @@
                 </div>
             </div>
             <p class="sm-roi-disclaimer">
-                * Lưu ý tính toán: Giá điện EVN bậc 5-6 (~3.500 VND/kWh) và giá thành SolaMate 1800W (~25 triệu VND) là con số ước tính. Sản lượng điện dựa trên điều kiện nắng trung bình tại TP.HCM (4.5-5 kWh/ngày). Thời gian hoàn vốn thực tế phụ thuộc vào cường độ nắng, hướng ban công và mức tiêu thụ điện của gia đình. Chi phí lắp đặt có thể thay đổi tùy theo khu vực.
+                * Lưu ý tính toán: Giá điện EVN bậc 6 (~3.393 VND/kWh) và giá thành SolaMate 1800W (~30 triệu VND) là con số ước tính. Sản lượng điện ~7.2 kWh/ngày dựa trên điều kiện nắng trung bình tại TP.HCM. Thời gian hoàn vốn thực tế phụ thuộc vào cường độ nắng, hướng ban công và mức tiêu thụ điện của gia đình. Chi phí lắp đặt có thể thay đổi tùy theo khu vực.
             </p>
         </div>
     </section>
@@ -1786,30 +1836,34 @@
                 <h2 class="sm-section-title">Câu hỏi thường gặp</h2>
                 <p class="sm-section-sub">Giải đáp những thắc mắc phổ biến về SolaMate</p>
             </div>
-            <div class="sm-faq-grid">
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">🌪️ Trời bão có an toàn không?</div>
-                    <div class="sm-faq-answer">SolaMate thiết kế chịu bão cấp 12, với khung nhôm hàng không và ngàm khóa chống rơi. Đã được TÜV chứng nhận an toàn.</div>
+            <div class="sm-faq-list">
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">SolaMate là gì?</div>
+                    <div class="sm-faq-answer">SolaMate là hệ thống điện mặt trời ban công <strong>"Tất-cả-trong-một"</strong> (All-in-one) thông minh đầu tiên, được thiết kế theo phong cách tối giản Bauhaus. Sản phẩm cho phép bạn tự tạo ra nguồn điện sạch ngay tại các không gian sống đa dạng (wide-range living spaces) như ban công chung cư, cửa sổ hoặc sân vườn.</div>
                 </div>
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">🏢 Chung cư có được lắp không?</div>
-                    <div class="sm-faq-answer">Có, SolaMate được thiết kế đặc biệt cho ban công chung cư. Ngàm kẹp kép không cần khoan tường, không ảnh hưởng kết cấu building.</div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">Tôi có thể tự lắp đặt SolaMate không và mất bao lâu?</div>
+                    <div class="sm-faq-answer">Có, SolaMate được thiết kế để lắp đặt <strong>DIY (tự thực hiện)</strong> cực kỳ đơn giản với quy trình 3 bước không cần dụng cụ chuyên dụng. Toàn bộ quá trình lắp ráp và kết nối có thể hoàn tất <strong>chỉ trong 15 phút</strong>.</div>
                 </div>
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">⚡ Có cần xin phép không?</div>
-                    <div class="sm-faq-answer">Với công suất nhỏ (dưới 1kW), quy trình lắp đặt rất đơn giản và không yêu cầu đồng hồ 2 chiều phức tạp như các hệ thống lớn.</div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">SolaMate có thể lắp đặt ở những đâu?</div>
+                    <div class="sm-faq-answer">Hệ thống rất linh hoạt với <strong>3 giải pháp lắp đặt</strong> chính: treo trên lan can ban công (Railing), lắp làm mái che cửa sổ (Sunshade) hoặc đặt trên mặt đất/sân thượng (Ground). Thiết kế gập và mô-đun hóa giúp sản phẩm phù hợp với nhiều loại cấu trúc nhà ở khác nhau.</div>
                 </div>
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">💰 Hoàn vốn bao lâu?</div>
-                    <div class="sm-faq-answer">Với mức tiết kiệm 600-900K/tháng, thời gian hoàn vốn trung bình chỉ 3.5 năm. Sau đó là điện miễn phí trong 25+ năm.</div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">Công nghệ "Zero-export" (Chống phát ngược) là gì và tại sao tôi cần nó?</div>
+                    <div class="sm-faq-answer">Đây là thiết bị tiêu chuẩn đi kèm giúp đảm bảo điện năng tạo ra được <strong>tiêu thụ 100% trong nhà</strong> và không phát ngược lên lưới điện công cộng. Điều này giúp bảo vệ đồng hồ điện, đảm bảo an toàn lưới điện gia đình và tuân thủ các quy định của ngành điện mà không cần thủ tục xin phép rườm rà.</div>
                 </div>
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">🔧 Tự lắp được không?</div>
-                    <div class="sm-faq-answer">Có, SolaMate được thiết kế "cắm là chạy". Hướng dẫn lắp đặt chi tiết đi kèm, chỉ cần lắp đặt nhanh chóng (chỉ từ 60 phút) là xong. Không cần thợ điện.</div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">Hệ thống này có bền không và được bảo hành bao lâu?</div>
+                    <div class="sm-faq-answer">SolaMate được thiết kế với <strong>tuổi thọ lên tới 30 năm</strong>. Chúng tôi cung cấp <strong>10 năm bảo hành</strong> cho bộ biến tần vi mô (Microinverter), <strong>30 năm bảo hành hiệu suất</strong> cho tấm pin và <strong>25 năm</strong> cho hệ thống giá đỡ bằng thép hàng không chống ăn mòn.</div>
                 </div>
-                <div class="sm-faq-item">
-                    <div class="sm-faq-question">📱 Có giám sát được không?</div>
-                    <div class="sm-faq-answer">Giám sát qua App. Theo dõi sản lượng điện, xem tiền tiết kiệm được mỗi ngày, mọi lúc mọi nơi.</div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">SolaMate có an toàn khi gặp mưa bão không?</div>
+                    <div class="sm-faq-answer">Hoàn toàn an toàn. Hệ thống có <strong>cấu trúc vững chắc</strong>, có khả năng chịu được áp lực gió bão <strong>cấp 12</strong>. Ngoài ra, các thiết bị đều đạt chuẩn chống nước và bụi cao nhất (<strong>IP67</strong> cho Microinverter và <strong>IP68</strong> cho tấm pin), đảm bảo hoạt động bền bỉ dưới mọi thời tiết.</div>
+                </div>
+                <div class="sm-faq-item" onclick="toggleFaq(this)">
+                    <div class="sm-faq-question">Tôi có thể theo dõi lượng điện tiết kiệm được bằng cách nào?</div>
+                    <div class="sm-faq-answer">Bạn có thể quản lý mọi thứ qua ứng dụng <strong>Solavita Cloud</strong> trên điện thoại. Ứng dụng cung cấp dữ liệu trực quan <strong>24/7</strong> về sản lượng điện tạo ra, trạng thái hoạt động của hệ thống và số tiền tiết kiệm được theo thời gian thực.</div>
                 </div>
             </div>
             <div style="text-align:center;margin-top:40px;">
@@ -1847,6 +1901,11 @@
         document.querySelectorAll('.sm-install-panel').forEach(p => p.classList.remove('active'));
         el.classList.add('active');
         document.getElementById('install-' + type).classList.add('active');
+    }
+
+    // FAQ accordion
+    function toggleFaq(el) {
+        el.classList.toggle('open');
     }
     </script>
 
